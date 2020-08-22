@@ -8,18 +8,20 @@
 
 #import "SPTInAppMessageMessageRequester-Protocol.h"
 
-@class NSString;
+@class NSString, SPTInAppMessageFeatureProperties;
 @protocol SPTInAppMessageMessageRequesterDelegate;
 
 @interface SPTInAppMessageMessageRequesterImplementation : NSObject <SPTInAppMessageMessageRequester>
 {
     id <SPTInAppMessageMessageRequesterDelegate> _delegate;
+    SPTInAppMessageFeatureProperties *_featureProperties;
 }
 
 - (void).cxx_destruct;
+@property(readonly, nonatomic) SPTInAppMessageFeatureProperties *featureProperties; // @synthesize featureProperties=_featureProperties;
 @property(nonatomic) __weak id <SPTInAppMessageMessageRequesterDelegate> delegate; // @synthesize delegate=_delegate;
 - (void)requestMessageWithFeatureName:(id)arg1 eventName:(id)arg2 eventID:(id)arg3 eventVersion:(id)arg4;
-- (id)initWithDelegate:(id)arg1;
+- (id)initWithDelegate:(id)arg1 featureProperties:(id)arg2;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

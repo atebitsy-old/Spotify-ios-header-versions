@@ -6,6 +6,10 @@
 
 #import "SPTService-Protocol.h"
 
+@protocol _TtP14MarqueeFeature18MarqueeTestManager_;
+
 @protocol _TtP14MarqueeFeature17SPTMarqueeService_ <SPTService>
+- (void)startMarquee;
+- (id <_TtP14MarqueeFeature18MarqueeTestManager_>)provideTestManager;
 @end
 

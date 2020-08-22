@@ -10,9 +10,7 @@
 @protocol HUBViewModel;
 
 @protocol SPTHomeViewModelProviderObserver <NSObject>
-- (void)viewModelProvider:(SPTHomeViewModelProvider *)arg1 didLoadRemoteViewModel:(id <HUBViewModel>)arg2 withError:(NSError *)arg3;
-- (void)viewModelProviderWillLoadRemoteViewModel:(SPTHomeViewModelProvider *)arg1;
-- (void)viewModelProvider:(SPTHomeViewModelProvider *)arg1 didLoadCachedViewModel:(id <HUBViewModel>)arg2 withError:(NSError *)arg3;
-- (void)viewModelProviderWillLoadCachedViewModel:(SPTHomeViewModelProvider *)arg1;
+- (void)viewModelProvider:(SPTHomeViewModelProvider *)arg1 didLoadViewModel:(id <HUBViewModel>)arg2 fromSource:(unsigned long long)arg3 withError:(NSError *)arg4;
+- (void)viewModelProvider:(SPTHomeViewModelProvider *)arg1 willLoadFromSource:(unsigned long long)arg2;
 @end
 

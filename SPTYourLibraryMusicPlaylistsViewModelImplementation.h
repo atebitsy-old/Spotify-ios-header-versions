@@ -62,8 +62,6 @@
 - (void)beginObservingRowAtIndexPath:(id)arg1;
 - (void)willEndTextFiltering;
 - (void)willBeginTextFiltering;
-- (id)indexPathForScrollSectionIndex:(unsigned long long)arg1;
-@property(readonly, nonatomic) NSArray *sectionIndexTitles;
 - (void)removeFilterAtIndex:(long long)arg1;
 - (void)logBetaAssistantViewImpressionIfNeeded;
 - (void)logEmptyStaticFilterViewImpression;
@@ -72,7 +70,6 @@
 - (void)logQuickScrollDragEnded;
 - (void)logQuickScrollDragStarted;
 - (void)logQuickScrollIsVisible;
-- (void)logSectionIndexSelected;
 - (void)logFilterSortInteractionType:(unsigned long long)arg1;
 - (void)resetFilters;
 - (id)sortingAndFilteringPickerViewController;
@@ -94,7 +91,6 @@
 @property(readonly, nonatomic, getter=isGroupLabelAvailable) _Bool groupLabelAvailable;
 @property(readonly, nonatomic) _Bool quickScrollUseDarkStyle;
 @property(readonly, nonatomic) long long quickScrollMinPages;
-@property(readonly, nonatomic) unsigned long long quickScrollMechanism;
 - (void)setActiveFilterRules:(id)arg1;
 - (id)activeFilterRules;
 - (id)availableFilterRules;

@@ -348,6 +348,11 @@ struct ColorCube {
 
 struct ConfigurationListenerImpl;
 
+struct ConnectTransferDetails {
+    struct optional<spotify::player::ContextTrack> _field1;
+    struct vector<spotify::player::ContextTrack, std::__1::allocator<spotify::player::ContextTrack>> _field2;
+};
+
 struct Connection;
 
 struct ConnectionBuilder {
@@ -553,6 +558,14 @@ struct GPBOutputBufferState {
     unsigned long long size;
     unsigned long long position;
     NSOutputStream *output;
+};
+
+struct GULReachabilityApi {
+    CDUnknownFunctionPointerType _field1;
+    CDUnknownFunctionPointerType _field2;
+    CDUnknownFunctionPointerType _field3;
+    CDUnknownFunctionPointerType _field4;
+    CDUnknownFunctionPointerType _field5;
 };
 
 struct GoogleSignInCredential {
@@ -821,6 +834,14 @@ struct PlayOrigin {
     struct set<std::__1::basic_string<char>, std::__1::less<std::__1::basic_string<char>>, std::__1::allocator<std::__1::basic_string<char>>> _field7;
 };
 
+struct PlaybackId {
+    unsigned char _field1[16];
+};
+
+struct PlayerLicense {
+    basic_string_90719d97 _field1;
+};
+
 struct Position {
     double _field1;
     double _field2;
@@ -996,19 +1017,10 @@ struct SignupInfo {
 };
 
 struct SkipToTrack {
-    struct optional<std::__1::basic_string<char>> {
-        _Bool _field1;
-        struct aligned_storage<std::__1::basic_string<char>> _field2;
-    } _field1;
+    struct optional<std::__1::basic_string<char>> _field1;
     struct optional<unsigned long> _field2;
-    struct optional<std::__1::basic_string<char>> {
-        _Bool _field1;
-        struct aligned_storage<std::__1::basic_string<char>> _field2;
-    } _field3;
-    struct optional<std::__1::basic_string<char>> {
-        _Bool _field1;
-        struct aligned_storage<std::__1::basic_string<char>> _field2;
-    } _field4;
+    struct optional<std::__1::basic_string<char>> _field3;
+    struct optional<std::__1::basic_string<char>> _field4;
     struct optional<unsigned long> _field5;
 };
 
@@ -1150,13 +1162,7 @@ struct UserAgentParameters {
     basic_string_90719d97 _field1;
     basic_string_90719d97 _field2;
     basic_string_90719d97 _field3;
-    struct optional<std::__1::basic_string<char>> {
-        union {
-            char _field1;
-            basic_string_90719d97 _field2;
-        } _field1;
-        _Bool _field2;
-    } _field4;
+    struct optional<std::__1::basic_string<char>> _field4;
 };
 
 struct UserInfo {
@@ -1262,6 +1268,42 @@ struct __tree_end_node<std::__1::__tree_node_base<void *>*> {
     struct __tree_node_base<void *> *_field1;
 };
 
+struct _logs_proto_mobilesdk_ios_ICoreConfiguration {
+    _Bool has_configuration_type;
+    int configuration_type;
+    unsigned int sdk_service_installed_count;
+    int *sdk_service_installed;
+    struct pb_bytes_array_s *device_model;
+    struct pb_bytes_array_s *app_id;
+    struct pb_bytes_array_s *bundle_id;
+    _Bool has_pod_name;
+    int pod_name;
+    struct pb_bytes_array_s *icore_version;
+    struct pb_bytes_array_s *sdk_version;
+    _Bool has_sdk_name;
+    int sdk_name;
+    _Bool has_app_count;
+    int app_count;
+    struct pb_bytes_array_s *os_version;
+    struct pb_bytes_array_s *min_supported_ios_version;
+    _Bool has_use_default_app;
+    _Bool use_default_app;
+    _Bool has_deployed_in_app_store;
+    _Bool deployed_in_app_store;
+    _Bool has_dynamic_framework_count;
+    int dynamic_framework_count;
+    struct pb_bytes_array_s *apple_framework_version;
+    _Bool has_using_zip_file;
+    _Bool using_zip_file;
+    _Bool has_deployment_type;
+    int deployment_type;
+    struct pb_bytes_array_s *platform_info;
+    _Bool has_swizzling_enabled;
+    _Bool swizzling_enabled;
+    _Bool has_using_gdt;
+    _Bool using_gdt;
+};
+
 struct _opaque_pthread_mutex_t {
     long long __sig;
     char __opaque[56];
@@ -1271,36 +1313,6 @@ struct _opaque_pthread_t {
     long long _field1;
     struct __darwin_pthread_handler_rec *_field2;
     char _field3[8176];
-};
-
-struct a8;
-
-struct aligned_storage<spotify::player::PlaybackId> {
-    union dummy_u {
-        char _field1[16];
-        char _field2;
-    } _field1;
-};
-
-struct aligned_storage<spotify::player::PlayerLicense> {
-    union dummy_u {
-        char _field1[24];
-        struct a8 _field2;
-    } _field1;
-};
-
-struct aligned_storage<spotify::player::PreparePlayOptions::ConnectTransferDetails> {
-    union dummy_u {
-        char _field1[104];
-        struct a8 _field2;
-    } _field1;
-};
-
-struct aligned_storage<std::__1::basic_string<char>> {
-    union dummy_u {
-        char _field1[24];
-        struct a8 _field2;
-    } _field1;
 };
 
 struct aligned_struct<40, 8> {
@@ -1642,7 +1654,10 @@ struct once_flag {
 };
 
 struct optional<bool> {
-    _Bool _field1;
+    union {
+        char _field1;
+        _Bool _field2;
+    } _field1;
     _Bool _field2;
 };
 
@@ -1726,19 +1741,44 @@ struct optional<spotify::http::ConnectionType> {
     _Bool _field2;
 };
 
+struct optional<spotify::player::ContextTrack> {
+    union {
+        char _field1;
+        struct ContextTrack _field2;
+    } _field1;
+    _Bool _field2;
+};
+
 struct optional<spotify::player::PlaybackId> {
-    _Bool _field1;
-    struct aligned_storage<spotify::player::PlaybackId> _field2;
+    union {
+        char _field1;
+        struct PlaybackId _field2;
+    } _field1;
+    _Bool _field2;
 };
 
 struct optional<spotify::player::PlayerLicense> {
-    _Bool _field1;
-    struct aligned_storage<spotify::player::PlayerLicense> _field2;
+    union {
+        char _field1;
+        struct PlayerLicense _field2;
+    } _field1;
+    _Bool _field2;
 };
 
 struct optional<spotify::player::PreparePlayOptions::ConnectTransferDetails> {
-    _Bool _field1;
-    struct aligned_storage<spotify::player::PreparePlayOptions::ConnectTransferDetails> _field2;
+    union {
+        char _field1;
+        struct ConnectTransferDetails _field2;
+    } _field1;
+    _Bool _field2;
+};
+
+struct optional<std::__1::basic_string<char>> {
+    union {
+        char _field1;
+        basic_string_90719d97 _field2;
+    } _field1;
+    _Bool _field2;
 };
 
 struct optional<std::__1::chrono::duration<long long, std::__1::ratio<1, 1000>>> {
@@ -1766,8 +1806,11 @@ struct optional<unsigned int> {
 };
 
 struct optional<unsigned long> {
-    _Bool _field1;
-    unsigned long long _field2;
+    union {
+        char _field1;
+        unsigned long long _field2;
+    } _field1;
+    _Bool _field2;
 };
 
 struct optional_last_value<void>;
@@ -1781,6 +1824,8 @@ struct pair<std::__1::basic_string<char>, std::__1::basic_string<char>>;
 struct path {
     basic_string_90719d97 _field1;
 };
+
+struct pb_bytes_array_s;
 
 struct scheduler;
 
@@ -2840,6 +2885,14 @@ struct vector<spotify::metadata::BiographyOrReview, std::__1::allocator<spotify:
 
 struct vector<spotify::palette::Swatch, std::__1::allocator<spotify::palette::Swatch>>;
 
+struct vector<spotify::player::ContextTrack, std::__1::allocator<spotify::player::ContextTrack>> {
+    struct ContextTrack *_field1;
+    struct ContextTrack *_field2;
+    struct __compressed_pair<spotify::player::ContextTrack *, std::__1::allocator<spotify::player::ContextTrack>> {
+        struct ContextTrack *_field1;
+    } _field3;
+};
+
 struct vector<spotify::tl::gid<16, spotify::uri::detail::TrackIdTag>, std::__1::allocator<spotify::tl::gid<16, spotify::uri::detail::TrackIdTag>>>;
 
 struct vector<spotify::uri::SpotifyLink, std::__1::allocator<spotify::uri::SpotifyLink>> {
@@ -2959,11 +3012,6 @@ struct work;
 
 #if 0
 // Names with conflicting types:
-typedef struct ?<std::__1::basic_string<char>> {
-    _Bool _field1;
-    struct aligned_storage<std::__1::basic_string<char>> _field2;
-} optional_861ab042;
-
 typedef struct {
     int _field1;
     basic_string_90719d97 _field2;
@@ -2976,14 +3024,6 @@ typedef struct {
     struct unordered_map<std::__1::basic_string<char>, std::__1::basic_string<char>, spotify::tl::CaseInsensitive, spotify::tl::CaseInsensitive, std::__1::allocator<std::__1::pair<const std::__1::basic_string<char>, std::__1::basic_string<char>>>> _field2;
     basic_string_90719d97 _field3;
 } Response_b29bb4de;
-
-typedef struct ?<std::__1::basic_string<char>> {
-    union {
-        char _field1;
-        basic_string_90719d97 _field2;
-    } _field1;
-    _Bool _field2;
-} optional_4f142267;
 
 typedef struct {
     struct CriticalSection _field1;
@@ -3061,6 +3101,12 @@ typedef struct {
 } CDStruct_70511ce9;
 
 typedef struct {
+    void **_field1;
+    int *_field2;
+    char *_field3;
+} CDStruct_e1a27b1c;
+
+typedef struct {
     char *_field1;
     char *_field2;
     unsigned int _field3;
@@ -3085,6 +3131,14 @@ typedef struct {
     unsigned int _field15;
     unsigned int _field16;
 } CDStruct_1e2a2a70;
+
+typedef struct {
+    char *_field1;
+    int _field2;
+    int _field3;
+    int _field4;
+    char *_field5;
+} CDStruct_7787c858;
 
 typedef struct {
     double broadcastRequestTimeout;

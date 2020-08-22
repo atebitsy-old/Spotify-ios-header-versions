@@ -7,6 +7,7 @@
 #import "_TtC20SingalongFeatureImpl14ScrollProvider.h"
 
 @interface _TtC20SingalongFeatureImpl14ScrollProvider (SingalongFeatureImpl)
+- (void)didSelectComponentViewForTrack:(id)arg1;
 - (id)componentViewForTrack:(id)arg1;
 - (void)loadContentForTrack:(id)arg1;
 - (_Bool)isEnabledForTrack:(id)arg1;

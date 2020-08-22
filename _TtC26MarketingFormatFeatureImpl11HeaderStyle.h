@@ -6,7 +6,9 @@
 
 #import <objc/NSObject.h>
 
-@interface _TtC26MarketingFormatFeatureImpl11HeaderStyle : NSObject
+#import "GLUEStyle-Protocol.h"
+
+@interface _TtC26MarketingFormatFeatureImpl11HeaderStyle : NSObject <GLUEStyle>
 {
     // Error parsing type: , name: glueTheme
     // Error parsing type: , name: appearance

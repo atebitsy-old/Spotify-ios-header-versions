@@ -8,16 +8,16 @@
 
 #import "SPTContainerService-Protocol.h"
 
-@class MetaViewController, NSString, SPTAllocationContext, SPTKeychainManagerImpl, SPTNavigationManager, SPTPageRegistryImplementation, SpotifyAppDelegate;
-@protocol SPTContainerUIService, SPTEmailUniversalLinkResolverDelegate, SPTNotificationSystemDelegate, SPTUICompletionNotifier, SPTURIDispatchService;
+@class NSString, SPTAllocationContext, SPTKeychainManagerImpl, SPTNavigationManager, SPTPageRegistryImplementation, SpotifyAppDelegate;
+@protocol SPTEmailUniversalLinkResolverDelegate, SPTMetaViewController, SPTNotificationSystemDelegate, SPTRootUIService, SPTUICompletionNotifier, SPTURIDispatchService;
 
 @interface SPTContainerServiceImplementation : NSObject <SPTContainerService>
 {
     SpotifyAppDelegate *_appDelegate;
-    id <SPTContainerUIService> _containerUIService;
+    id <SPTRootUIService> _rootUIService;
     id <SPTURIDispatchService> _URIDispatchService;
     SPTPageRegistryImplementation *_pageRegistry;
-    MetaViewController *_metaViewController;
+    id <SPTMetaViewController> _metaViewController;
     id <SPTUICompletionNotifier> _UICompletionNotifier;
     SPTNavigationManager *_navigationManager;
     SPTKeychainManagerImpl *_keychainManager;
@@ -28,10 +28,10 @@
 @property(retain, nonatomic) SPTKeychainManagerImpl *keychainManager; // @synthesize keychainManager=_keychainManager;
 @property(retain, nonatomic) SPTNavigationManager *navigationManager; // @synthesize navigationManager=_navigationManager;
 @property(retain, nonatomic) id <SPTUICompletionNotifier> UICompletionNotifier; // @synthesize UICompletionNotifier=_UICompletionNotifier;
-@property(retain, nonatomic) MetaViewController *metaViewController; // @synthesize metaViewController=_metaViewController;
+@property(retain, nonatomic) id <SPTMetaViewController> metaViewController; // @synthesize metaViewController=_metaViewController;
 @property(retain, nonatomic) SPTPageRegistryImplementation *pageRegistry; // @synthesize pageRegistry=_pageRegistry;
 @property(nonatomic) __weak id <SPTURIDispatchService> URIDispatchService; // @synthesize URIDispatchService=_URIDispatchService;
-@property(nonatomic) __weak id <SPTContainerUIService> containerUIService; // @synthesize containerUIService=_containerUIService;
+@property(nonatomic) __weak id <SPTRootUIService> rootUIService; // @synthesize rootUIService=_rootUIService;
 @property(nonatomic) __weak SpotifyAppDelegate *appDelegate; // @synthesize appDelegate=_appDelegate;
 @property(nonatomic) __weak id <SPTEmailUniversalLinkResolverDelegate> emailUniversalLinkResolverDelegate;
 @property(nonatomic) __weak id <SPTNotificationSystemDelegate> notificationSystemDelegate;

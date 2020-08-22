@@ -11,12 +11,10 @@
     // Error parsing type: , name: cosmosBridge
     // Error parsing type: , name: adsRegistry
     // Error parsing type: , name: navigationManager
-    // Error parsing type: , name: slateBuilderProvider
     // Error parsing type: , name: slateManager
-    // Error parsing type: , name: productState
-    // Error parsing type: , name: glueTheme
     // Error parsing type: , name: glueImageLoader
     // Error parsing type: , name: presentationMonitor
+    // Error parsing type: , name: marqueePresenter
     // Error parsing type: , name: loop
 }
 

@@ -8,13 +8,16 @@
 
 @interface _TtC20SingalongFeatureImpl18CardViewController : UIViewController
 {
+    // Error parsing type: , name: fullscreenViewController
     // Error parsing type: , name: loopController
     // Error parsing type: , name: lyricsDependencies
     // Error parsing type: , name: lyricsViewController
+    // Error parsing type: , name: $__lazy_storage_$_viewConnectable
 }
 
 - (void).cxx_destruct;
 - (id)initWithNibName:(id)arg1 bundle:(id)arg2;
+- (void)viewDidDisappear:(_Bool)arg1;
 - (void)loadView;
 - (id)initWithCoder:(id)arg1;
 

@@ -23,7 +23,7 @@
 - (GLUEPressedAnimatorStyle *)pressedAnimatorEntityRowStyle;
 - (GLUEPressedAnimatorStyle *)pressedAnimatorDefaultStyle;
 - (GLUEHeaderBackgroundStyle *)headerBackgroundStyle;
-- (GLUETrackCloudStyle *)trackCloudStyleWithNumberOfLines:(unsigned long long)arg1 showOnlyTrackNames:(_Bool)arg2 showNumberedList:(_Bool)arg3;
+- (GLUETrackCloudStyle *)trackCloudStyleWithNumberOfLines:(unsigned long long)arg1 showOnlyTrackNames:(_Bool)arg2 showNumberedList:(_Bool)arg3 enableHighlighting:(_Bool)arg4;
 - (GLUEEntityCardStyle *)cardStyleWithImageMask:(_Bool)arg1 imageDecoration:(_Bool)arg2 titleStyleDescription:(_Bool)arg3 subtitleStyleMetadata:(_Bool)arg4;
 - (GLUEEntityCardStyle *)radioGenreCardStyle;
 - (GLUEEntityCardStyle *)radioArtistCardStyle;

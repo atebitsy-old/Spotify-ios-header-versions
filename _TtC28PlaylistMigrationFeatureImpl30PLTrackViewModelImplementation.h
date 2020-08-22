@@ -30,6 +30,7 @@
 @property(nonatomic, readonly) NSString *rowId;
 @property(nonatomic, readonly) NSDictionary *formatListAttributes;
 @property(nonatomic, readonly) double duration;
+@property(nonatomic, readonly) _Bool isMusicAndTalk;
 @property(nonatomic, readonly) _Bool isPlayed;
 @property(nonatomic, readonly) double timeLeft;
 @property(nonatomic, readonly) NSDate *publishDate;

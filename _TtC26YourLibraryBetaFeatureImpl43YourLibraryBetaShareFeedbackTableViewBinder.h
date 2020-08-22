@@ -14,11 +14,12 @@
     // Error parsing type: , name: style
     // Error parsing type: , name: lastModel
     // Error parsing type: , name: $__lazy_storage_$_placeholderTextView
-    // Error parsing type: , name: $__lazy_storage_$_sendButton
+    // Error parsing type: , name: $__lazy_storage_$_footerView
 }
 
 - (void).cxx_destruct;
 - (id)init;
+- (void)didTapSendButton;
 - (void)dealloc;
 
 @end

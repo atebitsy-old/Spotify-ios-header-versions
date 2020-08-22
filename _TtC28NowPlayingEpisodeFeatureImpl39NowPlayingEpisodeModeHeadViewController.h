@@ -9,6 +9,8 @@
 @interface _TtC28NowPlayingEpisodeFeatureImpl39NowPlayingEpisodeModeHeadViewController : UIViewController
 {
     // Error parsing type: , name: viewModel
+    // Error parsing type: , name: linkDispatcher
+    // Error parsing type: , name: imageLoader
     // Error parsing type: , name: talkHeaderView
     // Error parsing type: , name: musicHeaderView
 }

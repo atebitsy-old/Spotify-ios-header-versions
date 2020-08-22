@@ -17,10 +17,8 @@
 @property(readonly, nonatomic, getter=isContentLayerVideoTabEnabled) _Bool videoTabEnabled;
 @property(readonly, nonatomic, getter=isPrideAnimatedHeartEnabled) _Bool prideAnimatedHeartEnabled;
 @property(readonly, nonatomic, getter=isMixedMediaEpisodeModeEnabled) _Bool mixedMediaEpisodeModeEnabled;
-@property(readonly, nonatomic, getter=isLocalBansEnabled) _Bool localBansEnabled;
 @property(readonly, nonatomic, getter=isFreeTierEnabled) _Bool freeTierEnabled;
 @property(readonly, nonatomic, getter=isShowsFormatContextAwareSharingEnabled) _Bool showsFormatContextAwareSharingEnabled;
-- (_Bool)setLocalBansEnabled:(_Bool)arg1;
 - (_Bool)isPodcast:(SPTPlayerState *)arg1;
 - (void)removeObserver:(id <SPTNowPlayingTestManagerObserver>)arg1;
 - (void)addObserver:(id <SPTNowPlayingTestManagerObserver>)arg1;

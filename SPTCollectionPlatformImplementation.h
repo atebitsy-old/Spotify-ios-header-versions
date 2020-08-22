@@ -9,7 +9,7 @@
 #import "SPTCollectionPlatform-Protocol.h"
 
 @class NSHashTable, NSString;
-@protocol SPTAlertInterface, SPTCollectionPlatformConfiguration, SPTCollectionPlatformDataLoader, SPTCollectionPlatformLogger, SPTCollectionPlatformStateProvider, SPTCollectionPlatformTestManager, SPTCosmosDictionaryDataLoader, SPTCosmosDictionaryDataLoaderRequestToken, SPTMetaViewController;
+@protocol SPTAlertInterface, SPTCollectionPlatformConfiguration, SPTCollectionPlatformDataLoader, SPTCollectionPlatformLogger, SPTCollectionPlatformStateProvider, SPTCollectionPlatformTestManager, SPTCosmosDictionaryDataLoader, SPTCosmosDictionaryDataLoaderRequestToken;
 
 @interface SPTCollectionPlatformImplementation : NSObject <SPTCollectionPlatform>
 {
@@ -21,7 +21,6 @@
     NSHashTable *_observers;
     id <SPTCollectionPlatformDataLoader> _dataLoader;
     id <SPTCollectionPlatformStateProvider> _stateProvider;
-    id <SPTMetaViewController> _metaViewController;
     id <SPTAlertInterface> _alertInterface;
     CDUnknownBlockType _timeGetter;
 }
@@ -29,7 +28,6 @@
 - (void).cxx_destruct;
 @property(copy, nonatomic) CDUnknownBlockType timeGetter; // @synthesize timeGetter=_timeGetter;
 @property(retain, nonatomic) id <SPTAlertInterface> alertInterface; // @synthesize alertInterface=_alertInterface;
-@property(retain, nonatomic) id <SPTMetaViewController> metaViewController; // @synthesize metaViewController=_metaViewController;
 @property(retain, nonatomic) id <SPTCollectionPlatformStateProvider> stateProvider; // @synthesize stateProvider=_stateProvider;
 @property(retain, nonatomic) id <SPTCollectionPlatformDataLoader> dataLoader; // @synthesize dataLoader=_dataLoader;
 @property(retain, nonatomic) NSHashTable *observers; // @synthesize observers=_observers;
@@ -40,7 +38,6 @@
 @property(retain, nonatomic) id <SPTCosmosDictionaryDataLoader> cosmosDataLoader; // @synthesize cosmosDataLoader=_cosmosDataLoader;
 - (id)setUpItemDictionaryForURLs:(id)arg1 source:(id)arg2 fromContext:(id)arg3;
 - (id)setUpItemDictionaryForURL:(id)arg1 source:(id)arg2 fromContext:(id)arg3;
-- (void)presentCollectionFullAlert;
 - (void)offlineStateForEntityURL:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (id)offlineURLForEntityURL:(id)arg1;
 - (void)removeOfflineURL:(id)arg1 completion:(CDUnknownBlockType)arg2;
@@ -61,7 +58,7 @@
 - (void)addURL:(id)arg1 bySource:(id)arg2 fromContext:(id)arg3 showUIConfirmation:(_Bool)arg4 completion:(CDUnknownBlockType)arg5;
 - (_Bool)canAddTrackWithURL:(id)arg1;
 - (void)dealloc;
-- (id)initWithCosmosDataLoader:(id)arg1 collectionLogger:(id)arg2 collectionStateProvider:(id)arg3 collectionTestManager:(id)arg4 metaViewController:(id)arg5 alertInterface:(id)arg6;
+- (id)initWithCosmosDataLoader:(id)arg1 collectionLogger:(id)arg2 collectionStateProvider:(id)arg3 collectionTestManager:(id)arg4 alertInterface:(id)arg5;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

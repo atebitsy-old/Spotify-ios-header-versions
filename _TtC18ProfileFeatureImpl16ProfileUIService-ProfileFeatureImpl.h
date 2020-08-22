@@ -9,6 +9,5 @@
 @interface _TtC18ProfileFeatureImpl16ProfileUIService (ProfileFeatureImpl)
 + (id)serviceIdentifier;
 - (void)load;
-- (void)configureWithServices:(id)arg1;
 @end
 

@@ -17,6 +17,8 @@
     _Bool _solidHeaderBackground;
     _Bool _isErrorLoggingEnabled;
     _Bool _homeLoadingDebuggerEnabled;
+    _Bool _improvedViewLoadSequenceInstrumentation;
+    _Bool _observeAppForeBackgrounding;
     unsigned long long _listeningHistory;
     NSString *_listeningHistoryString;
 }
@@ -24,6 +26,8 @@
 - (void).cxx_destruct;
 @property(retain, nonatomic) NSString *listeningHistoryString; // @synthesize listeningHistoryString=_listeningHistoryString;
 @property(readonly, nonatomic) unsigned long long listeningHistory; // @synthesize listeningHistory=_listeningHistory;
+@property(readonly, nonatomic) _Bool observeAppForeBackgrounding; // @synthesize observeAppForeBackgrounding=_observeAppForeBackgrounding;
+@property(readonly, nonatomic) _Bool improvedViewLoadSequenceInstrumentation; // @synthesize improvedViewLoadSequenceInstrumentation=_improvedViewLoadSequenceInstrumentation;
 @property(readonly, nonatomic) _Bool homeLoadingDebuggerEnabled; // @synthesize homeLoadingDebuggerEnabled=_homeLoadingDebuggerEnabled;
 @property(readonly, nonatomic) _Bool isErrorLoggingEnabled; // @synthesize isErrorLoggingEnabled=_isErrorLoggingEnabled;
 @property(readonly, nonatomic) _Bool solidHeaderBackground; // @synthesize solidHeaderBackground=_solidHeaderBackground;

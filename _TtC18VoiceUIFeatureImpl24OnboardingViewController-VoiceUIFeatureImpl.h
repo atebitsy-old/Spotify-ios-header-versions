@@ -6,7 +6,9 @@
 
 #import "_TtC18VoiceUIFeatureImpl24OnboardingViewController.h"
 
-@interface _TtC18VoiceUIFeatureImpl24OnboardingViewController (VoiceUIFeatureImpl)
+#import "SPTMetaViewControllerPresentable-Protocol.h"
+
+@interface _TtC18VoiceUIFeatureImpl24OnboardingViewController (VoiceUIFeatureImpl) <SPTMetaViewControllerPresentable>
 @property(nonatomic, readonly) long long presentationStyle;
 @end
 

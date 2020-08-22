@@ -157,7 +157,6 @@
 @property(readonly, nonatomic, getter=isGroupLabelAvailable) _Bool groupLabelAvailable;
 @property(readonly, nonatomic) long long quickScrollMinPages;
 @property(readonly, nonatomic) _Bool quickScrollUseDarkStyle;
-@property(readonly, nonatomic) unsigned long long quickScrollMechanism;
 @property(readonly, nonatomic, getter=isEmpty) _Bool empty;
 @property(readonly, nonatomic, getter=isLoaded) _Bool loaded;
 - (id)initWithModel:(id)arg1 contextMenuFeature:(id)arg2 playOrigin:(id)arg3 player:(id)arg4 offlineModeState:(id)arg5 logger:(id)arg6 testManager:(id)arg7 sortingFilteringPickerFactory:(id)arg8 audioPreviewPlayer:(id)arg9 collectionPlatformConfigurator:(id)arg10 alertInterface:(id)arg11;

@@ -9,6 +9,7 @@
 @interface _TtC26PlaylistCuratorFeatureImpl21PlaylistCuratorClient : NSObject
 {
     // Error parsing type: , name: dataLoader
+    // Error parsing type: , name: decoder
 }
 
 - (void).cxx_destruct;

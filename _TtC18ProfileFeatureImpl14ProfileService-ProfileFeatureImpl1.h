@@ -10,6 +10,5 @@
 + (id)serviceIdentifier;
 - (void)unload;
 - (void)load;
-- (void)configureWithServices:(id)arg1;
 @end
 

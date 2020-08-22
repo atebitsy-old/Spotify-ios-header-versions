@@ -6,9 +6,10 @@
 
 #import "NSObject-Protocol.h"
 
+@class UIViewController;
 @protocol SPTSharingSDKShareDialogPresenterData;
 
 @protocol SPTSharingSDKShareDialogPresenter <NSObject>
-- (void)presentShareDialogWithShareableData:(id <SPTSharingSDKShareDialogPresenterData>)arg1 completionHandler:(void (^)(_Bool, NSError *, _Bool))arg2;
+- (void)presentShareDialogWithShareableData:(id <SPTSharingSDKShareDialogPresenterData>)arg1 contextViewController:(UIViewController *)arg2 completionHandler:(void (^)(_Bool, NSError *, _Bool))arg3;
 @end
 

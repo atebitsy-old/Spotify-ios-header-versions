@@ -30,7 +30,7 @@
 - (void)deleteContentDownloadedFromMediaURL:(id)arg1;
 - (id)localFilePathForMediaURL:(id)arg1;
 - (_Bool)isContentDownloadedFromMediaURL:(id)arg1;
-- (void)didFinishDownloadingContentFromMediaURL:(id)arg1 toRelativeLocation:(id)arg2;
+- (void)didCompleteDownloadFromMediaURL:(id)arg1 toRelativeLocation:(id)arg2;
 - (void)restoreCompletedDownloads;
 - (id)initWithFileManager:(id)arg1 userDefaults:(id)arg2 delegate:(id)arg3;
 

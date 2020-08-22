@@ -17,6 +17,7 @@
     // Error parsing type: , name: playerService
     // Error parsing type: , name: singalongService
     // Error parsing type: , name: ubiService
+    // Error parsing type: , name: uiPresentationService
     // Error parsing type: , name: colorLyricsDataLoader
     // Error parsing type: , name: $__lazy_storage_$_player
 }

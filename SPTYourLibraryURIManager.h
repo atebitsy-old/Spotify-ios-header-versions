@@ -16,13 +16,16 @@
     id <SPTYourLibraryModel> _model;
     id <SPTYourLibraryTestManager> _testManager;
     NSArray *_pageProviders;
+    CDUnknownBlockType _yourLibraryExperienceActive;
 }
 
 - (void).cxx_destruct;
+@property(copy, nonatomic) CDUnknownBlockType yourLibraryExperienceActive; // @synthesize yourLibraryExperienceActive=_yourLibraryExperienceActive;
 @property(copy, nonatomic) NSArray *pageProviders; // @synthesize pageProviders=_pageProviders;
 @property(retain, nonatomic) id <SPTYourLibraryTestManager> testManager; // @synthesize testManager=_testManager;
 @property(retain, nonatomic) id <SPTYourLibraryModel> model; // @synthesize model=_model;
 - (void)yourLibraryModel:(id)arg1 didUpdatePageProviders:(id)arg2 groupData:(id)arg3;
+- (_Bool)providerClaimsURI:(id)arg1;
 - (_Bool)claimsURI:(id)arg1;
 - (id)initWithModel:(id)arg1 testManager:(id)arg2;
 

@@ -18,6 +18,7 @@
     _Bool _pausedPlayback;
     _Bool _firstCardScheduled;
     _Bool _loggedUIPageImpression;
+    _Bool _backgrounded;
     SPTGeniusService *_geniusService;
     id <SPTPlayer> _player;
     SPTGeniusLoggingService *_loggingService;
@@ -29,18 +30,21 @@
     SPTGeniusCardContainerView *_cardContainerView;
     UIView *_currentCard;
     SPTGeniusAnnotation *_currentAnnotation;
+    SPTGeniusAnnotation *_lastLoggedAnnotation;
     NSTimer *_timer;
     double _nextTimestamp;
     double _currentTimestamp;
 }
 
 - (void).cxx_destruct;
+@property(nonatomic, getter=isBackgrounded) _Bool backgrounded; // @synthesize backgrounded=_backgrounded;
 @property(nonatomic) _Bool loggedUIPageImpression; // @synthesize loggedUIPageImpression=_loggedUIPageImpression;
 @property(nonatomic) _Bool firstCardScheduled; // @synthesize firstCardScheduled=_firstCardScheduled;
 @property(nonatomic) _Bool pausedPlayback; // @synthesize pausedPlayback=_pausedPlayback;
 @property(nonatomic) double currentTimestamp; // @synthesize currentTimestamp=_currentTimestamp;
 @property(nonatomic) double nextTimestamp; // @synthesize nextTimestamp=_nextTimestamp;
 @property(retain, nonatomic) NSTimer *timer; // @synthesize timer=_timer;
+@property(retain, nonatomic) SPTGeniusAnnotation *lastLoggedAnnotation; // @synthesize lastLoggedAnnotation=_lastLoggedAnnotation;
 @property(retain, nonatomic) SPTGeniusAnnotation *currentAnnotation; // @synthesize currentAnnotation=_currentAnnotation;
 @property(retain, nonatomic) UIView *currentCard; // @synthesize currentCard=_currentCard;
 @property(retain, nonatomic) SPTGeniusCardContainerView *cardContainerView; // @synthesize cardContainerView=_cardContainerView;
@@ -57,6 +61,11 @@
 - (void)didTapButtonWithGeniusSongID:(long long)arg1 itemIndex:(int)arg2;
 - (void)handleNewPlayerState:(id)arg1;
 - (void)player:(id)arg1 stateDidChange:(id)arg2;
+- (void)applicationWillEnterForeground;
+- (void)applicationDidEnterBackground;
+- (void)unregisterForBackgroundNotifications;
+- (void)registerForBackgroundNotifications;
+- (void)logCurrentAnnotationImpression;
 - (void)showCardAtTime:(double)arg1;
 - (long long)getCurrentAnnotationIndex;
 - (void)showNextCardWithDelay:(double)arg1;
@@ -70,6 +79,7 @@
 - (void)viewDidDisappear:(_Bool)arg1;
 - (void)viewWillAppear:(_Bool)arg1;
 - (void)viewDidLoad;
+- (void)dealloc;
 - (id)initWithGeniusService:(id)arg1 loggingService:(id)arg2 player:(id)arg3 imageLoaderFactory:(id)arg4 linkDispatcher:(id)arg5;
 
 // Remaining properties

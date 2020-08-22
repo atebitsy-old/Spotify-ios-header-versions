@@ -11,7 +11,7 @@
 #import "SPTPodcastEpisodeCellActionTarget-Protocol.h"
 
 @class NSString, NSURL;
-@protocol SPTFreeTierPlaylistCellProviderDelegate, SPTFreeTierPlaylistItemsViewModel, SPTFreeTierPlaylistLogger, SPTFreeTierPlaylistPlayModel, SPTFreeTierPlaylistPodcastCellStateFactory, SPTLinkDispatcher, SPTPlayer, SPTPodcastEpisodeCellActionHandlerDelegate, SPTPodcastEpisodeCellActionHandlerEpisodeProvider, SPTPodcastEpisodeCellConfigurator, SPTPodcastOffliningManager;
+@protocol SPTFreeTierPlaylistCellProviderDelegate, SPTFreeTierPlaylistItemsViewModel, SPTFreeTierPlaylistLogger, SPTFreeTierPlaylistPlayModel, SPTFreeTierPlaylistPodcastCellStateFactory, SPTLinkDispatcher, SPTPlayer, SPTPodcastEpisodeCellActionHandlerDelegate, SPTPodcastEpisodeCellActionHandlerEpisodeProvider, SPTPodcastEpisodeCellConfigurator, SPTPodcastOffliningManager, SPTProductState;
 
 @interface SPTFreeTierPlaylistPodcastCellProvider : NSObject <SPTFreeTierPlaylistCellProvider, SPTFreeTierPlaylistCellProviderV2, SPTPodcastEpisodeCellActionTarget>
 {
@@ -25,9 +25,11 @@
     id <SPTFreeTierPlaylistItemsViewModel> _itemsViewModel;
     id <SPTPodcastOffliningManager> _podcastOffliningManager;
     id <SPTFreeTierPlaylistLogger> _logger;
+    id <SPTProductState> _productState;
 }
 
 - (void).cxx_destruct;
+@property(readonly, nonatomic) id <SPTProductState> productState; // @synthesize productState=_productState;
 @property(readonly, nonatomic) id <SPTFreeTierPlaylistLogger> logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic) id <SPTPodcastOffliningManager> podcastOffliningManager; // @synthesize podcastOffliningManager=_podcastOffliningManager;
 @property(nonatomic) __weak id <SPTFreeTierPlaylistItemsViewModel> itemsViewModel; // @synthesize itemsViewModel=_itemsViewModel;
@@ -62,7 +64,7 @@
 - (void)configurePlaylistCell:(id)arg1 forRowAtIndexPath:(id)arg2;
 - (_Bool)handlesItem:(id)arg1 indexPath:(id)arg2;
 - (_Bool)handlesCellAtIndexPath:(id)arg1;
-- (id)initWithCellConfigurator:(id)arg1 cellStateFactory:(id)arg2 player:(id)arg3 itemsViewModel:(id)arg4 podcastOffliningManager:(id)arg5 linkDispatcher:(id)arg6 playlistURL:(id)arg7 playModel:(id)arg8 logger:(id)arg9;
+- (id)initWithCellConfigurator:(id)arg1 cellStateFactory:(id)arg2 player:(id)arg3 itemsViewModel:(id)arg4 podcastOffliningManager:(id)arg5 linkDispatcher:(id)arg6 playlistURL:(id)arg7 playModel:(id)arg8 productState:(id)arg9 logger:(id)arg10;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

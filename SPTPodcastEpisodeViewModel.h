@@ -9,7 +9,7 @@
 #import "SPTPodcastPlayerDelegate-Protocol.h"
 
 @class NSArray, NSString, NSURL, SPTPodcastEpisodeFeatureProperties;
-@protocol SPTAbbaFeatureFlags, SPTCollectionLogger, SPTCollectionPlatform, SPTExplicitContentAccessManager, SPTLinkDispatcher, SPTPodcast, SPTPodcastDataLoader, SPTPodcastDataLoaderRequestToken, SPTPodcastEpisode, SPTPodcastEpisodeFactory, SPTPodcastEpisodePlayerContextParameters, SPTPodcastEpisodeViewModelDelegate, SPTPodcastFactory, SPTPodcastOffliningManager, SPTPodcastPlayer, SPTPodcastRequestFactory, SPTPodcastUIStringFormatter, SPTShareEntityData, SPTShareEntityDataFactory;
+@protocol SPTCollectionLogger, SPTCollectionPlatform, SPTExplicitContentAccessManager, SPTLinkDispatcher, SPTPodcast, SPTPodcastDataLoader, SPTPodcastDataLoaderRequestToken, SPTPodcastEpisode, SPTPodcastEpisodeFactory, SPTPodcastEpisodePlayerContextParameters, SPTPodcastEpisodeViewModelDelegate, SPTPodcastFactory, SPTPodcastOffliningManager, SPTPodcastPlayer, SPTPodcastRequestFactory, SPTPodcastUIStringFormatter, SPTShareEntityData, SPTShareEntityDataFactory;
 
 @interface SPTPodcastEpisodeViewModel : NSObject <SPTPodcastPlayerDelegate>
 {
@@ -29,7 +29,6 @@
     id <SPTPodcastFactory> _podcastFactory;
     id <SPTPodcastUIStringFormatter> _stringFormatter;
     id <SPTPodcastPlayer> _player;
-    id <SPTAbbaFeatureFlags> _featureFlags;
     id <SPTExplicitContentAccessManager> _explicitContentAccessManager;
     id <SPTPodcast> _podcast;
     id <SPTLinkDispatcher> _linkDispatcher;
@@ -55,7 +54,6 @@
 @property(retain, nonatomic) id <SPTPodcast> podcast; // @synthesize podcast=_podcast;
 @property(nonatomic) _Bool reversePlaybackOrder; // @synthesize reversePlaybackOrder=_reversePlaybackOrder;
 @property(readonly, nonatomic) id <SPTExplicitContentAccessManager> explicitContentAccessManager; // @synthesize explicitContentAccessManager=_explicitContentAccessManager;
-@property(retain, nonatomic) id <SPTAbbaFeatureFlags> featureFlags; // @synthesize featureFlags=_featureFlags;
 @property(retain, nonatomic) id <SPTPodcastPlayer> player; // @synthesize player=_player;
 @property(retain, nonatomic) id <SPTPodcastUIStringFormatter> stringFormatter; // @synthesize stringFormatter=_stringFormatter;
 @property(retain, nonatomic) id <SPTPodcastFactory> podcastFactory; // @synthesize podcastFactory=_podcastFactory;

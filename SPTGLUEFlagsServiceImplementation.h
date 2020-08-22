@@ -9,19 +9,23 @@
 #import "SPTGLUEFlagsService-Protocol.h"
 #import "SPTService-Protocol.h"
 
-@class NSString, SPTAllocationContext;
-@protocol SPTAbbaService, SPTSessionService, SPTSettingsFeature;
+@class NSString, SPTAllocationContext, SPTGLUEFeatureProperties;
+@protocol SPTAbbaService, SPTRemoteConfigurationService, SPTSessionService, SPTSettingsFeature;
 
 @interface SPTGLUEFlagsServiceImplementation : NSObject <SPTGLUEFlagsService, SPTService>
 {
     id <SPTAbbaService> _abbaService;
     id <SPTSessionService> _clientSessionService;
+    id <SPTRemoteConfigurationService> _remoteConfigurationService;
     id <SPTSettingsFeature> _settingsFeature;
+    SPTGLUEFeatureProperties *_properties;
 }
 
 + (id)serviceIdentifier;
 - (void).cxx_destruct;
+@property(retain, nonatomic) SPTGLUEFeatureProperties *properties; // @synthesize properties=_properties;
 @property(nonatomic) __weak id <SPTSettingsFeature> settingsFeature; // @synthesize settingsFeature=_settingsFeature;
+@property(nonatomic) __weak id <SPTRemoteConfigurationService> remoteConfigurationService; // @synthesize remoteConfigurationService=_remoteConfigurationService;
 @property(nonatomic) __weak id <SPTSessionService> clientSessionService; // @synthesize clientSessionService=_clientSessionService;
 @property(nonatomic) __weak id <SPTAbbaService> abbaService; // @synthesize abbaService=_abbaService;
 - (void)addMotionItemToPage:(id)arg1 featureSettingsItemFactory:(id)arg2;

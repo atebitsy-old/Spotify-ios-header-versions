@@ -17,7 +17,6 @@
     _Bool _podcastNewPlaybackSpeedsEnabled;
     _Bool _podcastNewEpisodeNotificationsEnabled;
     _Bool _podcastShowPageSearchEnabled;
-    _Bool _podcastShowPageHtmlDescriptionEnabled;
     _Bool _podcastTopicsInShowRequestEnabled;
     _Bool _podcastShowPageLoaderEnabled;
     _Bool _podcastDalProtobufEnabled;
@@ -39,7 +38,6 @@
 @property(readonly, nonatomic) _Bool podcastDalProtobufEnabled; // @synthesize podcastDalProtobufEnabled=_podcastDalProtobufEnabled;
 @property(readonly, nonatomic) _Bool podcastShowPageLoaderEnabled; // @synthesize podcastShowPageLoaderEnabled=_podcastShowPageLoaderEnabled;
 @property(readonly, nonatomic) _Bool podcastTopicsInShowRequestEnabled; // @synthesize podcastTopicsInShowRequestEnabled=_podcastTopicsInShowRequestEnabled;
-@property(readonly, nonatomic) _Bool podcastShowPageHtmlDescriptionEnabled; // @synthesize podcastShowPageHtmlDescriptionEnabled=_podcastShowPageHtmlDescriptionEnabled;
 @property(readonly, nonatomic) _Bool podcastShowPageSearchEnabled; // @synthesize podcastShowPageSearchEnabled=_podcastShowPageSearchEnabled;
 @property(readonly, nonatomic) _Bool podcastNewEpisodeNotificationsEnabled; // @synthesize podcastNewEpisodeNotificationsEnabled=_podcastNewEpisodeNotificationsEnabled;
 @property(readonly, nonatomic) _Bool podcastNewPlaybackSpeedsEnabled; // @synthesize podcastNewPlaybackSpeedsEnabled=_podcastNewPlaybackSpeedsEnabled;

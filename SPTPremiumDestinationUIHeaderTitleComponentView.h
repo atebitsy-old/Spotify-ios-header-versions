@@ -21,6 +21,7 @@
 @property(retain, nonatomic) GLUELabel *label; // @synthesize label=_label;
 @property(retain, nonatomic) SPTPremiumDestinationUIHeaderTitleStyle *style; // @synthesize style=_style;
 @property(retain, nonatomic) SPTPremiumDestinationUIGLUETheme *theme; // @synthesize theme=_theme;
+- (long long)getTextAlignmentFromModel:(id)arg1;
 - (void)prepareForReuse;
 - (void)configureWithModel:(id)arg1;
 - (void)addLayoutConstraints;

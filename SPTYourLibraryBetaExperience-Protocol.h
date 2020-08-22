@@ -4,10 +4,12 @@
 //     class-dump is Copyright (C) 1997-1998, 2000-2001, 2004-2015 by Steve Nygard.
 //
 
-@class NSString, UIViewController;
+@class NSString, NSURL, UIViewController;
 @protocol SPTPageController, SPTPageCreationContext;
 
 @protocol SPTYourLibraryBetaExperience
+- (void)handleWithURI:(NSURL *)arg1;
+- (_Bool)claimsWithURI:(NSURL *)arg1;
 - (UIViewController<SPTPageController> *)provideViewControllerWithPageCreationContext:(id <SPTPageCreationContext>)arg1;
 - (void)startExperience;
 - (void)stopExperience;

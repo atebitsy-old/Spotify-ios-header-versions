@@ -57,7 +57,7 @@
 - (void)loadMetadataForAlbums:(id)arg1;
 - (void)subscribeToAlbumCollectionState;
 - (void)loadItemsForRange:(struct _NSRange)arg1 sortRules:(id)arg2 filterRules:(id)arg3 textFilter:(id)arg4;
-@property(readonly, nonatomic) NSArray *sectionIndices;
+- (id)sectionIndices;
 @property(readonly, nonatomic) NSURL *serviceURL;
 - (id)initWithDataLoader:(id)arg1 collectionPlatform:(id)arg2 type:(unsigned long long)arg3 featureProperties:(id)arg4;
 

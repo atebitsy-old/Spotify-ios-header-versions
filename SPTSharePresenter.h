@@ -40,7 +40,7 @@
 @property(readonly, nonatomic) __weak id <SPTShareUBILogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
 @property(readonly, nonatomic) __weak id <SPTPageController> pageController; // @synthesize pageController=_pageController;
 @property(readonly, nonatomic) __weak id <SPTShareEventSenderLogger> shareEventSenderLogger; // @synthesize shareEventSenderLogger=_shareEventSenderLogger;
-@property(readonly, nonatomic) SPTSharingSDK *sharingSDK; // @synthesize sharingSDK=_sharingSDK;
+@property(readonly, nonatomic) __weak SPTSharingSDK *sharingSDK; // @synthesize sharingSDK=_sharingSDK;
 @property(retain, nonatomic) id <SPTShareHandler> shareHandler; // @synthesize shareHandler=_shareHandler;
 @property(retain, nonatomic) id <SPTSharingSDKDeeplinkHandler> deeplinkHandler; // @synthesize deeplinkHandler=_deeplinkHandler;
 @property(readonly, nonatomic) id <SPTAlertController> alertController; // @synthesize alertController=_alertController;

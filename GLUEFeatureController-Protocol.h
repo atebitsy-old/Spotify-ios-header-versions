@@ -5,6 +5,7 @@
 //
 
 @protocol GLUEFeatureController
+@property _Bool generatedIconFontEnabled;
 @property _Bool motionEnabled;
 - (void)enableModernFeatures;
 - (void)resetRolloutStatuses;

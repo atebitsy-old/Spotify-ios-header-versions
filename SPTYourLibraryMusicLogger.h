@@ -63,7 +63,6 @@
 - (void)logCreatePlaylistButton;
 - (void)logLikedSongsWithURL:(id)arg1;
 - (void)logToggleCollapseSection:(unsigned long long)arg1 collapsed:(_Bool)arg2;
-- (void)logSectionIndexSelected;
 - (void)logQuickScrollDragEnded;
 - (void)logQuickScrollDragStarted;
 - (void)logHiddenContentWithURL:(id)arg1;

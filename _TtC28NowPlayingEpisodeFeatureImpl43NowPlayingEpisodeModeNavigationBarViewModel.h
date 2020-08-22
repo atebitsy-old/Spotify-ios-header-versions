@@ -9,7 +9,9 @@
 @interface _TtC28NowPlayingEpisodeFeatureImpl43NowPlayingEpisodeModeNavigationBarViewModel : NSObject
 {
     // Error parsing type: , name: episodePlayer
+    // Error parsing type: , name: podcastEntityDataLoader
     // Error parsing type: , name: delegate
+    // Error parsing type: , name: currentEpisode
 }
 
 - (void).cxx_destruct;

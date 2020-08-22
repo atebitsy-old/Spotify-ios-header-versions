@@ -11,8 +11,6 @@
 
 @protocol SPTYourLibraryMusicPlaylistsModelEntity <NSObject>
 @property(readonly, copy, nonatomic) NSArray *itemFilters;
-@property(readonly, copy, nonatomic) NSArray *sectionTitles;
-@property(readonly, copy, nonatomic) NSArray *sectionIndexes;
 @property(readonly, nonatomic) _Bool hasHiddenContent;
 @property(readonly, nonatomic) id <SPTYourLibraryMusicPlaylistModelItemEntity> offlineMixEntity;
 @property(readonly, nonatomic) id <SPTYourLibraryMusicPlaylistModelItemEntity> favoriteEntity;

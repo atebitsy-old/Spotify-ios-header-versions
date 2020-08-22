@@ -14,11 +14,13 @@
     // Error parsing type: , name: showTitle
     // Error parsing type: , name: coverArtUri
     // Error parsing type: , name: isPlaying
+    // Error parsing type: , name: progress
 }
 
 - (void).cxx_destruct;
 - (id)init;
-- (id)initWithEpisodeTitle:(id)arg1 showTitle:(id)arg2 coverArtUri:(id)arg3 isPlaying:(_Bool)arg4;
+- (id)initWithEpisodeTitle:(id)arg1 showTitle:(id)arg2 coverArtUri:(id)arg3 isPlaying:(_Bool)arg4 progress:(float)arg5;
+@property(nonatomic, readonly) float progress; // @synthesize progress;
 @property(nonatomic, readonly) _Bool isPlaying; // @synthesize isPlaying;
 @property(nonatomic, readonly) NSURL *coverArtUri;
 @property(nonatomic, readonly) NSString *showTitle;

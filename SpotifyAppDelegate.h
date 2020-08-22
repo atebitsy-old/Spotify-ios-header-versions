@@ -11,53 +11,43 @@
 #import "UNUserNotificationCenterDelegate-Protocol.h"
 #import "_TtP16SPTServiceSystem30SPTServiceOrchestratorDelegate_-Protocol.h"
 
-@class NSMutableDictionary, NSString, SPTApplicationDelegateLogger, SPTCookieStorageManager, SPTDeferredBlockDispatcher, SPTLogCenterImplementation, SPTPerfTracingSignpostObserver, SPTPlayModeMonitor, SPTStartupTracer, UIWindow, _TtC16SPTServiceSystem22SPTServiceOrchestrator;
-@protocol OS_os_log, SPTAppStartupController, SPTCrashReporter, SPTEmailUniversalLinkResolverDelegate, SPTLinkDispatcher, SPTMetaViewController, SPTNotificationSystemDelegate, SPTReminderHandlerService, SPTThirdPartyTrackerBroadcaster, SPTUserActivityController;
+@class NSString, SPTApplicationDelegateLogger, SPTCookieStorageManager, SPTDeferredBlockDispatcher, SPTKernelPerformanceTracker, SPTLogCenterImplementation, UIWindow, _TtC16SPTServiceSystem22SPTServiceOrchestrator;
+@protocol SPTAppStartupController, SPTCrashReporter, SPTEmailUniversalLinkResolverDelegate, SPTLinkDispatcher, SPTNotificationSystemDelegate, SPTReminderHandlerService, SPTThirdPartyTrackerBroadcaster, SPTUserActivityController;
 
 @interface SpotifyAppDelegate : NSObject <_TtP16SPTServiceSystem30SPTServiceOrchestratorDelegate_, SPTAppStartupControllerDelegate, UNUserNotificationCenterDelegate, UIApplicationDelegate>
 {
-    id <SPTAppStartupController> _appStartupController;
     UIWindow *_window;
-    NSObject<OS_os_log> *_lifecycleLog;
-    NSObject<OS_os_log> *_serviceSystemLog;
+    id <SPTAppStartupController> _appStartupController;
+    _TtC16SPTServiceSystem22SPTServiceOrchestrator *_serviceOrchestrator;
+    SPTLogCenterImplementation *_logCenter;
+    SPTKernelPerformanceTracker *_perfTracker;
+    id <SPTNotificationSystemDelegate> _notificationDelegate;
+    id <SPTEmailUniversalLinkResolverDelegate> _emailUniversalLinkResolverDelegate;
     id <SPTCrashReporter> _crashReporter;
     id <SPTUserActivityController> _userActivityController;
-    SPTPlayModeMonitor *_playModeMonitor;
     id <SPTLinkDispatcher> _linkDispatcher;
     id <SPTThirdPartyTrackerBroadcaster> _trackerBroadcaster;
     SPTApplicationDelegateLogger *_appDelegateLogger;
     SPTCookieStorageManager *_cookieStorageManager;
-    id <SPTMetaViewController> _metaViewController;
     SPTDeferredBlockDispatcher *_deferredBlockDispatcher;
     id <SPTReminderHandlerService> _reminderHandlerService;
-    SPTPerfTracingSignpostObserver *_perfTracingObserver;
-    NSMutableDictionary *_scopeSignpostIDs;
-    _TtC16SPTServiceSystem22SPTServiceOrchestrator *_serviceOrchestrator;
-    SPTLogCenterImplementation *_logCenter;
-    SPTStartupTracer *_startupTracer;
-    id <SPTNotificationSystemDelegate> _notificationDelegate;
-    id <SPTEmailUniversalLinkResolverDelegate> _emailUniversalLinkResolverDelegate;
 }
 
 + (id)appDelegate;
 - (void).cxx_destruct;
-@property(nonatomic) __weak id <SPTEmailUniversalLinkResolverDelegate> emailUniversalLinkResolverDelegate; // @synthesize emailUniversalLinkResolverDelegate=_emailUniversalLinkResolverDelegate;
-@property(nonatomic) __weak id <SPTNotificationSystemDelegate> notificationDelegate; // @synthesize notificationDelegate=_notificationDelegate;
-@property(retain, nonatomic) SPTStartupTracer *startupTracer; // @synthesize startupTracer=_startupTracer;
-@property(retain, nonatomic) SPTLogCenterImplementation *logCenter; // @synthesize logCenter=_logCenter;
-@property(retain, nonatomic) _TtC16SPTServiceSystem22SPTServiceOrchestrator *serviceOrchestrator; // @synthesize serviceOrchestrator=_serviceOrchestrator;
-@property(readonly, nonatomic) NSMutableDictionary *scopeSignpostIDs; // @synthesize scopeSignpostIDs=_scopeSignpostIDs;
-@property(retain, nonatomic) SPTPerfTracingSignpostObserver *perfTracingObserver; // @synthesize perfTracingObserver=_perfTracingObserver;
 @property(nonatomic) __weak id <SPTReminderHandlerService> reminderHandlerService; // @synthesize reminderHandlerService=_reminderHandlerService;
 @property(retain, nonatomic) SPTDeferredBlockDispatcher *deferredBlockDispatcher; // @synthesize deferredBlockDispatcher=_deferredBlockDispatcher;
-@property(retain, nonatomic) id <SPTMetaViewController> metaViewController; // @synthesize metaViewController=_metaViewController;
 @property(retain, nonatomic) SPTCookieStorageManager *cookieStorageManager; // @synthesize cookieStorageManager=_cookieStorageManager;
 @property(retain, nonatomic) SPTApplicationDelegateLogger *appDelegateLogger; // @synthesize appDelegateLogger=_appDelegateLogger;
 @property(retain, nonatomic) id <SPTThirdPartyTrackerBroadcaster> trackerBroadcaster; // @synthesize trackerBroadcaster=_trackerBroadcaster;
 @property(retain, nonatomic) id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
-@property(retain, nonatomic) SPTPlayModeMonitor *playModeMonitor; // @synthesize playModeMonitor=_playModeMonitor;
 @property(retain, nonatomic) id <SPTUserActivityController> userActivityController; // @synthesize userActivityController=_userActivityController;
 @property(retain, nonatomic) id <SPTCrashReporter> crashReporter; // @synthesize crashReporter=_crashReporter;
+@property(nonatomic) __weak id <SPTEmailUniversalLinkResolverDelegate> emailUniversalLinkResolverDelegate; // @synthesize emailUniversalLinkResolverDelegate=_emailUniversalLinkResolverDelegate;
+@property(nonatomic) __weak id <SPTNotificationSystemDelegate> notificationDelegate; // @synthesize notificationDelegate=_notificationDelegate;
+@property(retain, nonatomic) SPTKernelPerformanceTracker *perfTracker; // @synthesize perfTracker=_perfTracker;
+@property(retain, nonatomic) SPTLogCenterImplementation *logCenter; // @synthesize logCenter=_logCenter;
+@property(retain, nonatomic) _TtC16SPTServiceSystem22SPTServiceOrchestrator *serviceOrchestrator; // @synthesize serviceOrchestrator=_serviceOrchestrator;
 @property(retain, nonatomic) UIWindow *window; // @synthesize window=_window;
 - (void)loadSessionScopeServices;
 - (void)idleStateWasReachedForAppStartupController:(id)arg1;
@@ -74,18 +64,15 @@
 - (void)userWillLogOut;
 - (void)applyThemeAppearance;
 - (void)setupTheme;
-@property(readonly, nonatomic) NSObject<OS_os_log> *serviceSystemLog; // @synthesize serviceSystemLog=_serviceSystemLog;
-@property(readonly, nonatomic) NSObject<OS_os_log> *lifecycleLog; // @synthesize lifecycleLog=_lifecycleLog;
 @property(readonly, nonatomic) id <SPTAppStartupController> appStartupController; // @synthesize appStartupController=_appStartupController;
 - (void)removePlainTextFBToken;
 - (void)performVersionMigrations;
+- (void)handleInitialURL;
 - (void)setupAndShowMainWindow;
 - (void)startReceivingRemoteControlEvents;
 - (_Bool)handleLaunchOptions:(id)arg1;
 - (void)addCrashReporterHooks;
 - (void)setupInstanceVariables;
-- (void)configureTracing;
-- (void)setupColdStartTracking;
 - (void)setupLogging;
 - (void)userNotificationCenter:(id)arg1 openSettingsForNotification:(id)arg2;
 - (void)userNotificationCenter:(id)arg1 didReceiveNotificationResponse:(id)arg2 withCompletionHandler:(CDUnknownBlockType)arg3;

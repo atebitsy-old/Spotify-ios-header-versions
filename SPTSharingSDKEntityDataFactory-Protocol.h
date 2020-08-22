@@ -13,7 +13,7 @@
 - (id <SPTSharingSDKEntityData>)provideGradientStoryEntityDataWithSpotifyURIString:(NSString *)arg1 extraQueryItems:(NSSet *)arg2 fallbackShareableURL:(NSURL *)arg3 utmTag:(SPTSharingSDKUTMTag *)arg4;
 - (id <SPTSharingSDKEntityData>)provideImageStoryEntityDataWithSpotifyURIString:(NSString *)arg1 image:(UIImage *)arg2 extraQueryItems:(NSSet *)arg3 fallbackShareableURL:(NSURL *)arg4 utmTag:(SPTSharingSDKUTMTag *)arg5;
 - (id <SPTSharingSDKEntityData>)provideVideoStoryEntityDataWithSpotifyURIString:(NSString *)arg1 video:(NSData *)arg2 extraQueryItems:(NSSet *)arg3 fallbackShareableURL:(NSURL *)arg4 utmTag:(SPTSharingSDKUTMTag *)arg5;
-- (id <SPTSharingSDKEntityData>)provideImageEntityDataWithSpotifyURIString:(NSString *)arg1 image:(UIImage *)arg2;
+- (id <SPTSharingSDKEntityData>)provideImageEntityDataWithSpotifyURIString:(NSString *)arg1 image:(UIImage *)arg2 text:(NSString *)arg3 extraQueryItems:(NSSet *)arg4 fallbackShareableURL:(NSURL *)arg5 utmTag:(SPTSharingSDKUTMTag *)arg6;
 - (id <SPTSharingSDKEntityData>)provideMessageEntityDataWithSpotifyURIString:(NSString *)arg1 text:(NSString *)arg2 extraQueryItems:(NSSet *)arg3 fallbackShareableURL:(NSURL *)arg4 utmTag:(SPTSharingSDKUTMTag *)arg5 excludedActivityTypes:(NSArray *)arg6;
 - (id <SPTSharingSDKEntityData>)provideLinkEntityDataWithSpotifyURIString:(NSString *)arg1 extraQueryItems:(NSSet *)arg2 fallbackShareableURL:(NSURL *)arg3 utmTag:(SPTSharingSDKUTMTag *)arg4 excludedActivityTypes:(NSArray *)arg5;
 @end

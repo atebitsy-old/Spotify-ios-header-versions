@@ -46,7 +46,7 @@
 @property(retain, nonatomic) id <GLUEImageLoader> imageLoader; // @synthesize imageLoader=_imageLoader;
 - (id)explicitLabelStyle;
 - (id)providePlaceholderImage;
-- (void)updateProgressVisibility:(_Bool)arg1;
+- (void)updatePlayedStateVisibility:(_Bool)arg1;
 - (id)defineDurationTextColor:(_Bool)arg1;
 - (id)defineTitleColor:(_Bool)arg1;
 - (void)updateWithViewModel:(id)arg1;

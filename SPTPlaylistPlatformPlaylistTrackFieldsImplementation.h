@@ -23,6 +23,7 @@
     _Bool _isPremiumOnly;
     _Bool _isBackgroundable;
     _Bool _isEpisode;
+    _Bool _isMusicAndTalk;
     _Bool _isPlayed;
     NSString *_name;
     NSURL *_URL;
@@ -55,6 +56,7 @@
 @property(nonatomic) _Bool isPlayed; // @synthesize isPlayed=_isPlayed;
 @property(nonatomic) double timeLeft; // @synthesize timeLeft=_timeLeft;
 @property(nonatomic) double duration; // @synthesize duration=_duration;
+@property(nonatomic) _Bool isMusicAndTalk; // @synthesize isMusicAndTalk=_isMusicAndTalk;
 @property(nonatomic) _Bool isEpisode; // @synthesize isEpisode=_isEpisode;
 @property(retain, nonatomic) NSDate *publishDate; // @synthesize publishDate=_publishDate;
 @property(copy, nonatomic) NSString *showName; // @synthesize showName=_showName;

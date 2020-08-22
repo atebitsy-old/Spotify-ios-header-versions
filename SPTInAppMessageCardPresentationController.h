@@ -11,7 +11,7 @@
 #import "SPTSlateDataSource-Protocol.h"
 #import "SPTSlateDelegate-Protocol.h"
 
-@class NSDictionary, NSString, SPTInAppMessageServiceLogger, UIView;
+@class NSDictionary, NSNotificationCenter, NSString, SPTInAppMessageServiceLogger, UIView;
 @protocol SPTAuthController, SPTCarDetector, SPTCrashReporter, SPTInAppMessageSDKMessageViewModel, SPTOfflineModeState, SPTSlate, SPTSlateBuilderProvider, SPTSlateManager;
 
 @interface SPTInAppMessageCardPresentationController : NSObject <SPTSlateDelegate, SPTSlateDataSource, SPTOfflineModeStateObserver, SPTInAppMessagePresenter>
@@ -27,6 +27,7 @@
     id <SPTOfflineModeState> _offlineModeState;
     id <SPTCarDetector> _carDetector;
     SPTInAppMessageServiceLogger *_serviceLogger;
+    NSNotificationCenter *_notificationCenter;
     NSDictionary *_cancelationInfo;
     id <SPTCrashReporter> _crashReporter;
     UIView *_containerView;
@@ -41,6 +42,7 @@
 @property(readonly, nonatomic) id <SPTCrashReporter> crashReporter; // @synthesize crashReporter=_crashReporter;
 @property(copy, nonatomic) NSDictionary *cancelationInfo; // @synthesize cancelationInfo=_cancelationInfo;
 @property(nonatomic, getter=isOffline) _Bool offline; // @synthesize offline=_offline;
+@property(readonly, nonatomic) NSNotificationCenter *notificationCenter; // @synthesize notificationCenter=_notificationCenter;
 @property(readonly, nonatomic) SPTInAppMessageServiceLogger *serviceLogger; // @synthesize serviceLogger=_serviceLogger;
 @property(readonly, nonatomic) id <SPTCarDetector> carDetector; // @synthesize carDetector=_carDetector;
 @property(readonly, nonatomic) id <SPTOfflineModeState> offlineModeState; // @synthesize offlineModeState=_offlineModeState;
@@ -71,7 +73,7 @@
 - (void)cancelMessagePresentation:(id)arg1;
 - (void)offlineModeState:(id)arg1 updated:(_Bool)arg2;
 - (void)dealloc;
-- (id)initWithViewModel:(id)arg1 matchedPattern:(id)arg2 triggerType:(id)arg3 slateManager:(id)arg4 slateBuilderProvider:(id)arg5 offlineModeState:(id)arg6 carDetector:(id)arg7 serviceLogger:(id)arg8 crashReporter:(id)arg9 authController:(id)arg10;
+- (id)initWithViewModel:(id)arg1 matchedPattern:(id)arg2 triggerType:(id)arg3 slateManager:(id)arg4 slateBuilderProvider:(id)arg5 offlineModeState:(id)arg6 carDetector:(id)arg7 serviceLogger:(id)arg8 crashReporter:(id)arg9 authController:(id)arg10 notificationCenter:(id)arg11;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

@@ -27,13 +27,14 @@
     // Error parsing type: , name: $__lazy_storage_$_pitstopLogProcessor
     // Error parsing type: , name: $__lazy_storage_$_pitstopLogger
     // Error parsing type: , name: $__lazy_storage_$_otaProtocolHandler
-    // Error parsing type: , name: $__lazy_storage_$_presetsAppProtocolHandler
     // Error parsing type: , name: $__lazy_storage_$_registerDeviceAppProtocolHandler
     // Error parsing type: , name: $__lazy_storage_$_pitstopAppProtocolHandler
     // Error parsing type: , name: $__lazy_storage_$_instrumentationAppProtocolHandler
     // Error parsing type: , name: $__lazy_storage_$_voiceAppProtocolHandler
     // Error parsing type: , name: $__lazy_storage_$_remoteConfigurationNetworkManager
     // Error parsing type: , name: $__lazy_storage_$_remoteConfigurationAppProtocolHandler
+    // Error parsing type: , name: $__lazy_storage_$_presetsNetworkManager
+    // Error parsing type: , name: $__lazy_storage_$_presetsAppProtocolHandler
 }
 
 + (id)serviceIdentifier;

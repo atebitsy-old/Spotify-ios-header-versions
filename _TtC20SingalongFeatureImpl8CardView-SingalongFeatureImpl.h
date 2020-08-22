@@ -6,9 +6,7 @@
 
 #import "_TtC20SingalongFeatureImpl8CardView.h"
 
-#import "_TtP20SingalongFeatureImpl9Colorable_-Protocol.h"
-
-@interface _TtC20SingalongFeatureImpl8CardView (SingalongFeatureImpl) <_TtP20SingalongFeatureImpl9Colorable_>
+@interface _TtC20SingalongFeatureImpl8CardView (SingalongFeatureImpl)
 - (void)applyColors:(id)arg1;
 @end
 

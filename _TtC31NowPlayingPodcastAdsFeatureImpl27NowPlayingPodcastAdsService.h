@@ -9,6 +9,9 @@
 @interface _TtC31NowPlayingPodcastAdsFeatureImpl27NowPlayingPodcastAdsService : NSObject
 {
     // Error parsing type: , name: _containerService
+    // Error parsing type: , name: _nowPlayingPlatformService
+    // Error parsing type: , name: nowPlayingPodcastAdMode
+    // Error parsing type: , name: nowPlayingModeRegistry
 }
 
 + (id)serviceIdentifier;

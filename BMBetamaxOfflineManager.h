@@ -33,13 +33,12 @@
 - (id)getMediaURLsForActiveDownloads;
 - (id)provideOptionsWithMinimumBitrateInBPS:(id)arg1;
 - (id)provideRequestWithMediaURL:(id)arg1 title:(id)arg2 artworkData:(id)arg3;
-- (_Bool)isContentDownloadedFromMediaURL:(id)arg1;
-- (_Bool)isDownloadingContentFromMediaURL:(id)arg1;
 - (id)localFilePathForMediaURL:(id)arg1;
+- (long long)getState:(id)arg1;
 - (void)delete:(id)arg1;
 - (void)downloadWithRequest:(id)arg1 options:(id)arg2;
 - (void)downloadWithRequest:(id)arg1;
-- (id)initWithKvoControllerFactory:(id)arg1;
+- (id)init;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

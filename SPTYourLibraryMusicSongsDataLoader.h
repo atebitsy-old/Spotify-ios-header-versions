@@ -8,14 +8,13 @@
 
 #import "SPTYourLibraryMusicRangeDataLoader-Protocol.h"
 
-@class NSArray, NSString;
+@class NSString;
 @protocol SPTClientSettings, SPTCollectionPlatformDataLoader, SPTCollectionPlatformDataLoaderRequestToken, SPTYourLibraryMusicRangeDataLoaderDelegate, SPTYourLibraryMusicSongsDataLoaderDelegate, SPTYourLibraryMusicTestManager;
 
 @interface SPTYourLibraryMusicSongsDataLoader : NSObject <SPTYourLibraryMusicRangeDataLoader>
 {
     id <SPTYourLibraryMusicRangeDataLoaderDelegate> rangeDataLoaderDelegate;
     unsigned long long totalNumberOfItems;
-    NSArray *sectionIndices;
     id <SPTYourLibraryMusicSongsDataLoaderDelegate> _delegate;
     id <SPTCollectionPlatformDataLoader> _collectionDataLoader;
     id <SPTClientSettings> _clientSettings;
@@ -29,7 +28,6 @@
 @property(retain, nonatomic) id <SPTClientSettings> clientSettings; // @synthesize clientSettings=_clientSettings;
 @property(retain, nonatomic) id <SPTCollectionPlatformDataLoader> collectionDataLoader; // @synthesize collectionDataLoader=_collectionDataLoader;
 @property(nonatomic) __weak id <SPTYourLibraryMusicSongsDataLoaderDelegate> delegate; // @synthesize delegate=_delegate;
-@property(copy, nonatomic) NSArray *sectionIndices; // @synthesize sectionIndices;
 @property(nonatomic) unsigned long long totalNumberOfItems; // @synthesize totalNumberOfItems;
 @property(nonatomic) __weak id <SPTYourLibraryMusicRangeDataLoaderDelegate> rangeDataLoaderDelegate; // @synthesize rangeDataLoaderDelegate;
 - (void)loadItemsForRange:(struct _NSRange)arg1 sortRules:(id)arg2 filterRules:(id)arg3 textFilter:(id)arg4;

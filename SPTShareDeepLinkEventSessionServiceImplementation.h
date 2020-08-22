@@ -8,15 +8,16 @@
 
 #import "SPTShareDeepLinkEventSessionService-Protocol.h"
 
-@class NSString, SPTAllocationContext, SPTShareFeatureProperties;
-@protocol SPTEventSenderService, SPTPlayerFeature, SPTRemoteConfigurationService, SPTShareDeepLinkEventHandler, SPTShareEventSenderLogger;
+@class NSString, SPTAllocationContext, SPTShareDeepLinkSessionEventHandlerImplementation, SPTShareFeatureProperties;
+@protocol SPTEventSenderService, SPTPlayerFeature, SPTRemoteConfigurationService, SPTShareDeepLinkEventApplicationService, SPTShareEventSenderLogger;
 
 @interface SPTShareDeepLinkEventSessionServiceImplementation : NSObject <SPTShareDeepLinkEventSessionService>
 {
     id <SPTEventSenderService> _eventSenderService;
     id <SPTPlayerFeature> _playerService;
     id <SPTRemoteConfigurationService> _remoteConfigurationService;
-    id <SPTShareDeepLinkEventHandler> _deepLinkEventHandler;
+    id <SPTShareDeepLinkEventApplicationService> _shareDeepLinkEventApplicationService;
+    SPTShareDeepLinkSessionEventHandlerImplementation *_deepLinkEventHandler;
     SPTShareFeatureProperties *_featureProperties;
     id <SPTShareEventSenderLogger> _shareEventSenderLogger;
 }
@@ -25,11 +26,11 @@
 - (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTShareEventSenderLogger> shareEventSenderLogger; // @synthesize shareEventSenderLogger=_shareEventSenderLogger;
 @property(retain, nonatomic) SPTShareFeatureProperties *featureProperties; // @synthesize featureProperties=_featureProperties;
-@property(retain, nonatomic) id <SPTShareDeepLinkEventHandler> deepLinkEventHandler; // @synthesize deepLinkEventHandler=_deepLinkEventHandler;
+@property(retain, nonatomic) SPTShareDeepLinkSessionEventHandlerImplementation *deepLinkEventHandler; // @synthesize deepLinkEventHandler=_deepLinkEventHandler;
+@property(nonatomic) __weak id <SPTShareDeepLinkEventApplicationService> shareDeepLinkEventApplicationService; // @synthesize shareDeepLinkEventApplicationService=_shareDeepLinkEventApplicationService;
 @property(nonatomic) __weak id <SPTRemoteConfigurationService> remoteConfigurationService; // @synthesize remoteConfigurationService=_remoteConfigurationService;
 @property(nonatomic) __weak id <SPTPlayerFeature> playerService; // @synthesize playerService=_playerService;
 @property(nonatomic) __weak id <SPTEventSenderService> eventSenderService; // @synthesize eventSenderService=_eventSenderService;
-- (id)provideShareDeepLinkEventHandler;
 - (void)load;
 - (void)configureWithServices:(id)arg1;
 

@@ -4,15 +4,11 @@
 //     class-dump is Copyright (C) 1997-1998, 2000-2001, 2004-2015 by Steve Nygard.
 //
 
-@class NSURL, UIButton, UIViewController;
+@class UIButton, UIViewController;
 
 @protocol _TtP24ResponsiveShuffleFeature40SPTResponsiveShuffleOnboardingController_
-- (void)banTappedWithTrackURI:(NSURL *)arg1;
-- (void)unheartTappedWithTrackURI:(NSURL *)arg1;
-- (void)heartTappedWithTrackURI:(NSURL *)arg1;
 - (void)registerBanWithButton:(UIButton *)arg1;
 - (void)registerHeartWithButton:(UIButton *)arg1;
 - (void)registerTopLevelViewController:(UIViewController *)arg1;
-@property(nonatomic, readonly) _Bool shouldShowDefaultConfirmation;
 @end
 

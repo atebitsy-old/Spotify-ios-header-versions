@@ -13,11 +13,9 @@
     // Error parsing type: , name: slateManager
     // Error parsing type: , name: productState
     // Error parsing type: , name: glueTheme
+    // Error parsing type: , name: modalPresentationController
     // Error parsing type: , name: $__lazy_storage_$_style
     // Error parsing type: , name: $__lazy_storage_$_slate
-    // Error parsing type: , name: $__lazy_storage_$_marqueeViewController
-    // Error parsing type: , name: $__lazy_storage_$_marqueeViewModel
-    // Error parsing type: , name: $__lazy_storage_$_marqueeView
     // Error parsing type: , name: adEntity
     // Error parsing type: , name: artworkImage
 }

@@ -8,22 +8,21 @@
 
 @interface _TtC21FollowFeedFeatureImpl17FollowFeedService : NSObject
 {
-    // Error parsing type: , name: containerService
-    // Error parsing type: , name: uriDispatchService
-    // Error parsing type: , name: hubsService
-    // Error parsing type: , name: glueService
-    // Error parsing type: , name: networkService
-    // Error parsing type: , name: followService
-    // Error parsing type: , name: playerService
-    // Error parsing type: , name: remoteConfigurationService
-    // Error parsing type: , name: eventSenderService
-    // Error parsing type: , name: crashReporterService
-    // Error parsing type: , name: contextMenuService
-    // Error parsing type: , name: uiPresentationService
-    // Error parsing type: , name: contributingArtistService
-    // Error parsing type: , name: ubiService
-    // Error parsing type: , name: pageLoaderViewService
-    // Error parsing type: , name: explicitContentService
+    // Error parsing type: , name: _containerService
+    // Error parsing type: , name: _hubsService
+    // Error parsing type: , name: _glueService
+    // Error parsing type: , name: _networkService
+    // Error parsing type: , name: _followService
+    // Error parsing type: , name: _playerService
+    // Error parsing type: , name: _remoteConfigurationService
+    // Error parsing type: , name: _eventSenderService
+    // Error parsing type: , name: _crashReporterService
+    // Error parsing type: , name: _contextMenuService
+    // Error parsing type: , name: _uiPresentationService
+    // Error parsing type: , name: _contributingArtistService
+    // Error parsing type: , name: _ubiService
+    // Error parsing type: , name: _pageLoaderViewService
+    // Error parsing type: , name: _explicitContentService
     // Error parsing type: , name: pageRegistrationToken
     // Error parsing type: , name: remoteConfigManager
     // Error parsing type: , name: $__lazy_storage_$_explicitContentManager
@@ -33,9 +32,8 @@
 + (id)serviceIdentifier;
 - (void).cxx_destruct;
 - (id)init;
-- (id)provideFollowFeedViewController;
+- (id)provideFollowFeedViewControllerWith_uri:(id)arg1 context:(id)arg2;
 - (void)load;
-- (void)configureWithServices:(id)arg1;
 - (id)provideFeedLogger;
 - (id)provideFeedUpdatesManager;
 - (id)provideRemoteConfigManager;

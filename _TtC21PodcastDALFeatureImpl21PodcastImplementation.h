@@ -6,12 +6,10 @@
 
 #import <objc/NSObject.h>
 
-#import "SPTPodcast-Protocol.h"
-
 @class NSArray, NSString, NSURL;
 @protocol SPTPodcastEpisode;
 
-@interface _TtC21PodcastDALFeatureImpl21PodcastImplementation : NSObject <SPTPodcast>
+@interface _TtC21PodcastDALFeatureImpl21PodcastImplementation : NSObject
 {
     // Error parsing type: , name: title
     // Error parsing type: , name: descriptionText
@@ -41,8 +39,7 @@
 @property(nonatomic) long long consumptionOrder; // @synthesize consumptionOrder;
 @property(nonatomic) long long numberOfFollowers; // @synthesize numberOfFollowers;
 @property(nonatomic) unsigned long long mediaType; // @synthesize mediaType;
-@property(nonatomic) _Bool following; // @synthesize following=isFollowing;
-- (_Bool)isFollowing;
+@property(nonatomic) _Bool isFollowing; // @synthesize isFollowing;
 @property(nonatomic, copy) NSURL *imageURL;
 @property(nonatomic, copy) NSURL *latestPlayedEpisodeURL;
 @property(nonatomic, copy) NSURL *URL;

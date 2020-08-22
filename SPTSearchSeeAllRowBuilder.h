@@ -16,8 +16,8 @@
 + (id)entityTypeNameForEntityType:(int)arg1;
 + (id)seeMoreTargetURIForEntityType:(int)arg1 query:(id)arg2;
 + (id)seeAllIdentifierForEntityType:(int)arg1;
-+ (id)seeMoreTitleForEntityType:(int)arg1;
-+ (id)seeAllRowForEntityType:(int)arg1 query:(id)arg2 requestID:(id)arg3 pageURI:(id)arg4 ubiLocationSerializer:(id)arg5 position:(unsigned long long)arg6;
++ (id)seeMoreTitleForEntityType:(int)arg1 updatedPodcastCopyEnabled:(_Bool)arg2;
++ (id)seeAllRowForEntityType:(int)arg1 query:(id)arg2 requestID:(id)arg3 pageURI:(id)arg4 ubiLocationSerializer:(id)arg5 position:(unsigned long long)arg6 updatedPodcastCopyEnabled:(_Bool)arg7;
 
 @end
 

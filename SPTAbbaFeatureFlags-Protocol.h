@@ -10,7 +10,6 @@
 @protocol SPTAbbaFeatureFlagsObserver;
 
 @protocol SPTAbbaFeatureFlags <NSObject>
-- (void)logAccessForFlagName:(NSString *)arg1;
 - (NSString *)objectForKeyedSubscript:(NSString *)arg1;
 - (NSString *)stringForKey:(NSString *)arg1;
 - (void)removeObserver:(id <SPTAbbaFeatureFlagsObserver>)arg1;

@@ -7,10 +7,10 @@
 @class NSString;
 
 @protocol SPTClientTokenPersistentStorage
-- (_Bool)getPSESFlag;
-- (void)storePSESFlag:(_Bool)arg1;
+@property(nonatomic) _Bool disabledRCSFlag;
+@property(nonatomic) _Bool enabledRCSFlag;
+@property(nonatomic) _Bool enabledPSESFlag;
 - (void)clearClientToken;
-- (NSString *)getEncryptedClientToken;
-- (void)storeEncryptedClientToken:(NSString *)arg1;
+@property(nonatomic, copy) NSString *encryptedClientToken;
 @end
 

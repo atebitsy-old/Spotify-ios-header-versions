@@ -10,6 +10,7 @@
 {
     // Error parsing type: , name: metaViewController
     // Error parsing type: , name: tooltipPresenter
+    // Error parsing type: , name: feedbackObserverManager
     // Error parsing type: , name: topLevelViewController
     // Error parsing type: , name: heartButton
     // Error parsing type: , name: banButton
@@ -20,9 +21,14 @@
 - (void).cxx_destruct;
 - (id)init;
 - (void)playInitiatedWithPlaylistURI:(id)arg1 formatListAttributes:(id)arg2;
+- (void)unthumbDownTappedWithTrackURI:(id)arg1;
+- (void)thumbDownTappedWithTrackURI:(id)arg1;
+- (void)unthumbUpTappedWithTrackURI:(id)arg1;
+- (void)thumbUpTappedWithTrackURI:(id)arg1;
 - (void)banTappedWithTrackURI:(id)arg1;
 - (void)unheartTappedWithTrackURI:(id)arg1;
 - (void)heartTappedWithTrackURI:(id)arg1;
+- (void)registerObserver:(id)arg1;
 - (void)registerBanWithButton:(id)arg1;
 - (void)registerHeartWithButton:(id)arg1;
 - (void)registerTopLevelViewController:(id)arg1;

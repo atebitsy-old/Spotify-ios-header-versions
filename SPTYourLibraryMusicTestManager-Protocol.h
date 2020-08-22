@@ -10,9 +10,6 @@
 @property(readonly, nonatomic) unsigned long long likedSongsFiltersSource;
 @property(readonly, nonatomic, getter=isLikedSongsFiltersEnabled) _Bool likedSongsFiltersEnabled;
 @property(readonly, nonatomic, getter=isOfflineArtistEnabled) _Bool offlineArtistEnabled;
-@property(readonly, nonatomic) long long quickScrollMinPages;
-@property(readonly, nonatomic) unsigned long long quickScrollMechanismInLikedSongs;
-@property(readonly, nonatomic) unsigned long long quickScrollMechanism;
 @property(readonly, nonatomic, getter=isYourLibraryBetaEnabled) _Bool yourLibraryBetaEnabled;
 @property(readonly, nonatomic, getter=isShowAlbumArtistRecommendationsEnabled) _Bool showAlbumArtistRecommendationsEnabled;
 @property(readonly, nonatomic, getter=isFrecencySortOrderDefaultInPlaylistsEnabled) _Bool frecencySortOrderDefaultInPlaylistsEnabled;

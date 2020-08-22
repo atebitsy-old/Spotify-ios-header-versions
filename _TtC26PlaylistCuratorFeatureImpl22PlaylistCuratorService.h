@@ -8,13 +8,15 @@
 
 @interface _TtC26PlaylistCuratorFeatureImpl22PlaylistCuratorService : NSObject
 {
-    // Error parsing type: , name: containerService
-    // Error parsing type: , name: settingsService
-    // Error parsing type: , name: uiPresentationService
-    // Error parsing type: , name: networkService
-    // Error parsing type: , name: glueService
+    // Error parsing type: , name: _containerService
+    // Error parsing type: , name: _glueService
+    // Error parsing type: , name: _settingsService
+    // Error parsing type: , name: _uiPresentationService
+    // Error parsing type: , name: _networkService
+    // Error parsing type: , name: _audioPreviewService
+    // Error parsing type: , name: _preCurationService
+    // Error parsing type: , name: _snackbarService
     // Error parsing type: , name: playlistCuratorFactory
-    // Error parsing type: , name: $__lazy_storage_$_dependencies
 }
 
 + (id)serviceIdentifier;
@@ -22,7 +24,6 @@
 - (id)init;
 - (void)unload;
 - (void)load;
-- (void)configureWithServices:(id)arg1;
 
 @end
 

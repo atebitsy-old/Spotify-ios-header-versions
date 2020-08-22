@@ -8,7 +8,7 @@
 
 #import "SPTClientTokenAcquirer-Protocol.h"
 
-@class NSString;
+@class NSError, NSString;
 
 @interface SPTClientTokenAcquirerImplementation : NSObject <SPTClientTokenAcquirer>
 {
@@ -19,6 +19,7 @@
 - (void).cxx_destruct;
 - (id)createEncryptedClientTokenObserver;
 - (id)getToken;
+@property(readonly, nonatomic, getter=areAllRequestsDisabledWithError) NSError *allRequestsDisabledWithError;
 @property(readonly, nonatomic, getter=isEnabled) _Bool enabled;
 - (void)enable;
 - (void)disable;

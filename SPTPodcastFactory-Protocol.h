@@ -4,14 +4,12 @@
 //     class-dump is Copyright (C) 1997-1998, 2000-2001, 2004-2015 by Steve Nygard.
 //
 
-#import "NSObject-Protocol.h"
-
 @class NSData, NSDictionary;
 @protocol SPTPodcast;
 
-@protocol SPTPodcastFactory <NSObject>
-- (id <SPTPodcast>)podcastWithDictionary:(NSDictionary *)arg1 shouldRemoveHeaders:(_Bool)arg2;
+@protocol SPTPodcastFactory
 - (id <SPTPodcast>)podcastWithProtobufData:(NSData *)arg1 responseType:(unsigned long long)arg2;
+- (id <SPTPodcast>)podcastWithDictionary:(NSDictionary *)arg1 shouldRemoveHeaders:(_Bool)arg2;
 - (id <SPTPodcast>)podcastWithDictionary:(NSDictionary *)arg1;
 @end
 

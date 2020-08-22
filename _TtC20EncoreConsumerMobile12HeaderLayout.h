@@ -33,6 +33,7 @@
     // Error parsing type: , name: previousTopAccessoryViewProgress
     // Error parsing type: , name: previousBackgroundAndForegroundViewProgress
     // Error parsing type: , name: previousTotalHeaderViewProgress
+    // Error parsing type: , name: previousHeaderWidth
     // Error parsing type: , name: contentViewHeight
     // Error parsing type: , name: topAccessoryViewHeight
     // Error parsing type: , name: topAccessoryViewVerticalOffset

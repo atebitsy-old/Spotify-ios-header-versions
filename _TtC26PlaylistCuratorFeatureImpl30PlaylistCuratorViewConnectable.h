@@ -9,7 +9,8 @@
 @interface _TtC26PlaylistCuratorFeatureImpl30PlaylistCuratorViewConnectable : _TtCs12_SwiftObject
 {
     // Error parsing type: , name: view
-    // Error parsing type: , name: viewBinder
+    // Error parsing type: , name: tracksViewBinder
+    // Error parsing type: , name: episodesViewBinder
     // Error parsing type: , name: fuser
     // Error parsing type: , name: diffuser
     // Error parsing type: , name: consumer

@@ -13,11 +13,13 @@
 @interface GLUEThemeFeatureController : NSObject <GLUEFeatureController>
 {
     _Bool _motionEnabled;
+    _Bool generatedIconFontEnabled;
     id <GLUETheme> _theme;
 }
 
 - (void).cxx_destruct;
 @property(readonly, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
+@property _Bool generatedIconFontEnabled; // @synthesize generatedIconFontEnabled;
 @property _Bool motionEnabled; // @synthesize motionEnabled=_motionEnabled;
 - (id)debugDescription;
 - (void)enableModernFeatures;

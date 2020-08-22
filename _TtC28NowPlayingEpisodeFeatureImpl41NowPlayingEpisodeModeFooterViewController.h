@@ -8,17 +8,18 @@
 
 @interface _TtC28NowPlayingEpisodeFeatureImpl41NowPlayingEpisodeModeFooterViewController : UIViewController
 {
+    // Error parsing type: , name: sleepTimerService
     // Error parsing type: , name: episodeModeSharePresenter
     // Error parsing type: , name: auxiliaryActionsHandler
     // Error parsing type: , name: podcastSpeedControlManager
     // Error parsing type: , name: devicesAvailableViewProvider
     // Error parsing type: , name: devicesAvailableView
-    // Error parsing type: , name: nextButton
-    // Error parsing type: , name: previousButton
     // Error parsing type: , name: shareButton
     // Error parsing type: , name: speedButton
     // Error parsing type: , name: sleepButton
     // Error parsing type: , name: viewModel
+    // Error parsing type: , name: nextButton
+    // Error parsing type: , name: previousButton
     // Error parsing type: , name: circularProgressPlayPauseView
 }
 

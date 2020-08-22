@@ -10,7 +10,6 @@
 {
 }
 
-+ (void)loadSpoticonFontFile;
 + (id)spoticonFont;
 + (id)keyFromConfiguration:(id)arg1;
 + (id)sharedCache;

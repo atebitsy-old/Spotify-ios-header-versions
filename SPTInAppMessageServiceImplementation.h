@@ -8,16 +8,14 @@
 
 #import "SPTInAppMessageService-Protocol.h"
 
-@class NSString, SPCore, SPTAllocationContext, SPTInAppMessageActionFactory, SPTInAppMessageBannerMessageController, SPTInAppMessageBannerMessagePriorityDecider, SPTInAppMessageCardMessageController, SPTInAppMessageCardMessagePriorityDecider, SPTInAppMessageEventEmitter, SPTInAppMessageFeatureProperties, SPTInAppMessageManager, SPTInAppMessageMessageRequesterImplementation, SPTInAppMessageNoteMessageController, SPTInAppMessageNoteMessagePriorityDecider, SPTInAppMessageNotePresentationManager, SPTInAppMessageNowPlayingManagerRegistryImplementation, SPTInAppMessagePresentationMonitorImplementation, SPTInAppMessagePreviewFlowManager, SPTInAppMessagePreviewViewModel, SPTInAppMessageReceiverImplementation, SPTInAppMessageSDKMessagePreviewReceiverImplementation, SPTInAppMessageSettingsPageBuilder, SPTInAppMessageTriggerConfigurationsController, SPTInAppMessageTriggerEngine, SPTInAppMessageTriggerListController;
-@protocol FollowFeature, SPContextMenuFeature, SPTAccountService, SPTAuthService, SPTBannerFeature, SPTCollectionPlatformService, SPTContainerService, SPTContainerUIService, SPTCoreService, SPTCrashReporterService, SPTEventSenderService, SPTFeatureFlagSignal, SPTFreeTierService, SPTFreeTierTooltipService, SPTInstrumentationService, SPTNetworkService, SPTOnDemandService, SPTPlayerFeature, SPTPlaylistPlatformService, SPTPodcastFeature, SPTPushMessagingService, SPTRemoteConfigurationService, SPTSessionService, SPTSettingsFeature, SPTSnackbarService, SPTUBIService, SPTUIPresentationService, SPTURIDispatchService, SPTWebViewFeature, SlateFeature, _TtP19CarDetectionFeature22SPTCarDetectionService_;
+@class NSString, SPCore, SPTAllocationContext, SPTInAppMessageActionFactory, SPTInAppMessageEventEmitter, SPTInAppMessageFeatureProperties, SPTInAppMessageManager, SPTInAppMessageMessageRequesterImplementation, SPTInAppMessageNowPlayingManagerRegistryImplementation, SPTInAppMessagePresentationMonitorImplementation, SPTInAppMessagePreviewFlowManager, SPTInAppMessagePreviewViewModel, SPTInAppMessageReceiverImplementation, SPTInAppMessageSDKMessagePreviewReceiverImplementation, SPTInAppMessageSettingsPageBuilder;
+@protocol FollowFeature, SPContextMenuFeature, SPTAccountService, SPTAuthService, SPTBannerFeature, SPTCollectionPlatformService, SPTContainerService, SPTContainerUIService, SPTCoreService, SPTCrashReporterService, SPTEventSenderService, SPTFreeTierService, SPTFreeTierTooltipService, SPTInstrumentationService, SPTNetworkService, SPTOnDemandService, SPTPlayerFeature, SPTPlaylistPlatformService, SPTPodcastFeature, SPTPushMessagingService, SPTRemoteConfigurationService, SPTSessionService, SPTSettingsFeature, SPTSnackbarService, SPTUBIService, SPTUIPresentationService, SPTURIDispatchService, SPTWebViewFeature, SlateFeature, _TtP12EmailFeature15SPTEmailService_, _TtP19CarDetectionFeature22SPTCarDetectionService_;
 
 @interface SPTInAppMessageServiceImplementation : NSObject <SPTInAppMessageService>
 {
-    _Bool _addedPlayerObserver;
     _Bool _previewViewModelObservingPlayer;
     _Bool _addedSDKPageViewObserver;
     _Bool _addedSDKPlayerObserver;
-    _Bool _addedPageViewObserver;
     id <SPTSessionService> _clientSessionService;
     id <SPTCoreService> _coreService;
     id <SPTNetworkService> _networkFeature;
@@ -48,16 +46,7 @@
     id <SPTUBIService> _ubiService;
     id <SPTWebViewFeature> _webViewFeature;
     id <SPTUIPresentationService> _uiPresentationService;
-    SPTInAppMessageTriggerConfigurationsController *_triggerConfigurationsController;
-    SPTInAppMessageTriggerListController *_triggerListController;
-    SPTInAppMessageTriggerEngine *_triggerEngine;
-    SPTInAppMessageCardMessagePriorityDecider *_cardMessagePriorityDecider;
-    SPTInAppMessageBannerMessagePriorityDecider *_bannerMessagePriorityDecider;
-    SPTInAppMessageNoteMessagePriorityDecider *_noteMessagePriorityDecider;
-    SPTInAppMessageCardMessageController *_cardMessageController;
-    SPTInAppMessageBannerMessageController *_bannerMessageController;
-    SPTInAppMessageNoteMessageController *_noteMessageController;
-    SPTInAppMessageNotePresentationManager *_notePresentationManager;
+    id <_TtP12EmailFeature15SPTEmailService_> _emailService;
     SPTInAppMessageMessageRequesterImplementation *_messageRequester;
     SPTInAppMessageNowPlayingManagerRegistryImplementation *_nowPlayingManagerRegistry;
     SPTInAppMessagePreviewFlowManager *_previewFlowManager;
@@ -65,7 +54,6 @@
     SPCore *_core;
     SPTInAppMessageSettingsPageBuilder *_settingsPageBuilder;
     SPTInAppMessageActionFactory *_actionFactory;
-    id <SPTFeatureFlagSignal> _freeTierFeatureFlagSignal;
     SPTInAppMessagePresentationMonitorImplementation *_presentationMonitor;
     SPTInAppMessageManager *_inAppMessageManager;
     SPTInAppMessageReceiverImplementation *_messageReceiver;
@@ -82,29 +70,17 @@
 @property(retain, nonatomic) SPTInAppMessageReceiverImplementation *messageReceiver; // @synthesize messageReceiver=_messageReceiver;
 @property(retain, nonatomic) SPTInAppMessageManager *inAppMessageManager; // @synthesize inAppMessageManager=_inAppMessageManager;
 @property(retain, nonatomic) SPTInAppMessagePresentationMonitorImplementation *presentationMonitor; // @synthesize presentationMonitor=_presentationMonitor;
-@property(retain, nonatomic) id <SPTFeatureFlagSignal> freeTierFeatureFlagSignal; // @synthesize freeTierFeatureFlagSignal=_freeTierFeatureFlagSignal;
 @property(retain, nonatomic) SPTInAppMessageActionFactory *actionFactory; // @synthesize actionFactory=_actionFactory;
 @property(retain, nonatomic) SPTInAppMessageSettingsPageBuilder *settingsPageBuilder; // @synthesize settingsPageBuilder=_settingsPageBuilder;
 @property(nonatomic) __weak SPCore *core; // @synthesize core=_core;
-@property(nonatomic) _Bool addedPageViewObserver; // @synthesize addedPageViewObserver=_addedPageViewObserver;
 @property(nonatomic) _Bool addedSDKPlayerObserver; // @synthesize addedSDKPlayerObserver=_addedSDKPlayerObserver;
 @property(nonatomic) _Bool addedSDKPageViewObserver; // @synthesize addedSDKPageViewObserver=_addedSDKPageViewObserver;
 @property(nonatomic) _Bool previewViewModelObservingPlayer; // @synthesize previewViewModelObservingPlayer=_previewViewModelObservingPlayer;
-@property(nonatomic) _Bool addedPlayerObserver; // @synthesize addedPlayerObserver=_addedPlayerObserver;
 @property(retain, nonatomic) SPTInAppMessagePreviewViewModel *previewViewModel; // @synthesize previewViewModel=_previewViewModel;
 @property(retain, nonatomic) SPTInAppMessagePreviewFlowManager *previewFlowManager; // @synthesize previewFlowManager=_previewFlowManager;
 @property(retain, nonatomic) SPTInAppMessageNowPlayingManagerRegistryImplementation *nowPlayingManagerRegistry; // @synthesize nowPlayingManagerRegistry=_nowPlayingManagerRegistry;
 @property(retain, nonatomic) SPTInAppMessageMessageRequesterImplementation *messageRequester; // @synthesize messageRequester=_messageRequester;
-@property(retain, nonatomic) SPTInAppMessageNotePresentationManager *notePresentationManager; // @synthesize notePresentationManager=_notePresentationManager;
-@property(retain, nonatomic) SPTInAppMessageNoteMessageController *noteMessageController; // @synthesize noteMessageController=_noteMessageController;
-@property(retain, nonatomic) SPTInAppMessageBannerMessageController *bannerMessageController; // @synthesize bannerMessageController=_bannerMessageController;
-@property(retain, nonatomic) SPTInAppMessageCardMessageController *cardMessageController; // @synthesize cardMessageController=_cardMessageController;
-@property(retain, nonatomic) SPTInAppMessageNoteMessagePriorityDecider *noteMessagePriorityDecider; // @synthesize noteMessagePriorityDecider=_noteMessagePriorityDecider;
-@property(retain, nonatomic) SPTInAppMessageBannerMessagePriorityDecider *bannerMessagePriorityDecider; // @synthesize bannerMessagePriorityDecider=_bannerMessagePriorityDecider;
-@property(retain, nonatomic) SPTInAppMessageCardMessagePriorityDecider *cardMessagePriorityDecider; // @synthesize cardMessagePriorityDecider=_cardMessagePriorityDecider;
-@property(retain, nonatomic) SPTInAppMessageTriggerEngine *triggerEngine; // @synthesize triggerEngine=_triggerEngine;
-@property(retain, nonatomic) SPTInAppMessageTriggerListController *triggerListController; // @synthesize triggerListController=_triggerListController;
-@property(retain, nonatomic) SPTInAppMessageTriggerConfigurationsController *triggerConfigurationsController; // @synthesize triggerConfigurationsController=_triggerConfigurationsController;
+@property(nonatomic) __weak id <_TtP12EmailFeature15SPTEmailService_> emailService; // @synthesize emailService=_emailService;
 @property(nonatomic) __weak id <SPTUIPresentationService> uiPresentationService; // @synthesize uiPresentationService=_uiPresentationService;
 @property(nonatomic) __weak id <SPTWebViewFeature> webViewFeature; // @synthesize webViewFeature=_webViewFeature;
 @property(nonatomic) __weak id <SPTUBIService> ubiService; // @synthesize ubiService=_ubiService;
@@ -137,27 +113,14 @@
 @property(nonatomic) __weak id <SPTSessionService> clientSessionService; // @synthesize clientSessionService=_clientSessionService;
 - (_Bool)isBlockedForTA;
 - (id)providePresentationMonitor;
-- (id)provideNotePresentationManager;
 - (id)provideNowPlayingManagerRegistry;
 - (id)provideMessageRequester;
 - (id)createActionFactory;
-- (id)createCardMessageController;
 - (id)createPreviewFlowManager;
 - (id)createPreviewViewModel;
-- (id)createNoteMessageController;
-- (id)createBannerMessageController;
-- (id)createNoteMessagePriorityDecider;
-- (id)createBannerMessagePriorityDecider;
-- (id)createCardMessagePriorityDecider;
-- (id)createTriggerEngine;
-- (id)createTriggerListController;
-- (id)createTriggerConfigurationsController;
 - (id)createServiceLogger;
 - (void)loadSettingsPage;
-- (void)connectDelegates;
 - (void)unloadSDKControllers;
-- (void)unloadControllers;
-- (void)loadControllers;
 - (id)createActionHandlers;
 - (id)createEventEmitter;
 - (id)createMessagePreviewReceiver;

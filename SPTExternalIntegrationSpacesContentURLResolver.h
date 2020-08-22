@@ -6,21 +6,23 @@
 
 #import <objc/NSObject.h>
 
-@protocol SPTProductState;
+@protocol SPTExternalIntegrationTestManager, SPTProductState;
 
 @interface SPTExternalIntegrationSpacesContentURLResolver : NSObject
 {
     id <SPTProductState> _productState;
+    id <SPTExternalIntegrationTestManager> _testManager;
 }
 
 - (void).cxx_destruct;
+@property(readonly, nonatomic) id <SPTExternalIntegrationTestManager> testManager; // @synthesize testManager=_testManager;
 @property(readonly, nonatomic) id <SPTProductState> productState; // @synthesize productState=_productState;
+- (id)remoteHomeviewContentURL;
 - (id)signalsFromViewURIQueryParameters:(id)arg1;
 - (id)remoteHubContentURLForEndpointPath:(id)arg1 queryParameters:(id)arg2 forExternalData:(_Bool)arg3 includeDynamicComponents:(_Bool)arg4;
 - (id)remoteHubContentURLWithoutDynamicComponentsForViewURI:(id)arg1;
-- (id)remoteHubContentURLForEndpointPath:(id)arg1 queryParameters:(id)arg2 forExternalData:(_Bool)arg3;
 - (id)remoteHubContentURLForViewURI:(id)arg1;
-- (id)initWithProductState:(id)arg1;
+- (id)initWithProductState:(id)arg1 testManager:(id)arg2;
 
 @end
 

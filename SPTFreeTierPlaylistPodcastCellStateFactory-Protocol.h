@@ -9,6 +9,6 @@
 @protocol SPTFreeTierPlaylistTrackViewModel, SPTPlayer, SPTPodcastEpisodeCellState;
 
 @protocol SPTFreeTierPlaylistPodcastCellStateFactory <NSObject>
-- (id <SPTPodcastEpisodeCellState>)cellStateForTrackViewModel:(id <SPTFreeTierPlaylistTrackViewModel>)arg1 player:(id <SPTPlayer>)arg2;
+- (id <SPTPodcastEpisodeCellState>)cellStateForTrackViewModel:(id <SPTFreeTierPlaylistTrackViewModel>)arg1 player:(id <SPTPlayer>)arg2 allowEpisodeDownload:(_Bool)arg3;
 @end
 

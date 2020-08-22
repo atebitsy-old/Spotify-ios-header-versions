@@ -64,6 +64,7 @@
 - (void)forceTriggerSessionStateChange;
 - (void)forceTriggerUserCapabilitesChange;
 - (void)forceTriggerPlayerStateChange;
+- (void)forceTriggerConnectivityChanged;
 - (void)sendSubscriptionEventToSubscriberUponRegistration;
 - (void)externalIntegrationQueueController:(id)arg1 didReceiveNewPlayerQueue:(id)arg2;
 - (void)externalIntegrationRadioController:(id)arg1 didRecieveNewThumbStateForCurrentTrack:(_Bool)arg2;
@@ -76,6 +77,8 @@
 - (void)session:(id)arg1 temporaryConnectionError:(id)arg2;
 - (void)userCapabilitiesChanged;
 - (void)productState:(id)arg1 stateDidChange:(id)arg2;
+- (void)handleConnectivityChanged:(id)arg1;
+- (void)networkConnectivityController:(id)arg1 didChangeForcedOffline:(_Bool)arg2;
 - (void)networkConnectivityController:(id)arg1 didChangeConnectionType:(long long)arg2 oldConnectionType:(long long)arg3;
 - (void)stopObservingConnectionType;
 - (void)startObservingConnectionType;

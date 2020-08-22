@@ -6,7 +6,9 @@
 
 #import "_TtC20SingalongFeatureImpl19CommonViewContainer.h"
 
-@interface _TtC20SingalongFeatureImpl19CommonViewContainer (SingalongFeatureImpl)
+#import "_TtP20SingalongFeatureImpl9Colorable_-Protocol.h"
+
+@interface _TtC20SingalongFeatureImpl19CommonViewContainer (SingalongFeatureImpl) <_TtP20SingalongFeatureImpl9Colorable_>
 - (void)applyColors:(id)arg1;
 @end
 

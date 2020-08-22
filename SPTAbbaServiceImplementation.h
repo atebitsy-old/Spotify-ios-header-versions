@@ -9,7 +9,7 @@
 #import "SPTAbbaFeatureFlagsObserver-Protocol.h"
 #import "SPTAbbaService-Protocol.h"
 
-@class NSString, SPTAbbaFeatureAATestLogger, SPTAbbaFeatureFlags, SPTAbbaFlagDataConfigLoader, SPTAllocationContext;
+@class NSString, SPTAbbaFeatureFlags, SPTAbbaFlagDataConfigLoader, SPTAllocationContext;
 @protocol OS_dispatch_semaphore, SPTContainerService, SPTCoreService, SPTDebugService, SPTNetworkService, SPTSessionService;
 
 @interface SPTAbbaServiceImplementation : NSObject <SPTAbbaFeatureFlagsObserver, SPTAbbaService>
@@ -23,12 +23,10 @@
     SPTAbbaFeatureFlags *_featureFlags;
     SPTAbbaFlagDataConfigLoader *_abbaDataConfigLoader;
     NSObject<OS_dispatch_semaphore> *_abbaFlagsSemaphore;
-    SPTAbbaFeatureAATestLogger *_aaTestLogger;
 }
 
 + (id)serviceIdentifier;
 - (void).cxx_destruct;
-@property(retain, nonatomic) SPTAbbaFeatureAATestLogger *aaTestLogger; // @synthesize aaTestLogger=_aaTestLogger;
 @property(retain, nonatomic) NSObject<OS_dispatch_semaphore> *abbaFlagsSemaphore; // @synthesize abbaFlagsSemaphore=_abbaFlagsSemaphore;
 @property(retain, nonatomic) SPTAbbaFlagDataConfigLoader *abbaDataConfigLoader; // @synthesize abbaDataConfigLoader=_abbaDataConfigLoader;
 @property(retain, nonatomic) SPTAbbaFeatureFlags *featureFlags; // @synthesize featureFlags=_featureFlags;

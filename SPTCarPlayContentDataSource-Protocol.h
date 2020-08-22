@@ -12,5 +12,9 @@
 @protocol SPTCarPlayContentDataSource <NSObject>
 @property(readonly, nonatomic) __weak NSArray *rootItemURIs;
 - (NSArray *)fetchRootContentWithAccessorySessionID:(NSString *)arg1 contentController:(id <SPTExternalIntegrationContentController>)arg2 options:(id <SPTExternalIntegrationContentRequestOptions>)arg3;
+- (NSString *)libraryTabIdentifier;
+- (NSString *)browseTabIdentifier;
+- (NSString *)recentlyPlayedTabIdentifier;
+- (NSString *)homeTabIdentifier;
 @end
 

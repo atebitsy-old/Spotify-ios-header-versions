@@ -6,16 +6,18 @@
 
 #import <swiftCore/_TtCs12_SwiftObject.h>
 
+@class NSString;
+
 @interface _TtC23ConnectivityFeatureImpl40ClientTokenPersistentUserDefaultsStorage : _TtCs12_SwiftObject
 {
     // Error parsing type: , name: userDefaults
 }
 
-- (_Bool)getPSESFlag;
-- (void)storePSESFlag:(_Bool)arg1;
 - (void)clearClientToken;
-- (id)getEncryptedClientToken;
-- (void)storeEncryptedClientToken:(id)arg1;
+@property(nonatomic) _Bool disabledRCSFlag;
+@property(nonatomic) _Bool enabledRCSFlag;
+@property(nonatomic) _Bool enabledPSESFlag;
+@property(nonatomic, copy) NSString *encryptedClientToken;
 
 @end
 

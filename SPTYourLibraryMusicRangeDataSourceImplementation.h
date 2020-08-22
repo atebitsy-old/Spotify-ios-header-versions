@@ -57,7 +57,6 @@
 - (id)itemAtIndexPath:(id)arg1;
 - (_Bool)recentlyUnavailableRequestedIndex:(long long)arg1;
 - (void)addUnavailableIndex:(long long)arg1;
-@property(readonly, nonatomic) NSArray *sectionIndices;
 @property(readonly, nonatomic) long long totalNumberOfItems;
 - (void)loadWithSortRules:(id)arg1 filterRules:(id)arg2 textFilter:(id)arg3;
 - (id)initWithDataLoader:(id)arg1 itemsPerPage:(long long)arg2 threshold:(double)arg3;

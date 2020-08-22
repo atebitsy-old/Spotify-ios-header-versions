@@ -8,20 +8,20 @@
 
 @interface _TtC18ProfileFeatureImpl16ProfileUIService : NSObject
 {
-    // Error parsing type: , name: containerService
-    // Error parsing type: , name: uriDispatcherService
-    // Error parsing type: , name: networkService
-    // Error parsing type: , name: contextMenuService
-    // Error parsing type: , name: clientSessionService
-    // Error parsing type: , name: cosmosFeature
-    // Error parsing type: , name: cosmosDataLoaderService
-    // Error parsing type: , name: uiPresentationService
-    // Error parsing type: , name: glueService
-    // Error parsing type: , name: followFeature
-    // Error parsing type: , name: pageLoaderViewService
-    // Error parsing type: , name: containerUIService
-    // Error parsing type: , name: profileService
-    // Error parsing type: , name: ubiService
+    // Error parsing type: , name: _containerService
+    // Error parsing type: , name: _uriDispatcherService
+    // Error parsing type: , name: _networkService
+    // Error parsing type: , name: _contextMenuService
+    // Error parsing type: , name: _clientSessionService
+    // Error parsing type: , name: _cosmosFeature
+    // Error parsing type: , name: _cosmosDataLoaderService
+    // Error parsing type: , name: _uiPresentationService
+    // Error parsing type: , name: _glueService
+    // Error parsing type: , name: _followFeature
+    // Error parsing type: , name: _pageLoaderViewService
+    // Error parsing type: , name: _containerUIService
+    // Error parsing type: , name: _profileService
+    // Error parsing type: , name: _ubiService
     // Error parsing type: , name: profilePageToken
     // Error parsing type: , name: profileListPageToken
 }

@@ -8,7 +8,7 @@
 
 @interface _TtC26PlaylistCuratorFeatureImpl29PlaylistCuratorViewController : UIViewController
 {
-    // Error parsing type: , name: theme
+    // Error parsing type: , name: dependencies
     // Error parsing type: , name: client
     // Error parsing type: , name: loopController
     // Error parsing type: , name: delegate

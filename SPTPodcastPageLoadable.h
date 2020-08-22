@@ -9,7 +9,7 @@
 #import "SPTPageLoadable-Protocol.h"
 
 @class NSURL;
-@protocol SPTPageLoadStateHandler, SPTPodcastDataLoader, SPTPodcastFactory, SPTPodcastRequestFactory, SPTPodcastSortingProvider;
+@protocol SPTPageLoadStateHandler, SPTPodcastDataLoader, SPTPodcastFactory, SPTPodcastRequestFactory, SPTPodcastSortingProvider, SPTPodcastTestManager;
 
 @interface SPTPodcastPageLoadable : NSObject <SPTPageLoadable>
 {
@@ -18,11 +18,13 @@
     id <SPTPodcastDataLoader> _dataLoader;
     id <SPTPodcastFactory> _podcastFactory;
     id <SPTPodcastSortingProvider> _sortingProvider;
+    id <SPTPodcastTestManager> _testManager;
     id <SPTPageLoadStateHandler> _pageLoadHandler;
 }
 
 - (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTPageLoadStateHandler> pageLoadHandler; // @synthesize pageLoadHandler=_pageLoadHandler;
+@property(readonly, nonatomic) id <SPTPodcastTestManager> testManager; // @synthesize testManager=_testManager;
 @property(readonly, nonatomic) id <SPTPodcastSortingProvider> sortingProvider; // @synthesize sortingProvider=_sortingProvider;
 @property(readonly, nonatomic) id <SPTPodcastFactory> podcastFactory; // @synthesize podcastFactory=_podcastFactory;
 @property(readonly, nonatomic) id <SPTPodcastDataLoader> dataLoader; // @synthesize dataLoader=_dataLoader;
@@ -32,7 +34,7 @@
 - (CDUnknownBlockType)providePodcastRequestSuccessCallback;
 - (void)loadWithResultHandler:(id)arg1;
 - (void)cancel;
-- (id)initWithPodcastURI:(id)arg1 requestFactory:(id)arg2 dataLoader:(id)arg3 factory:(id)arg4 sortingProvider:(id)arg5;
+- (id)initWithPodcastURI:(id)arg1 requestFactory:(id)arg2 dataLoader:(id)arg3 factory:(id)arg4 sortingProvider:(id)arg5 testManager:(id)arg6;
 
 @end
 

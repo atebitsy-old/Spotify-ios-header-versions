@@ -9,33 +9,33 @@
 #import "HUBViewModelLoaderDelegate-Protocol.h"
 #import "SPTHomeLocalViewModelOverridesDelegate-Protocol.h"
 
-@class NSArray, NSString;
-@protocol HUBViewModelLoader, SPTHubViewModelProviderDelegate;
+@class NSString, SPTHomeContentOperationLoader, SPTObserverManager;
+@protocol SPTHubViewModelProviderDelegate;
 
 @interface SPTHomeViewModelProvider : SPTHubViewModelProvider <HUBViewModelLoaderDelegate, SPTHomeLocalViewModelOverridesDelegate>
 {
     id <SPTHubViewModelProviderDelegate> delegate;
-    id <HUBViewModelLoader> _cachedViewModelLoader;
-    id <HUBViewModelLoader> _remoteViewModelLoader;
+    SPTHomeContentOperationLoader *_cachedContentOperationLoader;
+    SPTHomeContentOperationLoader *_remoteContentOperationLoader;
+    SPTObserverManager *_observerManager;
     unsigned long long _lastLoadedSource;
-    NSArray *_observers;
 }
 
 - (void).cxx_destruct;
-@property(copy, nonatomic) NSArray *observers; // @synthesize observers=_observers;
 @property(nonatomic) unsigned long long lastLoadedSource; // @synthesize lastLoadedSource=_lastLoadedSource;
-@property(readonly, nonatomic) id <HUBViewModelLoader> remoteViewModelLoader; // @synthesize remoteViewModelLoader=_remoteViewModelLoader;
-@property(readonly, nonatomic) id <HUBViewModelLoader> cachedViewModelLoader; // @synthesize cachedViewModelLoader=_cachedViewModelLoader;
+@property(readonly, nonatomic) SPTObserverManager *observerManager; // @synthesize observerManager=_observerManager;
+@property(readonly, nonatomic) SPTHomeContentOperationLoader *remoteContentOperationLoader; // @synthesize remoteContentOperationLoader=_remoteContentOperationLoader;
+@property(readonly, nonatomic) SPTHomeContentOperationLoader *cachedContentOperationLoader; // @synthesize cachedContentOperationLoader=_cachedContentOperationLoader;
 @property(nonatomic) __weak id <SPTHubViewModelProviderDelegate> delegate; // @synthesize delegate;
 - (void)viewModelLoader:(id)arg1 didFailLoadingWithError:(id)arg2;
 - (void)viewModelLoader:(id)arg1 didLoadViewModel:(id)arg2;
 - (void)overridesDidChange:(id)arg1;
+- (void)cancelViewModelLoad;
 - (void)loadViewModelWithSource:(unsigned long long)arg1;
 - (void)loadViewModel;
 - (void)removeViewModelProviderObserver:(id)arg1;
 - (void)addViewModelProviderObserver:(id)arg1;
-- (void)dealloc;
-- (id)initWithCachedViewModelLoader:(id)arg1 remoteViewModelLoader:(id)arg2;
+- (id)initWithCachedContentOperationLoader:(id)arg1 remoteContentOperationLoader:(id)arg2 observerManager:(id)arg3;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

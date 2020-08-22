@@ -6,7 +6,7 @@
 
 #import <UIKit/UITextView.h>
 
-@class GLUELabelStyle, NSAttributedString, NSString;
+@class NSAttributedString, NSString, SPTEncoreTypeStyle, UIColor;
 
 @interface SPTPodcastSectionDescriptionTextView : UITextView
 {
@@ -15,13 +15,17 @@
     NSAttributedString *_htmlOriginalText;
     NSString *_suffix;
     double _lineHeight;
-    GLUELabelStyle *_style;
-    GLUELabelStyle *_seeMoreStyle;
+    SPTEncoreTypeStyle *_style;
+    UIColor *_descriptionTextColor;
+    SPTEncoreTypeStyle *_seeMoreStyle;
+    UIColor *_seeMoreTextColor;
 }
 
 - (void).cxx_destruct;
-@property(retain, nonatomic) GLUELabelStyle *seeMoreStyle; // @synthesize seeMoreStyle=_seeMoreStyle;
-@property(retain, nonatomic) GLUELabelStyle *style; // @synthesize style=_style;
+@property(retain, nonatomic) UIColor *seeMoreTextColor; // @synthesize seeMoreTextColor=_seeMoreTextColor;
+@property(retain, nonatomic) SPTEncoreTypeStyle *seeMoreStyle; // @synthesize seeMoreStyle=_seeMoreStyle;
+@property(retain, nonatomic) UIColor *descriptionTextColor; // @synthesize descriptionTextColor=_descriptionTextColor;
+@property(retain, nonatomic) SPTEncoreTypeStyle *style; // @synthesize style=_style;
 @property(nonatomic) _Bool needsTextViewLayout; // @synthesize needsTextViewLayout=_needsTextViewLayout;
 @property(nonatomic) double lineHeight; // @synthesize lineHeight=_lineHeight;
 @property(copy, nonatomic) NSString *suffix; // @synthesize suffix=_suffix;

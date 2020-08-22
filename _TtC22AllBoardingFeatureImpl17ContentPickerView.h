@@ -15,7 +15,9 @@
     // Error parsing type: , name: $__lazy_storage_$_collectionViewLayout
     // Error parsing type: , name: $__lazy_storage_$_collectionView
     // Error parsing type: , name: $__lazy_storage_$_buttonContainerView
-    // Error parsing type: , name: $__lazy_storage_$_doneButton
+    // Error parsing type: , name: doneButton
+    // Error parsing type: , name: $__lazy_storage_$_scrollToPodcastButton
+    // Error parsing type: , name: primaryButton
     // Error parsing type: , name: $__lazy_storage_$_secondaryDoneButton
     // Error parsing type: , name: overlayGradientView
     // Error parsing type: , name: userInteractionBlockerView

@@ -8,21 +8,26 @@
 
 @interface _TtC18MarqueeFeatureImpl14MarqueeService : NSObject
 {
-    // Error parsing type: , name: containerService
-    // Error parsing type: , name: adsBaseService
-    // Error parsing type: , name: slateService
-    // Error parsing type: , name: sessionService
-    // Error parsing type: , name: glueService
-    // Error parsing type: , name: inAppMessageService
+    // Error parsing type: , name: _containerService
+    // Error parsing type: , name: _adsBaseService
+    // Error parsing type: , name: _slateService
+    // Error parsing type: , name: _sessionService
+    // Error parsing type: , name: _glueService
+    // Error parsing type: , name: _remoteConfigService
+    // Error parsing type: , name: _inAppMessageService
+    // Error parsing type: , name: _presentationService
     // Error parsing type: , name: $__lazy_storage_$_marqueeController
+    // Error parsing type: , name: $__lazy_storage_$_marqueePresenter
+    // Error parsing type: , name: $__lazy_storage_$_testManager
 }
 
 + (id)serviceIdentifier;
 - (void).cxx_destruct;
 - (id)init;
+- (void)startMarquee;
+- (id)provideTestManager;
 - (void)unload;
 - (void)load;
-- (void)configureWithServices:(id)arg1;
 
 @end
 

@@ -87,8 +87,6 @@
 - (double)tableView:(id)arg1 heightForHeaderInSection:(long long)arg2;
 - (double)tableView:(id)arg1 estimatedHeightForRowAtIndexPath:(id)arg2;
 - (double)tableView:(id)arg1 heightForRowAtIndexPath:(id)arg2;
-- (long long)tableView:(id)arg1 sectionForSectionIndexTitle:(id)arg2 atIndex:(long long)arg3;
-- (id)sectionIndexTitlesForTableView:(id)arg1;
 - (long long)tableView:(id)arg1 numberOfRowsInSection:(long long)arg2;
 - (long long)numberOfSectionsInTableView:(id)arg1;
 - (id)tableView:(id)arg1 cellForRowAtIndexPath:(id)arg2;
@@ -107,7 +105,6 @@
 - (void)handleFilterBar;
 - (void)handleQuickScroll;
 - (void)handleEmptyView;
-- (_Bool)areSectionIndexTitlesUpdated;
 - (void)updateTableWithSectionHeadersChanged:(_Bool)arg1;
 - (void)viewModel:(id)arg1 error:(id)arg2;
 - (void)viewModelDidUpdate:(id)arg1 sectionHeadersChanged:(_Bool)arg2;

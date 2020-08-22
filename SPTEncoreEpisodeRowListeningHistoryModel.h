@@ -10,7 +10,7 @@
 {
 }
 
-- (id)initWithEpisodeTitle:(id)arg1 showTitle:(id)arg2 coverArtUri:(id)arg3 isPlaying:(_Bool)arg4;
+- (id)initWithEpisodeTitle:(id)arg1 showTitle:(id)arg2 coverArtUri:(id)arg3 isPlaying:(_Bool)arg4 progress:(float)arg5;
 
 @end
 

@@ -10,7 +10,6 @@
 @protocol SPTYourLibraryMusicRangeDataLoaderDelegate;
 
 @protocol SPTYourLibraryMusicRangeDataLoader <NSObject>
-@property(readonly, nonatomic) NSArray *sectionIndices;
 @property(readonly, nonatomic) unsigned long long totalNumberOfItems;
 @property(nonatomic) __weak id <SPTYourLibraryMusicRangeDataLoaderDelegate> rangeDataLoaderDelegate;
 - (void)loadItemsForRange:(struct _NSRange)arg1 sortRules:(NSArray *)arg2 filterRules:(NSArray *)arg3 textFilter:(NSString *)arg4;

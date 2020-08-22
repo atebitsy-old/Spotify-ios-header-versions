@@ -8,8 +8,12 @@
 
 @interface _TtC20SuperbirdFeatureImpl25PresetsAppProtocolHandler : NSObject
 {
+    // Error parsing type: , name: networkManager
+    // Error parsing type: , name: superbirdDetector
+    // Error parsing type: , name: interappPendingReplies
 }
 
+- (void).cxx_destruct;
 - (id)init;
 
 @end

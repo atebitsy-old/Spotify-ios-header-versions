@@ -6,22 +6,15 @@
 
 #import <objc/NSObject.h>
 
-@protocol BMKVOControllerFactory;
-
 @interface BMAVFactory : NSObject
 {
-    id <BMKVOControllerFactory> _kvoControllerFactory;
 }
 
-- (void).cxx_destruct;
-@property(retain, nonatomic) id <BMKVOControllerFactory> kvoControllerFactory; // @synthesize kvoControllerFactory=_kvoControllerFactory;
 - (id)createDownloadSessionWithDelegate:(id)arg1 identifier:(id)arg2;
-- (id)createPlayerLooperWithPlayer:(id)arg1;
 - (id)createPlayerItemWithAsset:(id)arg1;
 - (id)createQueuePlayer;
 - (id)createAssetWithURL:(id)arg1;
 - (id)createFairplayContentKeySession;
-- (id)initWithKvoControllerFactory:(id)arg1;
 
 @end
 

@@ -21,7 +21,7 @@
 - (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTShareVideoDataProvider> videoDataLoader; // @synthesize videoDataLoader=_videoDataLoader;
 @property(readonly, nonatomic) __weak SPTShareFeatureProperties *featureProperties; // @synthesize featureProperties=_featureProperties;
-@property(readonly, nonatomic) SPTSharingSDK *sharingSDK; // @synthesize sharingSDK=_sharingSDK;
+@property(readonly, nonatomic) __weak SPTSharingSDK *sharingSDK; // @synthesize sharingSDK=_sharingSDK;
 @property(retain, nonatomic) SPTShareLogger *shareLogger; // @synthesize shareLogger=_shareLogger;
 @property(retain, nonatomic) SPTDataLoaderFactory *dataLoaderFactory; // @synthesize dataLoaderFactory=_dataLoaderFactory;
 - (id)provideShareHandlerForShareDestination:(id)arg1;

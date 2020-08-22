@@ -103,6 +103,13 @@
 - (id)adjUrlDecode;
 - (id)adjUrlEncode;
 - (id)adjTrim;
+- (_Bool)bnc_containsString:(id)arg1;
+- (id)bnc_stringTruncatedAtNull;
+- (_Bool)bnc_isEqualToMaskedString:(id)arg1;
+- (id)apm_MD5String;
+- (id)apm_stringByUnescapingFromURLArgument;
+- (void)apm_getUTF32Bytes:(void *)arg1 maxBytes:(unsigned long long)arg2;
+- (unsigned long long)apm_UTF32Length;
 - (id)gckb_stringWithTrailingComponentsRemoved:(id)arg1;
 - (id)gckb_SHA1Hash;
 - (id)gckb_SHA256Hash;

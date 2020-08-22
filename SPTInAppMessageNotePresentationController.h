@@ -10,7 +10,7 @@
 #import "SPTInAppMessagePresenter-Protocol.h"
 #import "SPTOfflineModeStateObserver-Protocol.h"
 
-@class NSDictionary, NSString, SPTInAppMessageNoteOverlayController, SPTInAppMessageNowPlayingManagerRegistryImplementation, SPTInAppMessageServiceLogger;
+@class NSDictionary, NSNotificationCenter, NSString, SPTInAppMessageNoteOverlayController, SPTInAppMessageNowPlayingManagerRegistryImplementation, SPTInAppMessageServiceLogger;
 @protocol SPTAuthController, SPTBannerPresentationManager, SPTCarDetector, SPTCrashReporter, SPTFreeTierTooltipConditionalPresenter, SPTInAppMessageSDKMessageViewModel, SPTOfflineModeState, SPTSlateManager, SPTSnackbarConditionalPresenter;
 
 @interface SPTInAppMessageNotePresentationController : NSObject <SPTOfflineModeStateObserver, SPTInAppMessageNoteOverlayControllerDelegate, SPTInAppMessagePresenter>
@@ -28,6 +28,7 @@
     id <SPTCrashReporter> _crashReporter;
     id <SPTOfflineModeState> _offlineModeState;
     id <SPTAuthController> _authController;
+    NSNotificationCenter *_notificationCenter;
     double _presentationStartTime;
     NSDictionary *_cancelationInfo;
     NSString *_matchedPattern;
@@ -40,6 +41,7 @@
 @property(copy, nonatomic) NSDictionary *cancelationInfo; // @synthesize cancelationInfo=_cancelationInfo;
 @property(nonatomic) double presentationStartTime; // @synthesize presentationStartTime=_presentationStartTime;
 @property(nonatomic, getter=isOffline) _Bool offline; // @synthesize offline=_offline;
+@property(readonly, nonatomic) NSNotificationCenter *notificationCenter; // @synthesize notificationCenter=_notificationCenter;
 @property(readonly, nonatomic) id <SPTAuthController> authController; // @synthesize authController=_authController;
 @property(readonly, nonatomic) __weak id <SPTOfflineModeState> offlineModeState; // @synthesize offlineModeState=_offlineModeState;
 @property(readonly, nonatomic) id <SPTCrashReporter> crashReporter; // @synthesize crashReporter=_crashReporter;
@@ -61,7 +63,7 @@
 - (void)dismiss;
 - (void)presentInAppMessageView:(id)arg1 withCompletion:(CDUnknownBlockType)arg2;
 - (void)dealloc;
-- (id)initWithNoteOverlayController:(id)arg1 messageViewModel:(id)arg2 matchedPattern:(id)arg3 triggerType:(id)arg4 slateManager:(id)arg5 bannerPresentationManager:(id)arg6 freeTierTooltipPresenter:(id)arg7 snackbarPresenter:(id)arg8 offlineModeState:(id)arg9 nowPlayingManagerRegistry:(id)arg10 carDetector:(id)arg11 serviceLogger:(id)arg12 crashReporter:(id)arg13 authController:(id)arg14;
+- (id)initWithNoteOverlayController:(id)arg1 messageViewModel:(id)arg2 matchedPattern:(id)arg3 triggerType:(id)arg4 slateManager:(id)arg5 bannerPresentationManager:(id)arg6 freeTierTooltipPresenter:(id)arg7 snackbarPresenter:(id)arg8 offlineModeState:(id)arg9 nowPlayingManagerRegistry:(id)arg10 carDetector:(id)arg11 serviceLogger:(id)arg12 crashReporter:(id)arg13 authController:(id)arg14 notificationCenter:(id)arg15;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

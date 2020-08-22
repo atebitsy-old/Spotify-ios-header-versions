@@ -6,31 +6,41 @@
 
 #import <objc/NSObject.h>
 
-#import "SPTDataLoaderAuthorisationHostRegistration-Protocol.h"
+#import "SPTClientTokenAcquireTaskDelegate-Protocol.h"
 #import "SPTDataLoaderAuthoriser-Protocol.h"
 
-@class NSString;
-@protocol SPTClientTokenAcquirer, SPTDataLoaderAuthoriserDelegate;
+@class NSMutableArray, NSString;
+@protocol SPTClientTokenAcquireTask, SPTClientTokenAcquirer, SPTDataLoaderAuthoriserDelegate, SPTNetworkConnectivityController;
 
-@interface SPTDataLoaderClientTokenAuthoriser : NSObject <SPTDataLoaderAuthoriser, SPTDataLoaderAuthorisationHostRegistration>
+@interface SPTDataLoaderClientTokenAuthoriser : NSObject <SPTDataLoaderAuthoriser, SPTClientTokenAcquireTaskDelegate>
 {
-    id <SPTDataLoaderAuthoriserDelegate> delegate;
-    NSString *identifier;
+    id <SPTDataLoaderAuthoriserDelegate> _delegate;
+    NSString *_identifier;
     id <SPTClientTokenAcquirer> _clientTokenAcquirer;
+    id <SPTNetworkConnectivityController> _networkConnectivityController;
+    NSMutableArray *_pendingRequests;
+    id <SPTClientTokenAcquireTask> _task;
 }
 
 - (void).cxx_destruct;
+@property(retain, nonatomic) id <SPTClientTokenAcquireTask> task; // @synthesize task=_task;
+@property(retain, nonatomic) NSMutableArray *pendingRequests; // @synthesize pendingRequests=_pendingRequests;
+@property(nonatomic) __weak id <SPTNetworkConnectivityController> networkConnectivityController; // @synthesize networkConnectivityController=_networkConnectivityController;
 @property(nonatomic) __weak id <SPTClientTokenAcquirer> clientTokenAcquirer; // @synthesize clientTokenAcquirer=_clientTokenAcquirer;
-@property(readonly, nonatomic) NSString *identifier; // @synthesize identifier;
-@property(nonatomic) __weak id <SPTDataLoaderAuthoriserDelegate> delegate; // @synthesize delegate;
-- (void)unregisterAuthorisationHostsName:(id)arg1;
-- (void)registerAuthorisationHosts:(id)arg1 withName:(id)arg2;
+@property(readonly, nonatomic) NSString *identifier; // @synthesize identifier=_identifier;
+@property(nonatomic) __weak id <SPTDataLoaderAuthoriserDelegate> delegate; // @synthesize delegate=_delegate;
+- (void)clientTokenAcquireTask:(id)arg1 didFailWithError:(id)arg2;
+- (void)clientTokenAcquireTask:(id)arg1 didReceiveToken:(id)arg2;
 - (_Bool)requestRequiresAuthorisation:(id)arg1;
 - (void)requestFailedAuthorisation:(id)arg1 response:(id)arg2;
 - (void)refresh;
 - (void)authoriseRequest:(id)arg1;
+- (void)dealloc;
 - (id)copyWithZone:(struct _NSZone *)arg1;
-- (id)initWithClientTokenAcquirer:(id)arg1;
+- (void)resetTask;
+- (void)injectAuthorisationHeadersIntoRequest:(id)arg1 clientToken:(id)arg2;
+- (void)acquireTokenWithRefresh:(_Bool)arg1;
+- (id)initWithClientTokenAcquirer:(id)arg1 networkConnectivityController:(id)arg2;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

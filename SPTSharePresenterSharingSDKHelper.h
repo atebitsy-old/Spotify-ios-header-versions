@@ -20,11 +20,13 @@
 - (id)makeSnapchatStoriesEntityDataWith:(id)arg1 utmTag:(id)arg2;
 - (id)makeFacebookStoriesEntityDataWith:(id)arg1 utmTag:(id)arg2;
 - (id)makeInstagramStoriesEntityDataWith:(id)arg1 utmTag:(id)arg2;
+- (id)makeTwitterEntityDataWith:(id)arg1 utmTag:(id)arg2;
 - (id)makeLinkOrMessageEntityDataWith:(id)arg1 utmTag:(id)arg2;
 - (id)makeLinkEntityDataWith:(id)arg1 utmTag:(id)arg2;
 - (id)utmMediumForDestinationID:(long long)arg1;
 - (id)utmSourceForDestinationID:(long long)arg1;
 - (id)utmTagForShareForDestinationID:(long long)arg1;
+- (long long)shareDestinationIDFromSharingSDKDestinationID:(id)arg1;
 - (id)entityDataFromShareData:(id)arg1 destinationID:(long long)arg2;
 - (id)sharingSKDDestinationForDestinationID:(long long)arg1;
 - (id)initWithSharingSDK:(id)arg1;

@@ -18,6 +18,8 @@
     _Bool _editorialOnDemandEnabled;
     _Bool _onDemandDebuggingEnabled;
     _Bool _topicCarouselProhibited;
+    _Bool _lyricsDebuggingEnabled;
+    _Bool _updatedPodcastCopyEnabled;
     NSURL *_pageURI;
     HUBViewModelBuilderFactory *_viewModelBuilderFactory;
     id <SPTSearch2EmptyStatePropertiesProvider> _emptyStatePropertiesProvider;
@@ -30,6 +32,8 @@
 }
 
 - (void).cxx_destruct;
+@property(readonly, nonatomic) _Bool updatedPodcastCopyEnabled; // @synthesize updatedPodcastCopyEnabled=_updatedPodcastCopyEnabled;
+@property(readonly, nonatomic) _Bool lyricsDebuggingEnabled; // @synthesize lyricsDebuggingEnabled=_lyricsDebuggingEnabled;
 @property(readonly, nonatomic) _Bool topicCarouselProhibited; // @synthesize topicCarouselProhibited=_topicCarouselProhibited;
 @property(readonly, nonatomic) _Bool onDemandDebuggingEnabled; // @synthesize onDemandDebuggingEnabled=_onDemandDebuggingEnabled;
 @property(readonly, nonatomic) _Bool editorialOnDemandEnabled; // @synthesize editorialOnDemandEnabled=_editorialOnDemandEnabled;
@@ -65,7 +69,7 @@
 - (id)parseDrillDownResponse:(id)arg1 requestID:(id)arg2 offset:(unsigned long long)arg3 error:(id *)arg4;
 - (id)parseMainResponse:(id)arg1 requestID:(id)arg2 error:(id *)arg3;
 - (id)parse:(id)arg1 requestID:(id)arg2 offset:(unsigned long long)arg3 error:(id *)arg4;
-- (id)initWithPageURI:(id)arg1 viewModelBuilderFactory:(id)arg2 emptyStatePropertiesProvider:(id)arg3 onDemandPermissionMonitor:(id)arg4 explicitContentAccessManager:(id)arg5 ageVerificationProvider:(id)arg6 query:(id)arg7 isDrillDown:(_Bool)arg8 ubiLocationSerializer:(id)arg9 referrerIdentifier:(id)arg10 topicsEnabled:(_Bool)arg11 editorialOnDemandEnabled:(_Bool)arg12 onDemandDebuggingEnabled:(_Bool)arg13 topicCarouselProhibited:(_Bool)arg14;
+- (id)initWithPageURI:(id)arg1 viewModelBuilderFactory:(id)arg2 emptyStatePropertiesProvider:(id)arg3 onDemandPermissionMonitor:(id)arg4 explicitContentAccessManager:(id)arg5 ageVerificationProvider:(id)arg6 query:(id)arg7 isDrillDown:(_Bool)arg8 ubiLocationSerializer:(id)arg9 referrerIdentifier:(id)arg10 topicsEnabled:(_Bool)arg11 editorialOnDemandEnabled:(_Bool)arg12 onDemandDebuggingEnabled:(_Bool)arg13 topicCarouselProhibited:(_Bool)arg14 lyricsDebuggingEnabled:(_Bool)arg15 updatedPodcastCopyEnabled:(_Bool)arg16;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

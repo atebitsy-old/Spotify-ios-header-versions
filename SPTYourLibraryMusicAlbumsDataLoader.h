@@ -8,7 +8,7 @@
 
 #import "SPTYourLibraryMusicRangeDataLoader-Protocol.h"
 
-@class NSArray, NSString;
+@class NSString;
 @protocol SPTCollectionPlatformDataLoader, SPTCollectionPlatformDataLoaderRequestToken, SPTYourLibraryMusicRangeDataLoaderDelegate, SPTYourLibraryMusicTestManager;
 
 @interface SPTYourLibraryMusicAlbumsDataLoader : NSObject <SPTYourLibraryMusicRangeDataLoader>
@@ -17,13 +17,11 @@
     id <SPTCollectionPlatformDataLoader> _collectionDataLoader;
     id <SPTYourLibraryMusicTestManager> _testManager;
     unsigned long long _totalNumberOfItems;
-    NSArray *_sectionIndices;
     id <SPTCollectionPlatformDataLoaderRequestToken> _subscription;
 }
 
 - (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTCollectionPlatformDataLoaderRequestToken> subscription; // @synthesize subscription=_subscription;
-@property(copy, nonatomic) NSArray *sectionIndices; // @synthesize sectionIndices=_sectionIndices;
 @property(nonatomic) unsigned long long totalNumberOfItems; // @synthesize totalNumberOfItems=_totalNumberOfItems;
 @property(retain, nonatomic) id <SPTYourLibraryMusicTestManager> testManager; // @synthesize testManager=_testManager;
 @property(readonly, nonatomic) id <SPTCollectionPlatformDataLoader> collectionDataLoader; // @synthesize collectionDataLoader=_collectionDataLoader;

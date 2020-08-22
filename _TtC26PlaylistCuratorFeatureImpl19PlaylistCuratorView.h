@@ -11,6 +11,7 @@
     // Error parsing type: , name: closeButton
     // Error parsing type: , name: tabView
     // Error parsing type: , name: songsView
+    // Error parsing type: , name: podcastView
 }
 
 - (void).cxx_destruct;

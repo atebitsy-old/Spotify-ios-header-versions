@@ -9,7 +9,7 @@
 #import "SPTImageLoaderDelegate-Protocol.h"
 
 @class NSString, NSURL, SPTScannablesAuthorizationRequester, SPTScannablesDependencies, SPTUIBlurView, UIButton;
-@protocol SPTAlertController, SPTImageLoader, SPTScannablesOnboardingPresenter;
+@protocol SPTImageLoader, SPTScannablesOnboardingPresenter, SPTSnackbarConditionalPresenter;
 
 @interface SPTScannablesImageView : UIImageView <SPTImageLoaderDelegate>
 {
@@ -18,19 +18,19 @@
     id <SPTScannablesOnboardingPresenter> _onboardingPresenter;
     SPTScannablesAuthorizationRequester *_authorizationRequester;
     SPTScannablesDependencies *_dependencies;
+    id <SPTSnackbarConditionalPresenter> _snackbarPresenter;
     SPTUIBlurView *_overlayView;
     UIImageView *_overlayImageView;
     UIButton *_saveToCameraRollButton;
-    id <SPTAlertController> _alertController;
     id <SPTImageLoader> _imageLoader;
 }
 
 - (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTImageLoader> imageLoader; // @synthesize imageLoader=_imageLoader;
-@property(retain, nonatomic) id <SPTAlertController> alertController; // @synthesize alertController=_alertController;
 @property(retain, nonatomic) UIButton *saveToCameraRollButton; // @synthesize saveToCameraRollButton=_saveToCameraRollButton;
 @property(retain, nonatomic) UIImageView *overlayImageView; // @synthesize overlayImageView=_overlayImageView;
 @property(retain, nonatomic) SPTUIBlurView *overlayView; // @synthesize overlayView=_overlayView;
+@property(readonly, nonatomic) id <SPTSnackbarConditionalPresenter> snackbarPresenter; // @synthesize snackbarPresenter=_snackbarPresenter;
 @property(readonly, nonatomic) SPTScannablesDependencies *dependencies; // @synthesize dependencies=_dependencies;
 @property(readonly, nonatomic) SPTScannablesAuthorizationRequester *authorizationRequester; // @synthesize authorizationRequester=_authorizationRequester;
 @property(readonly, nonatomic) __weak id <SPTScannablesOnboardingPresenter> onboardingPresenter; // @synthesize onboardingPresenter=_onboardingPresenter;
@@ -38,14 +38,16 @@
 @property(readonly, nonatomic) NSURL *entityURL; // @synthesize entityURL=_entityURL;
 - (void)imageLoader:(id)arg1 didFailToLoadImageForURL:(id)arg2 error:(id)arg3 context:(id)arg4;
 - (void)imageLoader:(id)arg1 didLoadImage:(id)arg2 forURL:(id)arg3 loadTime:(double)arg4 context:(id)arg5;
+- (void)presentSnackbarWithMessage:(id)arg1;
 - (void)image:(id)arg1 didFinishSavingWithError:(id)arg2 contextInfo:(void *)arg3;
 - (void)didTapSaveToCameraRollButton;
+- (void)dismissOverlayView;
 - (void)overlayViewDismissedWithRecognizer:(id)arg1;
 - (void)didTapScannable;
 - (void)requestScannableIfNeeded;
 - (void)layoutSubviews;
 - (void)setupImageView;
-- (id)initWithEntityURL:(id)arg1 imageURL:(id)arg2 onboardingPresenter:(id)arg3 authorizationRequester:(id)arg4 dependencies:(id)arg5 alertController:(id)arg6;
+- (id)initWithEntityURL:(id)arg1 imageURL:(id)arg2 onboardingPresenter:(id)arg3 authorizationRequester:(id)arg4 dependencies:(id)arg5 snackbarPresenter:(id)arg6;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

@@ -4,11 +4,9 @@
 //     class-dump is Copyright (C) 1997-1998, 2000-2001, 2004-2015 by Steve Nygard.
 //
 
-#import "NSObject-Protocol.h"
-
 @class NSString, NSURL;
 
-@protocol SPTPodcastTopic <NSObject>
+@protocol SPTPodcastTopic
 @property(nonatomic, readonly) NSURL *uri;
 @property(nonatomic, readonly) NSString *title;
 @end

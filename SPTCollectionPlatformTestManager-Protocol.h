@@ -9,7 +9,6 @@
 @protocol SPTCollectionPlatformConfiguration;
 
 @protocol SPTCollectionPlatformTestManager <NSObject>
-@property(readonly, nonatomic, getter=isLocalBansEnabled) _Bool localBansEnabled;
 @property(readonly, nonatomic, getter=isPremiumLabelEnabled) _Bool premiumLabelEnabled;
 @property(readonly, getter=isFollowedArtistsOnlyEnabled) _Bool followedArtistsOnlyEnabled;
 @property(readonly, nonatomic) id <SPTCollectionPlatformConfiguration> collectionConfiguration;

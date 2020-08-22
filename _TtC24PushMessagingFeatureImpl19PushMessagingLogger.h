@@ -14,6 +14,8 @@
     // Error parsing type: , name: pushMessagingLoggerMessageIDKey
     // Error parsing type: , name: pushMessagingLoggerURLKey
     // Error parsing type: , name: pushMessagingLoggerTimestampKey
+    // Error parsing type: , name: pushErrorReasonKey
+    // Error parsing type: , name: pushAppDeviceIdKey
     // Error parsing type: , name: pushSettingNotificationCenter
     // Error parsing type: , name: pushSettingLockScreen
     // Error parsing type: , name: pushSettingCarPlay
@@ -27,6 +29,7 @@
     // Error parsing type: , name: pushAuthStatusUnknown
     // Error parsing type: , name: pushMessagingSharedGroupKey
     // Error parsing type: , name: pushMessagingExtensionDictionaryKey
+    // Error parsing type: , name: pushExtensionLogImageFailureEventsKey
     // Error parsing type: , name: logCenter
     // Error parsing type: , name: eventSender
     // Error parsing type: , name: ubiLogger

@@ -21,11 +21,5 @@
 @property(copy, nonatomic) NSString *title; // @synthesize title=_title;
 - (id)initWithDictionary:(id)arg1;
 
-// Remaining properties
-@property(readonly, copy) NSString *debugDescription;
-@property(readonly, copy) NSString *description;
-@property(readonly) unsigned long long hash;
-@property(readonly) Class superclass;
-
 @end
 

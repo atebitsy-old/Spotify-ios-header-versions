@@ -13,19 +13,27 @@
 @interface SPTYourLibraryExperienceImplementation : NSObject <SPTYourLibraryBetaExperience>
 {
     _Bool _isDefaultExperience;
+    CDUnknownBlockType _startBlock;
     CDUnknownBlockType _stopBlock;
     CDUnknownBlockType _viewControllerBlock;
+    CDUnknownBlockType _claimsURI;
+    CDUnknownBlockType _handleURI;
 }
 
 - (void).cxx_destruct;
+@property(copy, nonatomic) CDUnknownBlockType handleURI; // @synthesize handleURI=_handleURI;
+@property(copy, nonatomic) CDUnknownBlockType claimsURI; // @synthesize claimsURI=_claimsURI;
 @property(copy, nonatomic) CDUnknownBlockType viewControllerBlock; // @synthesize viewControllerBlock=_viewControllerBlock;
 @property(copy, nonatomic) CDUnknownBlockType stopBlock; // @synthesize stopBlock=_stopBlock;
+@property(copy, nonatomic) CDUnknownBlockType startBlock; // @synthesize startBlock=_startBlock;
 @property(readonly, nonatomic) _Bool isDefaultExperience; // @synthesize isDefaultExperience=_isDefaultExperience;
+- (void)handleWithURI:(id)arg1;
+- (_Bool)claimsWithURI:(id)arg1;
 - (void)startExperience;
 - (void)stopExperience;
 - (id)provideViewControllerWithPageCreationContext:(id)arg1;
 @property(readonly, copy, nonatomic) NSString *identifier;
-- (id)initWithDefaultExperience:(_Bool)arg1 stopExperienceBlock:(CDUnknownBlockType)arg2 provideViewController:(CDUnknownBlockType)arg3;
+- (id)initWithDefaultExperience:(_Bool)arg1 startExperienceBlock:(CDUnknownBlockType)arg2 stopExperienceBlock:(CDUnknownBlockType)arg3 provideViewController:(CDUnknownBlockType)arg4 claimsURI:(CDUnknownBlockType)arg5 handleURI:(CDUnknownBlockType)arg6;
 
 @end
 

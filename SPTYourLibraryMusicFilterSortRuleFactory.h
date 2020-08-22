@@ -15,8 +15,8 @@
 }
 
 + (id)nameSortRule:(id)arg1 title:(id)arg2;
-+ (id)nameSortRuleWithIdentifier:(id)arg1 title:(id)arg2 groupByName:(_Bool)arg3;
-+ (id)nameSortRuleWithIdentifier:(id)arg1 title:(id)arg2 groupByName:(_Bool)arg3 groupLabel:(_Bool)arg4;
++ (id)nameSortRuleWithIdentifier:(id)arg1 title:(id)arg2;
++ (id)nameSortRuleWithIdentifier:(id)arg1 title:(id)arg2 groupLabel:(_Bool)arg3;
 - (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTYourLibraryMusicTestManager> testManager; // @synthesize testManager=_testManager;
 @property(readonly, nonatomic) id <SPTProductState> productState; // @synthesize productState=_productState;
@@ -28,7 +28,7 @@
 - (id)recentlyAddedSongsSortRule;
 - (id)recentlyAddedSortRule;
 - (id)songsAlbumSortRule;
-- (id)artistNameSortRule:(id)arg1 groupByName:(_Bool)arg2 groupLabel:(_Bool)arg3;
+- (id)artistNameSortRule:(id)arg1 groupLabel:(_Bool)arg2;
 - (id)albumArtistNameSortRule;
 - (id)songsArtistNameSortRule;
 - (id)albumNameSortRule;

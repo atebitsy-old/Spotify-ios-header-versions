@@ -17,15 +17,11 @@
     NSArray *_items;
     id <SPTYourLibraryMusicPlaylistModelItemEntity> _favoriteEntity;
     id <SPTYourLibraryMusicPlaylistModelItemEntity> _offlineMixEntity;
-    NSArray *_sectionIndexes;
-    NSArray *_sectionTitles;
     NSArray *_itemFilters;
 }
 
 - (void).cxx_destruct;
 @property(copy, nonatomic) NSArray *itemFilters; // @synthesize itemFilters=_itemFilters;
-@property(copy, nonatomic) NSArray *sectionTitles; // @synthesize sectionTitles=_sectionTitles;
-@property(copy, nonatomic) NSArray *sectionIndexes; // @synthesize sectionIndexes=_sectionIndexes;
 @property(retain, nonatomic) id <SPTYourLibraryMusicPlaylistModelItemEntity> offlineMixEntity; // @synthesize offlineMixEntity=_offlineMixEntity;
 @property(retain, nonatomic) id <SPTYourLibraryMusicPlaylistModelItemEntity> favoriteEntity; // @synthesize favoriteEntity=_favoriteEntity;
 @property(copy, nonatomic) NSArray *items; // @synthesize items=_items;

@@ -13,10 +13,12 @@
     long long _icon;
     UIColor *_iconColor;
     unsigned long long _steeringDirection;
+    UIColor *_iconColorSelected;
     struct CGSize _iconSize;
 }
 
 - (void).cxx_destruct;
+@property(copy, nonatomic) UIColor *iconColorSelected; // @synthesize iconColorSelected=_iconColorSelected;
 @property(nonatomic) unsigned long long steeringDirection; // @synthesize steeringDirection=_steeringDirection;
 - (void)setIconSize:(struct CGSize)arg1;
 - (struct CGSize)iconSize;
@@ -24,6 +26,7 @@
 - (id)iconColor;
 - (void)setIcon:(long long)arg1;
 - (long long)icon;
+- (void)applyIcon;
 - (id)initWithDirection:(unsigned long long)arg1;
 
 @end

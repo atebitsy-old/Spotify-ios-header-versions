@@ -107,8 +107,6 @@
 - (void)scrollViewDidScroll:(id)arg1;
 - (_Bool)automaticallyAdjustsScrollViewInsets;
 - (void)spt_scrollToTop;
-- (long long)tableView:(id)arg1 sectionForSectionIndexTitle:(id)arg2 atIndex:(long long)arg3;
-- (id)sectionIndexTitlesForTableView:(id)arg1;
 - (long long)numberOfSectionsInTableView:(id)arg1;
 - (long long)tableView:(id)arg1 numberOfRowsInSection:(long long)arg2;
 - (id)tableView:(id)arg1 cellForRowAtIndexPath:(id)arg2;
@@ -118,7 +116,6 @@
 - (void)hideProgressViewWithError:(id)arg1;
 - (void)setupConstraints;
 - (void)initializeInterface;
-- (void)viewWillAppear:(_Bool)arg1;
 - (void)viewDidLoad;
 - (id)initWithViewModel:(id)arg1 imageLoader:(id)arg2 theme:(id)arg3 styleFactoryBlock:(CDUnknownBlockType)arg4 emptyView:(id)arg5 viewLogger:(id)arg6 pageIdentifier:(id)arg7 pageURI:(id)arg8 sortingFilterUIFactory:(id)arg9 snackbarPresenter:(id)arg10 shareDragDelegateFactory:(id)arg11 quickScrollFactory:(id)arg12;
 

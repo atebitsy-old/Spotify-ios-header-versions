@@ -6,14 +6,19 @@
 
 #import "HUBComponentView.h"
 
+@protocol HUBComponentEventHandler;
+
 @interface _TtC18SupportFeatureImpl27CategoryComponentViewBinder : HUBComponentView
 {
+    // Error parsing type: , name: eventHandler
     // Error parsing type: , name: categoryView
+    // Error parsing type: , name: $__lazy_storage_$_contentViewClickBehavior
 }
 
 - (void).cxx_destruct;
 - (void)configureWithModel:(id)arg1;
 - (id)initWithFrame:(struct CGRect)arg1;
+@property(nonatomic) __weak id <HUBComponentEventHandler> eventHandler; // @synthesize eventHandler;
 
 @end
 

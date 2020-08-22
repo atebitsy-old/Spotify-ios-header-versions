@@ -18,8 +18,12 @@
     _Bool _topicCarouselProhibited;
     _Bool _v2AssistedCurationEnabled;
     _Bool _recentsRowEpisodeTwoLinesEnabled;
+    _Bool _lyricsDebuggingEnabled;
+    _Bool _updatedPodcastCopyEnabled;
 }
 
+@property(readonly, nonatomic) _Bool updatedPodcastCopyEnabled; // @synthesize updatedPodcastCopyEnabled=_updatedPodcastCopyEnabled;
+@property(readonly, nonatomic) _Bool lyricsDebuggingEnabled; // @synthesize lyricsDebuggingEnabled=_lyricsDebuggingEnabled;
 @property(readonly, nonatomic) _Bool recentsRowEpisodeTwoLinesEnabled; // @synthesize recentsRowEpisodeTwoLinesEnabled=_recentsRowEpisodeTwoLinesEnabled;
 @property(readonly, nonatomic) _Bool v2AssistedCurationEnabled; // @synthesize v2AssistedCurationEnabled=_v2AssistedCurationEnabled;
 @property(readonly, nonatomic) _Bool topicCarouselProhibited; // @synthesize topicCarouselProhibited=_topicCarouselProhibited;

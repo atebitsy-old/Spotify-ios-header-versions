@@ -9,11 +9,12 @@
 #import "SPTExternalIntegrationPlaybackControllerObserver-Protocol.h"
 
 @class NSString, SPTCarPlayContentItem, SPTCarPlayContentItemBuilder, SPTCarPlayFeatureProperties;
-@protocol SPTExternalIntegrationPlaybackController;
+@protocol SPTCarPlayContentDataSource, SPTExternalIntegrationPlaybackController;
 
 @interface SPTCarPlayContinuePlayingFeature : NSObject <SPTExternalIntegrationPlaybackControllerObserver>
 {
     SPTCarPlayFeatureProperties *_properties;
+    id <SPTCarPlayContentDataSource> _contentDataSource;
     SPTCarPlayContentItemBuilder *_contentItemBuilder;
     id <SPTExternalIntegrationPlaybackController> _playbackController;
     SPTCarPlayContentItem *_continuePlayingItem;
@@ -25,6 +26,7 @@
 @property(nonatomic) __weak SPTCarPlayContentItem *continuePlayingItem; // @synthesize continuePlayingItem=_continuePlayingItem;
 @property(readonly, nonatomic) __weak id <SPTExternalIntegrationPlaybackController> playbackController; // @synthesize playbackController=_playbackController;
 @property(readonly, nonatomic) SPTCarPlayContentItemBuilder *contentItemBuilder; // @synthesize contentItemBuilder=_contentItemBuilder;
+@property(readonly, nonatomic) id <SPTCarPlayContentDataSource> contentDataSource; // @synthesize contentDataSource=_contentDataSource;
 @property(retain, nonatomic) SPTCarPlayFeatureProperties *properties; // @synthesize properties=_properties;
 - (id)getContextTitleFromPlayerState:(id)arg1;
 - (_Bool)isContextLoaded:(id)arg1;
@@ -32,7 +34,7 @@
 - (void)externalIntegrationPlaybackController:(id)arg1 didReceiveNewPlayerState:(id)arg2 oldPlayerState:(id)arg3;
 - (void)handleContinuePlayingWithActionOrigin:(id)arg1 completionHandler:(CDUnknownBlockType)arg2;
 - (id)createContentItemforParent:(id)arg1 withIndexPath:(id)arg2;
-- (id)initWithProperties:(id)arg1 debugLog:(id)arg2 contentItemBuilder:(id)arg3 playbackController:(id)arg4;
+- (id)initWithProperties:(id)arg1 contentDataSource:(id)arg2 debugLog:(id)arg3 contentItemBuilder:(id)arg4 playbackController:(id)arg5;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

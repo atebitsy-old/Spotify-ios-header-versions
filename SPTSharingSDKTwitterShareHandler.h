@@ -9,25 +9,24 @@
 #import "SPTSharingSDKShareHandler-Protocol.h"
 
 @class NSString, SPTSharingSDKLinkGenerator;
-@protocol SPTSharingSDKDeeplinkHandler, SPTSharingSDKEntityData;
+@protocol SPTSharingSDKEntityData, SPTSharingSDKSLComposeViewControllerWrapper, SPTSharingSDKViewControllerPresenter;
 
 @interface SPTSharingSDKTwitterShareHandler : NSObject <SPTSharingSDKShareHandler>
 {
     id <SPTSharingSDKEntityData> _entityData;
     SPTSharingSDKLinkGenerator *_linkGenerator;
-    id <SPTSharingSDKDeeplinkHandler> _deeplinkHandler;
+    id <SPTSharingSDKViewControllerPresenter> _viewControllerPresenter;
+    id <SPTSharingSDKSLComposeViewControllerWrapper> _composeViewControllerWrapper;
 }
 
-+ (id)failedToDeeplinkError;
-+ (id)deviceCannotOpenDeeplinkError;
 - (void).cxx_destruct;
-@property(readonly, nonatomic) id <SPTSharingSDKDeeplinkHandler> deeplinkHandler; // @synthesize deeplinkHandler=_deeplinkHandler;
+@property(readonly, nonatomic) id <SPTSharingSDKSLComposeViewControllerWrapper> composeViewControllerWrapper; // @synthesize composeViewControllerWrapper=_composeViewControllerWrapper;
+@property(readonly, nonatomic) id <SPTSharingSDKViewControllerPresenter> viewControllerPresenter; // @synthesize viewControllerPresenter=_viewControllerPresenter;
 @property(readonly, nonatomic) SPTSharingSDKLinkGenerator *linkGenerator; // @synthesize linkGenerator=_linkGenerator;
 @property(readonly, nonatomic) id <SPTSharingSDKEntityData> entityData; // @synthesize entityData=_entityData;
 - (id)completionDataWithShareID:(id)arg1;
-- (id)makeDeeplinkURLWithShareableURL:(id)arg1;
 - (void)performShareAction:(CDUnknownBlockType)arg1;
-- (id)initWithEntityData:(id)arg1 linkGenerator:(id)arg2 deeplinkHandler:(id)arg3;
+- (id)initWithEntityData:(id)arg1 linkGenerator:(id)arg2 viewControllerPresenter:(id)arg3 composeViewControllerWrapper:(id)arg4;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

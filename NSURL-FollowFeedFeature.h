@@ -92,12 +92,6 @@
 + (id)spt_seedASessionQuestionnaireURL:(id)arg1 sessionId:(id)arg2;
 + (id)spt_freeTierTrackContentURLForTrackIdentifier:(id)arg1;
 + (id)spt_hiddenContentURI;
-+ (void)createQueryParameterWithTriggerPatterns:(id)arg1 triggerType:(id)arg2 forUrlString:(id)arg3;
-+ (id)spt_inAppMessageFeatureFetchNoteMessagesURLForTriggerPatterns:(id)arg1 triggerType:(id)arg2 usingDevEnabled:(_Bool)arg3;
-+ (id)spt_inAppMessageFeatureFetchBannerMessagesURLForTriggerPatterns:(id)arg1 triggerType:(id)arg2 usingDevEnabled:(_Bool)arg3;
-+ (id)spt_inAppMessageFeatureFetchCardMessagesURLForTriggerPatterns:(id)arg1 triggerType:(id)arg2 usingDevEnabled:(_Bool)arg3;
-+ (id)spt_inAppMessageFeatureFetchTriggersURLUsingDevEnabled:(_Bool)arg1;
-+ (id)spt_inAppMessageFeatureBaseURLComponentsForEndpoint:(id)arg1 devEnabled:(_Bool)arg2;
 + (id)spt_PaymentIAPVerifyURLWithAppVersion:(id)arg1 transport:(long long)arg2;
 + (id)spt_PaymentIAPOffersURLWithTransport:(long long)arg1;
 + (id)spt_languageOnboardingErrorDialogURI;

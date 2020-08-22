@@ -14,7 +14,7 @@
 {
 }
 
-- (id)cellStateForTrackViewModel:(id)arg1 player:(id)arg2;
+- (id)cellStateForTrackViewModel:(id)arg1 player:(id)arg2 allowEpisodeDownload:(_Bool)arg3;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

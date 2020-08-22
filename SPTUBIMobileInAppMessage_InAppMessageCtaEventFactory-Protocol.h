@@ -10,6 +10,7 @@
 @protocol SPTUBIEventLocation, SPTUBIInteractionEvent;
 
 @protocol SPTUBIMobileInAppMessage_InAppMessageCtaEventFactory <NSObject>
+- (id <SPTUBIInteractionEvent>)hitSendEmailVerification;
 - (id <SPTUBIInteractionEvent>)hitNavigateToWebviewUriWithDestination:(NSURL *)arg1;
 - (id <SPTUBIInteractionEvent>)hitNavigateToExternalUriWithDestination:(NSURL *)arg1;
 - (id <SPTUBIInteractionEvent>)hitOpenOsSettings;

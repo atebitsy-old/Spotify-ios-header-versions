@@ -30,7 +30,6 @@
 - (id)subtitleForSection:(long long)arg1;
 - (id)titleForSection:(long long)arg1;
 - (_Bool)showSectionInModalMode:(unsigned long long)arg1;
-@property(readonly, nonatomic) unsigned long long scrollIndexMinimumDisplayRowCount;
 - (id)initWithLocalSettings:(id)arg1 testManager:(id)arg2;
 
 // Remaining properties

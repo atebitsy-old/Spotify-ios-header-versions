@@ -8,7 +8,7 @@
 
 @interface _TtC20SuperbirdFeatureImpl37RemoteConfigurationAppProtocolHandler : NSObject
 {
-    // Error parsing type: , name: remoteConfigurationNetworkManager
+    // Error parsing type: , name: networkManager
     // Error parsing type: , name: interappPendingReplies
 }
 

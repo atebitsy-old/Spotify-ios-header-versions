@@ -8,7 +8,7 @@
 
 #import "SPTPlayerItemNotificationObserver-Protocol.h"
 
-@class AVPlayerItem, AVQueuePlayer, BMAVFactory, NSHashTable, NSString, SPTPlayerItemNotificationObservable, SPTVideoPlayerLooper, SPTVideoSubtitleSelector, SPTVideoSubtitleSelectorFactory;
+@class AVPlayerItem, AVQueuePlayer, BMAVLooperFactory, NSHashTable, NSString, SPTPlayerItemNotificationObservable, SPTVideoPlayerLooper, SPTVideoSubtitleSelector, SPTVideoSubtitleSelectorFactory;
 @protocol BMKVOController, BMKVOControllerFactory, BMPlayerConfiguration, BMSubtitle;
 
 @interface SPTVideoPlayerSource : NSObject <SPTPlayerItemNotificationObserver>
@@ -22,7 +22,7 @@
     id <BMKVOController> _kvoController;
     id <BMKVOControllerFactory> _kvoControllerFactory;
     id <BMPlayerConfiguration> _playerConfiguration;
-    BMAVFactory *_avFactory;
+    BMAVLooperFactory *_avLooperFactory;
     SPTVideoPlayerLooper *_playerLooper;
     NSHashTable *_observers;
     SPTPlayerItemNotificationObservable *_playerItemObservable;
@@ -38,7 +38,7 @@
 @property(retain, nonatomic) SPTPlayerItemNotificationObservable *playerItemObservable; // @synthesize playerItemObservable=_playerItemObservable;
 @property(retain, nonatomic) NSHashTable *observers; // @synthesize observers=_observers;
 @property(retain, nonatomic) SPTVideoPlayerLooper *playerLooper; // @synthesize playerLooper=_playerLooper;
-@property(retain, nonatomic) BMAVFactory *avFactory; // @synthesize avFactory=_avFactory;
+@property(retain, nonatomic) BMAVLooperFactory *avLooperFactory; // @synthesize avLooperFactory=_avLooperFactory;
 @property(retain, nonatomic) id <BMPlayerConfiguration> playerConfiguration; // @synthesize playerConfiguration=_playerConfiguration;
 @property(retain, nonatomic) id <BMKVOControllerFactory> kvoControllerFactory; // @synthesize kvoControllerFactory=_kvoControllerFactory;
 @property(retain, nonatomic) id <BMKVOController> kvoController; // @synthesize kvoController=_kvoController;
@@ -66,7 +66,7 @@
 - (void)playerStatusChanged;
 - (void)recreatePlayer;
 - (void)dealloc;
-- (id)initWithPlayerConfiguration:(id)arg1 avFactory:(id)arg2 kvoControllerFactory:(id)arg3 playerItemObservable:(id)arg4 subtitleSelectorFactory:(id)arg5;
+- (id)initWithPlayerConfiguration:(id)arg1 avLooperFactory:(id)arg2 kvoControllerFactory:(id)arg3 playerItemObservable:(id)arg4 subtitleSelectorFactory:(id)arg5;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

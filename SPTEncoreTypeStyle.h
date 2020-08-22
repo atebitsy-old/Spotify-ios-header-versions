@@ -38,7 +38,6 @@
 + (id)attributedStringFromText:(id)arg1 withStyle:(id)arg2 andAccessibilityScale:(double)arg3;
 + (id)mergeParagraphStyle:(id)arg1 withParagraphStyle:(id)arg2;
 + (id)mergedStringAttributes:(id)arg1;
-+ (id)diff:(id)arg1 with:(id)arg2;
 - (void).cxx_destruct;
 @property(readonly, nonatomic) _Bool upperCaseLayout; // @synthesize upperCaseLayout=_upperCaseLayout;
 @property(readonly, nonatomic) CDStruct_b9b47a9c lineHeightRange; // @synthesize lineHeightRange=_lineHeightRange;

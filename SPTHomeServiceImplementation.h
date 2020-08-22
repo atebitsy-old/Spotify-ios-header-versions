@@ -8,11 +8,15 @@
 
 #import "SPTHomeService-Protocol.h"
 
-@class NSString, NSURL, SPTAllocationContext, SPTHomeContentStorage, SPTHomeDebugger, SPTHomeFeatureProperties, SPTHomeHubManager;
+@class NSString, NSURL, SPTAllocationContext, SPTHomeContentStorage, SPTHomeDebugger, SPTHomeFeatureProperties, SPTHomeForegroundingHandler, SPTHomeHubManager, SPTHomeLogger;
 @protocol SPTContainerUIService, SPTCrashReporterService, SPTFreeTierTasteOnboardingService, SPTFreeTierUIService, SPTGLUEService, SPTHomeUIService, SPTHubFrameworkService, SPTNavigationFeature, SPTNetworkService, SPTOfflineService, SPTOnDemandService, SPTPageLoaderViewService, SPTPerformanceMetricsService, SPTPlayerFeature, SPTPodcastUIService, SPTRecentlyPlayedService, SPTRemoteConfigurationService, SPTSessionService, SPTSettingsFeature, SPTShareFeature, SPTUBIHubsUtilities, SPTUBIService, _TtP17FollowFeedFeature20SPTFollowFeedService_, _TtP19CarDetectionFeature22SPTCarDetectionService_, _TtP23ListeningHistoryFeature26SPTListeningHistoryService_;
 
 @interface SPTHomeServiceImplementation : SPTUIPageService <SPTHomeService>
 {
+    SPTHomeContentStorage *_homeContentStorage;
+    SPTHomeLogger *_homeLogger;
+    SPTHomeDebugger *_homeDebugger;
+    SPTHomeForegroundingHandler *_foregroundingHandler;
     id <SPTGLUEService> _glueService;
     id <SPTHubFrameworkService> _hubService;
     id <SPTSessionService> _clientSessionService;
@@ -38,20 +42,16 @@
     id <SPTCrashReporterService> _crashReporterService;
     id <SPTContainerUIService> _containerUIService;
     SPTHomeHubManager *_hubManager;
-    SPTHomeContentStorage *_homeContentStorage;
     id <SPTUBIHubsUtilities> _ubiHubsUtilities;
     SPTHomeFeatureProperties *_homeFeatureProperties;
     NSURL *_pageURI;
-    SPTHomeDebugger *_homeDebugger;
 }
 
 + (id)serviceIdentifier;
 - (void).cxx_destruct;
-@property(retain, nonatomic) SPTHomeDebugger *homeDebugger; // @synthesize homeDebugger=_homeDebugger;
 @property(copy, nonatomic) NSURL *pageURI; // @synthesize pageURI=_pageURI;
 @property(retain, nonatomic) SPTHomeFeatureProperties *homeFeatureProperties; // @synthesize homeFeatureProperties=_homeFeatureProperties;
 @property(retain, nonatomic) id <SPTUBIHubsUtilities> ubiHubsUtilities; // @synthesize ubiHubsUtilities=_ubiHubsUtilities;
-@property(retain, nonatomic) SPTHomeContentStorage *homeContentStorage; // @synthesize homeContentStorage=_homeContentStorage;
 @property(retain, nonatomic) SPTHomeHubManager *hubManager; // @synthesize hubManager=_hubManager;
 @property(nonatomic) __weak id <SPTContainerUIService> containerUIService; // @synthesize containerUIService=_containerUIService;
 @property(nonatomic) __weak id <SPTCrashReporterService> crashReporterService; // @synthesize crashReporterService=_crashReporterService;
@@ -80,9 +80,13 @@
 - (id)pageLoaderViewControllerFor:(id)arg1 URI:(id)arg2 navigationItemDecorator:(id)arg3;
 - (id)provideViewControllerForURI:(id)arg1 context:(id)arg2;
 - (_Bool)claimsURI:(id)arg1;
-- (id)createLoggerForViewURI:(id)arg1;
+@property(readonly, nonatomic) SPTHomeForegroundingHandler *foregroundingHandler; // @synthesize foregroundingHandler=_foregroundingHandler;
+@property(readonly, nonatomic) SPTHomeDebugger *homeDebugger; // @synthesize homeDebugger=_homeDebugger;
+@property(readonly, nonatomic) SPTHomeLogger *homeLogger; // @synthesize homeLogger=_homeLogger;
 - (id)providePersistentCache;
+@property(readonly, nonatomic) SPTHomeContentStorage *homeContentStorage; // @synthesize homeContentStorage=_homeContentStorage;
 - (id)createHomeHubProviderWithComponentRegistry:(id)arg1;
+- (id)createInteractionLoggerForViewURI:(id)arg1;
 - (void)setupHubManager;
 - (void)load;
 - (void)configureWithServices:(id)arg1;

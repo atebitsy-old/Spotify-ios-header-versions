@@ -4,21 +4,27 @@
 //     class-dump is Copyright (C) 1997-1998, 2000-2001, 2004-2015 by Steve Nygard.
 //
 
-#import <objc/NSObject.h>
+#import "SPTUIPageService.h"
 
-@interface _TtC26YourLibraryBetaFeatureImpl22YourLibraryBetaService : NSObject
+@interface _TtC26YourLibraryBetaFeatureImpl22YourLibraryBetaService : SPTUIPageService
 {
-    // Error parsing type: , name: containerService
     // Error parsing type: , name: clientSessionService
     // Error parsing type: , name: pageLoaderViewService
     // Error parsing type: , name: remoteConfigurationService
-    // Error parsing type: , name: loopController
+    // Error parsing type: , name: settingsService
     // Error parsing type: , name: glueService
     // Error parsing type: , name: uiPresentationService
+    // Error parsing type: , name: networkService
+    // Error parsing type: , name: loopController
     // Error parsing type: , name: pageToken
     // Error parsing type: , name: testManager
+    // Error parsing type: , name: viewController
+    // Error parsing type: , name: viewLoaded
+    // Error parsing type: , name: lastNavigationURI
     // Error parsing type: , name: $__lazy_storage_$_experienceRegistry
+    // Error parsing type: , name: $__lazy_storage_$_dataLoaderFactory
     // Error parsing type: , name: $__lazy_storage_$_feedbackTheme
+    // Error parsing type: , name: $__lazy_storage_$_settingsSectionManager
 }
 
 + (id)serviceIdentifier;
@@ -27,7 +33,8 @@
 - (id)provideFeedbackFactory;
 - (id)provideExperienceRegistry;
 - (id)provideTestManager;
-- (id)provideViewControllerWithUri:(id)arg1 pageCreationContext:(id)arg2;
+- (id)provideViewControllerForURI:(id)arg1 context:(id)arg2;
+- (_Bool)claimsURI:(id)arg1;
 - (void)load;
 - (void)configureWithServices:(id)arg1;
 

@@ -11,7 +11,7 @@
 #import "SPTOfflineModeStateObserver-Protocol.h"
 #import "SPTProductStateObserver-Protocol.h"
 
-@class NSDate, NSDictionary, NSMapTable, NSMutableArray, NSString, NSTimer, SPTAbbaLogger;
+@class NSDate, NSDictionary, NSMapTable, NSMutableArray, NSString, NSTimer;
 @protocol SPTAbbaDataSource, SPTLocalSettings, SPTOfflineModeState, SPTProductState;
 
 @interface SPTAbbaFeatureFlags : NSObject <SPTAbbaDataSourceDelegate, SPTProductStateObserver, SPTOfflineModeStateObserver, SPTAbbaFeatureFlags>
@@ -29,11 +29,9 @@
     NSDate *_lastLookupTimestamp;
     NSDate *_lastRefreshTimestamp;
     NSMutableArray *_lookedUpKeys;
-    SPTAbbaLogger *_abbaLogger;
 }
 
 - (void).cxx_destruct;
-@property(retain, nonatomic) SPTAbbaLogger *abbaLogger; // @synthesize abbaLogger=_abbaLogger;
 @property(retain) NSMutableArray *lookedUpKeys; // @synthesize lookedUpKeys=_lookedUpKeys;
 @property(retain) NSDate *lastRefreshTimestamp; // @synthesize lastRefreshTimestamp=_lastRefreshTimestamp;
 @property(retain) NSDate *lastLookupTimestamp; // @synthesize lastLookupTimestamp=_lastLookupTimestamp;
@@ -63,11 +61,9 @@
 - (id)objectForKeyedSubscript:(id)arg1;
 - (id)stringForKey:(id)arg1;
 - (id)variantForFlagName:(id)arg1;
-- (void)logAccessForFlagName:(id)arg1 variant:(id)arg2;
-- (void)logAccessForFlagName:(id)arg1;
 - (void)removeObserver:(id)arg1;
 - (void)addObserver:(id)arg1 on:(id)arg2;
-- (id)initWithDataSource:(id)arg1 productState:(id)arg2 abbaLogger:(id)arg3 localSettings:(id)arg4 offlineModeState:(id)arg5 refreshInterval:(double)arg6;
+- (id)initWithDataSource:(id)arg1 productState:(id)arg2 localSettings:(id)arg3 offlineModeState:(id)arg4 refreshInterval:(double)arg5;
 - (id)debugValues;
 
 // Remaining properties

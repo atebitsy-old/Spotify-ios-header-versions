@@ -13,6 +13,7 @@
 
 @interface SPTSearchPlatformOfflineViewModelFetcher : NSObject <SPTSearchPlatformViewModelFetcher>
 {
+    _Bool _updatedPodcastCopyEnabled;
     NSString *_query;
     id <SPTSearchOfflineTrackDataLoader> _offlineTrackDataLoader;
     id <SPTSearchOfflinePlaylistDataLoader> _playlistDataLoader;
@@ -27,6 +28,7 @@
 }
 
 - (void).cxx_destruct;
+@property(readonly, nonatomic) _Bool updatedPodcastCopyEnabled; // @synthesize updatedPodcastCopyEnabled=_updatedPodcastCopyEnabled;
 @property(readonly, copy, nonatomic) NSString *referrerIdentifier; // @synthesize referrerIdentifier=_referrerIdentifier;
 @property(readonly, nonatomic) id <SPTSearchUBILocationSerializer> ubiLocationSerializer; // @synthesize ubiLocationSerializer=_ubiLocationSerializer;
 @property(readonly, nonatomic) id <_TtP22AgeVerificationFeature26SPTAgeVerificationProvider_> ageVerificationProvider; // @synthesize ageVerificationProvider=_ageVerificationProvider;
@@ -62,7 +64,7 @@
 - (void)fetchPlaylistsWithCompletion:(CDUnknownBlockType)arg1;
 - (void)addNoResultsOverlayComponentToViewModelBuilder:(id)arg1;
 - (id)fetchViewModelWithCompletion:(CDUnknownBlockType)arg1;
-- (id)initWithQuery:(id)arg1 offlineTrackDataLoader:(id)arg2 playlistDataLoader:(id)arg3 albumDataLoader:(id)arg4 episodeDataLoder:(id)arg5 emptyStatePropertiesProvider:(id)arg6 viewModelBuilderFactory:(id)arg7 explicitContentAccessManager:(id)arg8 ageVerificationProvider:(id)arg9 ubiLocationSerializer:(id)arg10 referrerIdentifier:(id)arg11;
+- (id)initWithQuery:(id)arg1 offlineTrackDataLoader:(id)arg2 playlistDataLoader:(id)arg3 albumDataLoader:(id)arg4 episodeDataLoder:(id)arg5 emptyStatePropertiesProvider:(id)arg6 viewModelBuilderFactory:(id)arg7 explicitContentAccessManager:(id)arg8 ageVerificationProvider:(id)arg9 ubiLocationSerializer:(id)arg10 referrerIdentifier:(id)arg11 updatedPodcastCopyEnabled:(_Bool)arg12;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

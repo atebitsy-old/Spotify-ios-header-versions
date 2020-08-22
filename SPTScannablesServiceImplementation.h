@@ -9,7 +9,7 @@
 #import "SPTScannablesService-Protocol.h"
 
 @class NSMutableDictionary, NSString, SPTAllocationContext, SPTScannablesAuthorizationRequester, SPTScannablesDependencies, SPTScannablesImageLoaderRequestFactory, SPTScannablesScanViewModelFactory, SPTScannablesSlateFactory, SPTScannablesUserInterfaceFactoryImplementation;
-@protocol SPTBarButtonItemManager, SPTContainerService, SPTContainerUIService, SPTFreeTierTooltipService, SPTGLUEService, SPTLocalSettings, SPTNavigationFeature, SPTNetworkService, SPTPageLoaderViewService, SPTScannablesOnboardingPresenter, SPTScannablesPresenter, SPTScannablesRegistry, SPTScannablesShortcutItemProvider, SPTSessionService, SPTSettingsFeature, SPTUBIService, SPTUIPresentationService, SPTURIDispatchService, SlateFeature;
+@protocol SPTBarButtonItemManager, SPTContainerService, SPTContainerUIService, SPTFreeTierTooltipService, SPTGLUEService, SPTLocalSettings, SPTNavigationFeature, SPTNetworkService, SPTPageLoaderViewService, SPTScannablesOnboardingPresenter, SPTScannablesPresenter, SPTScannablesRegistry, SPTScannablesShortcutItemProvider, SPTSessionService, SPTSettingsFeature, SPTSnackbarService, SPTUBIService, SPTUIPresentationService, SPTURIDispatchService, SlateFeature;
 
 @interface SPTScannablesServiceImplementation : NSObject <SPTScannablesService>
 {
@@ -27,6 +27,7 @@
     id <SPTUIPresentationService> _UIPresentationService;
     id <SPTUBIService> _ubiService;
     id <SPTPageLoaderViewService> _pageLoaderViewService;
+    id <SPTSnackbarService> _snackbarService;
     SPTScannablesUserInterfaceFactoryImplementation *_userInterfaceFactory;
     id <SPTBarButtonItemManager> _barButtonItemManager;
     SPTScannablesScanViewModelFactory *_scanViewModelFactory;
@@ -55,6 +56,7 @@
 @property(retain, nonatomic) SPTScannablesScanViewModelFactory *scanViewModelFactory; // @synthesize scanViewModelFactory=_scanViewModelFactory;
 @property(retain, nonatomic) id <SPTBarButtonItemManager> barButtonItemManager; // @synthesize barButtonItemManager=_barButtonItemManager;
 @property(retain, nonatomic) SPTScannablesUserInterfaceFactoryImplementation *userInterfaceFactory; // @synthesize userInterfaceFactory=_userInterfaceFactory;
+@property(nonatomic) __weak id <SPTSnackbarService> snackbarService; // @synthesize snackbarService=_snackbarService;
 @property(nonatomic) __weak id <SPTPageLoaderViewService> pageLoaderViewService; // @synthesize pageLoaderViewService=_pageLoaderViewService;
 @property(nonatomic) __weak id <SPTUBIService> ubiService; // @synthesize ubiService=_ubiService;
 @property(nonatomic) __weak id <SPTUIPresentationService> UIPresentationService; // @synthesize UIPresentationService=_UIPresentationService;

@@ -57,6 +57,7 @@
 - (id)makeBrowseOfflineStateViewModel;
 - (id)makeErrorOverlayViewModelWithNavigationBarVisible:(_Bool)arg1;
 - (id)makeOfflineOverlayViewModelWithNavigationBarVisible:(_Bool)arg1;
+- (id)retryButtonLoggingData;
 - (id)makeOverlayViewModelWithTitle:(id)arg1 subtitle:(id)arg2 reloadButtonVisible:(_Bool)arg3 navigationBarVisible:(_Bool)arg4;
 - (id)pageIdentifierFromURI:(id)arg1;
 - (id)makeLoadingLoggerWithURI:(id)arg1;

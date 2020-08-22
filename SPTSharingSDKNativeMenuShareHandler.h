@@ -20,7 +20,6 @@
 }
 
 + (id)failedToCompleteUIActivityWithUnderlyingError:(id)arg1;
-+ (id)userCancelledError;
 - (void).cxx_destruct;
 @property(readonly, nonatomic) SPTSharingSDKActivityViewControllerWrapper *activityViewControllerWrapper; // @synthesize activityViewControllerWrapper=_activityViewControllerWrapper;
 @property(readonly, nonatomic) id <SPTSharingSDKViewControllerPresenter> viewControllerPresenter; // @synthesize viewControllerPresenter=_viewControllerPresenter;

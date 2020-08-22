@@ -9,8 +9,8 @@
 #import "SPTPartnerService-Protocol.h"
 #import "SPTPartnerTestManagerObserver-Protocol.h"
 
-@class NSString, SPTAllocationContext, SPTPartnerIntegrationStateLoader, SPTPartnerNavigationBannerCoordinator;
-@protocol SPTAuthService, SPTBannerFeature, SPTContainerService, SPTContainerUIService, SPTEventSenderService, SPTFeatureFlaggingService, SPTLoginDelayedSignupService, SPTNetworkService, SPTNowPlayingService, SPTPageRegistrationToken, SPTPartnerIntegrationRegistry, SPTPartnerTestManager, SPTSessionService, SPTSettingsFeature, SPTURIDispatchService, _TtP19CarDetectionFeature22SPTCarDetectionService_;
+@class NSString, SPTAllocationContext, SPTPartnerFeatureProperties, SPTPartnerIntegrationStateLoader, SPTPartnerNavigationBannerCoordinator;
+@protocol SPTAuthService, SPTBannerFeature, SPTContainerService, SPTContainerUIService, SPTEventSenderService, SPTFeatureFlaggingService, SPTLoginDelayedSignupService, SPTNetworkService, SPTNowPlayingService, SPTPageRegistrationToken, SPTPartnerIntegrationRegistry, SPTPartnerTestManager, SPTRemoteConfigurationService, SPTSessionService, SPTSettingsFeature, SPTURIDispatchService, _TtP19CarDetectionFeature22SPTCarDetectionService_;
 
 @interface SPTPartnerServiceImplementation : NSObject <SPTPartnerTestManagerObserver, SPTPartnerService>
 {
@@ -26,6 +26,7 @@
     id <SPTAuthService> _authService;
     id <SPTNowPlayingService> _nowPlayingService;
     id <SPTLoginDelayedSignupService> _delayedSignupService;
+    id <SPTRemoteConfigurationService> _remoteConfigurationService;
     id <SPTEventSenderService> _eventSenderService;
     id <SPTPartnerIntegrationRegistry> _partnerIntegrationRegistry;
     id <SPTPartnerTestManager> _testManager;
@@ -42,6 +43,7 @@
 @property(retain, nonatomic) id <SPTPartnerTestManager> testManager; // @synthesize testManager=_testManager;
 @property(retain, nonatomic) id <SPTPartnerIntegrationRegistry> partnerIntegrationRegistry; // @synthesize partnerIntegrationRegistry=_partnerIntegrationRegistry;
 @property(nonatomic) __weak id <SPTEventSenderService> eventSenderService; // @synthesize eventSenderService=_eventSenderService;
+@property(readonly, nonatomic) __weak id <SPTRemoteConfigurationService> remoteConfigurationService; // @synthesize remoteConfigurationService=_remoteConfigurationService;
 @property(readonly, nonatomic) __weak id <SPTLoginDelayedSignupService> delayedSignupService; // @synthesize delayedSignupService=_delayedSignupService;
 @property(readonly, nonatomic) __weak id <SPTNowPlayingService> nowPlayingService; // @synthesize nowPlayingService=_nowPlayingService;
 @property(readonly, nonatomic) __weak id <SPTAuthService> authService; // @synthesize authService=_authService;
@@ -57,6 +59,7 @@
 - (void)partnerTestManager:(id)arg1 didUpdateEnabledState:(_Bool)arg2;
 - (id)provideTestManager;
 - (id)providePartnerIntegrationRegistry;
+@property(readonly, nonatomic) SPTPartnerFeatureProperties *remoteProperties;
 - (id)provideLogger;
 - (id)providePartnerSettingsPageForURI:(id)arg1 context:(id)arg2;
 - (void)disable;

@@ -6,16 +6,30 @@
 
 #import <objc/NSObject.h>
 
+@class SPTShareFeatureProperties, SPTSharePresenterSharingSDKHelper, SPTSharingSDK;
+
 @interface SPTShareDestinationUtility : NSObject
 {
+    SPTSharingSDK *_sharingSDK;
+    SPTShareFeatureProperties *_featureProperties;
+    SPTSharePresenterSharingSDKHelper *_sharingSDKHelper;
 }
 
 + (id)buildDeeplinkURLWithShareText:(id)arg1 forDestination:(id)arg2;
+- (void).cxx_destruct;
+@property(retain, nonatomic) SPTSharePresenterSharingSDKHelper *sharingSDKHelper; // @synthesize sharingSDKHelper=_sharingSDKHelper;
+@property(readonly, nonatomic) __weak SPTShareFeatureProperties *featureProperties; // @synthesize featureProperties=_featureProperties;
+@property(readonly, nonatomic) __weak SPTSharingSDK *sharingSDK; // @synthesize sharingSDK=_sharingSDK;
 - (_Bool)isStoryCompatableURI:(id)arg1;
 - (_Bool)isDestination:(id)arg1 allowedForEntityURI:(id)arg2;
 - (id)availableShareDestinations;
+- (id)shareDestinationFromSharingSDKDestination:(id)arg1;
+- (id)sharingSDKProvidedShareDestinations;
+- (id)installedShareDestinations;
+- (id)defaultShareDestinations;
 - (id)availableShareDestinationsForEntityURI:(id)arg1;
 - (id)provideShareDestinationWithId:(long long)arg1;
+- (id)initWithSharingSDK:(id)arg1 featureProperties:(id)arg2;
 
 @end
 

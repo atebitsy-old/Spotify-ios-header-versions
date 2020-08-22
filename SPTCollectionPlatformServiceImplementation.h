@@ -10,11 +10,10 @@
 #import "SPTService-Protocol.h"
 
 @class NSString, SPTAllocationContext, SPTCollectionPlatformLoggerImplementation;
-@protocol CosmosFeature, SPTAbbaService, SPTCollectionPlatform, SPTCollectionPlatformConfiguration, SPTCollectionPlatformStateProvider, SPTCollectionPlatformTestManager, SPTContainerService, SPTContainerUIService, SPTCoreService, SPTCosmosDataLoaderService, SPTFeatureFlaggingService, SPTFreeTierService, SPTNowPlayingPlatformService, SPTPlaylistPlatformService, SPTRemoteConfigurationService, SPTResolver, SPTSessionService, SPTSnackbarService;
+@protocol CosmosFeature, SPTCollectionPlatform, SPTCollectionPlatformConfiguration, SPTCollectionPlatformStateProvider, SPTCollectionPlatformTestManager, SPTContainerService, SPTContainerUIService, SPTCoreService, SPTCosmosDataLoaderService, SPTFeatureFlaggingService, SPTFreeTierService, SPTPlaylistPlatformService, SPTRemoteConfigurationService, SPTResolver, SPTSessionService, SPTSnackbarService;
 
 @interface SPTCollectionPlatformServiceImplementation : NSObject <SPTService, SPTCollectionPlatformService>
 {
-    id <SPTAbbaService> _abbaService;
     id <SPTSessionService> _clientSessionService;
     id <CosmosFeature> _cosmosFeature;
     id <SPTCosmosDataLoaderService> _cosmosDataLoaderService;
@@ -24,7 +23,6 @@
     id <SPTContainerUIService> _containerUIService;
     id <SPTSnackbarService> _snackbarService;
     id <SPTCoreService> _coreService;
-    id <SPTNowPlayingPlatformService> _nowPlayingPlatformService;
     id <SPTRemoteConfigurationService> _remoteConfigurationService;
     id <SPTPlaylistPlatformService> _playlistPlatformService;
     id <SPTCollectionPlatformTestManager> _testManager;
@@ -45,7 +43,6 @@
 @property(retain, nonatomic) id <SPTCollectionPlatformTestManager> testManager; // @synthesize testManager=_testManager;
 @property(nonatomic) __weak id <SPTPlaylistPlatformService> playlistPlatformService; // @synthesize playlistPlatformService=_playlistPlatformService;
 @property(nonatomic) __weak id <SPTRemoteConfigurationService> remoteConfigurationService; // @synthesize remoteConfigurationService=_remoteConfigurationService;
-@property(nonatomic) __weak id <SPTNowPlayingPlatformService> nowPlayingPlatformService; // @synthesize nowPlayingPlatformService=_nowPlayingPlatformService;
 @property(nonatomic) __weak id <SPTCoreService> coreService; // @synthesize coreService=_coreService;
 @property(nonatomic) __weak id <SPTSnackbarService> snackbarService; // @synthesize snackbarService=_snackbarService;
 @property(nonatomic) __weak id <SPTContainerUIService> containerUIService; // @synthesize containerUIService=_containerUIService;
@@ -55,7 +52,6 @@
 @property(nonatomic) __weak id <SPTCosmosDataLoaderService> cosmosDataLoaderService; // @synthesize cosmosDataLoaderService=_cosmosDataLoaderService;
 @property(nonatomic) __weak id <CosmosFeature> cosmosFeature; // @synthesize cosmosFeature=_cosmosFeature;
 @property(nonatomic) __weak id <SPTSessionService> clientSessionService; // @synthesize clientSessionService=_clientSessionService;
-@property(nonatomic) __weak id <SPTAbbaService> abbaService; // @synthesize abbaService=_abbaService;
 - (id)provideCollectionResolver;
 - (id)provideCollectionLogger;
 - (id)provideCollectionPlatform;

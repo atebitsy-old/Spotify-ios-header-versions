@@ -6,12 +6,13 @@
 
 #import <UIKit/UIViewController.h>
 
+#import "SPTYourLibraryPageViewDelegate-Protocol.h"
 #import "UIScrollViewDelegate-Protocol.h"
 
 @class NSMutableArray, NSMutableOrderedSet, NSNumber, NSString, SPTYourLibraryPageViewControllerPage, UIScrollView;
 @protocol SPTYourLibraryPageViewControllerDataSource, SPTYourLibraryPageViewControllerDelegate;
 
-@interface SPTYourLibraryPageViewController : UIViewController <UIScrollViewDelegate>
+@interface SPTYourLibraryPageViewController : UIViewController <UIScrollViewDelegate, SPTYourLibraryPageViewDelegate>
 {
     _Bool _pageNavigationDisabled;
     _Bool _ready;
@@ -38,6 +39,7 @@
 @property(nonatomic, getter=isPageNavigationDisabled) _Bool pageNavigationDisabled; // @synthesize pageNavigationDisabled=_pageNavigationDisabled;
 @property(nonatomic) __weak id <SPTYourLibraryPageViewControllerDelegate> delegate; // @synthesize delegate=_delegate;
 @property(nonatomic) __weak id <SPTYourLibraryPageViewControllerDataSource> dataSource; // @synthesize dataSource=_dataSource;
+- (void)willChangeWidth:(double)arg1 forPageView:(id)arg2;
 - (void)scrollViewDidEndScrollingAnimation:(id)arg1;
 - (void)scrollViewDidScroll:(id)arg1;
 - (void)scrollViewDidEndDecelerating:(id)arg1;

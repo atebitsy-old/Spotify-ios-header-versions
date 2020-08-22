@@ -8,19 +8,17 @@
 
 #import "SPTSharingSDKShareDialogPresenter-Protocol.h"
 
-@class NSString, SPTShareFBSDKShareDialogWrapper, UIViewController;
+@class NSString, SPTShareFBSDKShareDialogWrapper;
 
 @interface SPTShareFacebookDialogPresenter : NSObject <SPTSharingSDKShareDialogPresenter>
 {
-    UIViewController *_contextViewController;
     SPTShareFBSDKShareDialogWrapper *_facebookDialogWrapper;
 }
 
 - (void).cxx_destruct;
 @property(readonly, nonatomic) SPTShareFBSDKShareDialogWrapper *facebookDialogWrapper; // @synthesize facebookDialogWrapper=_facebookDialogWrapper;
-@property(readonly, nonatomic) __weak UIViewController *contextViewController; // @synthesize contextViewController=_contextViewController;
-- (void)presentShareDialogWithShareableData:(id)arg1 completionHandler:(CDUnknownBlockType)arg2;
-- (id)initWithContextViewController:(id)arg1 facebookDialogWrapper:(id)arg2;
+- (void)presentShareDialogWithShareableData:(id)arg1 contextViewController:(id)arg2 completionHandler:(CDUnknownBlockType)arg3;
+- (id)initWithFacebookDialogWrapper:(id)arg1;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

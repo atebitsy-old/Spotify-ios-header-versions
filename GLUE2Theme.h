@@ -33,7 +33,7 @@
 - (id)pressedAnimatorEntityRowStyle;
 - (id)pressedAnimatorDefaultStyle;
 - (id)headerBackgroundStyle;
-- (id)trackCloudStyleWithNumberOfLines:(unsigned long long)arg1 showOnlyTrackNames:(_Bool)arg2 showNumberedList:(_Bool)arg3;
+- (id)trackCloudStyleWithNumberOfLines:(unsigned long long)arg1 showOnlyTrackNames:(_Bool)arg2 showNumberedList:(_Bool)arg3 enableHighlighting:(_Bool)arg4;
 - (id)trackCloudStyleForUIState:(unsigned long long)arg1;
 - (id)defaultTrackCloudStyle;
 - (id)cardStyleWithImageMask:(_Bool)arg1 imageDecoration:(_Bool)arg2 titleStyleDescription:(_Bool)arg3 subtitleStyleMetadata:(_Bool)arg4;

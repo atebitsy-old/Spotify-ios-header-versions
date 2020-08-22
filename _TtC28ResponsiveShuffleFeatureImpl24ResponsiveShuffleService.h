@@ -6,21 +6,21 @@
 
 #import <objc/NSObject.h>
 
-@protocol _TtP24ResponsiveShuffleFeature40SPTResponsiveShuffleOnboardingController_, _TtP24ResponsiveShuffleFeature41SPTResponsiveShufflePlayInitiatedNotifier_;
+@protocol _TtP24ResponsiveShuffleFeature38SPTResponsiveShuffleFeedbackController_, _TtP24ResponsiveShuffleFeature40SPTResponsiveShuffleOnboardingController_, _TtP24ResponsiveShuffleFeature41SPTResponsiveShufflePlayInitiatedNotifier_;
 
 @interface _TtC28ResponsiveShuffleFeatureImpl24ResponsiveShuffleService : NSObject
 {
     // Error parsing type: , name: viewURI
-    // Error parsing type: , name: containerService
-    // Error parsing type: , name: eventSenderService
-    // Error parsing type: , name: networkService
-    // Error parsing type: , name: playerFeature
-    // Error parsing type: , name: playlistPlatformService
-    // Error parsing type: , name: remoteConfigurationService
-    // Error parsing type: , name: sessionService
-    // Error parsing type: , name: settingsService
-    // Error parsing type: , name: snackbarService
-    // Error parsing type: , name: tooltipService
+    // Error parsing type: , name: _containerService
+    // Error parsing type: , name: _eventSenderService
+    // Error parsing type: , name: _networkService
+    // Error parsing type: , name: _playerFeature
+    // Error parsing type: , name: _playlistPlatformService
+    // Error parsing type: , name: _remoteConfigurationService
+    // Error parsing type: , name: _sessionService
+    // Error parsing type: , name: _settingsService
+    // Error parsing type: , name: _snackbarService
+    // Error parsing type: , name: _tooltipService
     // Error parsing type: , name: mobiusController
     // Error parsing type: , name: onboardingController
 }
@@ -29,9 +29,9 @@
 - (void).cxx_destruct;
 - (id)init;
 @property(nonatomic, readonly) id <_TtP24ResponsiveShuffleFeature41SPTResponsiveShufflePlayInitiatedNotifier_> playInitiatedNotifier;
+@property(nonatomic, readonly) id <_TtP24ResponsiveShuffleFeature38SPTResponsiveShuffleFeedbackController_> feedbackController;
 - (void)unload;
 - (void)load;
-- (void)configureWithServices:(id)arg1;
 @property(nonatomic, retain) id <_TtP24ResponsiveShuffleFeature40SPTResponsiveShuffleOnboardingController_> onboardingController; // @synthesize onboardingController;
 
 @end

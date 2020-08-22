@@ -10,7 +10,7 @@
 #import "SPTService-Protocol.h"
 
 @class NSString, SPTAllocationContext, SPTPlaybackPreferencesObserver, SPTSettingsLogger;
-@protocol CosmosFeature, SPTAbbaFeatureFlags, SPTAbbaService, SPTBannerFeature, SPTContainerService, SPTContainerUIService, SPTCoreService, SPTDataSaverService, SPTDebugService, SPTDebugUIService, SPTFeatureFlagSignal, SPTFreeTierService, SPTInAppMessageService, SPTLoginDelayedSignupService, SPTLoginService, SPTNetworkService, SPTRemoteConfigurationService, SPTSessionService, SPTSettingsDataSource, SPTSettingsFeature, SPTURIDispatchService, _TtP14ProfileFeature17SPTProfileService_, _TtP14VoiceUIFeature17SPTVoiceUIService_;
+@protocol CosmosFeature, SPTBannerFeature, SPTContainerService, SPTContainerUIService, SPTCoreService, SPTDataSaverService, SPTDebugService, SPTDebugUIService, SPTFeatureFlagSignal, SPTFreeTierService, SPTInAppMessageService, SPTLoginDelayedSignupService, SPTLoginService, SPTNetworkService, SPTRemoteConfigurationService, SPTSessionService, SPTSettingsDataSource, SPTSettingsFeature, SPTURIDispatchService, _TtP14ProfileFeature17SPTProfileService_, _TtP14VoiceUIFeature17SPTVoiceUIService_;
 
 @interface SPTBuiltInSettingsFeatureImplementation : NSObject <SPTFeatureFlagSignalObserver, SPTService>
 {
@@ -20,7 +20,6 @@
     id <SPTNetworkService> _networkService;
     id <SPTContainerService> _containerService;
     id <SPTContainerUIService> _containerUIService;
-    id <SPTAbbaService> _abbaService;
     id <SPTBannerFeature> _bannerFeature;
     id <SPTSessionService> _clientSessionService;
     id <SPTCoreService> _coreService;
@@ -35,7 +34,6 @@
     id <_TtP14ProfileFeature17SPTProfileService_> _profileService;
     id <SPTInAppMessageService> _inAppMessageService;
     id <SPTLoginDelayedSignupService> _delayedSignupService;
-    id <SPTAbbaFeatureFlags> _featureFlags;
     id <SPTSettingsDataSource> _settingsDataSource;
     id <SPTFeatureFlagSignal> _freeTierFeatureSignal;
     id <SPTFeatureFlagSignal> _dataSaverActivatedSignal;
@@ -54,7 +52,6 @@
 @property(nonatomic) _Bool freeTierEnabled; // @synthesize freeTierEnabled=_freeTierEnabled;
 @property(retain, nonatomic) id <SPTFeatureFlagSignal> freeTierFeatureSignal; // @synthesize freeTierFeatureSignal=_freeTierFeatureSignal;
 @property(retain, nonatomic) id <SPTSettingsDataSource> settingsDataSource; // @synthesize settingsDataSource=_settingsDataSource;
-@property(retain, nonatomic) id <SPTAbbaFeatureFlags> featureFlags; // @synthesize featureFlags=_featureFlags;
 @property(nonatomic) __weak id <SPTLoginDelayedSignupService> delayedSignupService; // @synthesize delayedSignupService=_delayedSignupService;
 @property(nonatomic) __weak id <SPTInAppMessageService> inAppMessageService; // @synthesize inAppMessageService=_inAppMessageService;
 @property(nonatomic) __weak id <_TtP14ProfileFeature17SPTProfileService_> profileService; // @synthesize profileService=_profileService;
@@ -69,7 +66,6 @@
 @property(nonatomic) __weak id <SPTCoreService> coreService; // @synthesize coreService=_coreService;
 @property(nonatomic) __weak id <SPTSessionService> clientSessionService; // @synthesize clientSessionService=_clientSessionService;
 @property(nonatomic) __weak id <SPTBannerFeature> bannerFeature; // @synthesize bannerFeature=_bannerFeature;
-@property(nonatomic) __weak id <SPTAbbaService> abbaService; // @synthesize abbaService=_abbaService;
 @property(nonatomic) __weak id <SPTContainerUIService> containerUIService; // @synthesize containerUIService=_containerUIService;
 @property(nonatomic) __weak id <SPTContainerService> containerService; // @synthesize containerService=_containerService;
 @property(nonatomic) __weak id <SPTNetworkService> networkService; // @synthesize networkService=_networkService;

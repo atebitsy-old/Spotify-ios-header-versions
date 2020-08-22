@@ -9,7 +9,7 @@
 #import "SPTAbbaDataSource-Protocol.h"
 #import "SPTDataLoaderDelegate-Protocol.h"
 
-@class NSDate, NSString, SPTAbbaLogger, SPTDataLoader;
+@class NSDate, NSString, SPTDataLoader;
 @protocol SPTAbbaDataSourceDelegate, SPTDataLoaderCancellationToken;
 
 @interface SPTAbbaDataSourceImplementation : NSObject <SPTDataLoaderDelegate, SPTAbbaDataSource>
@@ -20,11 +20,9 @@
     SPTDataLoader *_dataLoader;
     id <SPTDataLoaderCancellationToken> _cancellationToken;
     double _cacheLifetimeInterval;
-    SPTAbbaLogger *_abbaLogger;
 }
 
 - (void).cxx_destruct;
-@property(retain, nonatomic) SPTAbbaLogger *abbaLogger; // @synthesize abbaLogger=_abbaLogger;
 @property(nonatomic) double cacheLifetimeInterval; // @synthesize cacheLifetimeInterval=_cacheLifetimeInterval;
 @property(retain, nonatomic) id <SPTDataLoaderCancellationToken> cancellationToken; // @synthesize cancellationToken=_cancellationToken;
 @property(retain, nonatomic) SPTDataLoader *dataLoader; // @synthesize dataLoader=_dataLoader;
@@ -38,7 +36,7 @@
 - (void)loadFeatureFlags:(id)arg1;
 - (_Bool)isCacheExpired;
 - (void)loadData;
-- (id)initWithDataLoader:(id)arg1 cacheLifetimeInterval:(double)arg2 abbaLogger:(id)arg3;
+- (id)initWithDataLoader:(id)arg1 cacheLifetimeInterval:(double)arg2;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

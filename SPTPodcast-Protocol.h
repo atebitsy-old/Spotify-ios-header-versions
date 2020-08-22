@@ -4,13 +4,12 @@
 //     class-dump is Copyright (C) 1997-1998, 2000-2001, 2004-2015 by Steve Nygard.
 //
 
-#import "NSObject-Protocol.h"
 #import "SPTShow-Protocol.h"
 
 @class NSArray;
 @protocol SPTPodcastEpisode;
 
-@protocol SPTPodcast <NSObject, SPTShow>
+@protocol SPTPodcast <SPTShow>
 @property(nonatomic, readonly) NSArray *topics;
 @property(nonatomic, readonly) id <SPTPodcastEpisode> trailerEpisode;
 @property(nonatomic, readonly) NSArray *episodes;

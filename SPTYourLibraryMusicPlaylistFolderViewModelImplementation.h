@@ -14,7 +14,6 @@
 
 @interface SPTYourLibraryMusicPlaylistFolderViewModelImplementation : NSObject <SPTYourLibraryMusicPlaylistsViewModel, SPTYourLibraryMusicPlaylistsModelDelegate>
 {
-    _Bool _didLogScrollIndexSelected;
     id <SPTYourLibraryMusicPlaylistsViewModelDelegate> delegate;
     NSString *textFilter;
     id <SPTYourLibraryMusicPlaylistsModel> _model;
@@ -30,7 +29,6 @@
 
 - (void).cxx_destruct;
 @property(retain, nonatomic) SPTYourLibraryMusicGroupLabelReader *groupLabelReader; // @synthesize groupLabelReader=_groupLabelReader;
-@property(nonatomic) _Bool didLogScrollIndexSelected; // @synthesize didLogScrollIndexSelected=_didLogScrollIndexSelected;
 @property(retain, nonatomic) id <SPTSortingFilteringUIFactory> sortingFilteringPickerFactory; // @synthesize sortingFilteringPickerFactory=_sortingFilteringPickerFactory;
 @property(retain, nonatomic) id <SPTYourLibraryMusicPlaylistsModelEntity> modelEntity; // @synthesize modelEntity=_modelEntity;
 @property(retain, nonatomic) id <SPTYourLibraryMusicTestManager> testManager; // @synthesize testManager=_testManager;
@@ -52,7 +50,6 @@
 - (void)logQuickScrollDragEnded;
 - (void)logQuickScrollDragStarted;
 - (void)logQuickScrollIsVisible;
-- (void)logSectionIndexSelected;
 - (void)logFilterSortInteractionType:(unsigned long long)arg1;
 - (void)removeFilterAtIndex:(long long)arg1;
 - (void)resetFilters;
@@ -61,8 +58,6 @@
 - (void)searchWillBegan;
 - (void)endObservingRowAtIndexPath:(id)arg1;
 - (void)beginObservingRowAtIndexPath:(id)arg1;
-- (id)indexPathForScrollSectionIndex:(unsigned long long)arg1;
-@property(readonly, nonatomic) NSArray *sectionIndexTitles;
 - (void)createPlaylistActionInInfoView:(_Bool)arg1;
 - (unsigned long long)countOfItemsInSection:(unsigned long long)arg1;
 - (id)groupLabelAtIndexPath:(id)arg1;
@@ -73,7 +68,6 @@
 @property(readonly, nonatomic) NSString *title;
 - (_Bool)hasMoreInSection:(unsigned long long)arg1;
 - (void)loadMoreInSection:(unsigned long long)arg1;
-- (void)viewWillAppear;
 - (void)loadViewModel;
 @property(readonly, nonatomic, getter=isEmpty) _Bool empty;
 @property(readonly, nonatomic, getter=isLoaded) _Bool loaded;
@@ -85,7 +79,6 @@
 @property(readonly, nonatomic, getter=isGroupLabelAvailable) _Bool groupLabelAvailable;
 @property(readonly, nonatomic) _Bool quickScrollUseDarkStyle;
 @property(readonly, nonatomic) long long quickScrollMinPages;
-@property(readonly, nonatomic) unsigned long long quickScrollMechanism;
 @property(readonly, nonatomic, getter=isSortingAndFilteringEnabled) _Bool sortingAndFilteringEnabled;
 - (id)initWithModel:(id)arg1 linkDispatcher:(id)arg2 playlistSynchroniser:(id)arg3 createPlaylistController:(id)arg4 logger:(id)arg5 testManager:(id)arg6 sortingFilteringPickerFactory:(id)arg7;
 

@@ -15,6 +15,8 @@
     // Error parsing type: , name: provideViewControllerClosure
 }
 
+- (void)handleWithURI:(id)arg1;
+- (_Bool)claimsWithURI:(id)arg1;
 - (id)provideViewControllerWithPageCreationContext:(id)arg1;
 - (void)startExperience;
 - (void)stopExperience;

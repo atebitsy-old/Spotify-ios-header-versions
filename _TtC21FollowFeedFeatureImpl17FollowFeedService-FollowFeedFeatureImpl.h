@@ -7,6 +7,6 @@
 #import "_TtC21FollowFeedFeatureImpl17FollowFeedService.h"
 
 @interface _TtC21FollowFeedFeatureImpl17FollowFeedService (FollowFeedFeatureImpl)
-- (id)provideFollowFeedViewControllerWithPageLoader;
+- (id)provideFollowFeedViewControllerWithPageLoaderWith_uri:(id)arg1 context:(id)arg2;
 @end
 

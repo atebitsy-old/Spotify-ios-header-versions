@@ -25,10 +25,10 @@
 - (void)presentMessageBarWithText:(id)arg1;
 - (void)viewController:(id)arg1 viewWillDisappear:(id)arg2 animated:(_Bool)arg3;
 - (void)viewController:(id)arg1 viewWillAppear:(id)arg2 animated:(_Bool)arg3;
-- (void)viewModelProvider:(id)arg1 didLoadRemoteViewModel:(id)arg2 withError:(id)arg3;
-- (void)viewModelProviderWillLoadRemoteViewModel:(id)arg1;
-- (void)viewModelProvider:(id)arg1 didLoadCachedViewModel:(id)arg2 withError:(id)arg3;
-- (void)viewModelProviderWillLoadCachedViewModel:(id)arg1;
+- (void)didLoadRemoteViewModel:(id)arg1 withError:(id)arg2;
+- (void)didLoadCachedViewModel:(id)arg1 withError:(id)arg2;
+- (void)viewModelProvider:(id)arg1 didLoadViewModel:(id)arg2 fromSource:(unsigned long long)arg3 withError:(id)arg4;
+- (void)viewModelProvider:(id)arg1 willLoadFromSource:(unsigned long long)arg2;
 - (id)initWithMessageBarController:(id)arg1 homeContentStorage:(id)arg2;
 
 // Remaining properties

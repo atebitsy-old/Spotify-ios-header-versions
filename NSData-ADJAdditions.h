@@ -13,9 +13,14 @@
 + (id)gckb_dataWithHexString:(id)arg1;
 + (id)mp_dataFromHexString:(id)arg1;
 + (unsigned long long)mmk_headerTypeFromFirstword:(unsigned short)arg1 secondWord:(unsigned short)arg2;
++ (id)gul_dataByGzippingData:(id)arg1 error:(id *)arg2;
++ (id)gul_dataByInflatingGzippedData:(id)arg1 error:(id *)arg2;
 + (id)spt_librarySpeechRecognitionMessageDataWithBoundary:(id)arg1 sampleRate:(id)arg2 contentType:(unsigned long long)arg3 playerState:(id)arg4;
 - (id)adjEncodeBase64;
 - (id)base64EncodedString;
+- (long long)apm_64LeastSignificantBits;
+- (long long)apm_64LSBMD5;
+- (id)apm_MD5Data;
 - (long long)gckb_locationOfBytes:(const char *)arg1 length:(unsigned long long)arg2;
 - (id)gckb_SHA256HashAsString;
 - (id)gckb_SHA256Hash;

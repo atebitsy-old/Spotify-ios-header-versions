@@ -10,7 +10,7 @@
 
 @protocol SPTShow <NSObject>
 @property(nonatomic, readonly) unsigned long long mediaType;
-- (_Bool)isFollowing;
+@property(nonatomic, readonly) _Bool isFollowing;
 @property(nonatomic, readonly) NSURL *imageURL;
 @property(nonatomic, readonly) NSURL *latestPlayedEpisodeURL;
 @property(nonatomic, readonly) NSURL *URL;
@@ -18,8 +18,5 @@
 @property(nonatomic, readonly) NSString *rawDescription;
 @property(nonatomic, readonly) NSString *descriptionText;
 @property(nonatomic, readonly) NSString *title;
-
-// Remaining properties
-@property(nonatomic, readonly) _Bool following;
 @end
 

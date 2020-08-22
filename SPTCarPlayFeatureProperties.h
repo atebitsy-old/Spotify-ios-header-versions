@@ -19,8 +19,10 @@
     _Bool _carplayUbiEnabled;
     _Bool _carplayLargeListsEnabled;
     _Bool _carplayContinuePlayingFeature;
+    _Bool _carplayUseHomeviewService;
 }
 
+@property(readonly, nonatomic) _Bool carplayUseHomeviewService; // @synthesize carplayUseHomeviewService=_carplayUseHomeviewService;
 @property(readonly, nonatomic) _Bool carplayContinuePlayingFeature; // @synthesize carplayContinuePlayingFeature=_carplayContinuePlayingFeature;
 @property(readonly, nonatomic) _Bool carplayLargeListsEnabled; // @synthesize carplayLargeListsEnabled=_carplayLargeListsEnabled;
 @property(readonly, nonatomic) _Bool carplayUbiEnabled; // @synthesize carplayUbiEnabled=_carplayUbiEnabled;

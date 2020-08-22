@@ -12,19 +12,15 @@
 
 @optional
 @property(retain, nonatomic) UIWindow *window;
-- (void)application:(UIApplication *)arg1 didDiscardSceneSessions:(NSSet *)arg2;
-- (UISceneConfiguration *)application:(UIApplication *)arg1 configurationForConnectingSceneSession:(UISceneSession *)arg2 options:(UISceneConnectionOptions *)arg3;
 - (void)application:(UIApplication *)arg1 userDidAcceptCloudKitShareWithMetadata:(CKShareMetadata *)arg2;
 - (void)application:(UIApplication *)arg1 didUpdateUserActivity:(NSUserActivity *)arg2;
 - (void)application:(UIApplication *)arg1 didFailToContinueUserActivityWithType:(NSString *)arg2 error:(NSError *)arg3;
 - (_Bool)application:(UIApplication *)arg1 continueUserActivity:(NSUserActivity *)arg2 restorationHandler:(void (^)(NSArray *))arg3;
 - (_Bool)application:(UIApplication *)arg1 willContinueUserActivityWithType:(NSString *)arg2;
-- (_Bool)application:(UIApplication *)arg1 shouldRestoreApplicationState:(NSCoder *)arg2;
-- (_Bool)application:(UIApplication *)arg1 shouldSaveApplicationState:(NSCoder *)arg2;
 - (void)application:(UIApplication *)arg1 didDecodeRestorableStateWithCoder:(NSCoder *)arg2;
 - (void)application:(UIApplication *)arg1 willEncodeRestorableStateWithCoder:(NSCoder *)arg2;
-- (_Bool)application:(UIApplication *)arg1 shouldRestoreSecureApplicationState:(NSCoder *)arg2;
-- (_Bool)application:(UIApplication *)arg1 shouldSaveSecureApplicationState:(NSCoder *)arg2;
+- (_Bool)application:(UIApplication *)arg1 shouldRestoreApplicationState:(NSCoder *)arg2;
+- (_Bool)application:(UIApplication *)arg1 shouldSaveApplicationState:(NSCoder *)arg2;
 - (UIViewController *)application:(UIApplication *)arg1 viewControllerWithRestorationIdentifierPath:(NSArray *)arg2 coder:(NSCoder *)arg3;
 - (_Bool)application:(UIApplication *)arg1 shouldAllowExtensionPointIdentifier:(NSString *)arg2;
 - (unsigned long long)application:(UIApplication *)arg1 supportedInterfaceOrientationsForWindow:(UIWindow *)arg2;
@@ -63,5 +59,9 @@
 - (_Bool)application:(UIApplication *)arg1 didFinishLaunchingWithOptions:(NSDictionary *)arg2;
 - (_Bool)application:(UIApplication *)arg1 willFinishLaunchingWithOptions:(NSDictionary *)arg2;
 - (void)applicationDidFinishLaunching:(UIApplication *)arg1;
+- (void)application:(UIApplication *)arg1 didDiscardSceneSessions:(NSSet *)arg2;
+- (UISceneConfiguration *)application:(UIApplication *)arg1 configurationForConnectingSceneSession:(UISceneSession *)arg2 options:(UISceneConnectionOptions *)arg3;
+- (_Bool)application:(UIApplication *)arg1 shouldRestoreSecureApplicationState:(NSCoder *)arg2;
+- (_Bool)application:(UIApplication *)arg1 shouldSaveSecureApplicationState:(NSCoder *)arg2;
 @end
 

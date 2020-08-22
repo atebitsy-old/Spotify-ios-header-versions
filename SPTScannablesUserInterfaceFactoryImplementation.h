@@ -9,7 +9,7 @@
 #import "SPTScannablesUserInterfaceFactory-Protocol.h"
 
 @class NSString, SPTScannablesAuthorizationRequester, SPTScannablesDependencies, SPTScannablesScanViewModelFactory;
-@protocol SPTAlertController, SPTPageLoaderViewService, SPTScannablesDataSource, SPTScannablesOnboardingPresenter;
+@protocol SPTPageLoaderViewService, SPTScannablesDataSource, SPTScannablesOnboardingPresenter, SPTSnackbarConditionalPresenter;
 
 @interface SPTScannablesUserInterfaceFactoryImplementation : NSObject <SPTScannablesUserInterfaceFactory>
 {
@@ -18,13 +18,13 @@
     SPTScannablesAuthorizationRequester *_authorizationRequester;
     id <SPTScannablesOnboardingPresenter> _onboardingPresenter;
     SPTScannablesDependencies *_dependencies;
-    id <SPTAlertController> _alertController;
     id <SPTPageLoaderViewService> _pageLoaderViewService;
+    id <SPTSnackbarConditionalPresenter> _snackbarPresenter;
 }
 
 - (void).cxx_destruct;
+@property(readonly, nonatomic) id <SPTSnackbarConditionalPresenter> snackbarPresenter; // @synthesize snackbarPresenter=_snackbarPresenter;
 @property(nonatomic) __weak id <SPTPageLoaderViewService> pageLoaderViewService; // @synthesize pageLoaderViewService=_pageLoaderViewService;
-@property(retain, nonatomic) id <SPTAlertController> alertController; // @synthesize alertController=_alertController;
 @property(readonly, nonatomic) SPTScannablesDependencies *dependencies; // @synthesize dependencies=_dependencies;
 @property(readonly, nonatomic) id <SPTScannablesOnboardingPresenter> onboardingPresenter; // @synthesize onboardingPresenter=_onboardingPresenter;
 @property(readonly, nonatomic) SPTScannablesAuthorizationRequester *authorizationRequester; // @synthesize authorizationRequester=_authorizationRequester;
@@ -34,7 +34,7 @@
 - (id)createScannableImageViewForEntityURL:(id)arg1;
 - (id)provideScanViewControllerWithSourceIdentifier:(id)arg1;
 - (id)createContextMenuViewHeaderWithTitle:(id)arg1 subtitle:(id)arg2 entityURL:(id)arg3 imageURL:(id)arg4 fallbackHeader:(id)arg5;
-- (id)initWithScanViewModelFactory:(id)arg1 dataSource:(id)arg2 authorizationRequester:(id)arg3 onboardingPresenter:(id)arg4 dependencies:(id)arg5 alertController:(id)arg6 pageLoaderViewService:(id)arg7;
+- (id)initWithScanViewModelFactory:(id)arg1 dataSource:(id)arg2 authorizationRequester:(id)arg3 onboardingPresenter:(id)arg4 dependencies:(id)arg5 pageLoaderViewService:(id)arg6 snackbarPresenter:(id)arg7;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

@@ -6,17 +6,15 @@
 
 #import "SPTYourLibraryMusicFilterableViewModel-Protocol.h"
 
-@class NSArray, NSIndexPath, NSString;
+@class NSIndexPath, NSString;
 @protocol SPTYourLibraryMusicEntityViewModelDelegate, SPTYourLibraryMusicItemViewModel;
 
 @protocol SPTYourLibraryMusicEntityViewModel <SPTYourLibraryMusicFilterableViewModel>
 @property(readonly, nonatomic, getter=isGroupLabelAvailable) _Bool groupLabelAvailable;
 @property(readonly, nonatomic) _Bool quickScrollUseDarkStyle;
 @property(readonly, nonatomic) long long quickScrollMinPages;
-@property(readonly, nonatomic) unsigned long long quickScrollMechanism;
 @property(readonly, nonatomic) unsigned long long trailingAccessoryType;
 @property(readonly, nonatomic, getter=isSnackBarsUsedForMessaging) _Bool snackBarsUsedForMessaging;
-@property(readonly, nonatomic) NSArray *sectionIndexTitles;
 @property(readonly, copy, nonatomic) NSString *searchPlaceholderText;
 @property(readonly, copy, nonatomic) NSString *title;
 @property(nonatomic) __weak id <SPTYourLibraryMusicEntityViewModelDelegate> delegate;
@@ -29,7 +27,6 @@
 - (void)logQuickScrollDragEnded;
 - (void)logQuickScrollDragStarted;
 - (void)logQuickScrollIsVisible;
-- (void)logSectionIndexSelected;
 - (void)logFilterSortInteractionType:(unsigned long long)arg1;
 - (void)performItemActionAtIndexPath:(NSIndexPath *)arg1;
 - (void)itemSelectedAtIndexPath:(NSIndexPath *)arg1;
@@ -42,9 +39,7 @@
 - (_Bool)showHeaderForSection:(long long)arg1;
 - (NSString *)subtitleForSection:(long long)arg1;
 - (NSString *)titleForSection:(long long)arg1;
-- (long long)locationForSectionIndex:(long long)arg1;
 - (long long)numberOfRowsInSections:(long long)arg1;
-- (void)viewWillAppear;
 - (void)loadViewModel;
 
 @optional

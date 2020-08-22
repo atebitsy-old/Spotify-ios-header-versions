@@ -8,15 +8,23 @@
 
 #import "SPTCarPlayContentDataSource-Protocol.h"
 
-@class NSArray, NSString;
+@class NSArray, NSString, SPTCarPlayFeatureProperties;
 
 @interface SPTCarPlayStaticContentDataSource : NSObject <SPTCarPlayContentDataSource>
 {
+    SPTCarPlayFeatureProperties *_properties;
 }
 
+- (void).cxx_destruct;
+@property(retain, nonatomic) SPTCarPlayFeatureProperties *properties; // @synthesize properties=_properties;
 - (id)createRootForURI:(id)arg1 withTitle:(id)arg2 withIcon:(long long)arg3;
 - (id)fetchRootContentWithAccessorySessionID:(id)arg1 contentController:(id)arg2 options:(id)arg3;
+- (id)libraryTabIdentifier;
+- (id)browseTabIdentifier;
+- (id)recentlyPlayedTabIdentifier;
+- (id)homeTabIdentifier;
 @property(readonly, nonatomic) __weak NSArray *rootItemURIs;
+- (id)initWithProperties:(id)arg1;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

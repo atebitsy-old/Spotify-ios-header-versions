@@ -6,9 +6,7 @@
 
 #import <objc/NSObject.h>
 
-#import "GLUEStyle-Protocol.h"
-
-@interface _TtC26MarketingFormatFeatureImpl22HeaderEntitySlideStyle : NSObject <GLUEStyle>
+@interface _TtC26MarketingFormatFeatureImpl22HeaderEntitySlideStyle : NSObject
 {
     // Error parsing type: , name: glueTheme
     // Error parsing type: , name: slide

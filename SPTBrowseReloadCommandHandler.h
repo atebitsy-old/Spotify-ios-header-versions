@@ -8,17 +8,21 @@
 
 #import "HUBCommandHandler-Protocol.h"
 
-@protocol SPTBrowseViewModelProvider;
+@protocol SPTBrowseViewModelProvider, SPTHubInteractionLogger, SPTUBIHubsUtilities;
 
 @interface SPTBrowseReloadCommandHandler : NSObject <HUBCommandHandler>
 {
     id <SPTBrowseViewModelProvider> _viewModelProvider;
+    id <SPTHubInteractionLogger> _interactionLogger;
+    id <SPTUBIHubsUtilities> _ubiHubs;
 }
 
 - (void).cxx_destruct;
+@property(readonly, nonatomic) id <SPTUBIHubsUtilities> ubiHubs; // @synthesize ubiHubs=_ubiHubs;
+@property(readonly, nonatomic) id <SPTHubInteractionLogger> interactionLogger; // @synthesize interactionLogger=_interactionLogger;
 @property(readonly, nonatomic) id <SPTBrowseViewModelProvider> viewModelProvider; // @synthesize viewModelProvider=_viewModelProvider;
 - (void)handleCommand:(id)arg1 event:(id)arg2;
-- (id)initWithViewModelProvider:(id)arg1;
+- (id)initWithViewModelProvider:(id)arg1 interactionLogger:(id)arg2 ubiHubs:(id)arg3;
 
 @end
 

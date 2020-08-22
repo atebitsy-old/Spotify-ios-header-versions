@@ -6,7 +6,7 @@
 
 #import <objc/NSObject.h>
 
-@class NSArray, NSMutableSet, NSSet;
+@class NSArray, NSMutableSet, NSSet, NSString;
 @protocol SPTSortingFilteringSortRule, SPTSortingFilteringViewModelDelegate;
 
 @interface SPTSortingFilteringViewModel : NSObject
@@ -16,9 +16,13 @@
     NSArray *_availableFilterRules;
     NSArray *_availableSortRules;
     NSMutableSet *_internalSelectedFilterRules;
+    NSString *_filterSectionTitle;
+    NSString *_sortSectionTitle;
 }
 
 - (void).cxx_destruct;
+@property(copy, nonatomic) NSString *sortSectionTitle; // @synthesize sortSectionTitle=_sortSectionTitle;
+@property(copy, nonatomic) NSString *filterSectionTitle; // @synthesize filterSectionTitle=_filterSectionTitle;
 @property(retain, nonatomic) NSMutableSet *internalSelectedFilterRules; // @synthesize internalSelectedFilterRules=_internalSelectedFilterRules;
 @property(copy, nonatomic) NSArray *availableSortRules; // @synthesize availableSortRules=_availableSortRules;
 @property(copy, nonatomic) NSArray *availableFilterRules; // @synthesize availableFilterRules=_availableFilterRules;
@@ -32,7 +36,7 @@
 - (long long)numberItemsInSectionIndex:(long long)arg1;
 - (long long)numberSections;
 @property(readonly, copy, nonatomic) NSSet *selectedFilterRules;
-- (id)initWithAvailableFilterRules:(id)arg1 availableSortRules:(id)arg2 selectedFilterRules:(id)arg3 selectedSortRule:(id)arg4;
+- (id)initWithAvailableFilterRules:(id)arg1 availableSortRules:(id)arg2 selectedFilterRules:(id)arg3 selectedSortRule:(id)arg4 filterSectionTitle:(id)arg5 sortSectionTitle:(id)arg6;
 
 @end
 

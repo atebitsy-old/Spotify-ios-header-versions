@@ -6,7 +6,7 @@
 
 #import "VISREFBaseHeaderController.h"
 
-@class SPTPodcastHeaderContentView, SPTPodcastHeaderForegroundView, UIView, VISREFFadingContainerTopAccessoryView, VISREFGradientBackgroundView;
+@class SPTPodcastHeaderContentView, SPTPodcastHeaderForegroundView, SPTPodcastHeaderViewModel, UIView, VISREFFadingContainerTopAccessoryView, VISREFGradientBackgroundView;
 @protocol GLUEImageLoader, GLUETheme;
 
 @interface SPTPodcastHeaderController : VISREFBaseHeaderController
@@ -17,6 +17,7 @@
     SPTPodcastHeaderForegroundView *_foregroundView;
     VISREFFadingContainerTopAccessoryView *_topAccessoryView;
     UIView *_searchBarView;
+    SPTPodcastHeaderViewModel *_viewModel;
     id <GLUETheme> _theme;
     id <GLUEImageLoader> _imageLoader;
     double _navigationBarGradientEndPoint;
@@ -28,6 +29,7 @@
 @property(nonatomic) double navigationBarGradientEndPoint; // @synthesize navigationBarGradientEndPoint=_navigationBarGradientEndPoint;
 @property(retain, nonatomic) id <GLUEImageLoader> imageLoader; // @synthesize imageLoader=_imageLoader;
 @property(retain, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
+@property(retain, nonatomic) SPTPodcastHeaderViewModel *viewModel; // @synthesize viewModel=_viewModel;
 @property(retain, nonatomic) UIView *searchBarView; // @synthesize searchBarView=_searchBarView;
 @property(retain, nonatomic) VISREFFadingContainerTopAccessoryView *topAccessoryView; // @synthesize topAccessoryView=_topAccessoryView;
 @property(retain, nonatomic) SPTPodcastHeaderForegroundView *foregroundView; // @synthesize foregroundView=_foregroundView;

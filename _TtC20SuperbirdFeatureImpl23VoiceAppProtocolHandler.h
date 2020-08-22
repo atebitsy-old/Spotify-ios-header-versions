@@ -9,6 +9,7 @@
 @interface _TtC20SuperbirdFeatureImpl23VoiceAppProtocolHandler : NSObject
 {
     // Error parsing type: , name: superbirdVoiceSession
+    // Error parsing type: , name: superbirdVoiceSessionFactory
     // Error parsing type: , name: payloadConstructor
     // Error parsing type: , name: voiceSessionUpdates
 }

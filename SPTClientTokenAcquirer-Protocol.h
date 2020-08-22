@@ -6,9 +6,11 @@
 
 #import "NSObject-Protocol.h"
 
+@class NSError;
 @protocol SPTClientToken, SPTClientTokenAcquireTask, SPTEncryptedClientTokenObserver;
 
 @protocol SPTClientTokenAcquirer <NSObject>
+@property(readonly, nonatomic, getter=areAllRequestsDisabledWithError) NSError *allRequestsDisabledWithError;
 @property(readonly, nonatomic, getter=isEnabled) _Bool enabled;
 - (id <SPTEncryptedClientTokenObserver>)createEncryptedClientTokenObserver;
 - (void)disable;

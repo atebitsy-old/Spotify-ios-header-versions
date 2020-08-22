@@ -6,7 +6,7 @@
 
 #import <objc/NSObject.h>
 
-@class SPTHomeCommandHandlerFactory, SPTHomeDebugger, SPTHomeEndpointFactory, SPTHomeFeatureProperties, SPTHomeHubProvider, SPTHomeLocalViewModelOverrides, SPTHomeViewModelLoaderFactory, SPTHomeViewModelProvider;
+@class SPTHomeCommandHandlerFactory, SPTHomeContentOperationLoaderFactory, SPTHomeDebugger, SPTHomeEndpointFactory, SPTHomeFeatureProperties, SPTHomeHubProvider, SPTHomeLocalViewModelOverrides, SPTHomeViewModelProvider;
 @protocol GLUETheme, SPTOfflineModeState, SPTShareDragDelegateFactory;
 
 @interface SPTHomeHubManager : NSObject
@@ -18,7 +18,7 @@
     id <GLUETheme> _GLUETheme;
     id <SPTOfflineModeState> _offlineModeState;
     id <SPTShareDragDelegateFactory> _shareDragDelegateFactory;
-    SPTHomeViewModelLoaderFactory *_viewModelLoaderFactory;
+    SPTHomeContentOperationLoaderFactory *_contentOperationLoaderFactory;
     SPTHomeFeatureProperties *_homeFeatureProperties;
     SPTHomeLocalViewModelOverrides *_localViewModelOverrides;
     SPTHomeDebugger *_homeDebugger;
@@ -28,7 +28,7 @@
 @property(readonly, nonatomic) SPTHomeDebugger *homeDebugger; // @synthesize homeDebugger=_homeDebugger;
 @property(readonly, nonatomic) SPTHomeLocalViewModelOverrides *localViewModelOverrides; // @synthesize localViewModelOverrides=_localViewModelOverrides;
 @property(readonly, nonatomic) SPTHomeFeatureProperties *homeFeatureProperties; // @synthesize homeFeatureProperties=_homeFeatureProperties;
-@property(readonly, nonatomic) SPTHomeViewModelLoaderFactory *viewModelLoaderFactory; // @synthesize viewModelLoaderFactory=_viewModelLoaderFactory;
+@property(readonly, nonatomic) SPTHomeContentOperationLoaderFactory *contentOperationLoaderFactory; // @synthesize contentOperationLoaderFactory=_contentOperationLoaderFactory;
 @property(readonly, nonatomic) id <SPTShareDragDelegateFactory> shareDragDelegateFactory; // @synthesize shareDragDelegateFactory=_shareDragDelegateFactory;
 @property(readonly, nonatomic) id <SPTOfflineModeState> offlineModeState; // @synthesize offlineModeState=_offlineModeState;
 @property(readonly, nonatomic) id <GLUETheme> GLUETheme; // @synthesize GLUETheme=_GLUETheme;
@@ -38,8 +38,8 @@
 @property(readonly, nonatomic) SPTHomeViewModelProvider *viewModelProvider; // @synthesize viewModelProvider=_viewModelProvider;
 - (id)makeCommandDispatcherWithURL:(id)arg1 referrerIdentifier:(id)arg2 hubLogger:(id)arg3 viewModelProvider:(id)arg4 overrides:(id)arg5;
 - (id)makeViewModelProviderForSourceIdentifier:(id)arg1 overrides:(id)arg2;
-- (id)provideHubViewControllerForURL:(id)arg1 initialViewModel:(id)arg2 referrerIdentifier:(id)arg3 viewLogger:(id)arg4;
-- (id)initWithHomeHubProvider:(id)arg1 endpointFactory:(id)arg2 homeCommandHandlerFactory:(id)arg3 GLUETheme:(id)arg4 offlineModeState:(id)arg5 shareDragDelegateFactory:(id)arg6 viewModelLoaderFactory:(id)arg7 homeFeatureProperties:(id)arg8 sourceIdentifier:(id)arg9 homeDebugger:(id)arg10;
+- (id)provideHubViewControllerForURL:(id)arg1 initialViewModel:(id)arg2 referrerIdentifier:(id)arg3;
+- (id)initWithHomeHubProvider:(id)arg1 endpointFactory:(id)arg2 homeCommandHandlerFactory:(id)arg3 GLUETheme:(id)arg4 offlineModeState:(id)arg5 shareDragDelegateFactory:(id)arg6 contentOperationLoaderFactory:(id)arg7 homeFeatureProperties:(id)arg8 sourceIdentifier:(id)arg9 homeDebugger:(id)arg10;
 
 @end
 

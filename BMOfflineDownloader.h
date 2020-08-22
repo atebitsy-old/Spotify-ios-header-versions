@@ -16,11 +16,11 @@
     id <BMOfflineDownloaderDelegate> _delegate;
     AVAssetDownloadURLSession *_assetDownloadURLSession;
     NSMutableDictionary *_activeDownloads;
-    NSMutableDictionary *_finishedDownloads;
+    NSMutableDictionary *_relativeDownloadLocations;
 }
 
 - (void).cxx_destruct;
-@property(retain, nonatomic) NSMutableDictionary *finishedDownloads; // @synthesize finishedDownloads=_finishedDownloads;
+@property(retain, nonatomic) NSMutableDictionary *relativeDownloadLocations; // @synthesize relativeDownloadLocations=_relativeDownloadLocations;
 @property(retain, nonatomic) NSMutableDictionary *activeDownloads; // @synthesize activeDownloads=_activeDownloads;
 @property(retain, nonatomic) AVAssetDownloadURLSession *assetDownloadURLSession; // @synthesize assetDownloadURLSession=_assetDownloadURLSession;
 @property(nonatomic) __weak id <BMOfflineDownloaderDelegate> delegate; // @synthesize delegate=_delegate;

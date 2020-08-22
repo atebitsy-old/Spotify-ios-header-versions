@@ -9,7 +9,7 @@
 #import "SPTInAppMessagePresenter-Protocol.h"
 #import "SPTOfflineModeStateObserver-Protocol.h"
 
-@class NSDictionary, NSString, SPTInAppMessageNoteOverlayController, SPTInAppMessageNowPlayingManagerRegistryImplementation, SPTInAppMessageServiceLogger;
+@class NSDictionary, NSNotificationCenter, NSString, SPTInAppMessageNoteOverlayController, SPTInAppMessageNowPlayingManagerRegistryImplementation, SPTInAppMessageServiceLogger;
 @protocol SPTAuthController, SPTBannerPresentationManager, SPTBannerPresentationManagerTicket, SPTCarDetector, SPTCrashReporter, SPTInAppMessageSDKMessageViewModel, SPTOfflineModeState;
 
 @interface SPTInAppMessageSDKBannerPresentationController : NSObject <SPTOfflineModeStateObserver, SPTInAppMessagePresenter>
@@ -23,6 +23,7 @@
     id <SPTCarDetector> _carDetector;
     SPTInAppMessageServiceLogger *_serviceLogger;
     id <SPTBannerPresentationManagerTicket> _bannerTicket;
+    NSNotificationCenter *_notificationCenter;
     NSDictionary *_cancelationInfo;
     SPTInAppMessageNoteOverlayController *_noteOverlayController;
     id <SPTCrashReporter> _crashReporter;
@@ -41,6 +42,7 @@
 @property(readonly, nonatomic) SPTInAppMessageNoteOverlayController *noteOverlayController; // @synthesize noteOverlayController=_noteOverlayController;
 @property(nonatomic, getter=isOffline) _Bool offline; // @synthesize offline=_offline;
 @property(copy, nonatomic) NSDictionary *cancelationInfo; // @synthesize cancelationInfo=_cancelationInfo;
+@property(readonly, nonatomic) NSNotificationCenter *notificationCenter; // @synthesize notificationCenter=_notificationCenter;
 @property(retain, nonatomic) id <SPTBannerPresentationManagerTicket> bannerTicket; // @synthesize bannerTicket=_bannerTicket;
 @property(readonly, nonatomic) SPTInAppMessageServiceLogger *serviceLogger; // @synthesize serviceLogger=_serviceLogger;
 @property(readonly, nonatomic) id <SPTCarDetector> carDetector; // @synthesize carDetector=_carDetector;
@@ -57,7 +59,7 @@
 - (void)cancelBannerMessagePresentation:(id)arg1;
 - (void)offlineModeState:(id)arg1 updated:(_Bool)arg2;
 - (void)dealloc;
-- (id)initWithBannerPresentationManager:(id)arg1 messageViewModel:(id)arg2 matchedPattern:(id)arg3 triggerType:(id)arg4 offlineModeState:(id)arg5 carDetector:(id)arg6 nowPlayingManagerRegistry:(id)arg7 serviceLogger:(id)arg8 noteOverlayController:(id)arg9 crashReporter:(id)arg10 authController:(id)arg11;
+- (id)initWithBannerPresentationManager:(id)arg1 messageViewModel:(id)arg2 matchedPattern:(id)arg3 triggerType:(id)arg4 offlineModeState:(id)arg5 carDetector:(id)arg6 nowPlayingManagerRegistry:(id)arg7 serviceLogger:(id)arg8 noteOverlayController:(id)arg9 crashReporter:(id)arg10 authController:(id)arg11 notificationCenter:(id)arg12;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

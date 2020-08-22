@@ -6,7 +6,7 @@
 
 #import <objc/NSObject.h>
 
-@class AVAudioSession, AVAudioSessionRouteDescription, EAAccessoryManager, NSArray, NSNotificationCenter, NSSet, NSTimer, SPTAccessoryManagerLogging;
+@class AVAudioSession, AVAudioSessionRouteDescription, EAAccessoryManager, NSArray, NSNotificationCenter, NSSet, NSTimer;
 @protocol SPTAccessoryCategorizer, SPTAccessoryStateManager;
 
 @interface SPTAccessoryDetector : NSObject
@@ -17,7 +17,6 @@
     AVAudioSession *_audioSession;
     id <SPTAccessoryCategorizer> _categorizer;
     id <SPTAccessoryStateManager> _accessoryStateManager;
-    SPTAccessoryManagerLogging *_logger;
     NSArray *_notificationCenterObserverTokens;
     AVAudioSessionRouteDescription *_currentRoute;
     NSSet *_pendingAccessories;
@@ -30,7 +29,6 @@
 @property(retain, nonatomic) AVAudioSessionRouteDescription *currentRoute; // @synthesize currentRoute=_currentRoute;
 @property(nonatomic, getter=isAudioSessionInterrupted) _Bool audioSessionInterrupted; // @synthesize audioSessionInterrupted=_audioSessionInterrupted;
 @property(retain, nonatomic) NSArray *notificationCenterObserverTokens; // @synthesize notificationCenterObserverTokens=_notificationCenterObserverTokens;
-@property(readonly, nonatomic) SPTAccessoryManagerLogging *logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic) id <SPTAccessoryStateManager> accessoryStateManager; // @synthesize accessoryStateManager=_accessoryStateManager;
 @property(readonly, nonatomic) id <SPTAccessoryCategorizer> categorizer; // @synthesize categorizer=_categorizer;
 @property(readonly, nonatomic) AVAudioSession *audioSession; // @synthesize audioSession=_audioSession;
@@ -56,7 +54,7 @@
 - (void)endObservingAccessories;
 - (void)beginObservingAccessories;
 - (void)dealloc;
-- (id)initWithNotificationCenter:(id)arg1 eaAccessoryManager:(id)arg2 audioSession:(id)arg3 categorizer:(id)arg4 accessoryStateManager:(id)arg5 logger:(id)arg6;
+- (id)initWithNotificationCenter:(id)arg1 eaAccessoryManager:(id)arg2 audioSession:(id)arg3 categorizer:(id)arg4 accessoryStateManager:(id)arg5;
 
 @end
 

@@ -6,37 +6,19 @@
 
 #import <objc/NSObject.h>
 
-@class NSMutableDictionary, NSString;
-@protocol SPTLogCenter;
+@protocol SPTUBIMobileBehindTheLyricsEventFactory;
 
 @interface SPTGeniusLoggingService : NSObject
 {
-    _Bool _backgrounded;
-    id <SPTLogCenter> _logCenter;
-    NSString *_featureId;
-    NSMutableDictionary *_loggedItems;
+    id <SPTUBIMobileBehindTheLyricsEventFactory> _eventFactory;
 }
 
 - (void).cxx_destruct;
-@property(retain, nonatomic) NSMutableDictionary *loggedItems; // @synthesize loggedItems=_loggedItems;
-@property(nonatomic, getter=isBackgrounded) _Bool backgrounded; // @synthesize backgrounded=_backgrounded;
-@property(readonly, copy, nonatomic) NSString *featureId; // @synthesize featureId=_featureId;
-@property(readonly, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
-- (void)unregisterForBackgroundNotifications;
-- (void)registerForBackgroundNotifications;
-- (void)dealloc;
-- (void)applicationWillEnterForeground;
-- (void)applicationDidEnterBackground;
-- (void)addItemToLoggedItemsForKey:(id)arg1;
-- (_Bool)impressionIsNotLoggedForKey:(id)arg1;
-- (id)createImpressionKeyWithBlockIndex:(id)arg1 itemIndex:(id)arg2 impressionType:(id)arg3;
-- (void)logSettingToggleName:(id)arg1 value:(_Bool)arg2;
-- (void)logUserInteractionMessageWithTrackURI:(id)arg1 pageIdentifier:(id)arg2 sectionId:(id)arg3 blockIndex:(long long)arg4 itemIndex:(long long)arg5 targetURI:(id)arg6 interactionType:(id)arg7 userIntent:(id)arg8;
-- (void)logUserImpressionMessageWithTrackURI:(id)arg1 pageIdentifier:(id)arg2 sectionId:(id)arg3 blockIndex:(unsigned long long)arg4 itemIndex:(unsigned long long)arg5 targetURI:(id)arg6 impressionType:(id)arg7 renderType:(id)arg8;
-- (void)logImpressionWithTrackURI:(id)arg1 pageIdentifier:(id)arg2 sectionId:(id)arg3 blockIndex:(long long)arg4 itemIndex:(long long)arg5 targetUri:(id)arg6 impressionType:(id)arg7 renderType:(id)arg8;
-- (void)logPageImpressionWithSectionName:(id)arg1 pageIndex:(unsigned long long)arg2;
-- (void)logPageImpressionWithTrackURI:(id)arg1;
-- (id)initWithLogCenter:(id)arg1 featureId:(id)arg2;
+@property(readonly, nonatomic) id <SPTUBIMobileBehindTheLyricsEventFactory> eventFactory; // @synthesize eventFactory=_eventFactory;
+- (void)logLinkInteractionWithTrackURI:(id)arg1 destinationURL:(id)arg2 index:(unsigned long long)arg3 type:(id)arg4;
+- (void)logAnnotationImpressionWithTrackURI:(id)arg1 index:(unsigned long long)arg2 type:(id)arg3;
+- (void)logComponentImpressionWithTrackURI:(id)arg1;
+- (id)initWithEventFactory:(id)arg1;
 
 @end
 

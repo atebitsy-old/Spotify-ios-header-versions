@@ -11,6 +11,7 @@
 @interface SPTPartnerIntegrationSettingsSectionViewModel : NSObject
 {
     _Bool _toggleSwitchOn;
+    _Bool _toggleSwitchDisplayed;
     NSString *_title;
     NSString *_descriptionText;
     NSString *_disclaimerText;
@@ -25,6 +26,7 @@
 @property(readonly, nonatomic) SPTPartnerTestManagerImplementation *testManager; // @synthesize testManager=_testManager;
 @property(readonly, nonatomic) SPTPartnerIntegrationAuthorizer *authorizer; // @synthesize authorizer=_authorizer;
 @property(readonly, nonatomic) SPTPartnerIntegrationCategory *category; // @synthesize category=_category;
+@property(readonly, nonatomic, getter=isToggleSwitchDisplayed) _Bool toggleSwitchDisplayed; // @synthesize toggleSwitchDisplayed=_toggleSwitchDisplayed;
 @property(readonly, nonatomic, getter=isToggleSwitchOn) _Bool toggleSwitchOn; // @synthesize toggleSwitchOn=_toggleSwitchOn;
 @property(readonly, copy, nonatomic) NSArray *items; // @synthesize items=_items;
 @property(readonly, copy, nonatomic) NSString *toggleAccessibilityLabel; // @synthesize toggleAccessibilityLabel=_toggleAccessibilityLabel;

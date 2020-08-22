@@ -6,8 +6,8 @@
 
 #import <objc/NSObject.h>
 
-@class NSArray, SPTPartnerIntegrationAuthorizer, SPTPartnerIntegrationStateLoader, SPTPartnerTestManagerImplementation;
-@protocol SPTPartnerIntegrationRegistry, SPTPartnerIntegrationSettingsViewModelDelegate;
+@class NSArray, NSString, SPTPartnerFeatureProperties, SPTPartnerIntegrationAuthorizer, SPTPartnerIntegrationStateLoader, SPTPartnerTestManagerImplementation;
+@protocol SPTLinkDispatcher, SPTPartnerIntegrationRegistry, SPTPartnerIntegrationSettingsViewModelDelegate;
 
 @interface SPTPartnerIntegrationSettingsViewModel : NSObject
 {
@@ -17,19 +17,25 @@
     SPTPartnerIntegrationAuthorizer *_authorizer;
     SPTPartnerTestManagerImplementation *_testManager;
     id <SPTPartnerIntegrationRegistry> _integrationRegistry;
+    id <SPTLinkDispatcher> _linkDispatcher;
+    SPTPartnerFeatureProperties *_remoteProperties;
 }
 
 - (void).cxx_destruct;
+@property(readonly, nonatomic) SPTPartnerFeatureProperties *remoteProperties; // @synthesize remoteProperties=_remoteProperties;
+@property(readonly, nonatomic) id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
 @property(readonly, nonatomic) id <SPTPartnerIntegrationRegistry> integrationRegistry; // @synthesize integrationRegistry=_integrationRegistry;
 @property(readonly, nonatomic) SPTPartnerTestManagerImplementation *testManager; // @synthesize testManager=_testManager;
 @property(readonly, nonatomic) SPTPartnerIntegrationAuthorizer *authorizer; // @synthesize authorizer=_authorizer;
 @property(readonly, nonatomic) SPTPartnerIntegrationStateLoader *stateLoader; // @synthesize stateLoader=_stateLoader;
 @property(copy, nonatomic) NSArray *sections; // @synthesize sections=_sections;
 @property(nonatomic) __weak id <SPTPartnerIntegrationSettingsViewModelDelegate> delegate; // @synthesize delegate=_delegate;
+@property(readonly, nonatomic) NSString *settingsTitle;
 - (_Bool)isOffline;
 - (id)sectionsFromCategories:(id)arg1;
+- (id)voiceAssistantsCategory;
 - (void)loadData;
-- (id)initWithIntegrationStateLoader:(id)arg1 authorizer:(id)arg2 testManager:(id)arg3;
+- (id)initWithIntegrationStateLoader:(id)arg1 authorizer:(id)arg2 testManager:(id)arg3 linkDispatcher:(id)arg4 remoteConfigurationProperties:(id)arg5;
 
 @end
 

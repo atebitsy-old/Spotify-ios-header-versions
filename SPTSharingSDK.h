@@ -31,6 +31,8 @@
 - (id)provideStoriesShareHandlerWithDestination:(id)arg1 entityData:(id)arg2;
 - (id)provideMessageShareHandlerWithDestination:(id)arg1 entityData:(id)arg2 contextViewController:(id)arg3;
 - (id)provideLinkShareHandlerWithDestination:(id)arg1 entityData:(id)arg2 contextViewController:(id)arg3;
+- (id)provideImageShareHandlerWithDestination:(id)arg1 entityData:(id)arg2 contextViewController:(id)arg3;
+- (id)provideTwitterShareHandlerWithEntityData:(id)arg1 contextViewController:(id)arg2;
 - (id)provideDownloadShareHandlerWithEntityData:(id)arg1;
 - (id)buildShareHandlerFromShareDestination:(id)arg1 shareEntityData:(id)arg2 contextViewController:(id)arg3;
 - (_Bool)isShareDialogPresenterRegisteredForDestination:(id)arg1;

@@ -13,6 +13,7 @@
     // Error parsing type: , name: settingsService
     // Error parsing type: , name: glueService
     // Error parsing type: , name: hubsService
+    // Error parsing type: , name: uriDispatchService
     // Error parsing type: , name: pageRegistrationToken
     // Error parsing type: , name: remoteConfigManager
 }

@@ -10,6 +10,8 @@
 {
     // Error parsing type: , name: searchBarButton
     // Error parsing type: , name: tableView
+    // Error parsing type: , name: failedView
+    // Error parsing type: , name: loadingView
 }
 
 - (void).cxx_destruct;

@@ -13,12 +13,15 @@
     // Error parsing type: , name: subtitleLabel
     // Error parsing type: , name: feedbackButton
     // Error parsing type: , name: imageLoader
+    // Error parsing type: , name: linkDispatcher
+    // Error parsing type: , name: viewModel
     // Error parsing type: , name: delegate
     // Error parsing type: , name: glueTheme
 }
 
 - (void).cxx_destruct;
 - (id)initWithFrame:(struct CGRect)arg1;
+- (void)subtitleLabelTappedWithRecognizer:(id)arg1;
 - (void)feedbackButtonTappedWithButton:(id)arg1;
 - (id)initWithCoder:(id)arg1;
 

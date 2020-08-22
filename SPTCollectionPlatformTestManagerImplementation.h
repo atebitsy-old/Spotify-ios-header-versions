@@ -10,17 +10,15 @@
 #import "SPTFeatureFlagSignalObserver-Protocol.h"
 
 @class NSString, SPTCollectionPlatformFeatureProperties;
-@protocol SPTAbbaFeatureFlags, SPTCollectionPlatformConfiguration, SPTEntityService, SPTFeatureFlagFactory, SPTFeatureFlagSignal, SPTNowPlayingTestManager, SPTPlaylistPlatformPlaylistDataLoader, SPTProductState, SPTRemoteConfigurationResolver, SPTSnackbarConditionalPresenter;
+@protocol SPTCollectionPlatformConfiguration, SPTEntityService, SPTFeatureFlagFactory, SPTFeatureFlagSignal, SPTPlaylistPlatformPlaylistDataLoader, SPTProductState, SPTRemoteConfigurationResolver, SPTSnackbarConditionalPresenter;
 
 @interface SPTCollectionPlatformTestManagerImplementation : NSObject <SPTFeatureFlagSignalObserver, SPTCollectionPlatformPropertiesManager>
 {
     _Bool _freeTierEnabled;
     _Bool _madeForPublicEnabled;
     _Bool _madeForEmployeeEnabled;
-    _Bool _localBansEnabled;
     id <SPTCollectionPlatformConfiguration> _collectionConfiguration;
     id <SPTProductState> _productState;
-    id <SPTAbbaFeatureFlags> _abbaFeatureFlags;
     id <SPTRemoteConfigurationResolver> _remoteConfigurationResolver;
     SPTCollectionPlatformFeatureProperties *_remoteConfigurationProperties;
     id <SPTFeatureFlagFactory> _featureFlagFactory;
@@ -28,12 +26,9 @@
     id <SPTEntityService> _entityService;
     id <SPTPlaylistPlatformPlaylistDataLoader> _playlistDataLoader;
     id <SPTSnackbarConditionalPresenter> _snackbarPresenter;
-    id <SPTNowPlayingTestManager> _nowPlayingTestManager;
 }
 
 - (void).cxx_destruct;
-@property(retain, nonatomic) id <SPTNowPlayingTestManager> nowPlayingTestManager; // @synthesize nowPlayingTestManager=_nowPlayingTestManager;
-@property(nonatomic, getter=isLocalBansEnabled) _Bool localBansEnabled; // @synthesize localBansEnabled=_localBansEnabled;
 @property(nonatomic, getter=isMadeForEmployeeEnabled) _Bool madeForEmployeeEnabled; // @synthesize madeForEmployeeEnabled=_madeForEmployeeEnabled;
 @property(nonatomic, getter=isMadeForPublicEnabled) _Bool madeForPublicEnabled; // @synthesize madeForPublicEnabled=_madeForPublicEnabled;
 @property(retain, nonatomic) id <SPTSnackbarConditionalPresenter> snackbarPresenter; // @synthesize snackbarPresenter=_snackbarPresenter;
@@ -43,21 +38,18 @@
 @property(readonly, nonatomic) id <SPTFeatureFlagFactory> featureFlagFactory; // @synthesize featureFlagFactory=_featureFlagFactory;
 @property(retain, nonatomic) SPTCollectionPlatformFeatureProperties *remoteConfigurationProperties; // @synthesize remoteConfigurationProperties=_remoteConfigurationProperties;
 @property(readonly, nonatomic) id <SPTRemoteConfigurationResolver> remoteConfigurationResolver; // @synthesize remoteConfigurationResolver=_remoteConfigurationResolver;
-@property(readonly, nonatomic) id <SPTAbbaFeatureFlags> abbaFeatureFlags; // @synthesize abbaFeatureFlags=_abbaFeatureFlags;
 @property(readonly, nonatomic) id <SPTProductState> productState; // @synthesize productState=_productState;
 @property(nonatomic, getter=isFreeTierEnabled) _Bool freeTierEnabled; // @synthesize freeTierEnabled=_freeTierEnabled;
 @property(retain, nonatomic) id <SPTCollectionPlatformConfiguration> collectionConfiguration; // @synthesize collectionConfiguration=_collectionConfiguration;
-- (id)objectForKeyedSubscript:(id)arg1;
 @property(readonly, nonatomic, getter=isPremiumLabelEnabled) _Bool premiumLabelEnabled;
 @property(readonly, nonatomic, getter=isSnackbarForPremiumEnabled) _Bool snackbarForPremiumEnabled;
 @property(readonly, nonatomic, getter=isSnackbarWithACMCopyForArtistsEnabled) _Bool sackbarWithAcmCopyForArtistsEnabled;
 @property(readonly, nonatomic, getter=isSnackbarWithACMCopyEnabled) _Bool snackbarWithACMCopyEnabled;
 @property(readonly, getter=isFollowedArtistsOnlyEnabled) _Bool followedArtistsOnlyEnabled;
-- (void)updateLocalBans;
 - (void)featureFlagSignal:(id)arg1 hasAssumedState:(long long)arg2;
 - (void)setupRemoteConfigurationProperties;
 - (void)dealloc;
-- (id)initWithProductState:(id)arg1 abbaFeatureFlags:(id)arg2 remoteConfigurationResolver:(id)arg3 featureFlagFactory:(id)arg4 freeTierEnabledSignal:(id)arg5 snackbarPresenter:(id)arg6 nowPlayingTestManager:(id)arg7 entityService:(id)arg8 playlistDataLoader:(id)arg9;
+- (id)initWithProductState:(id)arg1 remoteConfigurationResolver:(id)arg2 featureFlagFactory:(id)arg3 freeTierEnabledSignal:(id)arg4 snackbarPresenter:(id)arg5 entityService:(id)arg6 playlistDataLoader:(id)arg7;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

@@ -9,7 +9,6 @@
 @interface _TtC26YourLibraryBetaFeatureImpl43YourLibraryBetaShareFeedbackTableViewBinder (YourLibraryBetaFeatureImpl)
 - (id)tableView:(id)arg1 willSelectRowAtIndexPath:(id)arg2;
 - (double)tableView:(id)arg1 heightForRowAtIndexPath:(id)arg2;
-- (void)tableView:(id)arg1 willDisplayFooterView:(id)arg2 forSection:(long long)arg3;
 - (id)tableView:(id)arg1 viewForFooterInSection:(long long)arg2;
 - (double)tableView:(id)arg1 heightForFooterInSection:(long long)arg2;
 - (id)tableView:(id)arg1 cellForRowAtIndexPath:(id)arg2;

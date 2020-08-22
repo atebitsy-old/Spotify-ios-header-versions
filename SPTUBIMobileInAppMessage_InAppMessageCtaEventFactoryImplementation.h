@@ -18,6 +18,7 @@
 + (id)factoryWithIdentifier:(id)arg1 uri:(id)arg2 components:(id)arg3;
 - (void).cxx_destruct;
 @property(copy, nonatomic) NSArray *components; // @synthesize components=_components;
+- (id)hitSendEmailVerification;
 - (id)hitNavigateToWebviewUriWithDestination:(id)arg1;
 - (id)hitNavigateToExternalUriWithDestination:(id)arg1;
 - (id)hitOpenOsSettings;

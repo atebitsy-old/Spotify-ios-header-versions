@@ -8,26 +8,20 @@
 
 #import "SPTInAppMessagePresentationMonitor-Protocol.h"
 
-@class NSString, SPTInAppMessageBannerMessageController, SPTInAppMessageCardMessageController, SPTInAppMessageNotePresentationManager, SPTInAppMessageReceiverImplementation;
+@class NSString, SPTInAppMessageReceiverImplementation;
 
 @interface SPTInAppMessagePresentationMonitorImplementation : NSObject <SPTInAppMessagePresentationMonitor>
 {
-    SPTInAppMessageCardMessageController *_cardMessageController;
-    SPTInAppMessageBannerMessageController *_bannerMessageController;
-    SPTInAppMessageNotePresentationManager *_notePresentationManager;
     SPTInAppMessageReceiverImplementation *_messageReceiverImplementation;
 }
 
 - (void).cxx_destruct;
 @property(readonly, nonatomic) SPTInAppMessageReceiverImplementation *messageReceiverImplementation; // @synthesize messageReceiverImplementation=_messageReceiverImplementation;
-@property(readonly, nonatomic) SPTInAppMessageNotePresentationManager *notePresentationManager; // @synthesize notePresentationManager=_notePresentationManager;
-@property(readonly, nonatomic) SPTInAppMessageBannerMessageController *bannerMessageController; // @synthesize bannerMessageController=_bannerMessageController;
-@property(readonly, nonatomic) SPTInAppMessageCardMessageController *cardMessageController; // @synthesize cardMessageController=_cardMessageController;
 @property(readonly, nonatomic, getter=isPresentingInAppMessage) _Bool presentingInAppMessage;
 @property(readonly, nonatomic, getter=isPresentingInAppMessageNote) _Bool presentingInAppMessageNote;
 @property(readonly, nonatomic, getter=isPresentingInAppMessageBanner) _Bool presentingInAppMessageBanner;
 @property(readonly, nonatomic, getter=isPresentingInAppMessageCard) _Bool presentingInAppMessageCard;
-- (id)initWithCardMessageController:(id)arg1 bannerMessageController:(id)arg2 notePresentationManager:(id)arg3 messageReceiverImplementation:(id)arg4;
+- (id)initWithMessageReceiverImplementation:(id)arg1;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

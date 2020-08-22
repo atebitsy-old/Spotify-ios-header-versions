@@ -23,6 +23,7 @@
 @property(retain, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
 - (void)enableModernFeatures;
 - (void)resetRolloutStatuses;
+@property _Bool generatedIconFontEnabled;
 @property _Bool motionEnabled;
 - (id)initWithTheme:(id)arg1;
 

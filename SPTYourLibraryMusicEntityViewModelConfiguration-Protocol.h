@@ -9,7 +9,6 @@
 @class NSString;
 
 @protocol SPTYourLibraryMusicEntityViewModelConfiguration <NSObject>
-@property(readonly, nonatomic) unsigned long long scrollIndexMinimumDisplayRowCount;
 @property(readonly, nonatomic) unsigned long long trailingAccessoryType;
 - (void)persistCollapsed:(_Bool)arg1 forSection:(long long)arg2;
 - (_Bool)collapsedSection:(long long)arg1;

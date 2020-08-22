@@ -19,7 +19,6 @@
     // Error parsing type: , name: delayedSignupService
     // Error parsing type: , name: testManager
     // Error parsing type: , name: cache
-    // Error parsing type: , name: logCenter
     // Error parsing type: , name: loop
 }
 

@@ -16,6 +16,7 @@
     _Bool _loading;
     _Bool _paused;
     _Bool _buffering;
+    _Bool _optional;
     NSDate *_timestamp;
     NSURL *_contextURI;
     NSURL *_contextURL;
@@ -47,6 +48,7 @@
 @property(readonly, nonatomic) SPTPlayerSuppressions *suppressions; // @synthesize suppressions=_suppressions;
 @property(retain, nonatomic) SPTPlayerRestrictions *restrictions; // @synthesize restrictions=_restrictions;
 @property(retain, nonatomic) SPTPlayerOptions *options; // @synthesize options=_options;
+@property(nonatomic, getter=isOptional) _Bool optional; // @synthesize optional=_optional;
 @property(nonatomic, getter=isBuffering) _Bool buffering; // @synthesize buffering=_buffering;
 @property(nonatomic, getter=isPaused) _Bool paused; // @synthesize paused=_paused;
 @property(nonatomic, getter=isLoading) _Bool loading; // @synthesize loading=_loading;

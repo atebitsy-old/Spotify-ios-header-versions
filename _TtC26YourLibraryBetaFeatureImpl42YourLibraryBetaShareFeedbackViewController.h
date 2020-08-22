@@ -17,6 +17,11 @@
     // Error parsing type: , name: $__lazy_storage_$_subtitleLabel
     // Error parsing type: , name: $__lazy_storage_$_cancelButton
     // Error parsing type: , name: $__lazy_storage_$_tableView
+    // Error parsing type: , name: $__lazy_storage_$_thanksLabel
+    // Error parsing type: , name: $__lazy_storage_$_progressView
+    // Error parsing type: , name: $__lazy_storage_$_retryLabel
+    // Error parsing type: , name: $__lazy_storage_$_retrySubtitleLabel
+    // Error parsing type: , name: $__lazy_storage_$_retryButton
 }
 
 - (void).cxx_destruct;

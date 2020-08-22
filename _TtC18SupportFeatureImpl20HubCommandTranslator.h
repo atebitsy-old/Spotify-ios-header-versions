@@ -8,6 +8,7 @@
 
 @interface _TtC18SupportFeatureImpl20HubCommandTranslator : _TtCs12_SwiftObject
 {
+    // Error parsing type: , name: homeNavigationHandler
 }
 
 @end

@@ -32,7 +32,7 @@
 - (struct CGSize)preferredImageSize;
 - (double)preferredHeight;
 - (void)layoutSubviews;
-- (id)initWithTitle:(id)arg1 subtitle:(id)arg2 entityURL:(id)arg3 imageURL:(id)arg4 dataSource:(id)arg5 onboardingPresenter:(id)arg6 authorizationRequester:(id)arg7 dependencies:(id)arg8 alertController:(id)arg9;
+- (id)initWithTitle:(id)arg1 subtitle:(id)arg2 entityURL:(id)arg3 imageURL:(id)arg4 dataSource:(id)arg5 onboardingPresenter:(id)arg6 authorizationRequester:(id)arg7 dependencies:(id)arg8 snackbarPresenter:(id)arg9;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

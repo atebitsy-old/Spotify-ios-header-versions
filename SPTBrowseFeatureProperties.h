@@ -15,8 +15,10 @@
     _Bool _shouldEnableFindPromo;
     _Bool _shouldRegisterMarketingFormatComponents;
     _Bool _shouldUsePageLoader;
+    _Bool _shouldEnableMovedEditorialHeader;
 }
 
+@property(readonly, nonatomic) _Bool shouldEnableMovedEditorialHeader; // @synthesize shouldEnableMovedEditorialHeader=_shouldEnableMovedEditorialHeader;
 @property(readonly, nonatomic) _Bool shouldUsePageLoader; // @synthesize shouldUsePageLoader=_shouldUsePageLoader;
 @property(readonly, nonatomic) _Bool shouldRegisterMarketingFormatComponents; // @synthesize shouldRegisterMarketingFormatComponents=_shouldRegisterMarketingFormatComponents;
 @property(readonly, nonatomic) _Bool shouldEnableFindPromo; // @synthesize shouldEnableFindPromo=_shouldEnableFindPromo;

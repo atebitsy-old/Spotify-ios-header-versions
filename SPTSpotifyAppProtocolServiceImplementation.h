@@ -10,15 +10,14 @@
 #import "SPTAppProtocolBackgroundControllerDelegate-Protocol.h"
 #import "SPTAppProtocolConnectionHandlerDelegate-Protocol.h"
 #import "SPTAppProtocolConnectorDelegate-Protocol.h"
-#import "SPTAppProtocolFeatureFlagManagerObserver-Protocol.h"
 #import "SPTExternalIntegrationPlaybackControllerObserver-Protocol.h"
 #import "SPTService-Protocol.h"
 #import "SPTSpotifyAppProtocolService-Protocol.h"
 
-@class NSMapTable, NSString, SPSession, SPTAllocationContext, SPTAppProtocolBackgroundController, SPTAppProtocolCallForwarder, SPTAppProtocolEAConnector, SPTAppProtocolFeatureFlagManager;
+@class NSMapTable, NSString, SPSession, SPTAllocationContext, SPTAppProtocolBackgroundController, SPTAppProtocolCallForwarder, SPTAppProtocolEAConnector;
 @protocol SPTAccessoryActionLogger, SPTAccessoryManagerService, SPTAccessoryStateManager, SPTAppProtocolConnector, SPTAuthController, SPTAuthService, SPTCoreService, SPTExternalIntegrationDebugLog, SPTExternalIntegrationDebugLogService, SPTExternalIntegrationPlatform, SPTGaiaConnectAPI, SPTNetworkService, SPTProductState;
 
-@interface SPTSpotifyAppProtocolServiceImplementation : NSObject <NSNetServiceDelegate, SPTAppProtocolConnectionHandlerDelegate, SPTAppProtocolConnectorDelegate, SPTExternalIntegrationPlaybackControllerObserver, SPTAppProtocolBackgroundControllerDelegate, SPTAppProtocolFeatureFlagManagerObserver, SPTService, SPTSpotifyAppProtocolService>
+@interface SPTSpotifyAppProtocolServiceImplementation : NSObject <NSNetServiceDelegate, SPTAppProtocolConnectionHandlerDelegate, SPTAppProtocolConnectorDelegate, SPTExternalIntegrationPlaybackControllerObserver, SPTAppProtocolBackgroundControllerDelegate, SPTService, SPTSpotifyAppProtocolService>
 {
     _Bool _backgrounded;
     id <SPTAccessoryStateManager> _accessoryStateManager;
@@ -27,7 +26,6 @@
     SPSession *_currentSession;
     id <SPTProductState> _productState;
     id <SPTExternalIntegrationPlatform> _externalIntegrationPlatform;
-    SPTAppProtocolFeatureFlagManager *_featureFlagManager;
     id <SPTAccessoryActionLogger> _actionLogger;
     id <SPTAccessoryManagerService> _accessoryManagerService;
     id <SPTExternalIntegrationDebugLogService> _debugLogService;
@@ -57,7 +55,6 @@
 @property(readonly, nonatomic) __weak id <SPTExternalIntegrationDebugLogService> debugLogService; // @synthesize debugLogService=_debugLogService;
 @property(readonly, nonatomic) __weak id <SPTAccessoryManagerService> accessoryManagerService; // @synthesize accessoryManagerService=_accessoryManagerService;
 @property(nonatomic) __weak id <SPTAccessoryActionLogger> actionLogger; // @synthesize actionLogger=_actionLogger;
-@property(retain, nonatomic) SPTAppProtocolFeatureFlagManager *featureFlagManager; // @synthesize featureFlagManager=_featureFlagManager;
 @property(nonatomic) __weak id <SPTExternalIntegrationPlatform> externalIntegrationPlatform; // @synthesize externalIntegrationPlatform=_externalIntegrationPlatform;
 @property(nonatomic) __weak id <SPTProductState> productState; // @synthesize productState=_productState;
 @property(nonatomic) __weak SPSession *currentSession; // @synthesize currentSession=_currentSession;
@@ -66,9 +63,7 @@
 - (void)unregisterExternalHandler:(id)arg1;
 - (void)registerExternalHandler:(id)arg1;
 - (_Bool)hasAllBackgroundControllerDependencies;
-- (void)updateBackgroundControllerEnabled;
-- (_Bool)isBackgroundControllerEnabled;
-- (void)appProtocolFeatureFlagManager:(id)arg1 didUpdateBackgroundEnabled:(_Bool)arg2;
+- (void)startBackgroundController;
 - (_Bool)isPlaying;
 - (void)externalIntegrationPlaybackController:(id)arg1 didReceiveNewPlayerState:(id)arg2 oldPlayerState:(id)arg3;
 - (void)willEnterForeground;

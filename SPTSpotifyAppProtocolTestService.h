@@ -9,21 +9,18 @@
 #import "SPTService-Protocol.h"
 
 @class NSString, SPTAllocationContext, SPTSpotifyAppProtocolServiceImplementation;
-@protocol SPTFeatureFlaggingService, SPTSettingsFeature;
+@protocol SPTSettingsFeature;
 
 @interface SPTSpotifyAppProtocolTestService : NSObject <SPTService>
 {
     SPTSpotifyAppProtocolServiceImplementation *_appProtocolService;
-    id <SPTFeatureFlaggingService> _featureFlaggingService;
     id <SPTSettingsFeature> _settingsFeature;
 }
 
 + (id)serviceIdentifier;
 - (void).cxx_destruct;
 @property(nonatomic) __weak id <SPTSettingsFeature> settingsFeature; // @synthesize settingsFeature=_settingsFeature;
-@property(nonatomic) __weak id <SPTFeatureFlaggingService> featureFlaggingService; // @synthesize featureFlaggingService=_featureFlaggingService;
 @property(nonatomic) __weak SPTSpotifyAppProtocolServiceImplementation *appProtocolService; // @synthesize appProtocolService=_appProtocolService;
-- (void)unload;
 - (void)load;
 - (void)configureWithServices:(id)arg1;
 

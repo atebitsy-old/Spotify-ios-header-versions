@@ -18,7 +18,6 @@
     _Bool _buttonSectionEnabled;
     _Bool _modalMode;
     _Bool _scrollingToTop;
-    _Bool _didLogScrollIndexSelected;
     id <SPTYourLibraryMusicEntityViewModelDelegate> _delegate;
     NSString *_title;
     NSString *_searchPlaceholderText;
@@ -35,7 +34,6 @@
 
 - (void).cxx_destruct;
 @property(retain, nonatomic) SPTYourLibraryMusicGroupLabelReader *groupLabelReader; // @synthesize groupLabelReader=_groupLabelReader;
-@property(nonatomic) _Bool didLogScrollIndexSelected; // @synthesize didLogScrollIndexSelected=_didLogScrollIndexSelected;
 @property(nonatomic) _Bool scrollingToTop; // @synthesize scrollingToTop=_scrollingToTop;
 @property(copy, nonatomic) NSDictionary *groupsMapping; // @synthesize groupsMapping=_groupsMapping;
 @property(nonatomic, getter=isModalMode) _Bool modalMode; // @synthesize modalMode=_modalMode;
@@ -67,7 +65,6 @@
 - (void)logQuickScrollDragEnded;
 - (void)logQuickScrollDragStarted;
 - (void)logQuickScrollIsVisible;
-- (void)logSectionIndexSelected;
 - (void)logFilterSortInteractionType:(unsigned long long)arg1;
 - (void)removeFilterAtIndex:(long long)arg1;
 - (void)resetFilters;
@@ -95,15 +92,11 @@
 - (unsigned long long)tableSectionFromModelGroup:(unsigned long long)arg1;
 - (id)groupLabelAtIndexPath:(id)arg1;
 - (id)itemAtIndexPath:(id)arg1;
-- (void)viewWillAppear;
 - (void)loadViewModel;
-- (long long)locationForSectionIndex:(long long)arg1;
-@property(readonly, nonatomic) NSArray *sectionIndexTitles;
 - (_Bool)isContentFiltered;
 @property(readonly, nonatomic, getter=isGroupLabelAvailable) _Bool groupLabelAvailable;
 @property(readonly, nonatomic) long long quickScrollMinPages;
 @property(readonly, nonatomic) _Bool quickScrollUseDarkStyle;
-@property(readonly, nonatomic) unsigned long long quickScrollMechanism;
 @property(readonly, nonatomic, getter=isSortingAndFilteringEnabled) _Bool sortingAndFilteringEnabled;
 @property(readonly, nonatomic, getter=isEmpty) _Bool empty;
 @property(readonly, nonatomic, getter=isLoaded) _Bool loaded;

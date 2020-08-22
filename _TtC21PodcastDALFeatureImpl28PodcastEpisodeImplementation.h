@@ -6,11 +6,9 @@
 
 #import <objc/NSObject.h>
 
-#import "SPTPodcastEpisode-Protocol.h"
-
 @class NSArray, NSDate, NSString, NSURL;
 
-@interface _TtC21PodcastDALFeatureImpl28PodcastEpisodeImplementation : NSObject <SPTPodcastEpisode>
+@interface _TtC21PodcastDALFeatureImpl28PodcastEpisodeImplementation : NSObject
 {
     // Error parsing type: , name: title
     // Error parsing type: , name: longDescription
@@ -49,7 +47,6 @@
 - (id)init;
 @property(nonatomic, readonly) long long hash;
 - (_Bool)isEqual:(id)arg1;
-- (id)copyWithZone:(void *)arg1;
 - (id)playerMediaTypeString;
 @property(nonatomic, readonly) NSArray *quotes;
 @property(nonatomic, readonly) double listenedDuration;
@@ -59,26 +56,18 @@
 - (id)localizedTime;
 @property(nonatomic) unsigned long long syncProgress; // @synthesize syncProgress;
 @property(nonatomic, copy) NSString *rawDescription;
-- (_Bool)isUnplayed;
-@property(nonatomic) _Bool newEpisode; // @synthesize newEpisode=isNewEpisode;
-- (_Bool)isNewEpisode;
+@property(nonatomic, readonly) _Bool isUnplayed;
+@property(nonatomic) _Bool isNewEpisode; // @synthesize isNewEpisode;
 @property(nonatomic) _Bool inCollection; // @synthesize inCollection;
 @property(nonatomic) unsigned long long type; // @synthesize type;
-@property(nonatomic) _Bool followingPodcast; // @synthesize followingPodcast=isFollowingPodcast;
-- (_Bool)isFollowingPodcast;
-@property(nonatomic) _Bool explicit; // @synthesize explicit=isExplicit;
-- (_Bool)isExplicit;
+@property(nonatomic) _Bool isFollowingPodcast; // @synthesize isFollowingPodcast;
+@property(nonatomic) _Bool isExplicit; // @synthesize isExplicit;
 @property(nonatomic) double lastPlayedAt; // @synthesize lastPlayedAt;
-@property(nonatomic) _Bool musicAndTalk; // @synthesize musicAndTalk=isMusicAndTalk;
-- (_Bool)isMusicAndTalk;
-@property(nonatomic) _Bool played; // @synthesize played=isPlayed;
-- (_Bool)isPlayed;
-@property(nonatomic) _Bool available; // @synthesize available=isAvailable;
-- (_Bool)isAvailable;
-@property(nonatomic) _Bool playable; // @synthesize playable=isPlayable;
-- (_Bool)isPlayable;
-@property(nonatomic) _Bool videoShowMediaType; // @synthesize videoShowMediaType=isVideoShowMediaType;
-- (_Bool)isVideoShowMediaType;
+@property(nonatomic) _Bool isMusicAndTalk; // @synthesize isMusicAndTalk;
+@property(nonatomic) _Bool isPlayed; // @synthesize isPlayed;
+@property(nonatomic) _Bool isAvailable; // @synthesize isAvailable;
+@property(nonatomic) _Bool isPlayable; // @synthesize isPlayable;
+@property(nonatomic) _Bool isVideoShowMediaType; // @synthesize isVideoShowMediaType;
 @property(nonatomic) long long mediaType; // @synthesize mediaType;
 @property(nonatomic, copy) NSString *manifestId;
 @property(nonatomic, copy) NSURL *largePodcastImageURL;
@@ -94,9 +83,6 @@
 @property(nonatomic, copy) NSURL *podcastURL;
 @property(nonatomic, copy) NSString *longDescription;
 @property(nonatomic, copy) NSString *title;
-
-// Remaining properties
-@property(nonatomic, readonly) _Bool unplayedEpisode;
 
 @end
 

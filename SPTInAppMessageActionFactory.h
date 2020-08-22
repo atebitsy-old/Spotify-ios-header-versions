@@ -9,7 +9,7 @@
 #import "SPTFeatureFlagSignalObserver-Protocol.h"
 
 @class NSString, SPTPopupManager;
-@protocol SPTAccountProductActivationController, SPTCollectionPlatform, SPTCollectionPlatformTestManager, SPTFeatureFlagSignal, SPTFollowModelFactory, SPTLinkDispatcher, SPTModalPresentationController, SPTOnDemandSet, SPTPlayer, SPTPlaylistModel, SPTPodcastTestManager, SPTPushMessagingPermissionRequestor, SPTUIModeTransitionCoordinator, SPTWebViewFactory;
+@protocol SPTAccountProductActivationController, SPTCollectionPlatform, SPTCollectionPlatformTestManager, SPTEmailVerificationHandler, SPTFeatureFlagSignal, SPTFollowModelFactory, SPTLinkDispatcher, SPTModalPresentationController, SPTOnDemandSet, SPTPlayer, SPTPlaylistModel, SPTPodcastTestManager, SPTPushMessagingPermissionRequestor, SPTUIModeTransitionCoordinator, SPTWebViewFactory;
 
 @interface SPTInAppMessageActionFactory : NSObject <SPTFeatureFlagSignalObserver>
 {
@@ -29,10 +29,12 @@
     id <SPTPushMessagingPermissionRequestor> _pushPermissionRequestor;
     id <SPTModalPresentationController> _modalPresentationController;
     id <SPTWebViewFactory> _webViewFactory;
+    id <SPTEmailVerificationHandler> _emailVerificationHandler;
 }
 
 - (void).cxx_destruct;
 @property(nonatomic) _Bool freeTierEnabled; // @synthesize freeTierEnabled=_freeTierEnabled;
+@property(retain, nonatomic) id <SPTEmailVerificationHandler> emailVerificationHandler; // @synthesize emailVerificationHandler=_emailVerificationHandler;
 @property(retain, nonatomic) id <SPTWebViewFactory> webViewFactory; // @synthesize webViewFactory=_webViewFactory;
 @property(retain, nonatomic) id <SPTModalPresentationController> modalPresentationController; // @synthesize modalPresentationController=_modalPresentationController;
 @property(retain, nonatomic) id <SPTPushMessagingPermissionRequestor> pushPermissionRequestor; // @synthesize pushPermissionRequestor=_pushPermissionRequestor;
@@ -51,7 +53,7 @@
 - (void)featureFlagSignal:(id)arg1 hasAssumedState:(long long)arg2;
 - (id)createActionForClickActionType:(long long)arg1;
 - (void)dealloc;
-- (id)initWithLinkDispatcher:(id)arg1 productActivationController:(id)arg2 transitionCoordinator:(id)arg3 freeTierEnabledSignal:(id)arg4 popupManager:(id)arg5 collectionPlatform:(id)arg6 followModelFactory:(id)arg7 podcastTestManager:(id)arg8 playlistModel:(id)arg9 collectionTestManager:(id)arg10 onDemandSet:(id)arg11 player:(id)arg12 pushPermissionRequestor:(id)arg13 modalPresentationController:(id)arg14 webviewFactory:(id)arg15;
+- (id)initWithLinkDispatcher:(id)arg1 productActivationController:(id)arg2 transitionCoordinator:(id)arg3 freeTierEnabledSignal:(id)arg4 popupManager:(id)arg5 collectionPlatform:(id)arg6 followModelFactory:(id)arg7 podcastTestManager:(id)arg8 playlistModel:(id)arg9 collectionTestManager:(id)arg10 onDemandSet:(id)arg11 player:(id)arg12 pushPermissionRequestor:(id)arg13 modalPresentationController:(id)arg14 webviewFactory:(id)arg15 emailVerificationHandler:(id)arg16;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

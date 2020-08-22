@@ -6,9 +6,7 @@
 
 #import "_TtC18VoiceUIFeatureImpl19VoiceViewController.h"
 
-#import "SPTMetaViewControllerPresentable-Protocol.h"
-
-@interface _TtC18VoiceUIFeatureImpl19VoiceViewController (VoiceUIFeatureImpl) <SPTMetaViewControllerPresentable>
+@interface _TtC18VoiceUIFeatureImpl19VoiceViewController (VoiceUIFeatureImpl)
 @property(nonatomic, readonly) long long presentationStyle;
 @end
 

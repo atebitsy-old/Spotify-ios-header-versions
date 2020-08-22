@@ -11,6 +11,7 @@
     // Error parsing type: , name: titleLabel
     // Error parsing type: , name: subtitleLabel
     // Error parsing type: , name: imageView
+    // Error parsing type: , name: shareButton
     // Error parsing type: , name: overlayGradientView
 }
 

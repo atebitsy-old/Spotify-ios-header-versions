@@ -6,20 +6,17 @@
 
 #import "SPTYourLibraryMusicFilterableViewModel-Protocol.h"
 
-@class NSArray, NSIndexPath, NSString;
+@class NSIndexPath, NSString;
 @protocol SPTYourLibraryMusicItemViewModel, SPTYourLibraryMusicPlaylistsViewModelDelegate, SPTYourLibraryMusicSectionViewModel;
 
 @protocol SPTYourLibraryMusicPlaylistsViewModel <SPTYourLibraryMusicFilterableViewModel>
 @property(readonly, nonatomic, getter=isGroupLabelAvailable) _Bool groupLabelAvailable;
 @property(readonly, nonatomic) _Bool quickScrollUseDarkStyle;
 @property(readonly, nonatomic) long long quickScrollMinPages;
-@property(readonly, nonatomic) unsigned long long quickScrollMechanism;
-@property(readonly, nonatomic) NSArray *sectionIndexTitles;
 @property(nonatomic) __weak id <SPTYourLibraryMusicPlaylistsViewModelDelegate> delegate;
 @property(readonly, nonatomic, getter=isEmpty) _Bool empty;
 @property(readonly, nonatomic, getter=isLoaded) _Bool loaded;
 @property(readonly, nonatomic) NSString *title;
-- (NSIndexPath *)indexPathForScrollSectionIndex:(unsigned long long)arg1;
 - (_Bool)showSeparatorForSection:(long long)arg1;
 - (void)createPlaylistActionInInfoView:(_Bool)arg1;
 - (void)logBetaAssistantViewImpressionIfNeeded;
@@ -29,7 +26,6 @@
 - (void)logQuickScrollDragEnded;
 - (void)logQuickScrollDragStarted;
 - (void)logQuickScrollIsVisible;
-- (void)logSectionIndexSelected;
 - (void)logFilterSortInteractionType:(unsigned long long)arg1;
 - (void)endObservingRowAtIndexPath:(NSIndexPath *)arg1;
 - (void)beginObservingRowAtIndexPath:(NSIndexPath *)arg1;
@@ -40,7 +36,6 @@
 - (unsigned long long)countOfItemsInSection:(unsigned long long)arg1;
 - (_Bool)hasMoreInSection:(unsigned long long)arg1;
 - (void)loadMoreInSection:(unsigned long long)arg1;
-- (void)viewWillAppear;
 - (void)loadViewModel;
 
 @optional

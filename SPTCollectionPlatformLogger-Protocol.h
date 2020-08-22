@@ -6,10 +6,9 @@
 
 #import "NSObject-Protocol.h"
 
-@class NSString, NSURL;
+@class NSURL;
 
 @protocol SPTCollectionPlatformLogger <NSObject>
-- (void)logAlertOnPageURI:(NSURL *)arg1 alertId:(NSString *)arg2;
 - (void)logCollectionUserIntent:(unsigned long long)arg1 pageURI:(NSURL *)arg2 targetURI:(NSURL *)arg3;
 - (void)logNewSaveState:(_Bool)arg1 pageURI:(NSURL *)arg2 targetURL:(NSURL *)arg3;
 @end

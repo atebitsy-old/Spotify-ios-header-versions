@@ -6,12 +6,11 @@
 
 #import <objc/NSObject.h>
 
-@class NSString;
+@class NSString, SPTAccessory;
 
 @interface _TtC20SuperbirdFeatureImpl20SuperbirdDetectorImp : NSObject
 {
     // Error parsing type: , name: superbirdIdentififer
-    // Error parsing type: , name: superbirdManufacturer
     // Error parsing type: , name: accessoryManager
     // Error parsing type: , name: observerManager
     // Error parsing type: , name: currentSuperbirdAccessory
@@ -23,6 +22,7 @@
 - (void)removeObserver:(id)arg1;
 - (void)addObserver:(id)arg1;
 - (void)dealloc;
+@property(nonatomic, retain) SPTAccessory *currentSuperbirdAccessory; // @synthesize currentSuperbirdAccessory;
 @property(nonatomic, readonly) NSString *deviceSerial;
 
 @end

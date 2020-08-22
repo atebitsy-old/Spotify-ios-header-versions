@@ -4,24 +4,18 @@
 //     class-dump is Copyright (C) 1997-1998, 2000-2001, 2004-2015 by Steve Nygard.
 //
 
-#import "NSCopying-Protocol.h"
-#import "NSObject-Protocol.h"
 #import "SPTEpisode-Protocol.h"
 
 @class NSArray, NSString;
 
-@protocol SPTPodcastEpisode <NSObject, SPTEpisode, NSCopying>
+@protocol SPTPodcastEpisode <SPTEpisode>
 + (NSString *)stringFromTimeInterval:(double)arg1;
 @property(nonatomic, readonly) NSArray *quotes;
 @property(nonatomic, readonly) double listeningProgress;
 @property(nonatomic, readonly) unsigned long long syncProgress;
-- (_Bool)isUnplayed;
-- (_Bool)isNewEpisode;
+@property(nonatomic, readonly) _Bool isUnplayed;
+@property(nonatomic, readonly) _Bool isNewEpisode;
 @property(nonatomic, readonly) _Bool inCollection;
 @property(nonatomic, readonly) unsigned long long type;
-
-// Remaining properties
-@property(nonatomic, readonly) _Bool newEpisode;
-@property(nonatomic, readonly) _Bool unplayedEpisode;
 @end
 

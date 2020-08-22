@@ -14,6 +14,8 @@
 + (void)removeObserver:(id)arg1 forName:(id)arg2;
 + (void)addObserver:(id)arg1 forName:(id)arg2;
 + (void)postNotificationNamed:(id)arg1;
++ (id)nameWithUniqueId:(id)arg1;
++ (id)darwinNotificationId;
 
 @end
 

@@ -6,9 +6,6 @@
 
 #import "SPTService-Protocol.h"
 
-@protocol SPTShareDeepLinkEventHandler;
-
 @protocol SPTShareDeepLinkEventSessionService <SPTService>
-- (id <SPTShareDeepLinkEventHandler>)provideShareDeepLinkEventHandler;
 @end
 

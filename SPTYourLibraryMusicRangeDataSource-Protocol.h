@@ -11,7 +11,6 @@
 
 @protocol SPTYourLibraryMusicRangeDataSource <NSObject>
 @property(nonatomic) __weak id <SPTYourLibraryMusicRangeDataSourceDelegate> delegate;
-@property(readonly, nonatomic) NSArray *sectionIndices;
 @property(readonly, nonatomic) long long totalNumberOfItems;
 - (id)itemAtIndexPath:(NSIndexPath *)arg1;
 - (void)loadWithSortRules:(NSArray *)arg1 filterRules:(NSArray *)arg2 textFilter:(NSString *)arg3;

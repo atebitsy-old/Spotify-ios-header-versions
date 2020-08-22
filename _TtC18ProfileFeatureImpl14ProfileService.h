@@ -8,10 +8,10 @@
 
 @interface _TtC18ProfileFeatureImpl14ProfileService : NSObject
 {
-    // Error parsing type: , name: clientSessionService
-    // Error parsing type: , name: cosmosFeature
-    // Error parsing type: , name: cosmosDataLoaderService
-    // Error parsing type: , name: networkService
+    // Error parsing type: , name: _clientSessionService
+    // Error parsing type: , name: _cosmosFeature
+    // Error parsing type: , name: _cosmosDataLoaderService
+    // Error parsing type: , name: _networkService
     // Error parsing type: , name: profileUserData
 }
 

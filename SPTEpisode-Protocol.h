@@ -13,14 +13,14 @@
 - (NSString *)localizedDate;
 - (NSString *)localizedDuration;
 - (NSString *)localizedTime;
-- (_Bool)isVideoShowMediaType;
-- (_Bool)isFollowingPodcast;
-- (_Bool)isExplicit;
+@property(nonatomic, readonly) _Bool isVideoShowMediaType;
+@property(nonatomic, readonly) _Bool isFollowingPodcast;
+@property(nonatomic, readonly) _Bool isExplicit;
 @property(nonatomic, readonly) double lastPlayedAt;
-- (_Bool)isPlayed;
-- (_Bool)isAvailable;
-- (_Bool)isMusicAndTalk;
-- (_Bool)isPlayable;
+@property(nonatomic, readonly) _Bool isMusicAndTalk;
+@property(nonatomic, readonly) _Bool isPlayed;
+@property(nonatomic, readonly) _Bool isAvailable;
+@property(nonatomic, readonly) _Bool isPlayable;
 @property(nonatomic, readonly) long long mediaType;
 @property(nonatomic, readonly) NSString *manifestId;
 @property(nonatomic, readonly) NSURL *largePodcastImageURL;
@@ -38,14 +38,5 @@
 @property(nonatomic, readonly) NSString *rawDescription;
 @property(nonatomic, readonly) NSString *longDescription;
 @property(nonatomic, readonly) NSString *title;
-
-// Remaining properties
-@property(nonatomic, readonly) _Bool available;
-@property(nonatomic, readonly) _Bool explicit;
-@property(nonatomic, readonly) _Bool followingPodcast;
-@property(nonatomic, readonly) _Bool musicAndTalk;
-@property(nonatomic, readonly) _Bool playable;
-@property(nonatomic, readonly) _Bool played;
-@property(nonatomic, readonly) _Bool videoShowMediaType;
 @end
 

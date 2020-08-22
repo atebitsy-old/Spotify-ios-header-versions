@@ -13,16 +13,19 @@
 
 @interface SPTFreeTierPlaylistPodcastCellStateImplementation : NSObject <SPTPodcastEpisodeCellState>
 {
+    _Bool _allowEpisodeDownload;
     id <SPTFreeTierPlaylistTrackViewModel> _trackViewModel;
     id <SPTPlayer> _player;
 }
 
 - (void).cxx_destruct;
+@property(readonly, nonatomic) _Bool allowEpisodeDownload; // @synthesize allowEpisodeDownload=_allowEpisodeDownload;
 @property(readonly, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
 @property(readonly, nonatomic) id <SPTFreeTierPlaylistTrackViewModel> trackViewModel; // @synthesize trackViewModel=_trackViewModel;
 - (_Bool)isEpisodeUnfinished;
 - (_Bool)isEpisodePlaying;
 - (_Bool)isEpisodeActive;
+- (_Bool)canBeDownloaded;
 - (_Bool)canBeMarkedAsPlayed;
 - (_Bool)isEpisodePlayable;
 - (_Bool)isEpisodeExplicit;
@@ -35,7 +38,7 @@
 - (id)currentStatusWithFormatter:(id)arg1;
 - (id)podcastSubtitle;
 - (id)podcastTitle;
-- (id)initWithPlaylistTrackViewModel:(id)arg1 player:(id)arg2;
+- (id)initWithPlaylistTrackViewModel:(id)arg1 player:(id)arg2 allowEpisodeDownload:(_Bool)arg3;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

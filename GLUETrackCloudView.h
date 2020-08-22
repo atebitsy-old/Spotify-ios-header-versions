@@ -40,7 +40,7 @@
 @property(retain, nonatomic) UIView *containerView; // @synthesize containerView=_containerView;
 @property(readonly, nonatomic) GLUELabel *titleLabel; // @synthesize titleLabel=_titleLabel;
 - (void)updateContentWithData:(id)arg1 andContainerWidth:(double)arg2;
-- (void)animateToHighlighted:(_Bool)arg1;
+- (void)animateToHighlightedIfNeeded:(_Bool)arg1;
 @property(nonatomic, getter=isHighlighted) _Bool highlighted;
 - (id)accessibilityLabel;
 - (void)applyStateStyle:(id)arg1;

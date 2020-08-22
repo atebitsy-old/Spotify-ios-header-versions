@@ -69,8 +69,6 @@
 - (void)addDataSource:(id)arg1 withItemAction:(CDUnknownBlockType)arg2;
 - (void)performItemActionAtIndex:(unsigned long long)arg1 inGroup:(unsigned long long)arg2;
 - (id)itemAtIndex:(unsigned long long)arg1 inGroup:(unsigned long long)arg2;
-- (unsigned long long)locationForSectionIndex:(long long)arg1;
-@property(readonly, nonatomic) NSArray *sectionIndexTitles;
 - (unsigned long long)numberOfItemsInGroup:(unsigned long long)arg1;
 - (unsigned long long)numberOfItemGroups;
 - (id)initWithHiddenContentModel:(id)arg1 filterSortManager:(id)arg2 externalSort:(id)arg3 availableContentMonitor:(id)arg4;
