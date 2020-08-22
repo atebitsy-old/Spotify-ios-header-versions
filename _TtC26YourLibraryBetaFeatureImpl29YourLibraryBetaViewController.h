@@ -4,20 +4,18 @@
 //     class-dump is Copyright (C) 1997-1998, 2000-2001, 2004-2015 by Steve Nygard.
 //
 
-#import "SPViewController.h"
+#import <UIKit/UIViewController.h>
 
-@interface _TtC26YourLibraryBetaFeatureImpl29YourLibraryBetaViewController : SPViewController
+@interface _TtC26YourLibraryBetaFeatureImpl29YourLibraryBetaViewController : UIViewController
 {
     // Error parsing type: , name: experienceActivation
     // Error parsing type: , name: pageCreationContext
     // Error parsing type: , name: loopController
     // Error parsing type: , name: viewBinder
-    // Error parsing type: , name: connected
 }
 
 - (void).cxx_destruct;
 - (id)initWithNibName:(id)arg1 bundle:(id)arg2;
-- (void)spt_scrollToTop;
 - (void)viewWillAppear:(_Bool)arg1;
 - (void)viewDidLoad;
 - (id)initWithCoder:(id)arg1;

@@ -8,6 +8,5 @@
 
 @protocol SPTLoginPhoneNumberTestManager <NSObject>
 @property(readonly, nonatomic, getter=isPhoneNumberAutofillEnabled) _Bool phoneNumberAutofillEnabled;
-- (unsigned long long)phoneNumberPlaceholderCell;
 @end
 

@@ -6,11 +6,12 @@
 
 #import "NSObject-Protocol.h"
 
-@class NSURL;
-@protocol SPTUBIEventLocation, SPTUBIMobileArtistPage_TopTracks_TrackRowEventFactory;
+@class NSString, NSURL;
+@protocol SPTUBIEventLocation, SPTUBIImpressionEvent, SPTUBIMobileArtistPage_TopTracks_TrackRowEventFactory;
 
 @protocol SPTUBIMobileArtistPage_TopTracksEventFactory <NSObject>
-- (id <SPTUBIMobileArtistPage_TopTracks_TrackRowEventFactory>)trackRowFactoryWithPosition:(long long)arg1 uri:(NSURL *)arg2;
+- (id <SPTUBIImpressionEvent>)impression;
+- (id <SPTUBIMobileArtistPage_TopTracks_TrackRowEventFactory>)trackRowFactoryWithIdentifier:(NSString *)arg1 position:(long long)arg2 uri:(NSURL *)arg3;
 - (id <SPTUBIEventLocation>)_location;
 @end
 

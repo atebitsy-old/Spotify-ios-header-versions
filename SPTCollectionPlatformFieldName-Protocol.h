@@ -9,6 +9,6 @@
 @class NSString;
 
 @protocol SPTCollectionPlatformFieldName <SPTCollectionPlatformDataLoaderField>
-@property(nonatomic, readonly) NSString *name;
+@property(readonly, copy, nonatomic) NSString *name;
 @end
 

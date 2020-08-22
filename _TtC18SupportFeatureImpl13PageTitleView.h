@@ -9,7 +9,6 @@
 @interface _TtC18SupportFeatureImpl13PageTitleView : UIView
 {
     // Error parsing type: , name: titleLabel
-    // Error parsing type: , name: spacing
 }
 
 - (void).cxx_destruct;

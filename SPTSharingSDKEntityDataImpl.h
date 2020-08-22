@@ -8,7 +8,8 @@
 
 #import "SPTSharingSDKEntityData-Protocol.h"
 
-@class NSArray, NSData, NSSet, NSString, NSURL, SPTSharingSDKUTMTag, UIImage;
+@class NSArray, NSData, NSSet, NSString, NSURL, UIImage;
+@protocol SPTSharingSDKUTMTag;
 
 @interface SPTSharingSDKEntityDataImpl : NSObject <SPTSharingSDKEntityData>
 {
@@ -19,13 +20,13 @@
     NSSet *_extraQueryItems;
     unsigned long long _capability;
     NSURL *_fallbackShareableURL;
-    SPTSharingSDKUTMTag *_utmTag;
+    id <SPTSharingSDKUTMTag> _utmTag;
     NSArray *_excludedActivityTypes;
 }
 
 - (void).cxx_destruct;
 @property(readonly, nonatomic) NSArray *excludedActivityTypes; // @synthesize excludedActivityTypes=_excludedActivityTypes;
-@property(readonly, nonatomic) SPTSharingSDKUTMTag *utmTag; // @synthesize utmTag=_utmTag;
+@property(readonly, nonatomic) id <SPTSharingSDKUTMTag> utmTag; // @synthesize utmTag=_utmTag;
 @property(readonly, nonatomic) NSURL *fallbackShareableURL; // @synthesize fallbackShareableURL=_fallbackShareableURL;
 @property(readonly, nonatomic) unsigned long long capability; // @synthesize capability=_capability;
 @property(readonly, nonatomic) NSSet *extraQueryItems; // @synthesize extraQueryItems=_extraQueryItems;

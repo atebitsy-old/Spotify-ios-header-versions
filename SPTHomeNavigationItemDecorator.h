@@ -6,8 +6,8 @@
 
 #import <objc/NSObject.h>
 
-@class SPTHomeFeatureProperties, SPTHomeLogger, SPTHomeNavigationButton, SPTTheme;
-@protocol SPTBarButtonItemManager, SPTLinkDispatcher, _TtP17FollowFeedFeature19SPTFollowFeedLogger_, _TtP17FollowFeedFeature21SPTFeedUpdatesManager_, _TtP17FollowFeedFeature29FollowFeedRemoteConfigManager_, _TtP23ListeningHistoryFeature25SPTListeningHistoryLogger_;
+@class SPTHomeLogger, SPTHomeNavigationButton, SPTTheme;
+@protocol SPTBarButtonItemManager, SPTLinkDispatcher, _TtP17FollowFeedFeature19SPTFollowFeedLogger_, _TtP17FollowFeedFeature21SPTFeedUpdatesManager_, _TtP17FollowFeedFeature29FollowFeedRemoteConfigManager_, _TtP23ListeningHistoryFeature25SPTListeningHistoryLogger_, _TtP23ListeningHistoryFeature35ListeningHistoryRemoteConfigManager_;
 
 @interface SPTHomeNavigationItemDecorator : NSObject
 {
@@ -18,7 +18,7 @@
     SPTHomeLogger *_homeLogger;
     SPTTheme *_theme;
     id <_TtP17FollowFeedFeature29FollowFeedRemoteConfigManager_> _followFeedRemoteConfig;
-    SPTHomeFeatureProperties *_homeFeatureProperties;
+    id <_TtP23ListeningHistoryFeature35ListeningHistoryRemoteConfigManager_> _listeningHistoryRemoteConfig;
     id <_TtP17FollowFeedFeature21SPTFeedUpdatesManager_> _feedUpdatesManager;
     SPTHomeNavigationButton *_settingsButton;
     SPTHomeNavigationButton *_feedButton;
@@ -30,7 +30,7 @@
 @property(retain, nonatomic) SPTHomeNavigationButton *feedButton; // @synthesize feedButton=_feedButton;
 @property(retain, nonatomic) SPTHomeNavigationButton *settingsButton; // @synthesize settingsButton=_settingsButton;
 @property(readonly, nonatomic) __weak id <_TtP17FollowFeedFeature21SPTFeedUpdatesManager_> feedUpdatesManager; // @synthesize feedUpdatesManager=_feedUpdatesManager;
-@property(readonly, nonatomic) __weak SPTHomeFeatureProperties *homeFeatureProperties; // @synthesize homeFeatureProperties=_homeFeatureProperties;
+@property(readonly, nonatomic) __weak id <_TtP23ListeningHistoryFeature35ListeningHistoryRemoteConfigManager_> listeningHistoryRemoteConfig; // @synthesize listeningHistoryRemoteConfig=_listeningHistoryRemoteConfig;
 @property(readonly, nonatomic) __weak id <_TtP17FollowFeedFeature29FollowFeedRemoteConfigManager_> followFeedRemoteConfig; // @synthesize followFeedRemoteConfig=_followFeedRemoteConfig;
 @property(readonly, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
 @property(readonly, nonatomic) SPTHomeLogger *homeLogger; // @synthesize homeLogger=_homeLogger;
@@ -48,7 +48,7 @@
 - (id)rightItems;
 - (void)updateNavigationItemDecoratorAlpha:(double)arg1;
 - (void)decoratePageController:(id)arg1;
-- (id)initWithBarButtonItemManager:(id)arg1 linkDispatcher:(id)arg2 homeLogger:(id)arg3 theme:(id)arg4 followFeedRemoteConfig:(id)arg5 homeFeatureProperties:(id)arg6 feedUpdatesManager:(id)arg7 feedLogger:(id)arg8 listeningHistoryLogger:(id)arg9;
+- (id)initWithBarButtonItemManager:(id)arg1 linkDispatcher:(id)arg2 homeLogger:(id)arg3 theme:(id)arg4 followFeedRemoteConfig:(id)arg5 listeningHistoryRemoteConfig:(id)arg6 feedUpdatesManager:(id)arg7 feedLogger:(id)arg8 listeningHistoryLogger:(id)arg9;
 
 @end
 

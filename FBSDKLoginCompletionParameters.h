@@ -21,11 +21,8 @@
     NSDate *_expirationDate;
     NSDate *_dataAccessExpirationDate;
     NSString *_challenge;
-    NSString *_graphDomain;
 }
 
-- (void).cxx_destruct;
-@property(copy, nonatomic) NSString *graphDomain; // @synthesize graphDomain=_graphDomain;
 @property(copy, nonatomic) NSString *challenge; // @synthesize challenge=_challenge;
 @property(copy, nonatomic) NSDate *dataAccessExpirationDate; // @synthesize dataAccessExpirationDate=_dataAccessExpirationDate;
 @property(copy, nonatomic) NSDate *expirationDate; // @synthesize expirationDate=_expirationDate;
@@ -37,6 +34,7 @@
 @property(copy, nonatomic) NSSet *permissions; // @synthesize permissions=_permissions;
 @property(copy, nonatomic) NSString *nonceString; // @synthesize nonceString=_nonceString;
 @property(copy, nonatomic) NSString *accessTokenString; // @synthesize accessTokenString=_accessTokenString;
+- (void).cxx_destruct;
 - (id)initWithError:(id)arg1;
 - (id)init;
 

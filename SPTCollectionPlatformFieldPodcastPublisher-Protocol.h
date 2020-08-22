@@ -9,6 +9,6 @@
 @class NSString;
 
 @protocol SPTCollectionPlatformFieldPodcastPublisher <SPTCollectionPlatformDataLoaderField>
-@property(nonatomic, readonly) NSString *publisher;
+@property(readonly, copy, nonatomic) NSString *publisher;
 @end
 

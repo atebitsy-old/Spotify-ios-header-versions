@@ -15,8 +15,8 @@
     unsigned long long _caretPosition;
 }
 
-- (void).cxx_destruct;
 @property(nonatomic) unsigned long long caretPosition; // @synthesize caretPosition=_caretPosition;
+- (void).cxx_destruct;
 - (void)_initializeContent;
 - (struct CGSize)sizeThatFits:(struct CGSize)arg1;
 - (void)layoutSubviews;

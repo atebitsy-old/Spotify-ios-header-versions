@@ -26,13 +26,13 @@
 @property(copy, nonatomic) NSString *domain; // @synthesize domain=_domain;
 - (id)accessGroup:(long long)arg1;
 - (id)ESDKCredentials;
-- (id)deleteESDKCredentials;
+- (_Bool)deleteESDKCredentials;
 - (id)setESDKCredentials:(id)arg1;
 - (id)storedLoginSession;
-- (id)deleteStoredLoginSession;
+- (_Bool)deleteStoredLoginSession;
 - (id)setStoredLoginSession:(id)arg1;
 - (id)coreCredentials;
-- (id)deleteCoreCredentials;
+- (_Bool)deleteCoreCredentials;
 - (id)setCoreCredentials:(id)arg1;
 - (id)initWithAccessGroup:(long long)arg1;
 - (id)initWithAccessGroup:(long long)arg1 keychainManager:(id)arg2;

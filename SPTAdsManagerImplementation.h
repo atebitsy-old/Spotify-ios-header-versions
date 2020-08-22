@@ -60,7 +60,6 @@
 - (_Bool)handleSkip;
 - (void)handlePlayContext:(id)arg1;
 - (void)handleAdTap:(id)arg1;
-- (void)handleAdTap:(id)arg1 shouldPlayContent:(_Bool)arg2;
 - (double)skipDelayRemaining:(double)arg1;
 @property(readonly, nonatomic) id <SPTAdsBaseEntity> activeAdEntity;
 @property(readonly, nonatomic) _Bool shouldDisallowPause;

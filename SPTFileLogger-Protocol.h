@@ -6,11 +6,11 @@
 
 #import "NSObject-Protocol.h"
 
-@class NSURL;
+@class NSArray, NSURL;
 
 @protocol SPTFileLogger <NSObject>
 - (void)writeToFileContentOfBuffer:(const char *)arg1 length:(int)arg2;
-- (NSURL *)currentLogFolder;
+- (NSArray *)logsList;
 - (NSURL *)currentLogFilePath;
 @end
 

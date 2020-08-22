@@ -8,22 +8,26 @@
 
 #import "SPTServiceManagerDelegate-Protocol.h"
 
-@class NSMutableDictionary, NSString, SPTServiceList;
-@protocol OS_dispatch_queue, SPTServiceInstanceInteractor, SPTServiceOrchestratorDelegate;
+@class NSMutableDictionary, NSString, SPTStartupTracer;
+@protocol OS_dispatch_queue, OS_os_log, SPTServiceInstanceInteractor, SPTServiceList, SPTServiceOrchestratorDelegate;
 
 @interface SPTServiceOrchestrator : NSObject <SPTServiceManagerDelegate>
 {
     id <SPTServiceOrchestratorDelegate> _delegate;
     id <SPTServiceInstanceInteractor> _instanceInteractor;
-    SPTServiceList *_serviceList;
+    id <SPTServiceList> _serviceList;
     NSObject<OS_dispatch_queue> *_lifecycleHooksQueue;
     NSMutableDictionary *_serviceManagers;
+    SPTStartupTracer *_startupTracer;
+    NSObject<OS_os_log> *_instrumentationLog;
 }
 
 - (void).cxx_destruct;
+@property(readonly, nonatomic) NSObject<OS_os_log> *instrumentationLog; // @synthesize instrumentationLog=_instrumentationLog;
+@property(readonly, nonatomic) SPTStartupTracer *startupTracer; // @synthesize startupTracer=_startupTracer;
 @property(retain, nonatomic) NSMutableDictionary *serviceManagers; // @synthesize serviceManagers=_serviceManagers;
 @property(readonly, nonatomic) NSObject<OS_dispatch_queue> *lifecycleHooksQueue; // @synthesize lifecycleHooksQueue=_lifecycleHooksQueue;
-@property(retain, nonatomic) SPTServiceList *serviceList; // @synthesize serviceList=_serviceList;
+@property(retain, nonatomic) id <SPTServiceList> serviceList; // @synthesize serviceList=_serviceList;
 @property(readonly, nonatomic) id <SPTServiceInstanceInteractor> instanceInteractor; // @synthesize instanceInteractor=_instanceInteractor;
 @property(nonatomic) __weak id <SPTServiceOrchestratorDelegate> delegate; // @synthesize delegate=_delegate;
 - (void)serviceManagerDidUnloadServices:(id)arg1;
@@ -42,7 +46,7 @@
 - (void)unloadServicesForScope:(id)arg1;
 - (void)loadServicesForScope:(id)arg1;
 - (id)serviceManagerForScope:(id)arg1;
-- (id)initWithServiceList:(id)arg1 instanceInteractor:(id)arg2;
+- (id)initWithServiceList:(id)arg1 instanceInteractor:(id)arg2 startupTracer:(id)arg3 instrumentationLog:(id)arg4;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

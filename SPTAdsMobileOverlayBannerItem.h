@@ -34,7 +34,6 @@
 @property(readonly, nonatomic) id <SPTAdsBaseImageEntity> entity; // @synthesize entity=_entity;
 @property(readonly, nonatomic) __weak id <SPTBannerViewDelegate> bannerViewDelegate; // @synthesize bannerViewDelegate=_bannerViewDelegate;
 - (void)didLoadContentImage:(id)arg1;
-- (void)didFailToLoadImage;
 @property(readonly, nonatomic) SPTBannerView *bannerView;
 - (id)initWithBannerViewDelegate:(id)arg1 adEntity:(id)arg2 bannerVersion:(unsigned long long)arg3 shouldShowBookmarkButton:(_Bool)arg4 theme:(id)arg5 glueImageLoader:(id)arg6 cosmosBridge:(id)arg7;
 

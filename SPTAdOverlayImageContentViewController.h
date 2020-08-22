@@ -42,13 +42,12 @@
 - (id)dismissText;
 - (id)title;
 - (void)didLoadContentImage:(id)arg1;
-- (void)didFailToLoadImage;
 - (void)configureBrandAndConcertAdBackgroundWithColor:(id)arg1;
 - (_Bool)isGoogleHomeOverlay;
 - (void)postImpressionIfNeeded;
 - (_Bool)isLeaveBehindOverlay;
 - (id)leaveBehindViewWithBookmarkButtonState:(long long)arg1;
-- (void)viewTapped;
+- (void)seeMoreTapped;
 - (void)titleActionButtonTapped;
 - (void)playActionButtonTapped;
 - (void)bookmarkButtonTapped;
@@ -57,7 +56,6 @@
 - (void)configureTitleActionButton;
 - (void)configurePlayActionButton;
 - (void)configureBookmarkButton;
-- (void)configureTappableArea;
 - (void)viewDidLoad;
 - (id)initWithEntity:(id)arg1 adManager:(id)arg2 imageLoader:(id)arg3 theme:(id)arg4 glueTheme:(id)arg5 cosmosBridge:(id)arg6 featureProperties:(id)arg7;
 

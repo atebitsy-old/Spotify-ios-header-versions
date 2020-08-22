@@ -15,10 +15,8 @@
     _Bool _useStandaloneComponents;
     _Bool _openNpvPlaybuttonEnabled;
     _Bool _allowHtml;
-    _Bool _pageLoadingEnabled;
 }
 
-@property(readonly, nonatomic) _Bool pageLoadingEnabled; // @synthesize pageLoadingEnabled=_pageLoadingEnabled;
 @property(readonly, nonatomic) _Bool allowHtml; // @synthesize allowHtml=_allowHtml;
 @property(readonly, nonatomic) _Bool openNpvPlaybuttonEnabled; // @synthesize openNpvPlaybuttonEnabled=_openNpvPlaybuttonEnabled;
 @property(readonly, nonatomic) _Bool useStandaloneComponents; // @synthesize useStandaloneComponents=_useStandaloneComponents;

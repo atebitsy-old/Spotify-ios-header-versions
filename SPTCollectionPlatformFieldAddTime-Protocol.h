@@ -9,6 +9,6 @@
 @class NSDate;
 
 @protocol SPTCollectionPlatformFieldAddTime <SPTCollectionPlatformDataLoaderField>
-@property(nonatomic, readonly) NSDate *addTime;
+@property(readonly, nonatomic) NSDate *addTime;
 @end
 

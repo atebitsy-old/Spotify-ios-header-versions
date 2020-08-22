@@ -13,8 +13,8 @@
     id <FBSDKContainerViewControllerDelegate> _delegate;
 }
 
-- (void).cxx_destruct;
 @property(nonatomic) __weak id <FBSDKContainerViewControllerDelegate> delegate; // @synthesize delegate=_delegate;
+- (void).cxx_destruct;
 - (void)displayChildController:(id)arg1;
 - (void)viewDidDisappear:(_Bool)arg1;
 

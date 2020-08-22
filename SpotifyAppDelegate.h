@@ -19,7 +19,6 @@
     id <SPTAppStartupController> _appStartupController;
     UIWindow *_window;
     NSObject<OS_os_log> *_lifecycleLog;
-    NSObject<OS_os_log> *_serviceSystemLog;
     id <SPTCrashReporter> _crashReporter;
     id <SPTUserActivityController> _userActivityController;
     SPTPlayModeMonitor *_playModeMonitor;
@@ -31,7 +30,6 @@
     NSMutableDictionary *_deferredBlocks;
     id <SPTReminderHandlerService> _reminderHandlerService;
     SPTPerfTracingSignpostObserver *_perfTracingObserver;
-    NSMutableDictionary *_scopeSignpostIDs;
     SPTServiceOrchestrator *_serviceOrchestrator;
     SPTLogCenterImplementation *_logCenter;
     SPTStartupTracer *_startupTracer;
@@ -46,7 +44,6 @@
 @property(retain, nonatomic) SPTStartupTracer *startupTracer; // @synthesize startupTracer=_startupTracer;
 @property(retain, nonatomic) SPTLogCenterImplementation *logCenter; // @synthesize logCenter=_logCenter;
 @property(retain, nonatomic) SPTServiceOrchestrator *serviceOrchestrator; // @synthesize serviceOrchestrator=_serviceOrchestrator;
-@property(readonly, nonatomic) NSMutableDictionary *scopeSignpostIDs; // @synthesize scopeSignpostIDs=_scopeSignpostIDs;
 @property(retain, nonatomic) SPTPerfTracingSignpostObserver *perfTracingObserver; // @synthesize perfTracingObserver=_perfTracingObserver;
 @property(nonatomic) __weak id <SPTReminderHandlerService> reminderHandlerService; // @synthesize reminderHandlerService=_reminderHandlerService;
 @property(retain, nonatomic) NSMutableDictionary *deferredBlocks; // @synthesize deferredBlocks=_deferredBlocks;
@@ -76,7 +73,6 @@
 - (void)userWillLogOut;
 - (void)applyThemeAppearance;
 - (void)setupTheme;
-@property(readonly, nonatomic) NSObject<OS_os_log> *serviceSystemLog; // @synthesize serviceSystemLog=_serviceSystemLog;
 @property(readonly, nonatomic) NSObject<OS_os_log> *lifecycleLog; // @synthesize lifecycleLog=_lifecycleLog;
 @property(readonly, nonatomic) id <SPTAppStartupController> appStartupController; // @synthesize appStartupController=_appStartupController;
 - (void)removePlainTextFBToken;
@@ -99,7 +95,6 @@
 - (void)applicationWillTerminate:(id)arg1;
 - (void)application:(id)arg1 didUpdateUserActivity:(id)arg2;
 - (void)handlePotentialDeepLinkEventWithURL:(id)arg1 sourceApplication:(id)arg2;
-- (void)handleDeepLinkWithURL:(id)arg1 restorationHandler:(CDUnknownBlockType)arg2;
 - (_Bool)application:(id)arg1 continueUserActivity:(id)arg2 restorationHandler:(CDUnknownBlockType)arg3;
 - (_Bool)application:(id)arg1 openURL:(id)arg2 options:(id)arg3;
 - (void)application:(id)arg1 didFailToRegisterForRemoteNotificationsWithError:(id)arg2;

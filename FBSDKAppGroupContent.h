@@ -19,10 +19,10 @@
 }
 
 + (_Bool)supportsSecureCoding;
-- (void).cxx_destruct;
 @property(nonatomic) unsigned long long privacy; // @synthesize privacy=_privacy;
 @property(copy, nonatomic) NSString *name; // @synthesize name=_name;
 @property(copy, nonatomic) NSString *groupDescription; // @synthesize groupDescription=_groupDescription;
+- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 - (void)encodeWithCoder:(id)arg1;
 - (id)initWithCoder:(id)arg1;

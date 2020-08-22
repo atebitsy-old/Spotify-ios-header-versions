@@ -11,6 +11,7 @@
     // Error parsing type: , name: colors
     // Error parsing type: , name: isVocalRemovalEnabled
     // Error parsing type: , name: lyricsLineSet
+    // Error parsing type: , name: $__lazy_storage_$_isLyricsEastAsian
 }
 
 - (void).cxx_destruct;

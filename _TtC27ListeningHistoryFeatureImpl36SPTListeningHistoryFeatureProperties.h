@@ -8,10 +8,10 @@
 
 @interface _TtC27ListeningHistoryFeatureImpl36SPTListeningHistoryFeatureProperties : NSObject
 {
-    // Error parsing type: , name: listeningHistoryEnabled
-    // Error parsing type: , name: listeningHistoryProductionEnabled
+    // Error parsing type: , name: listeningHistory
 }
 
+- (void).cxx_destruct;
 - (id)init;
 - (id)propertyModels;
 - (id)initWithConfiguration:(id)arg1;

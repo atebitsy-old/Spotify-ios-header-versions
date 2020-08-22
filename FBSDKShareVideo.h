@@ -28,11 +28,11 @@
 + (id)videoWithVideoAsset:(id)arg1;
 + (id)videoWithData:(id)arg1 previewPhoto:(id)arg2;
 + (id)videoWithData:(id)arg1;
-- (void).cxx_destruct;
 @property(copy, nonatomic) FBSDKSharePhoto *previewPhoto; // @synthesize previewPhoto=_previewPhoto;
 @property(copy, nonatomic) NSURL *videoURL; // @synthesize videoURL=_videoURL;
 @property(copy, nonatomic) PHAsset *videoAsset; // @synthesize videoAsset=_videoAsset;
 @property(retain, nonatomic) NSData *data; // @synthesize data=_data;
+- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 - (void)encodeWithCoder:(id)arg1;
 - (id)initWithCoder:(id)arg1;

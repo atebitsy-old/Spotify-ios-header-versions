@@ -14,11 +14,9 @@
 + (id)getOffset:(id)arg1 secondString:(id)arg2;
 + (id)getAddress:(id)arg1;
 + (id)symbolicateCallstack:(id)arg1 methodMapping:(id)arg2;
-+ (void)addClass:(Class)arg1 isClassMethod:(_Bool)arg2;
-+ (id)getClassesFrom:(id)arg1 prefixes:(id)arg2;
-+ (id)getClassNames:(id)arg1 frameworks:(id)arg2;
-+ (id)getMethodsTable:(id)arg1 frameworks:(id)arg2;
-+ (void)initialize;
++ (void)addClass:(Class)arg1 methodMapping:(id)arg2 isClassMethod:(_Bool)arg3;
++ (id)getClassNames;
++ (id)getMethodsTable;
 
 @end
 

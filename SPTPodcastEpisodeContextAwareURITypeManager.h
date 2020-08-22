@@ -9,21 +9,18 @@
 #import "SPTContextAwareURITypeManager-Protocol.h"
 
 @class NSString;
-@protocol SPTPodcastEntityDataLoader, SPTRemoteConfigurationResolver;
+@protocol SPTPodcastEntityDataLoader;
 
 @interface SPTPodcastEpisodeContextAwareURITypeManager : NSObject <SPTContextAwareURITypeManager>
 {
     id <SPTPodcastEntityDataLoader> _entityDataLoader;
-    id <SPTRemoteConfigurationResolver> _remoteConfigurationResolver;
 }
 
 - (void).cxx_destruct;
-@property(retain, nonatomic) id <SPTRemoteConfigurationResolver> remoteConfigurationResolver; // @synthesize remoteConfigurationResolver=_remoteConfigurationResolver;
 @property(retain, nonatomic) id <SPTPodcastEntityDataLoader> entityDataLoader; // @synthesize entityDataLoader=_entityDataLoader;
-- (id)provideFeatureProperties;
 - (void)resolveDefaultContextForURI:(id)arg1 handler:(CDUnknownBlockType)arg2;
 - (_Bool)typeManagerRecognizesURI:(id)arg1;
-- (id)initWithEntityDataLoader:(id)arg1 remoteConfigurationResolver:(id)arg2;
+- (id)initWithEntityDataLoader:(id)arg1;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

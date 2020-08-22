@@ -11,7 +11,7 @@
 #import "SPTAdsService-Protocol.h"
 
 @class NSString, NSURL, SPTAdContextManager, SPTAdContextManagerListener, SPTAdFeatureFlagChecks, SPTAdFeaturedActionHandler, SPTAdFocusManager, SPTAdLinkHandler, SPTAdMicPermissionsLogger, SPTAdMobileOverlayController, SPTAdNowPlayingAudioAdModeGenerator, SPTAdNowPlayingAuxiliaryActionsHandler, SPTAdNowPlayingManager, SPTAdNowPlayingVideoAdModeGenerator, SPTAdPlayerObservable, SPTAdRegistryInformationManager, SPTAdRulesManager, SPTAdStateLogger, SPTAdVoicePermissions, SPTAdVoiceSession, SPTAdsAutoDetectionController, SPTAdsFeatureProperties, SPTAdsInAppBrowserController, SPTAdsMarqueeController, SPTAdsRemindersManager, SPTAdsViewModel, SPTAllocationContext, SPTSponsoredContextManager;
-@protocol FollowFeature, SPContextMenuFeature, SPTAbbaService, SPTAccessoryManagerService, SPTAdsBaseService, SPTAdsManager, SPTAdsMarqueeLogger, SPTAudioPreviewService, SPTBannerFeature, SPTCarModeEngineService, SPTCollectionPlatformService, SPTComScoreAnalyticsManager, SPTContainerService, SPTContainerUIService, SPTCoreService, SPTDebugService, SPTEventSender, SPTEventSenderService, SPTFreeTierPreCurationService, SPTGLUEService, SPTInAppMessageService, SPTLocalSettings, SPTMarqueeobjcService, SPTNetworkService, SPTNowPlayingPlatformService, SPTPlayer, SPTPlayerFeature, SPTPlaylistPlatformService, SPTRemoteConfigurationResolver, SPTRemoteConfigurationService, SPTResolver, SPTSessionService, SPTSettingsFeature, SPTSnackbarService, SPTUBIService, SPTUIPresentationService, SPTURIDispatchService, SPTVideoCoordinatorService, SPTVoiceLibraryService, SPTVolumeService, SPTWebViewFeature, SlateFeature;
+@protocol FollowFeature, SPContextMenuFeature, SPTAbbaService, SPTAccessoryManagerService, SPTAdsBaseService, SPTAdsManager, SPTAudioPreviewService, SPTBannerFeature, SPTCarModeEngineService, SPTCollectionPlatformService, SPTComScoreAnalyticsManager, SPTContainerService, SPTContainerUIService, SPTCoreService, SPTDebugService, SPTEventSender, SPTEventSenderService, SPTFreeTierPreCurationService, SPTGLUEService, SPTInAppMessageService, SPTLocalSettings, SPTNetworkService, SPTNowPlayingPlatformService, SPTPlayer, SPTPlayerFeature, SPTPlaylistPlatformService, SPTRemoteConfigurationResolver, SPTRemoteConfigurationService, SPTResolver, SPTSessionService, SPTSettingsFeature, SPTSnackbarService, SPTUBIService, SPTUIPresentationService, SPTURIDispatchService, SPTVideoCoordinatorService, SPTVoiceLibraryService, SPTVolumeService, SPTWebViewFeature, SlateFeature;
 
 @interface SPTAdsServiceImplementation : NSObject <SPTAdFeatureFlagChecksObserver, SPSessionObserver, SPTAdsService>
 {
@@ -37,7 +37,6 @@
     id <SPTBannerFeature> _bannerService;
     id <SPTFreeTierPreCurationService> _freeTierCurationService;
     id <SPTUBIService> _ubiService;
-    id <SPTMarqueeobjcService> _marqueeObjcService;
     id <SPTResolver> _adResolver;
     SPTAdLinkHandler *_adLinkHandler;
     id <SPTLocalSettings> _localSettings;
@@ -71,7 +70,6 @@
     id <SPTEventSender> _eventSender;
     SPTAdMicPermissionsLogger *_micPermsLogger;
     SPTAdsRemindersManager *_adsReminderManager;
-    id <SPTAdsMarqueeLogger> _adsMarqueeLogger;
     id <SPTAdsBaseService> _adsBaseService;
     id <SPTSessionService> _clientSessionService;
     id <SPTContainerService> _containerService;
@@ -98,7 +96,6 @@
 @property(nonatomic) __weak id <SPTContainerService> containerService; // @synthesize containerService=_containerService;
 @property(nonatomic) __weak id <SPTSessionService> clientSessionService; // @synthesize clientSessionService=_clientSessionService;
 @property(nonatomic) __weak id <SPTAdsBaseService> adsBaseService; // @synthesize adsBaseService=_adsBaseService;
-@property(retain, nonatomic) id <SPTAdsMarqueeLogger> adsMarqueeLogger; // @synthesize adsMarqueeLogger=_adsMarqueeLogger;
 @property(retain, nonatomic) SPTAdsRemindersManager *adsReminderManager; // @synthesize adsReminderManager=_adsReminderManager;
 @property(retain, nonatomic) SPTAdMicPermissionsLogger *micPermsLogger; // @synthesize micPermsLogger=_micPermsLogger;
 @property(retain, nonatomic) id <SPTEventSender> eventSender; // @synthesize eventSender=_eventSender;
@@ -133,7 +130,6 @@
 @property(retain, nonatomic) id <SPTLocalSettings> localSettings; // @synthesize localSettings=_localSettings;
 @property(retain, nonatomic) SPTAdLinkHandler *adLinkHandler; // @synthesize adLinkHandler=_adLinkHandler;
 @property(retain, nonatomic) id <SPTResolver> adResolver; // @synthesize adResolver=_adResolver;
-@property(nonatomic) __weak id <SPTMarqueeobjcService> marqueeObjcService; // @synthesize marqueeObjcService=_marqueeObjcService;
 @property(nonatomic) __weak id <SPTUBIService> ubiService; // @synthesize ubiService=_ubiService;
 @property(nonatomic) __weak id <SPTFreeTierPreCurationService> freeTierCurationService; // @synthesize freeTierCurationService=_freeTierCurationService;
 @property(nonatomic) __weak id <SPTBannerFeature> bannerService; // @synthesize bannerService=_bannerService;

@@ -41,7 +41,7 @@
     SPTHomeHubManager *_hubManager;
     SPTHomeContentStorage *_homeContentStorage;
     id <SPTUBIHubsUtilities> _ubiHubsUtilities;
-    SPTHomeFeatureProperties *_homeFeatureProperties;
+    SPTHomeFeatureProperties *_remoteConfigProperties;
     NSURL *_pageURI;
     SPTHomeDebugger *_homeDebugger;
 }
@@ -50,7 +50,7 @@
 - (void).cxx_destruct;
 @property(retain, nonatomic) SPTHomeDebugger *homeDebugger; // @synthesize homeDebugger=_homeDebugger;
 @property(copy, nonatomic) NSURL *pageURI; // @synthesize pageURI=_pageURI;
-@property(retain, nonatomic) SPTHomeFeatureProperties *homeFeatureProperties; // @synthesize homeFeatureProperties=_homeFeatureProperties;
+@property(retain, nonatomic) SPTHomeFeatureProperties *remoteConfigProperties; // @synthesize remoteConfigProperties=_remoteConfigProperties;
 @property(retain, nonatomic) id <SPTUBIHubsUtilities> ubiHubsUtilities; // @synthesize ubiHubsUtilities=_ubiHubsUtilities;
 @property(retain, nonatomic) SPTHomeContentStorage *homeContentStorage; // @synthesize homeContentStorage=_homeContentStorage;
 @property(retain, nonatomic) SPTHomeHubManager *hubManager; // @synthesize hubManager=_hubManager;

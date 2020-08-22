@@ -7,11 +7,10 @@
 #import "NSObject-Protocol.h"
 
 @class NSURL;
-@protocol SPTUBIEventLocation, SPTUBIImpressionEvent, SPTUBIInteractionEvent;
+@protocol SPTUBIEventLocation, SPTUBIInteractionEvent;
 
 @protocol SPTUBIMobileArtistPage_Featuring_PlaylistEventFactory <NSObject>
 - (id <SPTUBIInteractionEvent>)hitUiNavigateWithDestination:(NSURL *)arg1;
-- (id <SPTUBIImpressionEvent>)impression;
 - (id <SPTUBIEventLocation>)_location;
 @end
 

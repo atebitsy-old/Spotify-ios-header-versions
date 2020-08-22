@@ -7,7 +7,7 @@
 #import "SPTUIPageService.h"
 
 @class SPTYourLibraryGLUETheme, SPTYourLibraryLogger, SPTYourLibraryURIManager, SPTYourLibraryViewController;
-@protocol SPTGLUEService, SPTOfflineService, SPTPerformanceMetricsService, SPTSessionService, SPTUBIService, SPTYourLibraryService, SPTYourLibraryViewModel, _TtP22YourLibraryBetaFeature25SPTYourLibraryBetaService_;
+@protocol SPTGLUEService, SPTOfflineService, SPTPerformanceMetricsService, SPTSessionService, SPTUBIService, SPTYourLibraryService, SPTYourLibraryViewModel;
 
 @interface SPTYourLibraryUIService : SPTUIPageService
 {
@@ -17,7 +17,6 @@
     id <SPTPerformanceMetricsService> _performanceMetricsService;
     id <SPTSessionService> _clientSessionService;
     id <SPTUBIService> _ubiService;
-    id <_TtP22YourLibraryBetaFeature25SPTYourLibraryBetaService_> _yourLibraryBetaService;
     SPTYourLibraryGLUETheme *_yourLibraryTheme;
     SPTYourLibraryLogger *_logger;
     SPTYourLibraryURIManager *_uriManager;
@@ -32,7 +31,6 @@
 @property(retain, nonatomic) SPTYourLibraryURIManager *uriManager; // @synthesize uriManager=_uriManager;
 @property(retain, nonatomic) SPTYourLibraryLogger *logger; // @synthesize logger=_logger;
 @property(retain, nonatomic) SPTYourLibraryGLUETheme *yourLibraryTheme; // @synthesize yourLibraryTheme=_yourLibraryTheme;
-@property(nonatomic) __weak id <_TtP22YourLibraryBetaFeature25SPTYourLibraryBetaService_> yourLibraryBetaService; // @synthesize yourLibraryBetaService=_yourLibraryBetaService;
 @property(nonatomic) __weak id <SPTUBIService> ubiService; // @synthesize ubiService=_ubiService;
 @property(nonatomic) __weak id <SPTSessionService> clientSessionService; // @synthesize clientSessionService=_clientSessionService;
 @property(nonatomic) __weak id <SPTPerformanceMetricsService> performanceMetricsService; // @synthesize performanceMetricsService=_performanceMetricsService;
@@ -44,7 +42,6 @@
 - (id)provideOfflineBannerViewController;
 - (id)provideViewControllerForURI:(id)arg1 context:(id)arg2;
 - (_Bool)claimsURI:(id)arg1;
-- (void)load;
 - (void)configureWithServices:(id)arg1;
 - (void)unload;
 

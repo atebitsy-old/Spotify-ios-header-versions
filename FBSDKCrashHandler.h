@@ -10,30 +10,10 @@
 {
 }
 
-+ (id)getFBSDKVersion;
-+ (_Bool)isSafeToGenerateMapping;
-+ (id)getPathToLibDataFile:(id)arg1;
-+ (id)getPathToCrashFile:(id)arg1;
-+ (id)loadLibData:(id)arg1;
-+ (void)generateMethodMapping:(id)arg1;
-+ (void)saveCrashLog:(id)arg1;
-+ (id)getCrashLogFileNames:(id)arg1;
-+ (void)clearCrashReportFiles;
-+ (id)loadCrashLog:(id)arg1;
-+ (id)loadCrashLogs;
-+ (id)getProcessedCrashLogs;
-+ (void)saveSignal:(int)arg1 withCallStack:(id)arg2;
-+ (void)saveException:(id)arg1;
-+ (void)installSignalHandler;
 + (void)uninstallExceptionsHandler;
 + (void)installExceptionsHandler;
-+ (void)removeObserver:(id)arg1;
-+ (void)addObserver:(id)arg1;
-+ (void)disable;
-+ (_Bool)callstack:(id)arg1 containsPrefix:(id)arg2;
-+ (id)filterCrashLogs:(id)arg1 processedCrashLogs:(id)arg2;
-+ (void)sendCrashLogs;
-+ (void)initialize;
++ (void)uploadCrashLogs;
++ (void)enable;
 
 @end
 

@@ -22,12 +22,12 @@
 - (id)concertsFactory;
 - (id)merchFactory;
 - (id)artistFanFundingFactory;
-- (id)artistsPlaylistFactory;
-- (id)fansAlsoLikeFactory;
-- (id)featuringFactory;
-- (id)popularReleasesFactory;
+- (id)artistsPlaylistFactoryWithIdentifier:(id)arg1;
+- (id)fansAlsoLikeFactoryWithIdentifier:(id)arg1;
+- (id)featuringFactoryWithIdentifier:(id)arg1;
+- (id)popularReleasesFactoryWithIdentifier:(id)arg1;
 - (id)artistPickFactory;
-- (id)trackCloudFactory;
+- (id)trackCloudFactoryWithIdentifier:(id)arg1;
 - (id)topTracksFactory;
 - (id)likedTracksFactoryWithUri:(id)arg1;
 - (id)headerFactory;

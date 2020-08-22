@@ -17,12 +17,12 @@
     unsigned long long _loggerSerialNumber;
 }
 
-- (void).cxx_destruct;
 @property(nonatomic) unsigned long long loggerSerialNumber; // @synthesize loggerSerialNumber=_loggerSerialNumber;
 @property(nonatomic) unsigned long long requestStartTime; // @synthesize requestStartTime=_requestStartTime;
 @property(copy, nonatomic) CDUnknownBlockType handler; // @synthesize handler=_handler;
 @property(readonly, nonatomic) NSDate *requestStartDate; // @synthesize requestStartDate=_requestStartDate;
 @property(retain, nonatomic) NSURLSessionTask *task; // @synthesize task=_task;
+- (void).cxx_destruct;
 - (void)cancel;
 - (void)start;
 @property(readonly) long long state;

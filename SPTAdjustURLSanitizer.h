@@ -14,7 +14,6 @@
 {
 }
 
-- (id)adjustDeepLinkFromURL:(id)arg1;
 - (id)cleanAdjustURL:(id)arg1;
 
 // Remaining properties

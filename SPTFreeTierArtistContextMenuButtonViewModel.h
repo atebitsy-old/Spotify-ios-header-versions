@@ -10,7 +10,7 @@
 #import "SPTFreeTierEntityContextMenuButtonViewModel-Protocol.h"
 
 @class FollowModel, NSDictionary, NSString, NSURL;
-@protocol SPTContextMenuActionsProvider, SPTContextMenuPresenter, SPTContextMenuPresenterFactory, SPTFollowModelFactory, SPTFreeTierArtistContextMenuButtonViewModelLogger, SPTFreeTierArtistTestManager, SPTFreeTierEntityContextMenuButtonViewModelDelegate, SPTModerationReportDecorationRegistry, SPTModerationServiceState;
+@protocol SPTContextMenuActionsProvider, SPTContextMenuPresenter, SPTContextMenuPresenterFactory, SPTFollowModelFactory, SPTFreeTierArtistTestManager, SPTFreeTierEntityContextMenuButtonViewModelDelegate, SPTModerationReportDecorationRegistry, SPTModerationServiceState;
 
 @interface SPTFreeTierArtistContextMenuButtonViewModel : NSObject <SPTFreeTierEntityContextMenuButtonViewModel, FollowModelObserver>
 {
@@ -27,11 +27,9 @@
     FollowModel *_followModel;
     id <SPTModerationReportDecorationRegistry> _decorationRegistry;
     id <SPTModerationServiceState> _moderationFeatureState;
-    id <SPTFreeTierArtistContextMenuButtonViewModelLogger> _ubiLogger;
 }
 
 - (void).cxx_destruct;
-@property(readonly, nonatomic) id <SPTFreeTierArtistContextMenuButtonViewModelLogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
 @property(readonly, nonatomic) id <SPTModerationServiceState> moderationFeatureState; // @synthesize moderationFeatureState=_moderationFeatureState;
 @property(readonly, nonatomic) id <SPTModerationReportDecorationRegistry> decorationRegistry; // @synthesize decorationRegistry=_decorationRegistry;
 @property(nonatomic, getter=isArtistBanned) _Bool artistBanned; // @synthesize artistBanned=_artistBanned;
@@ -54,7 +52,7 @@
 - (void)tapContextMenuButton:(id)arg1;
 - (void)configureWithViewURI:(id)arg1 metadata:(id)arg2;
 - (void)fetchFollowModelForArtist:(id)arg1;
-- (id)initWithPresenterFactory:(id)arg1 actionFactory:(id)arg2 freeTierArtistTestManager:(id)arg3 artistURI:(id)arg4 followModelFactory:(id)arg5 decorationRegistry:(id)arg6 moderationFeatureState:(id)arg7 ubiLogger:(id)arg8;
+- (id)initWithPresenterFactory:(id)arg1 actionFactory:(id)arg2 freeTierArtistTestManager:(id)arg3 artistURI:(id)arg4 followModelFactory:(id)arg5 decorationRegistry:(id)arg6 moderationFeatureState:(id)arg7;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

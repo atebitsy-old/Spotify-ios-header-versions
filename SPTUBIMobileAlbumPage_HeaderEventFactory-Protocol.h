@@ -6,10 +6,9 @@
 
 #import "NSObject-Protocol.h"
 
-@protocol SPTUBIEventLocation, SPTUBIMobileAlbumPage_Header_ShufflePlayButtonEventFactory, SPTUBIMobileAlbumPage_Header_TopBarEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIMobileAlbumPage_Header_TopBarEventFactory;
 
 @protocol SPTUBIMobileAlbumPage_HeaderEventFactory <NSObject>
-- (id <SPTUBIMobileAlbumPage_Header_ShufflePlayButtonEventFactory>)shufflePlayButtonFactory;
 - (id <SPTUBIMobileAlbumPage_Header_TopBarEventFactory>)topBarFactory;
 - (id <SPTUBIEventLocation>)_location;
 @end

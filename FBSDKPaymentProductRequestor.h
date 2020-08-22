@@ -20,9 +20,9 @@
 }
 
 + (void)initialize;
-- (void).cxx_destruct;
 @property(retain, nonatomic) SKProductsRequest *productRequest; // @synthesize productRequest=_productRequest;
 @property(retain, nonatomic) SKPaymentTransaction *transaction; // @synthesize transaction=_transaction;
+- (void).cxx_destruct;
 - (id)fetchDeviceReceipt;
 - (void)logImplicitTransactionEvent:(id)arg1 valueToSum:(double)arg2 parameters:(id)arg3;
 - (void)logImplicitPurchaseTransaction:(id)arg1 ofProduct:(id)arg2;

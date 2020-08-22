@@ -17,12 +17,12 @@
     struct CGSize _size;
 }
 
-- (void).cxx_destruct;
 @property(readonly, nonatomic) struct CGSize size; // @synthesize size=_size;
 @property(readonly, nonatomic) double scale; // @synthesize scale=_scale;
 @property(readonly, copy, nonatomic) NSString *profileID; // @synthesize profileID=_profileID;
 @property(readonly, nonatomic) unsigned long long pictureMode; // @synthesize pictureMode=_pictureMode;
 @property(readonly, nonatomic) _Bool imageShouldFit; // @synthesize imageShouldFit=_imageShouldFit;
+- (void).cxx_destruct;
 - (_Bool)isValidForState:(id)arg1;
 - (_Bool)isEqualToState:(id)arg1;
 - (_Bool)isEqual:(id)arg1;

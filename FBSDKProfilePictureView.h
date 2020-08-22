@@ -19,9 +19,9 @@
     NSString *_profileID;
 }
 
-- (void).cxx_destruct;
 @property(copy, nonatomic) NSString *profileID; // @synthesize profileID=_profileID;
 @property(nonatomic) unsigned long long pictureMode; // @synthesize pictureMode=_pictureMode;
+- (void).cxx_destruct;
 - (void)_updateImageWithData:(id)arg1 state:(id)arg2;
 - (void)_setPlaceholderImage;
 - (void)_needsImageUpdate;
@@ -35,8 +35,6 @@
 - (long long)contentMode;
 - (void)setBounds:(struct CGRect)arg1;
 - (void)dealloc;
-- (id)initWithProfile:(id)arg1;
-- (id)initWithFrame:(struct CGRect)arg1 profile:(id)arg2;
 - (id)initWithCoder:(id)arg1;
 - (id)initWithFrame:(struct CGRect)arg1;
 

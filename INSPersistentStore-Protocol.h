@@ -6,13 +6,11 @@
 
 #import "NSObject-Protocol.h"
 
-@class EventEnvelope, INSInstallIdEntityProxy, INSMessageEntityProxy, NSArray, NSData, NSDictionary, NSSet, NSString;
+@class EventEnvelope, INSMessageEntityProxy, NSArray, NSData, NSDictionary, NSSet, NSString;
 @protocol INSInstallIdEntityProtocol, INSSequenceNumberEntityProtocol;
 
 @protocol INSPersistentStore <NSObject>
 - (unsigned long long)getMessageCountOnPrivateMOC;
-- (void)deleteInstallIdEntityOnPrivateMOC;
-- (INSInstallIdEntityProxy *)getInstallIdEntityProxyOnPrivateMOC;
 - (_Bool)isCurrentlyOnPrivateMOCDispatchQueue;
 - (void)performBlockOnPrivateMOCQueue:(void (^)(void))arg1;
 - (NSDictionary *)getEventSenderStatsNodesOnPrivateMOCWithSequenceIds:(NSSet *)arg1;

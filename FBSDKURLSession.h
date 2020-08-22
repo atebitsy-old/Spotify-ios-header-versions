@@ -16,10 +16,10 @@
     NSOperationQueue *_delegateQueue;
 }
 
-- (void).cxx_destruct;
 @property(retain, nonatomic) NSOperationQueue *delegateQueue; // @synthesize delegateQueue=_delegateQueue;
 @property(nonatomic) __weak id <NSURLSessionDataDelegate> delegate; // @synthesize delegate=_delegate;
 @property(retain) NSURLSession *session; // @synthesize session=_session;
+- (void).cxx_destruct;
 - (_Bool)valid;
 - (void)invalidateAndCancel;
 - (void)updateSessionWithBlock:(CDUnknownBlockType)arg1;

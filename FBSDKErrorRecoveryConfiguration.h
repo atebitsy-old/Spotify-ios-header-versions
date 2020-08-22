@@ -20,11 +20,11 @@
 }
 
 + (_Bool)supportsSecureCoding;
-- (void).cxx_destruct;
 @property(readonly, nonatomic) NSString *recoveryActionName; // @synthesize recoveryActionName=_recoveryActionName;
 @property(readonly, nonatomic) unsigned long long errorCategory; // @synthesize errorCategory=_errorCategory;
 @property(readonly, nonatomic) NSArray *localizedRecoveryOptionDescriptions; // @synthesize localizedRecoveryOptionDescriptions=_localizedRecoveryOptionDescriptions;
 @property(readonly, nonatomic) NSString *localizedRecoveryDescription; // @synthesize localizedRecoveryDescription=_localizedRecoveryDescription;
+- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 - (void)encodeWithCoder:(id)arg1;
 - (id)initWithCoder:(id)arg1;

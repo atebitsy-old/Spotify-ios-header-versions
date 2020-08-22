@@ -49,6 +49,7 @@
 - (void)featureFlagsDidChange:(id)arg1;
 - (void)removeObserver:(id)arg1;
 - (void)addObserver:(id)arg1;
+@property(readonly, nonatomic, getter=isMarqueeEnabled) _Bool marqueeEnabled;
 @property(readonly, nonatomic, getter=isAdFeedbackEnabled) _Bool adFeedbackEnabled;
 @property(readonly, nonatomic, getter=isContextResumeEnabled) _Bool contextResumeEnabled;
 @property(readonly, nonatomic, getter=isPrerollEnabled) _Bool prerollEnabled;

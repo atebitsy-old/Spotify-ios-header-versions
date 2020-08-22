@@ -6,9 +6,7 @@
 
 #import "_TtC20SingalongFeatureImpl35ColorLyricsDataLoaderImplementation.h"
 
-#import "_TtP20SingalongFeatureImpl21ColorLyricsDataLoader_-Protocol.h"
-
-@interface _TtC20SingalongFeatureImpl35ColorLyricsDataLoaderImplementation (SingalongFeatureImpl) <_TtP20SingalongFeatureImpl21ColorLyricsDataLoader_>
+@interface _TtC20SingalongFeatureImpl35ColorLyricsDataLoaderImplementation (SingalongFeatureImpl)
 - (void)remove:(id)arg1 for:(id)arg2;
 - (_Bool)lyricsCachedFor:(id)arg1;
 - (_Bool)lyricsAvailableFor:(id)arg1;

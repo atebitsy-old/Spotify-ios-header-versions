@@ -8,7 +8,6 @@
 
 @interface _TtC20SingalongFeatureImpl13LyricsLineSet : NSObject
 {
-    // Error parsing type: , name: $__lazy_storage_$_isLyricsEastAsian
     // Error parsing type: , name: lyricsLines
     // Error parsing type: , name: providerCredits
     // Error parsing type: , name: publisherCredits

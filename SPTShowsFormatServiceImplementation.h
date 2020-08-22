@@ -10,7 +10,7 @@
 #import "SPTShowsFormatService-Protocol.h"
 
 @class NSString, SPTAllocationContext;
-@protocol SPContextMenuFeature, SPTCollectionPlatformService, SPTContainerService, SPTFeatureFlagSignal, SPTFeatureFlaggingService, SPTFreeTierPlaylistService, SPTFreeTierPlaylistUIService, SPTGLUEService, SPTNetworkService, SPTPlayerFeature, SPTPodcastFeature, SPTVideoFeature, _TtP17PodcastDALFeature20SPTPodcastDALService_;
+@protocol SPContextMenuFeature, SPTCollectionPlatformService, SPTContainerService, SPTFeatureFlagSignal, SPTFeatureFlaggingService, SPTFreeTierPlaylistService, SPTFreeTierPlaylistUIService, SPTGLUEService, SPTNetworkService, SPTPlayerFeature, SPTPodcastFeature, SPTVideoFeature;
 
 @interface SPTShowsFormatServiceImplementation : NSObject <SPTFeatureFlagSignalObserver, SPTShowsFormatService>
 {
@@ -24,7 +24,6 @@
     id <SPTNetworkService> _networkFeature;
     id <SPTPlayerFeature> _playerFeature;
     id <SPTPodcastFeature> _podcastFeature;
-    id <_TtP17PodcastDALFeature20SPTPodcastDALService_> _podcastDALService;
     id <SPTFreeTierPlaylistUIService> _playlistUIService;
     id <SPTFreeTierPlaylistService> _playlistService;
     id <SPTVideoFeature> _videoFeature;
@@ -44,7 +43,6 @@
 @property(nonatomic) __weak id <SPTVideoFeature> videoFeature; // @synthesize videoFeature=_videoFeature;
 @property(nonatomic) __weak id <SPTFreeTierPlaylistService> playlistService; // @synthesize playlistService=_playlistService;
 @property(nonatomic) __weak id <SPTFreeTierPlaylistUIService> playlistUIService; // @synthesize playlistUIService=_playlistUIService;
-@property(nonatomic) __weak id <_TtP17PodcastDALFeature20SPTPodcastDALService_> podcastDALService; // @synthesize podcastDALService=_podcastDALService;
 @property(nonatomic) __weak id <SPTPodcastFeature> podcastFeature; // @synthesize podcastFeature=_podcastFeature;
 @property(nonatomic) __weak id <SPTPlayerFeature> playerFeature; // @synthesize playerFeature=_playerFeature;
 @property(nonatomic) __weak id <SPTNetworkService> networkFeature; // @synthesize networkFeature=_networkFeature;

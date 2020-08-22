@@ -9,9 +9,10 @@
 @interface _TtC20EncoreConsumerMobile26HeaderFullbleedCentralView : UIView
 {
     // Error parsing type: , name: imageView
-    // Error parsing type: , name: contentView
-    // Error parsing type: , name: contentViewGradient
+    // Error parsing type: , name: titleView
+    // Error parsing type: , name: titleViewGradient
     // Error parsing type: , name: statusBarGradient
+    // Error parsing type: , name: title
     // Error parsing type: , name: image
     // Error parsing type: , name: associatedColor
     // Error parsing type: , name: onRemount
@@ -19,9 +20,9 @@
     // Error parsing type: , name: onFullHeaderProgress
     // Error parsing type: , name: imageAlphaProgressRange
     // Error parsing type: , name: statusBarProtectionProgressRange
-    // Error parsing type: , name: contentViewAlphaProgressRange
-    // Error parsing type: , name: contentViewCompressionAlphaClamp
-    // Error parsing type: , name: contentViewAlphaExpansionRange
+    // Error parsing type: , name: titleLabelAlphaProgressRange
+    // Error parsing type: , name: titleCompressionAlphaClamp
+    // Error parsing type: , name: titleAlphaExpansionRange
     // Error parsing type: , name: imageScalingProgressRange
     // Error parsing type: , name: centralViewWidthConstraint
     // Error parsing type: , name: imageAspectConstraint
@@ -32,6 +33,7 @@
 - (id)initWithFrame:(struct CGRect)arg1;
 - (void)layoutSubviews;
 - (id)initWithCoder:(id)arg1;
+- (id)init;
 
 @end
 

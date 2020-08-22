@@ -8,7 +8,6 @@
 
 #import "SPTExplicitContentEnabledStateObserver-Protocol.h"
 #import "SPTPodcastEpisodeViewModelSectionDelegate-Protocol.h"
-#import "SPTPodcastFollowButtonObserver-Protocol.h"
 #import "SPTPodcastFollowSectionViewModelDelegate-Protocol.h"
 #import "SPTPodcastPlayerDelegate-Protocol.h"
 #import "SPTPodcastTopicCategoryViewModelDelegate-Protocol.h"
@@ -18,7 +17,7 @@
 @class NSArray, NSString, NSURL, SPTPodcastEpisodeSectionViewModel, SPTPodcastFeatureProperties, SPTPodcastHeaderViewModel, SPTPodcastLogger, SPTPodcastTopicCategoryViewModel, SPTPodcastTopicCategoryViewModelV2, SPTPodcastTrailerSectionViewModel, SPTPodcastViewSectionConfiguration;
 @protocol SPTCollectionPlatform, SPTPodcast, SPTPodcastDataLoader, SPTPodcastDataLoaderRequestToken, SPTPodcastDispatcher, SPTPodcastEpisodeCellActionTarget, SPTPodcastFactory, SPTPodcastPlayer, SPTPodcastRequestFactory, SPTPodcastTestManager, SPTPodcastViewModelDelegate2;
 
-@interface SPTPodcastViewModel : NSObject <SPTPodcastEpisodeViewModelSectionDelegate, SPTPodcastTopicCategoryViewModelDelegate, SPTPodcastTopicCategoryViewModelDelegateV2, SPTPodcastFollowSectionViewModelDelegate, SPTExplicitContentEnabledStateObserver, SPTPodcastPlayerDelegate, SPTPodcastTrailerSectionViewModelDelegate, SPTPodcastFollowButtonObserver>
+@interface SPTPodcastViewModel : NSObject <SPTPodcastEpisodeViewModelSectionDelegate, SPTPodcastTopicCategoryViewModelDelegate, SPTPodcastTopicCategoryViewModelDelegateV2, SPTPodcastFollowSectionViewModelDelegate, SPTExplicitContentEnabledStateObserver, SPTPodcastPlayerDelegate, SPTPodcastTrailerSectionViewModelDelegate>
 {
     _Bool _topicsEmpty;
     _Bool _trailerWasShown;
@@ -79,6 +78,7 @@
 - (void)updatePodcastChipsSectionWithCategories:(id)arg1;
 - (void)followSectionViewModelDidUpdatePlaybackState:(id)arg1;
 - (void)followSectionViewModelDidSelectContextMenuButton:(id)arg1 senderView:(id)arg2;
+- (void)followSectionViewModelDidUpdateFollowedState:(id)arg1;
 - (void)viewModel:(id)arg1 didUpdatePlayingEpisodeAtIndexPath:(id)arg2;
 - (void)viewModel:(id)arg1 willPresentFilterContextViewController:(id)arg2 fromSender:(id)arg3;
 - (void)sectionViewModelDidUpdateFilterSorting:(id)arg1;
@@ -86,7 +86,6 @@
 - (void)trailerSectionViewModel:(id)arg1 didPressPlayTrailerEpisode:(id)arg2;
 - (void)toggleFollowedState;
 - (void)followedStateWasUpdated;
-- (void)followButtonPressedOn:(id)arg1;
 - (void)resetFilters;
 - (_Bool)canPlayEpisode:(id)arg1;
 - (void)updateFollowSectionLayoutWithPlayerIfNeeded:(id)arg1;

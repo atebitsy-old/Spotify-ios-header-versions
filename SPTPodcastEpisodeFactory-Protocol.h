@@ -6,11 +6,10 @@
 
 #import "NSObject-Protocol.h"
 
-@class NSData, NSDictionary;
+@class NSDictionary;
 @protocol SPTPodcast, SPTPodcastEpisode;
 
 @protocol SPTPodcastEpisodeFactory <NSObject>
-- (id <SPTPodcastEpisode>)podcastEpisodeWithProtobufData:(NSData *)arg1 responseType:(unsigned long long)arg2 podcast:(id <SPTPodcast>)arg3;
 - (id <SPTPodcastEpisode>)podcastEpisodeWithDictionary:(NSDictionary *)arg1 podcast:(id <SPTPodcast>)arg2;
 @end
 

@@ -12,16 +12,16 @@
 
 @interface SPTVoiceLibrarySpeechProxyRequest : NSObject <NSCopying>
 {
+    _Bool _useDevelopmentEndpoint;
     NSString *_endpoint;
     NSDictionary *_queryParams;
     NSDictionary *_headers;
-    unsigned long long _hostType;
     unsigned long long _contentType;
 }
 
 - (void).cxx_destruct;
 @property(nonatomic) unsigned long long contentType; // @synthesize contentType=_contentType;
-@property(nonatomic) unsigned long long hostType; // @synthesize hostType=_hostType;
+@property(nonatomic) _Bool useDevelopmentEndpoint; // @synthesize useDevelopmentEndpoint=_useDevelopmentEndpoint;
 @property(readonly, nonatomic) NSDictionary *headers; // @synthesize headers=_headers;
 @property(readonly, nonatomic) NSDictionary *queryParams; // @synthesize queryParams=_queryParams;
 @property(readonly, copy, nonatomic) NSString *endpoint; // @synthesize endpoint=_endpoint;

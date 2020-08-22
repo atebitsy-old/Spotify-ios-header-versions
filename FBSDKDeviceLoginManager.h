@@ -23,10 +23,10 @@
 }
 
 + (void)initialize;
-- (void).cxx_destruct;
 @property(copy, nonatomic) NSURL *redirectURL; // @synthesize redirectURL=_redirectURL;
 @property(readonly, copy, nonatomic) NSArray *permissions; // @synthesize permissions=_permissions;
 @property(nonatomic) __weak id <FBSDKDeviceLoginManagerDelegate> delegate; // @synthesize delegate=_delegate;
+- (void).cxx_destruct;
 - (void)netService:(id)arg1 didNotPublish:(id)arg2;
 - (void)_schedulePoll:(unsigned long long)arg1;
 - (void)_processError:(id)arg1;

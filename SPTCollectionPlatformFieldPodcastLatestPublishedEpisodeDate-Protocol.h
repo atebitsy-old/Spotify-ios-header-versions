@@ -9,6 +9,6 @@
 @class NSDate;
 
 @protocol SPTCollectionPlatformFieldPodcastLatestPublishedEpisodeDate <SPTCollectionPlatformDataLoaderField>
-@property(nonatomic, readonly) NSDate *latestPublishedEpisodeDate;
+@property(readonly, nonatomic) NSDate *latestPublishedEpisodeDate;
 @end
 

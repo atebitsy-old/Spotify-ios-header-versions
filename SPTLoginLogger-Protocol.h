@@ -10,7 +10,6 @@
 
 @protocol SPTLoginLogger <NSObject>
 @property(copy, nonatomic) NSString *requestID;
-- (void)trackMLComponentWithName:(NSString *)arg1;
 - (void)trackFeatureFlagFallbackWithFlagsAndFallbackState:(NSDictionary *)arg1;
 - (void)trackFeatureFlagExposureWithEnabledFlags:(NSArray *)arg1 disabledFlags:(NSArray *)arg2 fromCache:(_Bool)arg3;
 - (void)userDidCompleteRequestWithType:(NSString *)arg1 error:(NSError *)arg2 attemptId:(NSString *)arg3 result:(NSString *)arg4;

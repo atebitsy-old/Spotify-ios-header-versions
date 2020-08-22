@@ -9,6 +9,6 @@
 @class NSArray;
 
 @protocol SPTCollectionPlatformFieldArtists <SPTCollectionPlatformDataLoaderField>
-@property(nonatomic, readonly) NSArray *artists;
+@property(readonly, copy, nonatomic) NSArray *artists;
 @end
 

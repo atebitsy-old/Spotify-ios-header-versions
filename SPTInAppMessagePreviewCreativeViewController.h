@@ -10,7 +10,7 @@
 #import "UITableViewDelegate-Protocol.h"
 #import "UITextFieldDelegate-Protocol.h"
 
-@class GLUEButton, NSArray, NSString, SPTInAppMessagePreviewViewModel, UITableView, UITextField, UIView;
+@class GLUEButton, GLUELabel, NSArray, NSString, SPTInAppMessagePreviewViewModel, UISwitch, UITableView, UITextField, UIView;
 @protocol GLUETheme, SPTInAppMessagePreviewCreativeViewControllerDelegate;
 
 @interface SPTInAppMessagePreviewCreativeViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate>
@@ -23,6 +23,9 @@
     UITableView *_creativeDetailsTableView;
     UIView *_contentView;
     UITextField *_creativeIdTextField;
+    UISwitch *_relayCreativeSwitch;
+    GLUELabel *_relayCreativeLabel;
+    UIView *_relayCreativeView;
     NSArray *_layoutConstraints;
     NSArray *_triggerTypes;
     NSString *_selectedType;
@@ -32,6 +35,9 @@
 @property(copy, nonatomic) NSString *selectedType; // @synthesize selectedType=_selectedType;
 @property(copy, nonatomic) NSArray *triggerTypes; // @synthesize triggerTypes=_triggerTypes;
 @property(copy, nonatomic) NSArray *layoutConstraints; // @synthesize layoutConstraints=_layoutConstraints;
+@property(retain, nonatomic) UIView *relayCreativeView; // @synthesize relayCreativeView=_relayCreativeView;
+@property(retain, nonatomic) GLUELabel *relayCreativeLabel; // @synthesize relayCreativeLabel=_relayCreativeLabel;
+@property(retain, nonatomic) UISwitch *relayCreativeSwitch; // @synthesize relayCreativeSwitch=_relayCreativeSwitch;
 @property(retain, nonatomic) UITextField *creativeIdTextField; // @synthesize creativeIdTextField=_creativeIdTextField;
 @property(retain, nonatomic) UIView *contentView; // @synthesize contentView=_contentView;
 @property(retain, nonatomic) UITableView *creativeDetailsTableView; // @synthesize creativeDetailsTableView=_creativeDetailsTableView;

@@ -6,12 +6,11 @@
 
 #import "NSObject-Protocol.h"
 
-@class NSData, NSDictionary;
+@class NSDictionary;
 @protocol SPTPodcast;
 
 @protocol SPTPodcastFactory <NSObject>
 - (id <SPTPodcast>)podcastWithDictionary:(NSDictionary *)arg1 shouldRemoveHeaders:(_Bool)arg2;
-- (id <SPTPodcast>)podcastWithProtobufData:(NSData *)arg1 responseType:(unsigned long long)arg2;
 - (id <SPTPodcast>)podcastWithDictionary:(NSDictionary *)arg1;
 @end
 

@@ -6,11 +6,12 @@
 
 #import "NSObject-Protocol.h"
 
-@class NSURL;
-@protocol SPTUBIEventLocation, SPTUBIMobileArtistPage_FansAlsoLike_ArtistsEventFactory;
+@class NSString, NSURL;
+@protocol SPTUBIEventLocation, SPTUBIImpressionEvent, SPTUBIMobileArtistPage_FansAlsoLike_ArtistsEventFactory;
 
 @protocol SPTUBIMobileArtistPage_FansAlsoLikeEventFactory <NSObject>
-- (id <SPTUBIMobileArtistPage_FansAlsoLike_ArtistsEventFactory>)artistsFactoryWithPosition:(long long)arg1 uri:(NSURL *)arg2;
+- (id <SPTUBIImpressionEvent>)impression;
+- (id <SPTUBIMobileArtistPage_FansAlsoLike_ArtistsEventFactory>)artistsFactoryWithIdentifier:(NSString *)arg1 position:(long long)arg2 uri:(NSURL *)arg3;
 - (id <SPTUBIEventLocation>)_location;
 @end
 

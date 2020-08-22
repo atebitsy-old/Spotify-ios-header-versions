@@ -9,25 +9,23 @@
 #import "INSEventEnvelopeFactoryProtocol-Protocol.h"
 
 @class INSContextRegistry, INSEventSequenceIDProvider, NSString;
-@protocol INSInstallationIdProtocol, INSPersistentStore;
+@protocol INSPersistentStore;
 
 @interface INSEventEnvelopeFactory : NSObject <INSEventEnvelopeFactoryProtocol>
 {
     INSContextRegistry *_contextRegistry;
     id <INSPersistentStore> _persistentStore;
     INSEventSequenceIDProvider *_eventSequenceIdProvider;
-    id <INSInstallationIdProtocol> _installIdProvider;
 }
 
 + (id)envelopeForEntity:(id)arg1;
 - (void).cxx_destruct;
-@property(retain, nonatomic) id <INSInstallationIdProtocol> installIdProvider; // @synthesize installIdProvider=_installIdProvider;
 @property(readonly, nonatomic) INSEventSequenceIDProvider *eventSequenceIdProvider; // @synthesize eventSequenceIdProvider=_eventSequenceIdProvider;
 @property(retain, nonatomic) id <INSPersistentStore> persistentStore; // @synthesize persistentStore=_persistentStore;
 @property(retain, nonatomic) INSContextRegistry *contextRegistry; // @synthesize contextRegistry=_contextRegistry;
 - (id)messageFragmentForMessage:(id)arg1;
 - (id)createEnvelopeOnPrivateMOCForMessage:(id)arg1 owner:(id)arg2;
-- (id)initWithContextRegistry:(id)arg1 persistentStore:(id)arg2 eventSequenceIdProvider:(id)arg3 installIdProvider:(id)arg4;
+- (id)initWithContextRegistry:(id)arg1 persistentStore:(id)arg2 eventSequenceIdProvider:(id)arg3;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

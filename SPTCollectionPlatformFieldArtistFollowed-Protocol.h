@@ -7,6 +7,6 @@
 #import "SPTCollectionPlatformDataLoaderField-Protocol.h"
 
 @protocol SPTCollectionPlatformFieldArtistFollowed <SPTCollectionPlatformDataLoaderField>
-@property(nonatomic, readonly) _Bool isFollowed;
+@property(readonly, nonatomic) _Bool isFollowed;
 @end
 

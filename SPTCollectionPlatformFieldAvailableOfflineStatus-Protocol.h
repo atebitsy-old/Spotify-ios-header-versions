@@ -7,6 +7,6 @@
 #import "SPTCollectionPlatformDataLoaderField-Protocol.h"
 
 @protocol SPTCollectionPlatformFieldAvailableOfflineStatus <SPTCollectionPlatformDataLoaderField>
-@property(nonatomic, readonly) unsigned long long availableOfflineStatus;
+@property(readonly, nonatomic) unsigned long long availableOfflineStatus;
 @end
 

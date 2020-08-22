@@ -23,7 +23,6 @@
 }
 
 + (_Bool)supportsSecureCoding;
-- (void).cxx_destruct;
 @property(copy, nonatomic) NSArray *photos; // @synthesize photos=_photos;
 @property(readonly, copy, nonatomic) NSString *shareUUID; // @synthesize shareUUID=_shareUUID;
 @property(copy, nonatomic) NSString *pageID; // @synthesize pageID=_pageID;
@@ -32,6 +31,7 @@
 @property(copy, nonatomic) NSArray *peopleIDs; // @synthesize peopleIDs=_peopleIDs;
 @property(copy, nonatomic) FBSDKHashtag *hashtag; // @synthesize hashtag=_hashtag;
 @property(copy, nonatomic) NSURL *contentURL; // @synthesize contentURL=_contentURL;
+- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 - (void)encodeWithCoder:(id)arg1;
 - (id)initWithCoder:(id)arg1;

@@ -9,7 +9,7 @@
 #import "FBSDKCopying-Protocol.h"
 #import "NSSecureCoding-Protocol.h"
 
-@class FBSDKErrorConfiguration, FBSDKMonitoringConfiguration, NSArray, NSDate, NSDictionary, NSString, NSURL;
+@class FBSDKErrorConfiguration, NSArray, NSDate, NSDictionary, NSString, NSURL;
 
 @interface FBSDKServerConfiguration : NSObject <FBSDKCopying, NSSecureCoding>
 {
@@ -22,6 +22,8 @@
     _Bool _implicitPurchaseLoggingEnabled;
     _Bool _codelessEventsEnabled;
     _Bool _loginTooltipEnabled;
+    _Bool _nativeAuthFlowEnabled;
+    _Bool _systemAuthenticationEnabled;
     _Bool _uninstallTrackingEnabled;
     NSString *_appID;
     NSString *_appName;
@@ -37,18 +39,10 @@
     NSString *_updateMessage;
     NSArray *_eventBindings;
     NSDictionary *_restrictiveParams;
-    NSDictionary *_AAMRules;
-    NSDictionary *_suggestedEventsSetting;
-    FBSDKMonitoringConfiguration *_monitoringConfiguration;
 }
 
 + (_Bool)supportsSecureCoding;
-+ (id)defaultServerConfigurationForAppID:(id)arg1;
-- (void).cxx_destruct;
 @property(readonly, nonatomic) long long version; // @synthesize version=_version;
-@property(readonly, copy, nonatomic) FBSDKMonitoringConfiguration *monitoringConfiguration; // @synthesize monitoringConfiguration=_monitoringConfiguration;
-@property(readonly, copy, nonatomic) NSDictionary *suggestedEventsSetting; // @synthesize suggestedEventsSetting=_suggestedEventsSetting;
-@property(readonly, copy, nonatomic) NSDictionary *AAMRules; // @synthesize AAMRules=_AAMRules;
 @property(readonly, copy, nonatomic) NSDictionary *restrictiveParams; // @synthesize restrictiveParams=_restrictiveParams;
 @property(readonly, copy, nonatomic) NSArray *eventBindings; // @synthesize eventBindings=_eventBindings;
 @property(readonly, copy, nonatomic) NSString *updateMessage; // @synthesize updateMessage=_updateMessage;
@@ -60,6 +54,8 @@
 @property(readonly, copy, nonatomic) NSDate *timestamp; // @synthesize timestamp=_timestamp;
 @property(readonly, copy, nonatomic) NSString *loginTooltipText; // @synthesize loginTooltipText=_loginTooltipText;
 @property(readonly, nonatomic, getter=isUninstallTrackingEnabled) _Bool uninstallTrackingEnabled; // @synthesize uninstallTrackingEnabled=_uninstallTrackingEnabled;
+@property(readonly, nonatomic, getter=isSystemAuthenticationEnabled) _Bool systemAuthenticationEnabled; // @synthesize systemAuthenticationEnabled=_systemAuthenticationEnabled;
+@property(readonly, nonatomic, getter=isNativeAuthFlowEnabled) _Bool nativeAuthFlowEnabled; // @synthesize nativeAuthFlowEnabled=_nativeAuthFlowEnabled;
 @property(readonly, nonatomic, getter=isLoginTooltipEnabled) _Bool loginTooltipEnabled; // @synthesize loginTooltipEnabled=_loginTooltipEnabled;
 @property(readonly, nonatomic, getter=isCodelessEventsEnabled) _Bool codelessEventsEnabled; // @synthesize codelessEventsEnabled=_codelessEventsEnabled;
 @property(readonly, nonatomic, getter=isImplicitPurchaseLoggingSupported) _Bool implicitPurchaseLoggingEnabled; // @synthesize implicitPurchaseLoggingEnabled=_implicitPurchaseLoggingEnabled;
@@ -70,8 +66,7 @@
 @property(readonly, copy, nonatomic) NSString *appName; // @synthesize appName=_appName;
 @property(readonly, copy, nonatomic) NSString *appID; // @synthesize appID=_appID;
 @property(readonly, nonatomic, getter=isAdvertisingIDEnabled) _Bool advertisingIDEnabled; // @synthesize advertisingIDEnabled=_advertisingIDEnabled;
-- (id)dialogFlows;
-- (id)dialogConfigurations;
+- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 - (void)encodeWithCoder:(id)arg1;
 - (id)initWithCoder:(id)arg1;
@@ -79,7 +74,7 @@
 - (_Bool)useSafariViewControllerForDialogName:(id)arg1;
 - (_Bool)useNativeDialogForDialogName:(id)arg1;
 - (id)dialogConfigurationForDialogName:(id)arg1;
-- (id)initWithAppID:(id)arg1 appName:(id)arg2 loginTooltipEnabled:(_Bool)arg3 loginTooltipText:(id)arg4 defaultShareMode:(id)arg5 advertisingIDEnabled:(_Bool)arg6 implicitLoggingEnabled:(_Bool)arg7 implicitPurchaseLoggingEnabled:(_Bool)arg8 codelessEventsEnabled:(_Bool)arg9 uninstallTrackingEnabled:(_Bool)arg10 dialogConfigurations:(id)arg11 dialogFlows:(id)arg12 timestamp:(id)arg13 errorConfiguration:(id)arg14 sessionTimeoutInterval:(double)arg15 defaults:(_Bool)arg16 loggingToken:(id)arg17 smartLoginOptions:(unsigned long long)arg18 smartLoginBookmarkIconURL:(id)arg19 smartLoginMenuIconURL:(id)arg20 updateMessage:(id)arg21 eventBindings:(id)arg22 restrictiveParams:(id)arg23 AAMRules:(id)arg24 suggestedEventsSetting:(id)arg25 monitoringConfiguration:(id)arg26;
+- (id)initWithAppID:(id)arg1 appName:(id)arg2 loginTooltipEnabled:(_Bool)arg3 loginTooltipText:(id)arg4 defaultShareMode:(id)arg5 advertisingIDEnabled:(_Bool)arg6 implicitLoggingEnabled:(_Bool)arg7 implicitPurchaseLoggingEnabled:(_Bool)arg8 codelessEventsEnabled:(_Bool)arg9 systemAuthenticationEnabled:(_Bool)arg10 nativeAuthFlowEnabled:(_Bool)arg11 uninstallTrackingEnabled:(_Bool)arg12 dialogConfigurations:(id)arg13 dialogFlows:(id)arg14 timestamp:(id)arg15 errorConfiguration:(id)arg16 sessionTimeoutInterval:(double)arg17 defaults:(_Bool)arg18 loggingToken:(id)arg19 smartLoginOptions:(unsigned long long)arg20 smartLoginBookmarkIconURL:(id)arg21 smartLoginMenuIconURL:(id)arg22 updateMessage:(id)arg23 eventBindings:(id)arg24 restrictiveParams:(id)arg25;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

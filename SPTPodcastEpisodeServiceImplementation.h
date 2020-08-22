@@ -9,7 +9,7 @@
 #import "SPTPodcastEpisodeService-Protocol.h"
 
 @class NSString, SPTAllocationContext;
-@protocol SPTCollectionPlatformService, SPTContextDispatchService, SPTExplicitContentService, SPTGLUEService, SPTNetworkService, SPTPageLoaderViewService, SPTPerformanceMetricsService, SPTPodcastEpisodeFeaturedContentService, SPTPodcastFeature, SPTPodcastOffliningService, SPTPodcastRecommendationsService, SPTPodcastUIService, SPTRemoteConfigurationService, SPTShareFeature, SPTUBIService, SPTUIPresentationService, _TtP17PodcastDALFeature20SPTPodcastDALService_, _TtP27PodcastHTMLComponentFeature30SPTPodcastHTMLComponentService_, _TtP27PodcastInteractivityFeature15SPTPollsService_, _TtP30PodcastEpisodeAudioPlusFeature33SPTPodcastEpisodeAudioPlusService_;
+@protocol SPTCollectionPlatformService, SPTContextDispatchService, SPTExplicitContentService, SPTGLUEService, SPTNetworkService, SPTPerformanceMetricsService, SPTPodcastEpisodeFeaturedContentService, SPTPodcastFeature, SPTPodcastOffliningService, SPTPodcastRecommendationsService, SPTPodcastUIService, SPTRemoteConfigurationService, SPTShareFeature, SPTUBIService, SPTUIPresentationService, _TtP17PodcastDALFeature20SPTPodcastDALService_, _TtP27PodcastHTMLComponentFeature30SPTPodcastHTMLComponentService_, _TtP30PodcastEpisodeAudioPlusFeature33SPTPodcastEpisodeAudioPlusService_;
 
 @interface SPTPodcastEpisodeServiceImplementation : SPTUIPageService <SPTPodcastEpisodeService>
 {
@@ -31,14 +31,10 @@
     id <SPTContextDispatchService> _contextDispatchService;
     id <SPTGLUEService> _glueService;
     id <_TtP27PodcastHTMLComponentFeature30SPTPodcastHTMLComponentService_> _podcastHTMLComponentService;
-    id <_TtP27PodcastInteractivityFeature15SPTPollsService_> _pollsService;
-    id <SPTPageLoaderViewService> _pageLoaderViewService;
 }
 
 + (id)serviceIdentifier;
 - (void).cxx_destruct;
-@property(nonatomic) __weak id <SPTPageLoaderViewService> pageLoaderViewService; // @synthesize pageLoaderViewService=_pageLoaderViewService;
-@property(nonatomic) __weak id <_TtP27PodcastInteractivityFeature15SPTPollsService_> pollsService; // @synthesize pollsService=_pollsService;
 @property(nonatomic) __weak id <_TtP27PodcastHTMLComponentFeature30SPTPodcastHTMLComponentService_> podcastHTMLComponentService; // @synthesize podcastHTMLComponentService=_podcastHTMLComponentService;
 @property(nonatomic) __weak id <SPTGLUEService> glueService; // @synthesize glueService=_glueService;
 @property(nonatomic) __weak id <SPTContextDispatchService> contextDispatchService; // @synthesize contextDispatchService=_contextDispatchService;
@@ -65,8 +61,6 @@
 - (id)provideFeatureProperties;
 - (id)provideContextPlayerParameters:(id)arg1;
 - (id)makeViewModelForURI:(id)arg1 context:(id)arg2;
-- (id)provideEpisodeViewControllerForURI:(id)arg1 context:(id)arg2 viewModel:(id)arg3 viewLogger:(id)arg4;
-- (id)providePageLoaderViewControllerForURI:(id)arg1 context:(id)arg2;
 - (id)provideViewControllerForURI:(id)arg1 context:(id)arg2;
 - (_Bool)claimsURI:(id)arg1;
 - (void)load;

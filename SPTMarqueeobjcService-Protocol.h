@@ -6,10 +6,9 @@
 
 #import "SPTService-Protocol.h"
 
-@protocol SPTAdsMarqueeLogger, SPTMarqueeTestManager;
+@protocol SPTMarqueeTestManager;
 
 @protocol SPTMarqueeobjcService <SPTService>
-- (void)injectMarqueeAdsLogger:(id <SPTAdsMarqueeLogger>)arg1;
 - (void)loadMarqueeController;
 - (id <SPTMarqueeTestManager>)marqueeTestManager;
 @end

@@ -10,6 +10,7 @@
 @protocol SPTResolver;
 
 @protocol SPTAdsBaseCosmosBridge <NSObject>
+@property(readonly, nonatomic, getter=isReady) _Bool ready;
 - (void)logExpandVideoAd:(NSString *)arg1 atPlaybackPosition:(double)arg2;
 - (void)logCollapseVideoAd:(NSString *)arg1 atPlaybackPosition:(double)arg2;
 - (void)postCosmosAdEvent:(NSString *)arg1 forAd:(NSString *)arg2 playbackPosition:(double)arg3 eventData:(NSDictionary *)arg4;
@@ -38,10 +39,6 @@
 - (void)requestAdEndpointWithEndpointDomain:(NSString *)arg1 endpoint:(NSString *)arg2 action:(NSString *)arg3 body:(NSDictionary *)arg4 headers:(NSDictionary *)arg5 multipleResponse:(_Bool)arg6 responseBlock:(void (^)(_Bool, NSDictionary *))arg7;
 - (void)requestAdEndpoint:(NSString *)arg1 withAction:(NSString *)arg2 body:(NSDictionary *)arg3 headers:(NSDictionary *)arg4 multipleResponse:(_Bool)arg5 responseBlock:(void (^)(_Bool, NSDictionary *))arg6;
 - (void)performOnReady:(void (^)(void))arg1;
-- (_Bool)isReady;
 - (void)readyWithResolver:(id <SPTResolver>)arg1;
-
-// Remaining properties
-@property(nonatomic, readonly) _Bool ready;
 @end
 

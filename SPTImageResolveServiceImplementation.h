@@ -8,24 +8,24 @@
 
 #import "SPTImageResolveService-Protocol.h"
 
-@class NSString, SPTAllocationContext, SPTImageResolveCoreProjectionMapEndpoint, SPTImageResolveFactory, SPTImageResolveManager;
-@protocol SPTRemoteConfigurationService, SPTSessionService;
+@class NSString, SPTAllocationContext, SPTImageResolveManager;
+@protocol CosmosFeature, SPTNetworkService, SPTRemoteConfigurationService, SPTSessionService;
 
 @interface SPTImageResolveServiceImplementation : NSObject <SPTImageResolveService>
 {
     id <SPTRemoteConfigurationService> _remoteConfigurationService;
+    id <SPTNetworkService> _networkService;
     id <SPTSessionService> _sessionService;
-    SPTImageResolveFactory *_factory;
+    id <CosmosFeature> _cosmosService;
     SPTImageResolveManager *_imageResolveManager;
-    SPTImageResolveCoreProjectionMapEndpoint *_coreProjectionMapEndpoint;
 }
 
 + (id)serviceIdentifier;
 - (void).cxx_destruct;
-@property(retain, nonatomic) SPTImageResolveCoreProjectionMapEndpoint *coreProjectionMapEndpoint; // @synthesize coreProjectionMapEndpoint=_coreProjectionMapEndpoint;
 @property(retain, nonatomic) SPTImageResolveManager *imageResolveManager; // @synthesize imageResolveManager=_imageResolveManager;
-@property(retain, nonatomic) SPTImageResolveFactory *factory; // @synthesize factory=_factory;
+@property(nonatomic) __weak id <CosmosFeature> cosmosService; // @synthesize cosmosService=_cosmosService;
 @property(nonatomic) __weak id <SPTSessionService> sessionService; // @synthesize sessionService=_sessionService;
+@property(nonatomic) __weak id <SPTNetworkService> networkService; // @synthesize networkService=_networkService;
 @property(nonatomic) __weak id <SPTRemoteConfigurationService> remoteConfigurationService; // @synthesize remoteConfigurationService=_remoteConfigurationService;
 - (id)createImageResolver;
 - (void)unload;

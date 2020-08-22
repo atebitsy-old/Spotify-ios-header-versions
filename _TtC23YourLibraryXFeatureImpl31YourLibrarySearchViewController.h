@@ -10,7 +10,6 @@
 {
     // Error parsing type: , name: loopController
     // Error parsing type: , name: theme
-    // Error parsing type: , name: quickScrollFactory
     // Error parsing type: , name: yourLibrarySearchView
     // Error parsing type: , name: makeViewBinder
     // Error parsing type: , name: viewBinder

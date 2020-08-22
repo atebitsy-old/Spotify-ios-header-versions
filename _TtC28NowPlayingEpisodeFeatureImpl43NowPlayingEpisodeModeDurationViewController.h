@@ -15,7 +15,6 @@
     // Error parsing type: , name: timeRemaining
     // Error parsing type: , name: durationViewModel
     // Error parsing type: , name: viewModel
-    // Error parsing type: , name: screenWidth
 }
 
 - (void).cxx_destruct;

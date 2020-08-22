@@ -18,7 +18,7 @@
 - (void).cxx_destruct;
 @property(retain, nonatomic) SPTInAppMessageEngine *engine; // @synthesize engine=_engine;
 - (id)triggerTypeStringFromTriggerType:(long long)arg1;
-- (void)requestMessagePreviewForCreativeID:(id)arg1 triggerURI:(id)arg2;
+- (void)requestMessagePreviewForCreativeID:(id)arg1 triggerURI:(id)arg2 isRelayCreative:(_Bool)arg3;
 - (void)requestMessageForPattern:(id)arg1 triggerType:(long long)arg2;
 - (id)initWithInAppMessageEngine:(id)arg1;
 

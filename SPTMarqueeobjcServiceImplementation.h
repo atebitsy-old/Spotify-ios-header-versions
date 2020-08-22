@@ -9,7 +9,7 @@
 #import "SPTMarqueeobjcService-Protocol.h"
 
 @class NSString, SPTAllocationContext, SPTMarqueeController;
-@protocol SPTAdsBaseService, SPTAdsMarqueeLogger, SPTContainerService, SPTEventSenderService, SPTGLUEService, SPTInAppMessageService, SPTMarqueeTestManager, SPTRemoteConfigurationService, SPTSessionService, SPTUIPresentationService, SPTURIDispatchService, SPTWebViewFeature, SlateFeature;
+@protocol SPTAdsBaseService, SPTContainerService, SPTEventSenderService, SPTGLUEService, SPTInAppMessageService, SPTMarqueeTestManager, SPTRemoteConfigurationService, SPTSessionService, SPTUIPresentationService, SPTURIDispatchService, SPTWebViewFeature, SlateFeature;
 
 @interface SPTMarqueeobjcServiceImplementation : NSObject <SPTMarqueeobjcService>
 {
@@ -26,12 +26,10 @@
     id <SPTRemoteConfigurationService> _remoteConfigurationService;
     SPTMarqueeController *_marqueeController;
     id <SPTMarqueeTestManager> _marqueeTestManager;
-    id <SPTAdsMarqueeLogger> _marqueeEventLogger;
 }
 
 + (id)serviceIdentifier;
 - (void).cxx_destruct;
-@property(retain, nonatomic) id <SPTAdsMarqueeLogger> marqueeEventLogger; // @synthesize marqueeEventLogger=_marqueeEventLogger;
 @property(retain, nonatomic) id <SPTMarqueeTestManager> marqueeTestManager; // @synthesize marqueeTestManager=_marqueeTestManager;
 @property(retain, nonatomic) SPTMarqueeController *marqueeController; // @synthesize marqueeController=_marqueeController;
 @property(nonatomic) __weak id <SPTRemoteConfigurationService> remoteConfigurationService; // @synthesize remoteConfigurationService=_remoteConfigurationService;
@@ -45,7 +43,6 @@
 @property(nonatomic) __weak id <SPTWebViewFeature> webviewService; // @synthesize webviewService=_webviewService;
 @property(nonatomic) __weak id <SPTGLUEService> glueService; // @synthesize glueService=_glueService;
 @property(nonatomic) __weak id <SPTContainerService> containerService; // @synthesize containerService=_containerService;
-- (void)injectMarqueeAdsLogger:(id)arg1;
 - (void)loadMarqueeController;
 - (void)unload;
 - (void)load;

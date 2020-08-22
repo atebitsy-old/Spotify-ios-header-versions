@@ -27,8 +27,6 @@
 - (id)fetchInstallIdEntityWithContext:(id)arg1;
 - (id)fetchSequenceNumberEntitiesWithSequenceIds:(id)arg1;
 - (id)fetchFirstMessageEntitiesWithSequenceNumbers:(id)arg1;
-- (void)deleteInstallIdEntityOnPrivateMOC;
-- (id)getInstallIdEntityProxyOnPrivateMOC;
 - (_Bool)isCurrentlyOnPrivateMOCDispatchQueue;
 - (void)performBlockOnPrivateMOCQueue:(CDUnknownBlockType)arg1;
 - (id)getEventSenderStatsNodesOnPrivateMOCWithSequenceIds:(id)arg1;

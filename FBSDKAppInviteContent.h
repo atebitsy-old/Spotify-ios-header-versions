@@ -22,12 +22,12 @@
 }
 
 + (_Bool)supportsSecureCoding;
-- (void).cxx_destruct;
 @property(nonatomic) unsigned long long destination; // @synthesize destination=_destination;
 @property(copy, nonatomic) NSString *promotionText; // @synthesize promotionText=_promotionText;
 @property(copy, nonatomic) NSString *promotionCode; // @synthesize promotionCode=_promotionCode;
 @property(copy, nonatomic) NSURL *appLinkURL; // @synthesize appLinkURL=_appLinkURL;
 @property(copy, nonatomic) NSURL *appInvitePreviewImageURL; // @synthesize appInvitePreviewImageURL=_appInvitePreviewImageURL;
+- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 - (void)encodeWithCoder:(id)arg1;
 - (id)initWithCoder:(id)arg1;

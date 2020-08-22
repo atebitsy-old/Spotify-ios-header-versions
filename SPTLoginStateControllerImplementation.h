@@ -10,7 +10,7 @@
 #import "SPTLoginStateController-Protocol.h"
 
 @class NSError, NSString, SPCore, SPTHTTPService, SPTImageLoaderServiceManager, SPTLoginDbManager, SPTLoginDeferredDispatcher, SPTLoginDialogController, SPTLoginErrorDecorator, SPTLoginTestManager, SPTObserverManager, SPTSigninWithAppleHandler, SPTStartupTracer;
-@protocol SPTAlertInterface, SPTAuthLoginOptionsUtils, SPTCrashReporter, SPTLinkDispatcher, SPTLogCenterCoreIntegration, SPTLoginKeychainManager, SPTLoginLogger, SPTLoginPhoneNumberLoginStateDelegate, SPTMetaViewController;
+@protocol SPTAlertInterface, SPTCrashReporter, SPTLinkDispatcher, SPTLogCenterCoreIntegration, SPTLoginKeychainManager, SPTLoginLogger, SPTLoginPhoneNumberLoginStateDelegate, SPTMetaViewController;
 
 @interface SPTLoginStateControllerImplementation : NSObject <SPTCoreLoginControllerDelegate, SPTLoginStateController>
 {
@@ -18,7 +18,6 @@
     NSError *_lastConnectionError;
     id <SPTLoginPhoneNumberLoginStateDelegate> _phoneNumberLoginDelegate;
     SPCore *_core;
-    id <SPTAuthLoginOptionsUtils> _authLoginOptionsUtils;
     SPTImageLoaderServiceManager *_imageLoaderServiceManager;
     SPTHTTPService *_httpService;
     id <SPTLogCenterCoreIntegration> _logCenterCore;
@@ -63,7 +62,6 @@
 @property(retain, nonatomic) id <SPTLogCenterCoreIntegration> logCenterCore; // @synthesize logCenterCore=_logCenterCore;
 @property(retain, nonatomic) SPTHTTPService *httpService; // @synthesize httpService=_httpService;
 @property(retain, nonatomic) SPTImageLoaderServiceManager *imageLoaderServiceManager; // @synthesize imageLoaderServiceManager=_imageLoaderServiceManager;
-@property(retain, nonatomic) id <SPTAuthLoginOptionsUtils> authLoginOptionsUtils; // @synthesize authLoginOptionsUtils=_authLoginOptionsUtils;
 @property(nonatomic) __weak SPCore *core; // @synthesize core=_core;
 @property(nonatomic) __weak id <SPTLoginPhoneNumberLoginStateDelegate> phoneNumberLoginDelegate; // @synthesize phoneNumberLoginDelegate=_phoneNumberLoginDelegate;
 @property(retain, nonatomic) NSError *lastConnectionError; // @synthesize lastConnectionError=_lastConnectionError;
@@ -98,7 +96,7 @@
 - (void)didLogin;
 @property(readonly, nonatomic, getter=isLoggedIn) _Bool loggedIn;
 @property(nonatomic) _Bool allowErrorDispatch;
-- (id)initWithCore:(id)arg1 logCenterCore:(id)arg2 crashReporter:(id)arg3 startupTracer:(id)arg4 containerLogoutHandler:(CDUnknownBlockType)arg5 httpService:(id)arg6 imageLoaderServiceManager:(id)arg7 keychainManager:(id)arg8 metaViewController:(id)arg9 alertInterface:(id)arg10 deferredErrorDispatcher:(id)arg11 linkDispatcher:(id)arg12 errorDialogController:(id)arg13 errorDecorator:(id)arg14 loginLogger:(id)arg15 appleHandler:(id)arg16 login5TestManager:(id)arg17 databaseManager:(id)arg18 authLoginOptionsUtils:(id)arg19;
+- (id)initWithCore:(id)arg1 logCenterCore:(id)arg2 crashReporter:(id)arg3 startupTracer:(id)arg4 containerLogoutHandler:(CDUnknownBlockType)arg5 httpService:(id)arg6 imageLoaderServiceManager:(id)arg7 keychainManager:(id)arg8 metaViewController:(id)arg9 alertInterface:(id)arg10 deferredErrorDispatcher:(id)arg11 linkDispatcher:(id)arg12 errorDialogController:(id)arg13 errorDecorator:(id)arg14 loginLogger:(id)arg15 appleHandler:(id)arg16 login5TestManager:(id)arg17 databaseManager:(id)arg18;
 - (id)sessionStateAwaiter;
 - (id)waitForLoginCompletion;
 - (id)waitForLogoutCompletion;

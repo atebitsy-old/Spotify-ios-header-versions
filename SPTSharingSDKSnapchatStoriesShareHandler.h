@@ -7,7 +7,7 @@
 #import "SPTSharingSDKStoriesShareHandler.h"
 
 @class SPTSharingSDKImageDownloader, SPTSharingSDKLinkGenerator;
-@protocol SPTSharingSDKDeeplinkHandler, SPTSharingSDKEntityData, SPTSharingSDKPasteboardWrapper;
+@protocol SPTSharingSDKDeeplinkHandler, SPTSharingSDKEntityData, SPTSharingSDKPasteboardHandler;
 
 @interface SPTSharingSDKSnapchatStoriesShareHandler : SPTSharingSDKStoriesShareHandler
 {
@@ -15,11 +15,11 @@
     SPTSharingSDKImageDownloader *_imageDownloader;
     SPTSharingSDKLinkGenerator *_linkGenerator;
     id <SPTSharingSDKDeeplinkHandler> _deeplinkHandler;
-    id <SPTSharingSDKPasteboardWrapper> _pasteboardWrapper;
+    id <SPTSharingSDKPasteboardHandler> _pasteboardHandler;
 }
 
 - (void).cxx_destruct;
-- (id)pasteboardWrapper;
+- (id)pasteboardHandler;
 - (id)deeplinkHandler;
 - (id)linkGenerator;
 - (id)imageDownloader;
@@ -32,7 +32,7 @@
 - (id)pasteboardContentURLKey;
 - (id)extraPasteboardItems;
 - (id)stickerImagePath;
-- (id)initWithEntityData:(id)arg1 linkGenerator:(id)arg2 imageDownloader:(id)arg3 deeplinkHandler:(id)arg4 pasteboardWrapper:(id)arg5;
+- (id)initWithEntityData:(id)arg1 linkGenerator:(id)arg2 imageDownloader:(id)arg3 deeplinkHandler:(id)arg4 pasteboardHandler:(id)arg5;
 
 @end
 

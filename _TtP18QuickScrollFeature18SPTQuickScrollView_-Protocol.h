@@ -8,7 +8,6 @@
 @protocol _TtP18QuickScrollFeature26SPTQuickScrollViewDelegate_, _TtP18QuickScrollFeature28SPTQuickScrollViewDatasource_;
 
 @protocol _TtP18QuickScrollFeature18SPTQuickScrollView_
-- (void)invalidateTitle;
 - (void)reset;
 - (void)attachScrollView:(UIScrollView *)arg1;
 @property(nonatomic) _Bool isActive;

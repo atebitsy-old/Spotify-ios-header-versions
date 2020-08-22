@@ -9,10 +9,8 @@
 @interface _TtC26YourLibraryBetaFeatureImpl22YourLibraryBetaService : NSObject
 {
     // Error parsing type: , name: containerService
-    // Error parsing type: , name: clientSessionService
     // Error parsing type: , name: pageLoaderViewService
     // Error parsing type: , name: remoteConfigurationService
-    // Error parsing type: , name: loopController
     // Error parsing type: , name: pageToken
     // Error parsing type: , name: testManager
     // Error parsing type: , name: $__lazy_storage_$_experienceRegistry

@@ -34,7 +34,7 @@
 @property(readonly, nonatomic) SPTAdsPromotedContentImageView *contentImageView; // @synthesize contentImageView=_contentImageView;
 - (void)applyThemeLayout;
 - (void)addConstraints;
-- (id)initWithAdvertiserTheme:(id)arg1 bookmarkButtonState:(long long)arg2 glueImageLoader:(id)arg3;
+- (id)initWithAdvertiserTitle:(id)arg1 theme:(id)arg2 bookmarkButtonState:(long long)arg3 glueImageLoader:(id)arg4;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

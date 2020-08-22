@@ -9,23 +9,22 @@
 #import "SPTSharingSDKShareHandler-Protocol.h"
 
 @class NSString, SPTSharingSDKLinkGenerator;
-@protocol SPTSharingSDKEntityData, SPTSharingSDKShareDialogPresenterRegistry;
+@protocol SPTSharingSDKEntityData, SPTSharingSDKShareDialogPresenter;
 
 @interface SPTSharingSDKFacebookFeedShareHandler : NSObject <SPTSharingSDKShareHandler>
 {
     id <SPTSharingSDKEntityData> _entityData;
     SPTSharingSDKLinkGenerator *_linkGenerator;
-    id <SPTSharingSDKShareDialogPresenterRegistry> _dialogPresenterRegistry;
+    id <SPTSharingSDKShareDialogPresenter> _dialogPresenter;
 }
 
-+ (id)noDialogPresenterError;
 - (void).cxx_destruct;
-@property(readonly, nonatomic) __weak id <SPTSharingSDKShareDialogPresenterRegistry> dialogPresenterRegistry; // @synthesize dialogPresenterRegistry=_dialogPresenterRegistry;
+@property(readonly, nonatomic) id <SPTSharingSDKShareDialogPresenter> dialogPresenter; // @synthesize dialogPresenter=_dialogPresenter;
 @property(readonly, nonatomic) SPTSharingSDKLinkGenerator *linkGenerator; // @synthesize linkGenerator=_linkGenerator;
 @property(readonly, nonatomic) id <SPTSharingSDKEntityData> entityData; // @synthesize entityData=_entityData;
 - (id)completionDataWithShareID:(id)arg1;
 - (void)performShareAction:(CDUnknownBlockType)arg1;
-- (id)initWithEntityData:(id)arg1 linkGenerator:(id)arg2 dialogPresenterRegistry:(id)arg3;
+- (id)initWithEntityData:(id)arg1 linkGenerator:(id)arg2 dialogPresenter:(id)arg3;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

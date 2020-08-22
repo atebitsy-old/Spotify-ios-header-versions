@@ -22,11 +22,11 @@
 }
 
 + (id)showWithName:(id)arg1 parameters:(id)arg2 delegate:(id)arg3;
-- (void).cxx_destruct;
 @property(copy, nonatomic) NSDictionary *parameters; // @synthesize parameters=_parameters;
 @property(copy, nonatomic) NSString *name; // @synthesize name=_name;
 @property(nonatomic) __weak id <FBSDKWebDialogDelegate> delegate; // @synthesize delegate=_delegate;
 @property(nonatomic, getter=shouldDeferVisibility) _Bool deferVisibility; // @synthesize deferVisibility=_deferVisibility;
+- (void).cxx_destruct;
 - (void)_updateViewsWithScale:(double)arg1 alpha:(double)arg2 animationDuration:(double)arg3 completion:(CDUnknownBlockType)arg4;
 - (struct CGRect)_applicationFrameForOrientation;
 - (struct CGAffineTransform)_transformForOrientation;

@@ -7,7 +7,7 @@
 #import "_TtC28EncoreIntegrationFeatureImpl18ComponentFactories.h"
 
 @interface _TtC28EncoreIntegrationFeatureImpl18ComponentFactories (EncoreIntegrationFeatureImpl2)
-- (id)makeDownloadButton:(long long)arg1;
-- (id)makeDownloadButton;
+- (id)makePlaylistHeader:(long long)arg1;
+- (id)makePlaylistHeader;
 @end
 

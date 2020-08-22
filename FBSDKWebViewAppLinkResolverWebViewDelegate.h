@@ -17,10 +17,10 @@
     CDUnknownBlockType _didFailLoadWithError;
 }
 
-- (void).cxx_destruct;
 @property(nonatomic) _Bool hasLoaded; // @synthesize hasLoaded=_hasLoaded;
 @property(copy, nonatomic) CDUnknownBlockType didFailLoadWithError; // @synthesize didFailLoadWithError=_didFailLoadWithError;
 @property(copy, nonatomic) CDUnknownBlockType didFinishLoad; // @synthesize didFinishLoad=_didFinishLoad;
+- (void).cxx_destruct;
 - (void)webView:(id)arg1 decidePolicyForNavigationAction:(id)arg2 decisionHandler:(CDUnknownBlockType)arg3;
 - (void)webView:(id)arg1 didFailNavigation:(id)arg2 withError:(id)arg3;
 - (void)webView:(id)arg1 didFinishNavigation:(id)arg2;

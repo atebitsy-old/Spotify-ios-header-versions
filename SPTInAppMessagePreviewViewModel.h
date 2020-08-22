@@ -27,7 +27,7 @@
 @property(readonly, nonatomic) id <SPTAlertInterface> alertInterface; // @synthesize alertInterface=_alertInterface;
 - (void)presentAlertWithTitle:(id)arg1 message:(id)arg2;
 - (id)getURIForPageView:(id)arg1;
-- (void)fetchMessageForCreativeID:(id)arg1 triggerType:(id)arg2;
+- (void)fetchMessageForCreativeID:(id)arg1 triggerType:(id)arg2 isRelayCreative:(_Bool)arg3;
 - (void)player:(id)arg1 stateDidChange:(id)arg2 fromState:(id)arg3;
 - (void)currentPageViewUpdated:(id)arg1;
 - (id)initWithMessageRequester:(id)arg1 alertInterface:(id)arg2;

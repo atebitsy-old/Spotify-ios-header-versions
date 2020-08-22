@@ -6,7 +6,9 @@
 
 #import "_TtC23YourLibraryXFeatureImpl43YourLibrarySortingFilteringPickerController.h"
 
-@interface _TtC23YourLibraryXFeatureImpl43YourLibrarySortingFilteringPickerController (YourLibraryXFeatureImpl)
+#import "SPTSortingFilteringPickerDelegate-Protocol.h"
+
+@interface _TtC23YourLibraryXFeatureImpl43YourLibrarySortingFilteringPickerController (YourLibraryXFeatureImpl) <SPTSortingFilteringPickerDelegate>
 - (void)sortingFilteringPicker:(id)arg1 deselectedFilterRule:(id)arg2;
 - (void)sortingFilteringPicker:(id)arg1 selectedFilterRule:(id)arg2;
 - (void)didCancelSortingFilteringPicker:(id)arg1 reason:(unsigned long long)arg2;

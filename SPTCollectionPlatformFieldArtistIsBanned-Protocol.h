@@ -7,6 +7,6 @@
 #import "SPTCollectionPlatformDataLoaderField-Protocol.h"
 
 @protocol SPTCollectionPlatformFieldArtistIsBanned <SPTCollectionPlatformDataLoaderField>
-@property(nonatomic, readonly) _Bool isBanned;
+@property(readonly, nonatomic) _Bool isBanned;
 @end
 

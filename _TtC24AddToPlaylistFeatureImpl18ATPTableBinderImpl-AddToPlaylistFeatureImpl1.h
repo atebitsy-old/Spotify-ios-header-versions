@@ -6,9 +6,7 @@
 
 #import "_TtC24AddToPlaylistFeatureImpl18ATPTableBinderImpl.h"
 
-#import "UITableViewDelegate-Protocol.h"
-
-@interface _TtC24AddToPlaylistFeatureImpl18ATPTableBinderImpl (AddToPlaylistFeatureImpl1) <UITableViewDelegate>
+@interface _TtC24AddToPlaylistFeatureImpl18ATPTableBinderImpl (AddToPlaylistFeatureImpl1)
 - (id)tableView:(id)arg1 viewForHeaderInSection:(long long)arg2;
 - (void)tableView:(id)arg1 didEndDisplayingCell:(id)arg2 forRowAtIndexPath:(id)arg3;
 - (void)tableView:(id)arg1 willDisplayCell:(id)arg2 forRowAtIndexPath:(id)arg3;

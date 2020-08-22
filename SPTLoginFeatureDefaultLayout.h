@@ -16,11 +16,9 @@
     id <SPTLoginWelcomeViewHeader> _header;
     SPTLoginOptionArray *_loginOptionArray;
     NSString *_layoutName;
-    NSString *_layoutMLName;
 }
 
 - (void).cxx_destruct;
-@property(readonly, copy, nonatomic) NSString *layoutMLName; // @synthesize layoutMLName=_layoutMLName;
 @property(readonly, copy, nonatomic) NSString *layoutName; // @synthesize layoutName=_layoutName;
 @property(readonly, nonatomic) SPTLoginOptionArray *loginOptionArray; // @synthesize loginOptionArray=_loginOptionArray;
 @property(readonly, nonatomic) id <SPTLoginWelcomeViewHeader> header; // @synthesize header=_header;
@@ -28,7 +26,7 @@
 - (id)signupButtonViewModel;
 - (id)createButtons;
 - (id)buildWelcomeModel;
-- (id)initWithHeader:(id)arg1 loginOptions:(id)arg2 layoutName:(id)arg3 layoutMLName:(id)arg4;
+- (id)initWithHeader:(id)arg1 loginOptions:(id)arg2 layoutName:(id)arg3;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

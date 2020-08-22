@@ -17,12 +17,12 @@
     NSString *_overrideVersionPart;
     unsigned long long _expectingResults;
     NSOperationQueue *_delegateQueue;
-    FBSDKURLSession *_session;
     FBSDKGraphRequestMetadata *_recoveringRequestMetadata;
     FBSDKGraphErrorRecoveryProcessor *_errorRecoveryProcessor;
     id <FBSDKGraphRequestConnectionDelegate> _delegate;
     double _timeout;
     NSHTTPURLResponse *_urlResponse;
+    FBSDKURLSession *_session;
     NSMutableArray *_requests;
     unsigned long long _state;
     FBSDKLogger *_logger;
@@ -32,14 +32,15 @@
 + (id)userAgent;
 + (double)defaultConnectionTimeout;
 + (void)setDefaultConnectionTimeout:(double)arg1;
-- (void).cxx_destruct;
 @property(nonatomic) unsigned long long requestStartTime; // @synthesize requestStartTime=_requestStartTime;
 @property(retain, nonatomic) FBSDKLogger *logger; // @synthesize logger=_logger;
 @property(nonatomic) unsigned long long state; // @synthesize state=_state;
 @property(retain, nonatomic) NSMutableArray *requests; // @synthesize requests=_requests;
+@property(retain, nonatomic) FBSDKURLSession *session; // @synthesize session=_session;
 @property(readonly, retain, nonatomic) NSHTTPURLResponse *urlResponse; // @synthesize urlResponse=_urlResponse;
 @property(nonatomic) double timeout; // @synthesize timeout=_timeout;
 @property(nonatomic) __weak id <FBSDKGraphRequestConnectionDelegate> delegate; // @synthesize delegate=_delegate;
+- (void).cxx_destruct;
 @property(readonly, copy) NSString *description;
 - (void)processorDidAttemptRecovery:(id)arg1 didRecover:(_Bool)arg2 error:(id)arg3;
 - (void)URLSession:(id)arg1 task:(id)arg2 didSendBodyData:(long long)arg3 totalBytesSent:(long long)arg4 totalBytesExpectedToSend:(long long)arg5;
@@ -67,7 +68,6 @@
 - (void)appendJSONRequests:(id)arg1 toBody:(id)arg2 andNameAttachments:(id)arg3 logger:(id)arg4;
 - (void)appendAttachments:(id)arg1 toBody:(id)arg2 addFormData:(_Bool)arg3 logger:(id)arg4;
 - (void)addRequest:(id)arg1 toBatch:(id)arg2 attachments:(id)arg3 batchToken:(id)arg4;
-- (id)session;
 @property(retain, nonatomic) NSOperationQueue *delegateQueue;
 - (void)start;
 - (void)overrideGraphAPIVersion:(id)arg1;

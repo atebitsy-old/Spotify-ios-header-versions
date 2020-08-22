@@ -15,13 +15,12 @@
     NSArray *_components;
 }
 
-+ (id)factoryWithPosition:(long long)arg1 uri:(id)arg2 components:(id)arg3;
++ (id)factoryWithIdentifier:(id)arg1 position:(long long)arg2 uri:(id)arg3 components:(id)arg4;
 - (void).cxx_destruct;
 @property(copy, nonatomic) NSArray *components; // @synthesize components=_components;
 - (id)hitUiNavigateWithDestination:(id)arg1;
-- (id)impression;
 - (id)_location;
-- (id)initWithPosition:(long long)arg1 uri:(id)arg2 components:(id)arg3;
+- (id)initWithIdentifier:(id)arg1 position:(long long)arg2 uri:(id)arg3 components:(id)arg4;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

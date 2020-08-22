@@ -17,14 +17,12 @@
     SPTPersistentCache *_persistentCache;
     NSString *_persistentCacheKey;
     unsigned long long _projectionMapTTL;
-    CDUnknownBlockType _configurationUpdatedCallback;
     NSDictionary *_projectionMap;
 }
 
 + (id)preferredCacheOptions;
 - (void).cxx_destruct;
 @property(retain) NSDictionary *projectionMap; // @synthesize projectionMap=_projectionMap;
-@property(readonly, copy, nonatomic) CDUnknownBlockType configurationUpdatedCallback; // @synthesize configurationUpdatedCallback=_configurationUpdatedCallback;
 @property(readonly, nonatomic) unsigned long long projectionMapTTL; // @synthesize projectionMapTTL=_projectionMapTTL;
 @property(readonly, copy, nonatomic) NSString *persistentCacheKey; // @synthesize persistentCacheKey=_persistentCacheKey;
 @property(readonly, nonatomic) SPTPersistentCache *persistentCache; // @synthesize persistentCache=_persistentCache;
@@ -32,10 +30,9 @@
 - (void)purgeCachedProjectionMap;
 - (void)cacheResponse:(id)arg1;
 - (void)loadCachedProjectionMap;
-- (void)notifyProjectionMapUpdated:(id)arg1;
 - (id)provideProjectionMap;
 - (void)refreshProjectionMap;
-- (id)initWithTransport:(id)arg1 persistentCache:(id)arg2 userIdentifier:(id)arg3 projectionMapTTL:(unsigned long long)arg4 configurationUpdatedCallback:(CDUnknownBlockType)arg5;
+- (id)initWithTransport:(id)arg1 persistentCache:(id)arg2 userIdentifier:(id)arg3 projectionMapTTL:(unsigned long long)arg4;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

@@ -8,8 +8,8 @@
 
 #import "SPTPodcastViewModelSection-Protocol.h"
 
-@class NSAttributedString, NSString;
-@protocol SPTPodcast, SPTPodcastTestManager, SPTPodcastUBILogger, _TtP27PodcastHTMLComponentFeature20SPTPodcastHTMLParser_;
+@class NSAttributedString, NSString, SPTPodcast;
+@protocol SPTPodcastTestManager, SPTPodcastUBILogger, _TtP27PodcastHTMLComponentFeature20SPTPodcastHTMLParser_;
 
 @interface SPTPodcastDescriptionViewModel : NSObject <SPTPodcastViewModelSection>
 {
@@ -20,11 +20,11 @@
     id <_TtP27PodcastHTMLComponentFeature20SPTPodcastHTMLParser_> _podcastHTMLParser;
     id <SPTPodcastTestManager> _podcastTestManager;
     id <SPTPodcastUBILogger> _logger;
-    id <SPTPodcast> _podcast;
+    SPTPodcast *_podcast;
 }
 
 - (void).cxx_destruct;
-@property(retain, nonatomic) id <SPTPodcast> podcast; // @synthesize podcast=_podcast;
+@property(retain, nonatomic) SPTPodcast *podcast; // @synthesize podcast=_podcast;
 @property(retain, nonatomic) id <SPTPodcastUBILogger> logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic) id <SPTPodcastTestManager> podcastTestManager; // @synthesize podcastTestManager=_podcastTestManager;
 @property(readonly, nonatomic) id <_TtP27PodcastHTMLComponentFeature20SPTPodcastHTMLParser_> podcastHTMLParser; // @synthesize podcastHTMLParser=_podcastHTMLParser;

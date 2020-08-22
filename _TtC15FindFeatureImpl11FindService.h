@@ -20,6 +20,8 @@
     // Error parsing type: , name: uriDispatchService
     // Error parsing type: , name: ubiService
     // Error parsing type: , name: performanceMetricsService
+    // Error parsing type: , name: remoteConfigurationService
+    // Error parsing type: , name: properties
 }
 
 + (id)serviceIdentifier;

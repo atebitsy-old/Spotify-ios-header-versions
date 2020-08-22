@@ -13,9 +13,7 @@
 + (id)graphAPIDebugParamValue;
 + (void)updateGraphAPIDebugBehavior;
 + (void)_logIfSDKSettingsChanged;
-+ (void)_logWarnings;
-+ (_Bool)isDataProcessingRestricted;
-+ (id)dataProcessingOptions;
++ (void)logWarnings;
 + (id)appEventSettingsForUserDefaultsKey:(id)arg1 defaultValue:(id)arg2;
 + (id)appEventSettingsForPlistKey:(id)arg1 defaultValue:(id)arg2;
 + (id)graphAPIVersion;
@@ -29,8 +27,6 @@
 + (void)disableLoggingBehavior:(id)arg1;
 + (void)enableLoggingBehavior:(id)arg1;
 + (void)setLoggingBehaviors:(id)arg1;
-+ (void)setDataProcessingOptions:(id)arg1 country:(int)arg2 state:(int)arg3;
-+ (void)setDataProcessingOptions:(id)arg1;
 + (id)loggingBehaviors;
 + (void)setLimitEventAndDataUsage:(_Bool)arg1;
 + (_Bool)shouldLimitEventAndDataUsage;

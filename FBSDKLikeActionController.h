@@ -42,11 +42,11 @@
 + (void)_accessTokenDidChangeNotification:(id)arg1;
 + (void)initialize;
 + (_Bool)isDisabled;
-- (void).cxx_destruct;
 @property(readonly, nonatomic) _Bool objectIsLiked; // @synthesize objectIsLiked=_objectIsLiked;
 @property(readonly, nonatomic) unsigned long long objectType; // @synthesize objectType=_objectType;
 @property(readonly, copy, nonatomic) NSString *objectID; // @synthesize objectID=_objectID;
 @property(readonly, copy, nonatomic) NSDate *lastUpdateTime; // @synthesize lastUpdateTime=_lastUpdateTime;
+- (void).cxx_destruct;
 - (_Bool)_useOGLike;
 - (void)_updateWithObjectIsLiked:(long long)arg1 likeCountStringWithLike:(id)arg2 likeCountStringWithoutLike:(id)arg3 socialSentenceWithLike:(id)arg4 socialSentenceWithoutLike:(id)arg5 unlikeToken:(id)arg6 animated:(_Bool)arg7 deferred:(_Bool)arg8;
 - (void)_setExecuting:(_Bool)arg1 forKey:(id)arg2;

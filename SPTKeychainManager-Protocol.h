@@ -10,8 +10,8 @@
 
 @protocol SPTKeychainManager <NSObject>
 - (NSError *)deleteAllData;
-- (NSError *)deleteObjectForDomain:(NSString *)arg1 andKey:(NSString *)arg2 accessGroup:(NSString *)arg3 accessAttr:(NSString *)arg4 synchronizable:(_Bool)arg5;
-- (NSError *)deleteStringForDomain:(NSString *)arg1 andKey:(NSString *)arg2 accessGroup:(NSString *)arg3 accessAttr:(NSString *)arg4;
+- (_Bool)deleteObjectForDomain:(NSString *)arg1 andKey:(NSString *)arg2 accessGroup:(NSString *)arg3 accessAttr:(NSString *)arg4 synchronizable:(_Bool)arg5;
+- (_Bool)deleteStringForDomain:(NSString *)arg1 andKey:(NSString *)arg2 accessGroup:(NSString *)arg3 accessAttr:(NSString *)arg4;
 - (NSError *)setData:(NSData *)arg1 forDomain:(NSString *)arg2 andKey:(NSString *)arg3 accessGroup:(NSString *)arg4 accessAttr:(NSString *)arg5 synchronizable:(_Bool)arg6;
 - (NSError *)setString:(NSString *)arg1 forDomain:(NSString *)arg2 andKey:(NSString *)arg3 accessGroup:(NSString *)arg4 accessAttr:(NSString *)arg5;
 - (NSData *)dataForDomain:(NSString *)arg1 andKey:(NSString *)arg2 accessGroup:(NSString *)arg3 accessAttr:(NSString *)arg4 synchronizable:(_Bool)arg5;

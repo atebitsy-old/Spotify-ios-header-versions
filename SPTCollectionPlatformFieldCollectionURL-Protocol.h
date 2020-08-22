@@ -9,6 +9,6 @@
 @class NSURL;
 
 @protocol SPTCollectionPlatformFieldCollectionURL <SPTCollectionPlatformDataLoaderField>
-@property(nonatomic, readonly) NSURL *collectionURL;
+@property(readonly, nonatomic) NSURL *collectionURL;
 @end
 

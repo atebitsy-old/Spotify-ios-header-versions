@@ -6,13 +6,12 @@
 
 #import "NSObject-Protocol.h"
 
-@class UIApplication;
-@protocol SPTSpotifyApplication;
+@class SpotifyApplication;
 
 @protocol SpotifyApplicationRemoteControlDelegate <NSObject>
-- (_Bool)spotifyApplication:(UIApplication<SPTSpotifyApplication> *)arg1 handleRemoteControlEventOfSubtype:(long long)arg2;
+- (_Bool)spotifyApplication:(SpotifyApplication *)arg1 handleRemoteControlEventOfSubtype:(long long)arg2;
 
 @optional
-- (void)spotifyApplication:(UIApplication<SPTSpotifyApplication> *)arg1 setRemoteControlEnabled:(_Bool)arg2;
+- (void)spotifyApplication:(SpotifyApplication *)arg1 setRemoteControlEnabled:(_Bool)arg2;
 @end
 

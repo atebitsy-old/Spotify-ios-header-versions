@@ -8,7 +8,7 @@
 
 #import "SPTAccessoryManagerSessionService-Protocol.h"
 
-@class NSString, SPTAccessoryActionLoggerImplementation, SPTAccessoryAudioRouteLogger, SPTAccessoryManagerAppServiceImplementation, SPTAllocationContext;
+@class NSString, SPTAccessoryActionLoggerImplementation, SPTAccessoryManagerAppServiceImplementation, SPTAllocationContext;
 @protocol GaiaFeature, SPTEventSenderService, SPTPlayerFeature, SPTRemoteConfigurationResolver, SPTRemoteConfigurationService, SPTSessionService, SPTUBIService;
 
 @interface SPTAccessoryManagerSessionServiceImplementation : NSObject <SPTAccessoryManagerSessionService>
@@ -22,12 +22,10 @@
     id <SPTEventSenderService> _eventSenderService;
     id <SPTRemoteConfigurationResolver> _remoteConfigurationResolver;
     SPTAccessoryActionLoggerImplementation *_actionLogger;
-    SPTAccessoryAudioRouteLogger *_audioRouteLogger;
 }
 
 + (id)serviceIdentifier;
 - (void).cxx_destruct;
-@property(readonly, nonatomic) SPTAccessoryAudioRouteLogger *audioRouteLogger; // @synthesize audioRouteLogger=_audioRouteLogger;
 @property(readonly, nonatomic) SPTAccessoryActionLoggerImplementation *actionLogger; // @synthesize actionLogger=_actionLogger;
 @property(readonly, nonatomic) id <SPTRemoteConfigurationResolver> remoteConfigurationResolver; // @synthesize remoteConfigurationResolver=_remoteConfigurationResolver;
 @property(readonly, nonatomic) __weak id <SPTEventSenderService> eventSenderService; // @synthesize eventSenderService=_eventSenderService;

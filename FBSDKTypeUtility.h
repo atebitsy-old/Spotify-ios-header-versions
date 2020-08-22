@@ -11,24 +11,14 @@
 }
 
 + (id)_objectValue:(id)arg1 ofClass:(Class)arg2;
-+ (id)JSONObjectWithData:(id)arg1 options:(unsigned long long)arg2 error:(id *)arg3;
-+ (id)dataWithJSONObject:(id)arg1 options:(unsigned long long)arg2 error:(id *)arg3;
-+ (_Bool)isValidJSONObject:(id)arg1;
 + (id)URLValue:(id)arg1;
 + (unsigned long long)unsignedIntegerValue:(id)arg1;
 + (double)timeIntervalValue:(id)arg1;
 + (id)stringValue:(id)arg1;
 + (id)objectValue:(id)arg1;
 + (long long)integerValue:(id)arg1;
-+ (id)numberValue:(id)arg1;
-+ (void)dictionary:(id)arg1 enumerateKeysAndObjectsUsingBlock:(CDUnknownBlockType)arg2;
-+ (void)dictionary:(id)arg1 setObject:(id)arg2 forKey:(id)arg3;
-+ (id)dictionary:(id)arg1 objectForKey:(id)arg2 ofType:(Class)arg3;
 + (id)dictionaryValue:(id)arg1;
 + (_Bool)boolValue:(id)arg1;
-+ (void)array:(id)arg1 addObject:(id)arg2 atIndex:(unsigned long long)arg3;
-+ (void)array:(id)arg1 addObject:(id)arg2;
-+ (id)array:(id)arg1 objectAtIndex:(unsigned long long)arg2;
 + (id)arrayValue:(id)arg1;
 
 @end

@@ -9,7 +9,7 @@
 #import "INSSchedulerDataSource-Protocol.h"
 
 @class NSDate, NSString;
-@protocol INSEventEnvelopeFactoryProtocol, INSEventSenderStatsProviderProtocol, INSEventSequenceIDProviderProtocol, INSInstallationIdProtocol, INSPersistentStore;
+@protocol INSEventEnvelopeFactoryProtocol, INSEventSenderStatsProviderProtocol, INSEventSequenceIDProviderProtocol, INSPersistentStore;
 
 @interface INSEventSenderStatsDataSource : NSObject <INSSchedulerDataSource>
 {
@@ -19,11 +19,9 @@
     id <INSEventEnvelopeFactoryProtocol> _envelopeFactory;
     id <INSEventSequenceIDProviderProtocol> _sequenceIdProvider;
     id <INSPersistentStore> _persistentStore;
-    id <INSInstallationIdProtocol> _installIdProvider;
 }
 
 - (void).cxx_destruct;
-@property(retain, nonatomic) id <INSInstallationIdProtocol> installIdProvider; // @synthesize installIdProvider=_installIdProvider;
 @property(retain, nonatomic) id <INSPersistentStore> persistentStore; // @synthesize persistentStore=_persistentStore;
 @property(retain, nonatomic) id <INSEventSequenceIDProviderProtocol> sequenceIdProvider; // @synthesize sequenceIdProvider=_sequenceIdProvider;
 @property(retain, nonatomic) id <INSEventEnvelopeFactoryProtocol> envelopeFactory; // @synthesize envelopeFactory=_envelopeFactory;
@@ -32,7 +30,7 @@
 @property(retain, nonatomic) NSDate *lastDate; // @synthesize lastDate=_lastDate;
 - (_Bool)shouldSendStatsEvent;
 - (void)getAllEventEnvelopesOnPrivateMOCForOwner:(id)arg1 outAuthEnvelopes:(id)arg2 outNonAuthEnvelopes:(id)arg3;
-- (id)initWithInterval:(double)arg1 eventSenderStatsProvider:(id)arg2 envelopeFactory:(id)arg3 sequenceIdProvider:(id)arg4 persistentStore:(id)arg5 installIdProvider:(id)arg6;
+- (id)initWithInterval:(double)arg1 eventSenderStatsProvider:(id)arg2 envelopeFactory:(id)arg3 sequenceIdProvider:(id)arg4 persistentStore:(id)arg5;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

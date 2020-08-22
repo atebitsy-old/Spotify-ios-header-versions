@@ -9,7 +9,6 @@
 @interface _TtC23YourLibraryXFeatureImpl35YourLibraryOnboardingViewController : SPViewController
 {
     // Error parsing type: , name: style
-    // Error parsing type: , name: activate
     // Error parsing type: , name: $__lazy_storage_$_headerLabel
     // Error parsing type: , name: $__lazy_storage_$_firstShowcaseLabel
     // Error parsing type: , name: $__lazy_storage_$_firstShowcaseImageView

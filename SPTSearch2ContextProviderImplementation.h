@@ -63,7 +63,7 @@
 @property(readonly, nonatomic) id <SPTHubsRendererFactory> hubsRendererFactory; // @synthesize hubsRendererFactory=_hubsRendererFactory;
 @property(readonly, nonatomic) id <SPTSearch2URLProviding> urlProvider; // @synthesize urlProvider=_urlProvider;
 - (id)makeProtobufResponseParserWithQuery:(id)arg1 isDrillDown:(_Bool)arg2;
-- (id)makeAssistedCurationParserWithQuery:(id)arg1;
+- (id)makeAssistedCurationParser;
 - (id)makePostProcessContentOperations;
 - (id)makeHUBS2MigrationContentOperation;
 - (id)makeConnectivityMonitor;

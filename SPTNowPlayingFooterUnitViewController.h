@@ -13,14 +13,12 @@
 
 @interface SPTNowPlayingFooterUnitViewController : UIViewController <SPTNowPlayingContainedViewController>
 {
-    _Bool _sideBarMode;
     UIViewController *_leftButtonViewController;
     UIViewController *_rightButtonViewController;
     SPTTheme *_theme;
 }
 
 - (void).cxx_destruct;
-@property(readonly, nonatomic) _Bool sideBarMode; // @synthesize sideBarMode=_sideBarMode;
 @property(readonly, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
 @property(retain, nonatomic) UIViewController *rightButtonViewController; // @synthesize rightButtonViewController=_rightButtonViewController;
 @property(retain, nonatomic) UIViewController *leftButtonViewController; // @synthesize leftButtonViewController=_leftButtonViewController;
@@ -32,7 +30,7 @@
 - (void)setupExtraConstraintsIfNeeded;
 - (void)addSubViewController:(id)arg1;
 - (void)viewDidLoad;
-- (id)initWithLeftButtonViewController:(id)arg1 rightButtonViewController:(id)arg2 theme:(id)arg3 sideBarMode:(_Bool)arg4;
+- (id)initWithLeftButtonViewController:(id)arg1 rightButtonViewController:(id)arg2 theme:(id)arg3;
 
 // Remaining properties
 @property(nonatomic) __weak UIViewController<SPTNowPlayingContainingViewController> *container;

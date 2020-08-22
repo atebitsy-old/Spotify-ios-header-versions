@@ -41,7 +41,6 @@
     UITableViewCell *_featuredContentCell;
     UITableViewCell *_trackListContentCell;
     GLUEEntityRowTableViewCell *_podcastCell;
-    UITableViewCell *_pollCell;
     UITableViewCell *_recommendationsCell;
     UIBarButtonItem *_contextMenuBarButtonItem;
     id <SPTPodcastContextMenuProvider> _podcastContextMenuProvider;
@@ -52,7 +51,6 @@
     UIViewController *_coverArt;
     UIViewController *_seeAll;
     UIViewController *_audioPlus;
-    UIViewController *_pollViewController;
     UIViewController<SPTPodcastRecommendationsViewController> *_recommendations;
     UIViewController<SPTPodcastEpisodeFeaturedContentViewController> *_featuredContent;
     id <SPTMetaViewController> _metaViewController;
@@ -78,7 +76,6 @@
 @property(retain, nonatomic) id <SPTMetaViewController> metaViewController; // @synthesize metaViewController=_metaViewController;
 @property(retain, nonatomic) UIViewController<SPTPodcastEpisodeFeaturedContentViewController> *featuredContent; // @synthesize featuredContent=_featuredContent;
 @property(retain, nonatomic) UIViewController<SPTPodcastRecommendationsViewController> *recommendations; // @synthesize recommendations=_recommendations;
-@property(retain, nonatomic) UIViewController *pollViewController; // @synthesize pollViewController=_pollViewController;
 @property(retain, nonatomic) UIViewController *audioPlus; // @synthesize audioPlus=_audioPlus;
 @property(retain, nonatomic) UIViewController *seeAll; // @synthesize seeAll=_seeAll;
 @property(retain, nonatomic) UIViewController *coverArt; // @synthesize coverArt=_coverArt;
@@ -89,7 +86,6 @@
 @property(retain, nonatomic) id <SPTPodcastContextMenuProvider> podcastContextMenuProvider; // @synthesize podcastContextMenuProvider=_podcastContextMenuProvider;
 @property(retain, nonatomic) UIBarButtonItem *contextMenuBarButtonItem; // @synthesize contextMenuBarButtonItem=_contextMenuBarButtonItem;
 @property(retain, nonatomic) UITableViewCell *recommendationsCell; // @synthesize recommendationsCell=_recommendationsCell;
-@property(retain, nonatomic) UITableViewCell *pollCell; // @synthesize pollCell=_pollCell;
 @property(retain, nonatomic) GLUEEntityRowTableViewCell *podcastCell; // @synthesize podcastCell=_podcastCell;
 @property(retain, nonatomic) UITableViewCell *trackListContentCell; // @synthesize trackListContentCell=_trackListContentCell;
 @property(retain, nonatomic) UITableViewCell *featuredContentCell; // @synthesize featuredContentCell=_featuredContentCell;
@@ -128,7 +124,6 @@
 - (void)episodeDescriptionDidExpand;
 - (void)viewModelUpdatedPlaybackState:(id)arg1;
 - (void)viewModel:(id)arg1 didUpdateWithError:(id)arg2;
-- (void)reloadDataWithViewModel:(id)arg1 error:(id)arg2;
 - (void)removeViewControllerFromCell:(id)arg1;
 - (void)addViewController:(id)arg1 toCell:(id)arg2;
 - (_Bool)isStandaloneComponentEnabledForSectionIndex:(long long)arg1;
@@ -155,7 +150,7 @@
 - (void)loadComponentViews;
 - (void)viewDidLoad;
 - (void)dealloc;
-- (id)initWithEpisodeViewModel:(id)arg1 imageLoaderFactory:(id)arg2 modalPresentationController:(id)arg3 podcastContextMenuProvider:(id)arg4 shareFeature:(id)arg5 logger:(id)arg6 viewLogger:(id)arg7 actionRow:(id)arg8 descriptionView:(id)arg9 coverArt:(id)arg10 seeAll:(id)arg11 recommendations:(id)arg12 featuredContent:(id)arg13 trackList:(id)arg14 audioPlus:(id)arg15 poll:(id)arg16 buttonsFactory:(id)arg17 featureProperties:(id)arg18 metaViewController:(id)arg19 htmlParser:(id)arg20;
+- (id)initWithEpisodeViewModel:(id)arg1 imageLoaderFactory:(id)arg2 modalPresentationController:(id)arg3 podcastContextMenuProvider:(id)arg4 shareFeature:(id)arg5 logger:(id)arg6 viewLogger:(id)arg7 actionRow:(id)arg8 descriptionView:(id)arg9 coverArt:(id)arg10 seeAll:(id)arg11 recommendations:(id)arg12 featuredContent:(id)arg13 trackList:(id)arg14 audioPlus:(id)arg15 buttonsFactory:(id)arg16 featureProperties:(id)arg17 metaViewController:(id)arg18 htmlParser:(id)arg19;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

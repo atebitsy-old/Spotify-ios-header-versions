@@ -7,6 +7,6 @@
 #import "SPTCollectionPlatformDataLoaderField-Protocol.h"
 
 @protocol SPTCollectionPlatformFieldArtistTracksCount <SPTCollectionPlatformDataLoaderField>
-@property(nonatomic, readonly) unsigned long long artistTracksCount;
+@property(readonly, nonatomic) unsigned long long artistTracksCount;
 @end
 

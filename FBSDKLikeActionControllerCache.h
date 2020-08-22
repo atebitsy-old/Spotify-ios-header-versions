@@ -17,8 +17,8 @@
 }
 
 + (_Bool)supportsSecureCoding;
-- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) NSString *accessTokenString; // @synthesize accessTokenString=_accessTokenString;
+- (void).cxx_destruct;
 - (void)_prune;
 - (void)setObject:(id)arg1 forKeyedSubscript:(id)arg2;
 - (void)resetForAccessTokenString:(id)arg1;

@@ -11,5 +11,6 @@
 @protocol SPTPodcastFollowSectionViewModelDelegate <NSObject>
 - (void)followSectionViewModelDidUpdatePlaybackState:(SPTPodcastFollowSectionViewModel *)arg1;
 - (void)followSectionViewModelDidSelectContextMenuButton:(SPTPodcastFollowSectionViewModel *)arg1 senderView:(UIView *)arg2;
+- (void)followSectionViewModelDidUpdateFollowedState:(SPTPodcastFollowSectionViewModel *)arg1;
 @end
 

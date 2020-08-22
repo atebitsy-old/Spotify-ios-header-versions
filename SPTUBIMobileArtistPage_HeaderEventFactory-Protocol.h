@@ -6,10 +6,11 @@
 
 #import "NSObject-Protocol.h"
 
+@class NSString;
 @protocol SPTUBIEventLocation, SPTUBIMobileArtistPage_Header_ShufflePlayButtonEventFactory, SPTUBIMobileArtistPage_Header_TopBarEventFactory;
 
 @protocol SPTUBIMobileArtistPage_HeaderEventFactory <NSObject>
-- (id <SPTUBIMobileArtistPage_Header_ShufflePlayButtonEventFactory>)shufflePlayButtonFactory;
+- (id <SPTUBIMobileArtistPage_Header_ShufflePlayButtonEventFactory>)shufflePlayButtonFactoryWithIdentifier:(NSString *)arg1;
 - (id <SPTUBIMobileArtistPage_Header_TopBarEventFactory>)topBarFactory;
 - (id <SPTUBIEventLocation>)_location;
 @end

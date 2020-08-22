@@ -29,7 +29,7 @@
 - (void)invalidateTimer;
 - (void)setupRefreshTimer;
 - (void)performRequestWithURL:(id)arg1 triggerPattern:(id)arg2 triggerType:(id)arg3 triggers:(id)arg4;
-- (void)fetchMessagePreviewForCreativeID:(id)arg1 triggerURI:(id)arg2;
+- (void)fetchMessagePreviewForCreativeID:(id)arg1 triggerURI:(id)arg2 isRelayCreative:(_Bool)arg3;
 - (void)fetchMessagesForTriggers:(id)arg1 triggerPattern:(id)arg2 triggerType:(id)arg3;
 - (void)fetchTriggerList;
 @property(readonly, nonatomic) id <SPTInAppMessageNetworkClientObserver> observerNotifierProxy;

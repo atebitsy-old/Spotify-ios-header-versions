@@ -9,7 +9,7 @@
 #import "SPTSharingSDKShareHandler-Protocol.h"
 
 @class NSArray, NSDictionary, NSString, SPTSharingSDKImageDownloader, SPTSharingSDKLinkGenerator;
-@protocol SPTSharingSDKDeeplinkHandler, SPTSharingSDKEntityData, SPTSharingSDKPasteboardWrapper;
+@protocol SPTSharingSDKDeeplinkHandler, SPTSharingSDKEntityData, SPTSharingSDKPasteboardHandler;
 
 @interface SPTSharingSDKStoriesShareHandler : NSObject <SPTSharingSDKShareHandler>
 {
@@ -18,7 +18,7 @@
     SPTSharingSDKImageDownloader *_imageDownloader;
     SPTSharingSDKLinkGenerator *_linkGenerator;
     id <SPTSharingSDKDeeplinkHandler> _deeplinkHandler;
-    id <SPTSharingSDKPasteboardWrapper> _pasteboardWrapper;
+    id <SPTSharingSDKPasteboardHandler> _pasteboardHandler;
     NSString *_stickerImagePath;
     NSDictionary *_extraPasteboardItems;
     NSString *_pasteboardContentURLKey;
@@ -48,7 +48,7 @@
 @property(readonly, nonatomic) NSString *pasteboardContentURLKey; // @synthesize pasteboardContentURLKey=_pasteboardContentURLKey;
 @property(readonly, nonatomic) NSDictionary *extraPasteboardItems; // @synthesize extraPasteboardItems=_extraPasteboardItems;
 @property(readonly, nonatomic) NSString *stickerImagePath; // @synthesize stickerImagePath=_stickerImagePath;
-@property(readonly, nonatomic) __weak id <SPTSharingSDKPasteboardWrapper> pasteboardWrapper; // @synthesize pasteboardWrapper=_pasteboardWrapper;
+@property(readonly, nonatomic) __weak id <SPTSharingSDKPasteboardHandler> pasteboardHandler; // @synthesize pasteboardHandler=_pasteboardHandler;
 @property(readonly, nonatomic) __weak id <SPTSharingSDKDeeplinkHandler> deeplinkHandler; // @synthesize deeplinkHandler=_deeplinkHandler;
 @property(readonly, nonatomic) __weak SPTSharingSDKLinkGenerator *linkGenerator; // @synthesize linkGenerator=_linkGenerator;
 @property(readonly, nonatomic) __weak SPTSharingSDKImageDownloader *imageDownloader; // @synthesize imageDownloader=_imageDownloader;

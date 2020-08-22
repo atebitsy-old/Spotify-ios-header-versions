@@ -26,7 +26,6 @@
 + (id)_protocolForType:(unsigned long long)arg1 scheme:(id)arg2;
 + (id)protocolMap;
 + (id)bridgeAPIRequestWithProtocolType:(unsigned long long)arg1 scheme:(id)arg2 methodName:(id)arg3 methodVersion:(id)arg4 parameters:(id)arg5 userInfo:(id)arg6;
-- (void).cxx_destruct;
 @property(readonly, nonatomic) id <FBSDKBridgeAPIProtocol> protocol; // @synthesize protocol=_protocol;
 @property(readonly, copy, nonatomic) NSDictionary *userInfo; // @synthesize userInfo=_userInfo;
 @property(readonly, copy, nonatomic) NSString *scheme; // @synthesize scheme=_scheme;
@@ -35,6 +34,7 @@
 @property(readonly, copy, nonatomic) NSString *methodVersion; // @synthesize methodVersion=_methodVersion;
 @property(readonly, copy, nonatomic) NSString *methodName; // @synthesize methodName=_methodName;
 @property(readonly, copy, nonatomic) NSString *actionID; // @synthesize actionID=_actionID;
+- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 - (id)requestURL:(id *)arg1;
 - (id)initWithProtocol:(id)arg1 protocolType:(unsigned long long)arg2 scheme:(id)arg3 methodName:(id)arg4 methodVersion:(id)arg5 parameters:(id)arg6 userInfo:(id)arg7;

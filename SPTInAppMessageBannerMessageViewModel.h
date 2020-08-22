@@ -11,6 +11,7 @@
 
 @interface SPTInAppMessageBannerMessageViewModel : NSObject
 {
+    _Bool _QATool;
     id <SPTInAppMessageBannerMessageWebViewContentDelegate> _delegate;
     WKWebView *_webview;
     SPTInAppMessageBannerMessage *_bannerMessage;
@@ -28,6 +29,7 @@
 @property(retain, nonatomic) SPTInAppMessageServiceLogger *serviceLogger; // @synthesize serviceLogger=_serviceLogger;
 @property(retain, nonatomic) SPTInAppMessageActionFactory *actionFactory; // @synthesize actionFactory=_actionFactory;
 @property(retain, nonatomic) SPTInAppMessageScriptMessageHandler *messageHandler; // @synthesize messageHandler=_messageHandler;
+@property(nonatomic, getter=isQATool) _Bool QATool; // @synthesize QATool=_QATool;
 @property(retain, nonatomic) SPTInAppMessageTrigger *trigger; // @synthesize trigger=_trigger;
 @property(nonatomic) double bannerHeight; // @synthesize bannerHeight=_bannerHeight;
 @property(nonatomic) double presentationStartTime; // @synthesize presentationStartTime=_presentationStartTime;

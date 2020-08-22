@@ -10,6 +10,7 @@
 {
     // Error parsing type: , name: footerView
     // Error parsing type: , name: voteAction
+    // Error parsing type: , name: doneAction
 }
 
 @end

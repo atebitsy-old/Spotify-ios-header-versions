@@ -19,7 +19,6 @@
     _Bool _podcastShowPageHtmlDescriptionEnabled;
     _Bool _podcastDataAccessLayerEnabledForExternalFeatures;
     _Bool _podcastTopicsInShowRequestEnabled;
-    _Bool _podcastShowPageLoaderEnabled;
     unsigned long long _followShowConfirmationOverride;
     unsigned long long _unfollowShowConfirmationOverride;
     unsigned long long _podcastQuotes;
@@ -35,7 +34,6 @@
 @property(readonly, nonatomic) unsigned long long podcastQuotes; // @synthesize podcastQuotes=_podcastQuotes;
 @property(readonly, nonatomic) unsigned long long unfollowShowConfirmationOverride; // @synthesize unfollowShowConfirmationOverride=_unfollowShowConfirmationOverride;
 @property(readonly, nonatomic) unsigned long long followShowConfirmationOverride; // @synthesize followShowConfirmationOverride=_followShowConfirmationOverride;
-@property(readonly, nonatomic) _Bool podcastShowPageLoaderEnabled; // @synthesize podcastShowPageLoaderEnabled=_podcastShowPageLoaderEnabled;
 @property(readonly, nonatomic) _Bool podcastTopicsInShowRequestEnabled; // @synthesize podcastTopicsInShowRequestEnabled=_podcastTopicsInShowRequestEnabled;
 @property(readonly, nonatomic) _Bool podcastDataAccessLayerEnabledForExternalFeatures; // @synthesize podcastDataAccessLayerEnabledForExternalFeatures=_podcastDataAccessLayerEnabledForExternalFeatures;
 @property(readonly, nonatomic) _Bool podcastShowPageHtmlDescriptionEnabled; // @synthesize podcastShowPageHtmlDescriptionEnabled=_podcastShowPageHtmlDescriptionEnabled;

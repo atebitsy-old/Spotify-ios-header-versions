@@ -17,7 +17,6 @@
 
 @interface SPTNowPlayingDurationUnitViewController : UIViewController <SPTNowPlayingSliderV2DataSource, SPTNowPlayingDurationViewV2DataSource, SPTNowPlayingDurationViewV2Delegate, SPTNowPlayingContainedViewController, SPTNowPlayingDurationUnitViewModelDelegate>
 {
-    _Bool _sideBarMode;
     _Bool _hasShownLabelsAfterTrackChange;
     SPTTheme *_theme;
     SPTNowPlayingDurationUnitViewModelImplementation *_viewModel;
@@ -31,12 +30,9 @@
 @property(nonatomic) _Bool hasShownLabelsAfterTrackChange; // @synthesize hasShownLabelsAfterTrackChange=_hasShownLabelsAfterTrackChange;
 @property(readonly, nonatomic) SPTNowPlayingDurationUnitViewModelImplementation *viewModel; // @synthesize viewModel=_viewModel;
 @property(readonly, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
-@property(readonly, nonatomic) _Bool sideBarMode; // @synthesize sideBarMode=_sideBarMode;
 - (void)trackMetadataDidFinishUpdating;
 - (void)trackMetadataDidMove:(_Bool)arg1;
 - (void)trackPositionDidChange;
-- (void)hideLabels;
-- (void)hideLabelsAfterTrackChangeTime;
 - (void)updateLabelsVisibility;
 - (void)hideLabelsAfterTemporarilyShowing;
 - (void)showLabelsTemporarily;
@@ -58,12 +54,11 @@
 - (double)viewControllerPriority;
 - (unsigned long long)leadingEdge;
 - (void)setupConstraints;
-- (void)setupDurationView;
 - (void)viewWillDisappear:(_Bool)arg1;
 - (void)viewDidAppear:(_Bool)arg1;
 - (void)viewWillAppear:(_Bool)arg1;
 - (void)viewDidLoad;
-- (id)initWithTheme:(id)arg1 animationView:(id)arg2 viewModel:(id)arg3 sideBarMode:(_Bool)arg4;
+- (id)initWithTheme:(id)arg1 animationView:(id)arg2 viewModel:(id)arg3;
 
 // Remaining properties
 @property(nonatomic) __weak UIViewController<SPTNowPlayingContainingViewController> *container;

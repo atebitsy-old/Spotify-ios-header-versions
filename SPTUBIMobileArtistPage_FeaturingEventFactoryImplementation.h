@@ -15,12 +15,13 @@
     NSArray *_components;
 }
 
-+ (id)factoryWithComponents:(id)arg1;
++ (id)factoryWithIdentifier:(id)arg1 components:(id)arg2;
 - (void).cxx_destruct;
 @property(copy, nonatomic) NSArray *components; // @synthesize components=_components;
-- (id)playlistFactoryWithPosition:(long long)arg1 uri:(id)arg2;
+- (id)impression;
+- (id)playlistFactoryWithIdentifier:(id)arg1 position:(long long)arg2 uri:(id)arg3;
 - (id)_location;
-- (id)initWithComponents:(id)arg1;
+- (id)initWithIdentifier:(id)arg1 components:(id)arg2;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

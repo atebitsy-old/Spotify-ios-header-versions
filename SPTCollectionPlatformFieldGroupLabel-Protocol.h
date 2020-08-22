@@ -9,6 +9,6 @@
 @class NSString;
 
 @protocol SPTCollectionPlatformFieldGroupLabel <SPTCollectionPlatformDataLoaderField>
-@property(nonatomic, readonly) NSString *groupLabel;
+@property(readonly, copy, nonatomic) NSString *groupLabel;
 @end
 

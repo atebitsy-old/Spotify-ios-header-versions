@@ -44,7 +44,7 @@
 @property(retain, nonatomic) INSScheduler *scheduler; // @synthesize scheduler=_scheduler;
 @property(retain, nonatomic) id <INSTransport> transport; // @synthesize transport=_transport;
 - (void)internalErrorEventOccuredWithMessage:(id)arg1;
-- (id)defaultContexts:(id)arg1 clientVersion:(id)arg2 installIdContextProvider:(id)arg3;
+- (id)defaultContexts:(id)arg1 clientVersion:(id)arg2 persistentStore:(id)arg3;
 - (void)removeEventObserver:(id)arg1;
 - (void)addEventObserver:(id)arg1;
 - (void)schedulerDidRequestBackOff;

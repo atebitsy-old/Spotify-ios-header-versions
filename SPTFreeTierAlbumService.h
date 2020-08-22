@@ -70,8 +70,6 @@
 @property(nonatomic) __weak id <SPTGLUEService> glueService; // @synthesize glueService=_glueService;
 @property(nonatomic) __weak id <SPTHubFrameworkService> hubFrameworkService; // @synthesize hubFrameworkService=_hubFrameworkService;
 @property(nonatomic) __weak id <SPTCoreService> coreService; // @synthesize coreService=_coreService;
-- (id)createBarButtonFactory;
-- (id)createAlbumUBILogger;
 - (id)persistentCacheOptions;
 @property(readonly, nonatomic) SPTPersistentCache *persistentCache; // @synthesize persistentCache=_persistentCache;
 - (id)createViewControllerForViewURI:(id)arg1 referrerIdentifier:(id)arg2 preloadedModel:(id)arg3;

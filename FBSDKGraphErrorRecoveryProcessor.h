@@ -16,8 +16,8 @@
     id <FBSDKGraphErrorRecoveryProcessorDelegate> _delegate;
 }
 
-- (void).cxx_destruct;
 @property(retain, nonatomic) id <FBSDKGraphErrorRecoveryProcessorDelegate> delegate; // @synthesize delegate=_delegate;
+- (void).cxx_destruct;
 - (void)didPresentErrorWithRecovery:(_Bool)arg1 contextInfo:(void *)arg2;
 - (void)displayAlertWithTitle:(id)arg1 message:(id)arg2 cancelButtonTitle:(id)arg3;
 - (void)displayAlertWithRecoverySuggestion:(id)arg1 recoveryOptionsTitles:(id)arg2;

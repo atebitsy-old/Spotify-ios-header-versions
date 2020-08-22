@@ -48,10 +48,8 @@
 - (void)disableNextButtonLoading;
 - (void)selectedCountryDidUpdate;
 - (void)updateSelectedCountryCodeIfCountrySelectionIsDisabled;
-@property(readonly, copy, nonatomic) NSString *phoneNumberTextFieldPlaceholder;
 - (id)callingCodeForCountryCode:(id)arg1;
 - (id)initWithModel:(id)arg1 loginStateController:(id)arg2 locale:(id)arg3 logger:(id)arg4 phoneNumberSignupUtils:(id)arg5 autofillEnabled:(_Bool)arg6;
-- (void)logUserDidUsePhoneNumberAutofill;
 - (void)logOtpRequestFailure;
 - (void)logOtpRequestSuccess;
 - (void)logUserDidEditPhoneNumber;
@@ -70,6 +68,7 @@
 @property(readonly, nonatomic) NSString *dialogInvalidPhoneNumberMessage;
 @property(readonly, nonatomic) NSString *dialogInvalidPhoneNumberTitle;
 @property(readonly, nonatomic) NSString *dialogButtonTitle;
+@property(readonly, nonatomic) NSString *phoneNumberTextFieldPlaceholder;
 @property(readonly, nonatomic) NSString *nextButtonTitle;
 @property(readonly, nonatomic) NSString *helpText;
 @property(readonly, nonatomic) NSString *title;

@@ -20,7 +20,6 @@
 @property(copy, nonatomic) NSString *currentWelcomeImageAttemptID; // @synthesize currentWelcomeImageAttemptID=_currentWelcomeImageAttemptID;
 @property(readonly, nonatomic) SPTLoginErrorLogger *errorLogger; // @synthesize errorLogger=_errorLogger;
 @property(readonly, nonatomic) id <SPTLoginLogger> logger; // @synthesize logger=_logger;
-- (void)logUserDidSeeMLComponentWithName:(id)arg1;
 - (void)resetCurrentLoggerAttemptID;
 - (void)logImageResponseWithError:(id)arg1;
 - (void)logImageInteractionWithName:(id)arg1;

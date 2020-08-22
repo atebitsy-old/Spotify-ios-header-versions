@@ -7,11 +7,12 @@
 #import <objc/NSObject.h>
 
 @class NSArray, NSHashTable;
-@protocol SPTPodcastDataLoader, SPTPodcastDataLoaderRequestToken, SPTPodcastEpisodeFactory, SPTPodcastRequestFactory, SPTYourLibraryPodcastDispatcher;
+@protocol SPTPodcastDataLoader, SPTPodcastDataLoaderRequestToken, SPTPodcastEpisodeDataParser, SPTPodcastEpisodeFactory, SPTPodcastRequestFactory, SPTYourLibraryPodcastDispatcher;
 
 @interface SPTYourLibraryPodcastUnfinishedItemsProvider : NSObject
 {
     id <SPTPodcastDataLoader> _dataLoader;
+    id <SPTPodcastEpisodeDataParser> _episodeDataParser;
     id <SPTPodcastDataLoaderRequestToken> _unfinishedEpisodesRequestToken;
     NSHashTable *_observers;
     id <SPTPodcastEpisodeFactory> _podcastEpisodeFactory;
@@ -27,15 +28,15 @@
 @property(readonly, nonatomic) id <SPTPodcastEpisodeFactory> podcastEpisodeFactory; // @synthesize podcastEpisodeFactory=_podcastEpisodeFactory;
 @property(retain, nonatomic) NSHashTable *observers; // @synthesize observers=_observers;
 @property(retain, nonatomic) id <SPTPodcastDataLoaderRequestToken> unfinishedEpisodesRequestToken; // @synthesize unfinishedEpisodesRequestToken=_unfinishedEpisodesRequestToken;
+@property(retain, nonatomic) id <SPTPodcastEpisodeDataParser> episodeDataParser; // @synthesize episodeDataParser=_episodeDataParser;
 @property(retain, nonatomic) id <SPTPodcastDataLoader> dataLoader; // @synthesize dataLoader=_dataLoader;
 - (void)removeUnfinishedItemsProviderObserver:(id)arg1;
 - (void)addUnfinishedItemsProviderObserver:(id)arg1;
 - (void)notifyObservers;
 - (void)unsubscribe;
-- (void)parseUnfinishedEpisodes:(id)arg1;
 - (void)requestUnfinishedItemsWithActionType:(id)arg1 maximumCount:(unsigned long long)arg2;
 - (void)getUnfinishedItemsWithMaximumCount:(unsigned long long)arg1;
-- (id)initWithEpisodeFactory:(id)arg1 dataLoader:(id)arg2 podcastRequestFactory:(id)arg3 dispatcher:(id)arg4;
+- (id)initWithEpisodeFactory:(id)arg1 dataLoader:(id)arg2 podcastRequestFactory:(id)arg3 dispatcher:(id)arg4 episodeDataParser:(id)arg5;
 
 @end
 

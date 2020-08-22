@@ -11,13 +11,13 @@
 
 @protocol SPTAppExtensionCredentialsManager <NSObject>
 - (SPTAppExtensionKeychainCredentials *)ESDKCredentials;
-- (NSError *)deleteESDKCredentials;
+- (_Bool)deleteESDKCredentials;
 - (NSError *)setESDKCredentials:(SPTAppExtensionKeychainCredentials *)arg1;
 - (id <NSSecureCoding><SPTLoginSession>)storedLoginSession;
-- (NSError *)deleteStoredLoginSession;
+- (_Bool)deleteStoredLoginSession;
 - (NSError *)setStoredLoginSession:(id <NSSecureCoding><SPTLoginSession>)arg1;
 - (SPTAppExtensionKeychainCredentials *)coreCredentials;
-- (NSError *)deleteCoreCredentials;
+- (_Bool)deleteCoreCredentials;
 - (NSError *)setCoreCredentials:(SPTAppExtensionKeychainCredentials *)arg1;
 @end
 

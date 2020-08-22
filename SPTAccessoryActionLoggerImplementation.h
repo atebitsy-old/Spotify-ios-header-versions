@@ -9,7 +9,7 @@
 #import "SPTAccessoryActionLogger-Protocol.h"
 #import "SPTPlayerObserver-Protocol.h"
 
-@class NSString, SPTAccessoryAudioRouteLogger, SPTAccessoryManagerFeatureProperties, SPTPlayerState;
+@class NSString, SPTAccessoryManagerFeatureProperties, SPTPlayerState;
 @protocol SPTEventSender, SPTGaiaConnectAPI, SPTPlayer, SPTUBILogger;
 
 @interface SPTAccessoryActionLoggerImplementation : NSObject <SPTPlayerObserver, SPTAccessoryActionLogger>
@@ -18,7 +18,6 @@
     id <SPTEventSender> _eventSender;
     id <SPTPlayer> _player;
     id <SPTGaiaConnectAPI> _connectManager;
-    SPTAccessoryAudioRouteLogger *_audioRouteLogger;
     SPTAccessoryManagerFeatureProperties *_properties;
     SPTPlayerState *_playerState;
 }
@@ -26,7 +25,6 @@
 - (void).cxx_destruct;
 @property(retain, nonatomic) SPTPlayerState *playerState; // @synthesize playerState=_playerState;
 @property(readonly, nonatomic) SPTAccessoryManagerFeatureProperties *properties; // @synthesize properties=_properties;
-@property(readonly, nonatomic) SPTAccessoryAudioRouteLogger *audioRouteLogger; // @synthesize audioRouteLogger=_audioRouteLogger;
 @property(readonly, nonatomic) id <SPTGaiaConnectAPI> connectManager; // @synthesize connectManager=_connectManager;
 @property(readonly, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
 @property(readonly, nonatomic) id <SPTEventSender> eventSender; // @synthesize eventSender=_eventSender;
@@ -55,7 +53,7 @@
 - (id)logResumeWithCurrentItemToBeResumedFromAccessory:(id)arg1;
 - (id)logPlayWithItemToBePlayed:(id)arg1 withInteractionId:(id)arg2 fromAccessory:(id)arg3;
 - (void)dealloc;
-- (id)initWithUBILogger:(id)arg1 eventSender:(id)arg2 player:(id)arg3 properties:(id)arg4 audioRouteLogger:(id)arg5 connectManager:(id)arg6;
+- (id)initWithUBILogger:(id)arg1 eventSender:(id)arg2 player:(id)arg3 properties:(id)arg4 connectManager:(id)arg5;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

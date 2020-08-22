@@ -8,8 +8,6 @@
 
 @interface _TtC31PodcastInteractivityFeatureImpl24BasicContainerController : UIViewController
 {
-    // Error parsing type: , name: _containedViewController
-    // Error parsing type: , name: isTransitioningAppearance
     // Error parsing type: , name: containedViewController
 }
 

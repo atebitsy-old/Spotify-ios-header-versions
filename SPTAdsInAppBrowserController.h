@@ -9,7 +9,7 @@
 #import "SPTWebViewControllerDelegate-Protocol.h"
 
 @class NSString, NSURL, UIViewController;
-@protocol SPTEventSender, SPTLinkDispatcher, SPTWebViewController, SPTWebViewFactory;
+@protocol SPTEventSender, SPTWebViewController, SPTWebViewFactory;
 
 @interface SPTAdsInAppBrowserController : NSObject <SPTWebViewControllerDelegate>
 {
@@ -17,11 +17,9 @@
     UIViewController<SPTWebViewController> *_webViewController;
     id <SPTEventSender> _eventSender;
     NSURL *_initialURL;
-    id <SPTLinkDispatcher> _linkDispatcher;
 }
 
 - (void).cxx_destruct;
-@property(retain, nonatomic) id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
 @property(retain, nonatomic) NSURL *initialURL; // @synthesize initialURL=_initialURL;
 @property(readonly, nonatomic) id <SPTEventSender> eventSender; // @synthesize eventSender=_eventSender;
 @property(retain, nonatomic) UIViewController<SPTWebViewController> *webViewController; // @synthesize webViewController=_webViewController;
@@ -36,10 +34,9 @@
 - (void)webViewControllerDidAppear:(id)arg1;
 - (void)webViewController:(id)arg1 didFailNavigation:(unsigned long long)arg2 withError:(id)arg3;
 - (void)webViewController:(id)arg1 didStartProvisionalNavigation:(unsigned long long)arg2;
-- (_Bool)webViewController:(id)arg1 shouldAllowRequest:(id)arg2 navigationType:(long long)arg3;
 - (void)webViewController:(id)arg1 didFinishNavigation:(unsigned long long)arg2;
 - (void)presentBrowserWithURL:(id)arg1;
-- (id)initWithWebViewFactory:(id)arg1 eventSender:(id)arg2 linkDispatcher:(id)arg3;
+- (id)initWithWebViewFactory:(id)arg1 eventSender:(id)arg2;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

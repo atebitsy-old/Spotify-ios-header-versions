@@ -6,9 +6,11 @@
 
 #import <objc/NSObject.h>
 
+#import "_TtP20SingalongFeatureImpl26SPTSingalongServicePrivate_-Protocol.h"
+
 @class _TtC20SingalongFeatureImpl11TestManager;
 
-@interface _TtC20SingalongFeatureImpl16SingalongService : NSObject
+@interface _TtC20SingalongFeatureImpl16SingalongService : NSObject <_TtP20SingalongFeatureImpl26SPTSingalongServicePrivate_>
 {
     // Error parsing type: , name: containerService
     // Error parsing type: , name: remoteConfigurationService

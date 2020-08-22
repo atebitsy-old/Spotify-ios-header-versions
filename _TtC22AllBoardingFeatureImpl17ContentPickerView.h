@@ -14,9 +14,7 @@
     // Error parsing type: , name: skipButton
     // Error parsing type: , name: $__lazy_storage_$_collectionViewLayout
     // Error parsing type: , name: $__lazy_storage_$_collectionView
-    // Error parsing type: , name: $__lazy_storage_$_buttonContainerView
     // Error parsing type: , name: $__lazy_storage_$_doneButton
-    // Error parsing type: , name: $__lazy_storage_$_secondaryDoneButton
     // Error parsing type: , name: overlayGradientView
     // Error parsing type: , name: userInteractionBlockerView
     // Error parsing type: , name: $__lazy_storage_$_titleLabel

@@ -8,7 +8,7 @@
 
 #import "SPTThemableView-Protocol.h"
 
-@class NSString, UIImage, UIImageView, UILabel, UIView;
+@class NSString, UIImage, UIImageView, UILabel;
 @protocol SPTThemableViewLayoutDelegate;
 
 @interface SPTGaiaPopupContentView : SPTPopupContainerView <SPTThemableView>
@@ -19,12 +19,10 @@
     UIImageView *_iconView;
     UILabel *_messageLabel;
     UILabel *_deviceLabel;
-    UIView *_topLabelContainerView;
 }
 
 + (id)viewWithType:(long long)arg1;
 - (void).cxx_destruct;
-@property(retain, nonatomic) UIView *topLabelContainerView; // @synthesize topLabelContainerView=_topLabelContainerView;
 @property(retain, nonatomic) UILabel *deviceLabel; // @synthesize deviceLabel=_deviceLabel;
 @property(retain, nonatomic) UILabel *messageLabel; // @synthesize messageLabel=_messageLabel;
 @property(retain, nonatomic) UIImageView *iconView; // @synthesize iconView=_iconView;

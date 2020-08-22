@@ -14,9 +14,9 @@
     FBSDKAccessToken *_accessToken;
 }
 
-- (void).cxx_destruct;
 @property(readonly, nonatomic, getter=isCancelled) _Bool cancelled; // @synthesize cancelled=_cancelled;
 @property(readonly, nonatomic) FBSDKAccessToken *accessToken; // @synthesize accessToken=_accessToken;
+- (void).cxx_destruct;
 - (id)initWithToken:(id)arg1 isCancelled:(_Bool)arg2;
 
 @end

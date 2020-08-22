@@ -43,10 +43,9 @@
 @property(copy, nonatomic) NSString *clientVersion; // @synthesize clientVersion=_clientVersion;
 @property(copy, nonatomic) NSString *catalogue; // @synthesize catalogue=_catalogue;
 @property(copy, nonatomic) NSString *query; // @synthesize query=_query;
-- (id)timestampMillisecondsString;
-- (id)urlComponentsWithPathComponents:(id)arg1 queryParameters:(id)arg2;
-- (id)searchURLComponents;
-- (id)assistedCurationURLComponents;
+- (void)addDeprecatedPathComponents:(id)arg1;
+- (void)addDeprecatedQueryParameters:(id)arg1;
+- (id)experiencePathComponent;
 - (_Bool)isEqualToSearchRequestParameters:(id)arg1;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 - (_Bool)isEqual:(id)arg1;

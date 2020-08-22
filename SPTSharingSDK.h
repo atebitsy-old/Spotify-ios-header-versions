@@ -7,25 +7,24 @@
 #import <objc/NSObject.h>
 
 @class NSArray, SPTSharingSDKImageDownloader, SPTSharingSDKLinkGenerator;
-@protocol SPTSharingSDKDeeplinkHandler, SPTSharingSDKNetworkService, SPTSharingSDKPasteboardWrapper, SPTSharingSDKShareDialogPresenterRegistry, SPTSharingSDKShareHandler;
+@protocol SPTSharingSDKDeeplinkHandler, SPTSharingSDKNetworkService, SPTSharingSDKShareDialogPresenter, SPTSharingSDKShareHandler;
 
 @interface SPTSharingSDK : NSObject
 {
     SPTSharingSDKImageDownloader *_imageDownloader;
     SPTSharingSDKLinkGenerator *_linkGenerator;
-    id <SPTSharingSDKPasteboardWrapper> _pasteboardWrapper;
     NSArray *_allShareDestinations;
     id <SPTSharingSDKDeeplinkHandler> _deeplinkHandler;
+    id <SPTSharingSDKShareDialogPresenter> _dialogPresenter;
     id <SPTSharingSDKNetworkService> _networkService;
     id <SPTSharingSDKShareHandler> _shareHandler;
-    id <SPTSharingSDKShareDialogPresenterRegistry> _shareDialogPresenterRegistry;
 }
 
 + (id)notImplementedError;
 - (void).cxx_destruct;
-@property(retain, nonatomic) id <SPTSharingSDKShareDialogPresenterRegistry> shareDialogPresenterRegistry; // @synthesize shareDialogPresenterRegistry=_shareDialogPresenterRegistry;
 @property(retain, nonatomic) id <SPTSharingSDKShareHandler> shareHandler; // @synthesize shareHandler=_shareHandler;
 @property(readonly, nonatomic) id <SPTSharingSDKNetworkService> networkService; // @synthesize networkService=_networkService;
+@property(readonly, nonatomic) id <SPTSharingSDKShareDialogPresenter> dialogPresenter; // @synthesize dialogPresenter=_dialogPresenter;
 @property(readonly, nonatomic) id <SPTSharingSDKDeeplinkHandler> deeplinkHandler; // @synthesize deeplinkHandler=_deeplinkHandler;
 @property(readonly, nonatomic) NSArray *allShareDestinations; // @synthesize allShareDestinations=_allShareDestinations;
 - (id)provideStoriesShareHandlerWithDestination:(id)arg1 entityData:(id)arg2;
@@ -33,17 +32,14 @@
 - (id)provideLinkShareHandlerWithDestination:(id)arg1 entityData:(id)arg2 contextViewController:(id)arg3;
 - (id)provideDownloadShareHandlerWithEntityData:(id)arg1;
 - (id)buildShareHandlerFromShareDestination:(id)arg1 shareEntityData:(id)arg2 contextViewController:(id)arg3;
-- (_Bool)isShareDialogPresenterRegisteredForDestination:(id)arg1;
 - (void)generateShareableURLWithPayload:(id)arg1 completionHandler:(CDUnknownBlockType)arg2;
 - (void)performShareToDestination:(id)arg1 withShareEntityData:(id)arg2 contextViewController:(id)arg3 completion:(CDUnknownBlockType)arg4;
-- (id)provideShareDialogPresenterRegistry;
 - (id)provideShareEntityDataFactory;
 - (id)provideShareDestinationByID:(id)arg1;
 - (id)provideAvailableShareDestinations;
-@property(readonly, nonatomic) id <SPTSharingSDKPasteboardWrapper> pasteboardWrapper; // @synthesize pasteboardWrapper=_pasteboardWrapper;
 @property(readonly, nonatomic) SPTSharingSDKLinkGenerator *linkGenerator; // @synthesize linkGenerator=_linkGenerator;
 @property(readonly, nonatomic) SPTSharingSDKImageDownloader *imageDownloader; // @synthesize imageDownloader=_imageDownloader;
-- (id)initWithNetworkService:(id)arg1 deeplinkHandler:(id)arg2;
+- (id)initWithNetworkService:(id)arg1 deeplinkHandler:(id)arg2 dialogPresenter:(id)arg3;
 
 @end
 

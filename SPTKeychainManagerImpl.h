@@ -20,8 +20,8 @@
 @property(copy, nonatomic) NSString *keychainClass; // @synthesize keychainClass=_keychainClass;
 @property(readonly, nonatomic) SPTKeychainWrapper *keychainWrapper; // @synthesize keychainWrapper=_keychainWrapper;
 - (id)deleteAllData;
-- (id)deleteObjectForDomain:(id)arg1 andKey:(id)arg2 accessGroup:(id)arg3 accessAttr:(id)arg4 synchronizable:(_Bool)arg5;
-- (id)deleteStringForDomain:(id)arg1 andKey:(id)arg2 accessGroup:(id)arg3 accessAttr:(id)arg4;
+- (_Bool)deleteObjectForDomain:(id)arg1 andKey:(id)arg2 accessGroup:(id)arg3 accessAttr:(id)arg4 synchronizable:(_Bool)arg5;
+- (_Bool)deleteStringForDomain:(id)arg1 andKey:(id)arg2 accessGroup:(id)arg3 accessAttr:(id)arg4;
 - (int)addKeychainValueWithData:(id)arg1 andQuery:(id)arg2;
 - (int)updateKeychainValueWithData:(id)arg1 andQuery:(id)arg2;
 - (int)removeKeychainItemWithQuery:(id)arg1;

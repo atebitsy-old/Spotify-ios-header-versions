@@ -22,7 +22,6 @@
 - (void)setRememberMeModeForUsername:(id)arg1 rememberMe:(_Bool)arg2;
 - (void)forgetStoredCredentials:(id)arg1;
 - (id)serializableCredentialsAndCanonicalUsername:(id *)arg1;
-- (id)loginTaskWithGoogleSignInCredentials:(id)arg1 options:(id)arg2;
 - (id)loginTaskWithAppleSignInCredentials:(id)arg1 options:(id)arg2;
 - (id)loginTaskWithParentChildCredentials:(id)arg1 options:(id)arg2;
 - (id)loginTaskWithOneTimeTokenCredentials:(id)arg1 options:(id)arg2;

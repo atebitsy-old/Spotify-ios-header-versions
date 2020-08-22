@@ -25,7 +25,6 @@
 }
 
 + (_Bool)supportsSecureCoding;
-- (void).cxx_destruct;
 @property(copy, nonatomic) NSString *title; // @synthesize title=_title;
 @property(copy, nonatomic) NSArray *recipientSuggestions; // @synthesize recipientSuggestions=_recipientSuggestions;
 @property(copy, nonatomic) NSArray *recipients; // @synthesize recipients=_recipients;
@@ -34,6 +33,7 @@
 @property(nonatomic) unsigned long long filters; // @synthesize filters=_filters;
 @property(copy, nonatomic) NSString *data; // @synthesize data=_data;
 @property(nonatomic) unsigned long long actionType; // @synthesize actionType=_actionType;
+- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 - (void)encodeWithCoder:(id)arg1;
 - (id)initWithCoder:(id)arg1;

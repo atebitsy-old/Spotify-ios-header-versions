@@ -6,43 +6,21 @@
 
 #import <objc/NSObject.h>
 
-#import "SPTFreeTierAlbumContextMenuButtonViewModelLogger-Protocol.h"
-#import "SPTFreeTierAlbumFeedbackButtonViewModelLogger-Protocol.h"
-#import "SPTFreeTierAlbumOfflineModelLogger-Protocol.h"
-#import "SPTFreeTierEntityPlaybackToggleCommandHandlerLogger-Protocol.h"
-#import "SPTFreeTierEntityViewControllerLogger-Protocol.h"
-#import "VISREFBackButtonUBILogger-Protocol.h"
+@protocol SPTHubLogger, SPTUBIMobileAlbumPageEventFactory;
 
-@class NSString;
-@protocol SPTUBILogger, SPTUBIMobileAlbumPageEventFactory;
-
-@interface SPTFreeTierAlbumUBILogger : NSObject <SPTFreeTierAlbumContextMenuButtonViewModelLogger, SPTFreeTierAlbumFeedbackButtonViewModelLogger, SPTFreeTierEntityPlaybackToggleCommandHandlerLogger, SPTFreeTierAlbumOfflineModelLogger, SPTFreeTierEntityViewControllerLogger, VISREFBackButtonUBILogger>
+@interface SPTFreeTierAlbumUBILogger : NSObject
 {
-    id <SPTUBILogger> _logger;
+    id <SPTHubLogger> _logger;
     id <SPTUBIMobileAlbumPageEventFactory> _eventFactory;
 }
 
 - (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTUBIMobileAlbumPageEventFactory> eventFactory; // @synthesize eventFactory=_eventFactory;
-@property(readonly, nonatomic) id <SPTUBILogger> logger; // @synthesize logger=_logger;
-- (void)logHitPauseItem:(id)arg1;
-- (void)logHitShufflePlayContext:(id)arg1;
-- (void)logHitBack;
-- (void)logHitRemoveDownloadForItem:(id)arg1;
-- (void)logHitDownloadForItem:(id)arg1;
-- (void)logHitContextMenu;
-- (void)logHitUnfollowForURI:(id)arg1;
-- (void)logHitFollowForURI:(id)arg1;
+@property(readonly, nonatomic) id <SPTHubLogger> logger; // @synthesize logger=_logger;
 - (void)logSwipeRightAddToQueueWithPosition:(long long)arg1 targetURI:(id)arg2;
 - (void)logSwipeLeftRemoveLikeWithPosition:(long long)arg1 targetURI:(id)arg2;
 - (void)logSwipeLeftLikeWithPosition:(long long)arg1 targetURI:(id)arg2;
 - (id)initWithLogger:(id)arg1 eventFactory:(id)arg2;
-
-// Remaining properties
-@property(readonly, copy) NSString *debugDescription;
-@property(readonly, copy) NSString *description;
-@property(readonly) unsigned long long hash;
-@property(readonly) Class superclass;
 
 @end
 

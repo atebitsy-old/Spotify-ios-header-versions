@@ -21,11 +21,11 @@
 + (id)bridgeAPIResponseCancelledWithRequest:(id)arg1;
 + (id)bridgeAPIResponseWithRequest:(id)arg1 responseURL:(id)arg2 sourceApplication:(id)arg3 error:(id *)arg4;
 + (id)bridgeAPIResponseWithRequest:(id)arg1 error:(id)arg2;
-- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) NSDictionary *responseParameters; // @synthesize responseParameters=_responseParameters;
 @property(readonly, copy, nonatomic) FBSDKBridgeAPIRequest *request; // @synthesize request=_request;
 @property(readonly, copy, nonatomic) NSError *error; // @synthesize error=_error;
 @property(readonly, nonatomic, getter=isCancelled) _Bool cancelled; // @synthesize cancelled=_cancelled;
+- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 - (id)initWithRequest:(id)arg1 responseParameters:(id)arg2 cancelled:(_Bool)arg3 error:(id)arg4;
 

@@ -13,8 +13,8 @@
     UIColor *_color;
 }
 
-- (void).cxx_destruct;
 @property(readonly, nonatomic) UIColor *color; // @synthesize color=_color;
+- (void).cxx_destruct;
 - (struct CGPath *)pathWithSize:(struct CGSize)arg1;
 - (id)imageWithSize:(struct CGSize)arg1;
 - (id)init;

@@ -7,7 +7,7 @@
 #import <objc/NSObject.h>
 
 @class NSError, SPTLoginMainViewLoader, SPTLoginStateControllerImplementation;
-@protocol SPTAuthLoginOptionsUtils, SPTCrashReporter, SPTUIModeTransitionUIHandler;
+@protocol SPTCrashReporter, SPTUIModeTransitionUIHandler;
 
 @interface SPTLoginDelayedSignupAccountSwitcher : NSObject
 {
@@ -16,11 +16,9 @@
     id <SPTCrashReporter> _crashReporter;
     SPTLoginMainViewLoader *_mainViewLoader;
     NSError *_lastError;
-    id <SPTAuthLoginOptionsUtils> _authLoginOptionsUtils;
 }
 
 - (void).cxx_destruct;
-@property(retain, nonatomic) id <SPTAuthLoginOptionsUtils> authLoginOptionsUtils; // @synthesize authLoginOptionsUtils=_authLoginOptionsUtils;
 @property(retain, nonatomic) NSError *lastError; // @synthesize lastError=_lastError;
 @property(retain, nonatomic) SPTLoginMainViewLoader *mainViewLoader; // @synthesize mainViewLoader=_mainViewLoader;
 @property(retain, nonatomic) id <SPTCrashReporter> crashReporter; // @synthesize crashReporter=_crashReporter;
@@ -33,7 +31,7 @@
 - (void)reloginWithCredentials:(id)arg1 fallbackCredentials:(id)arg2 userDidSignup:(_Bool)arg3 completion:(CDUnknownBlockType)arg4;
 - (id)readAndClearLastError;
 - (void)switchToAccountWithCredentials:(id)arg1 currentCredentials:(id)arg2 userDidSignup:(_Bool)arg3 completion:(CDUnknownBlockType)arg4;
-- (id)initWithTransitionHandler:(id)arg1 loginStateController:(id)arg2 crashReporter:(id)arg3 mainViewLoader:(id)arg4 authLoginOptionsUtils:(id)arg5;
+- (id)initWithTransitionHandler:(id)arg1 loginStateController:(id)arg2 crashReporter:(id)arg3 mainViewLoader:(id)arg4;
 
 @end
 

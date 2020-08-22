@@ -18,12 +18,12 @@
     NSSet *_declinedPermissions;
 }
 
-- (void).cxx_destruct;
 @property(nonatomic) _Bool isSkipped; // @synthesize isSkipped=_isSkipped;
 @property(copy, nonatomic) NSSet *declinedPermissions; // @synthesize declinedPermissions=_declinedPermissions;
 @property(copy, nonatomic) NSSet *grantedPermissions; // @synthesize grantedPermissions=_grantedPermissions;
 @property(readonly, nonatomic) _Bool isCancelled; // @synthesize isCancelled=_isCancelled;
 @property(copy, nonatomic) FBSDKAccessToken *token; // @synthesize token=_token;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSDictionary *loggingExtras;
 - (void)addLoggingExtra:(id)arg1 forKey:(id)arg2;
 - (id)initWithToken:(id)arg1 isCancelled:(_Bool)arg2 grantedPermissions:(id)arg3 declinedPermissions:(id)arg4;

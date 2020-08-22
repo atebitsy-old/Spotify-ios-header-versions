@@ -17,6 +17,7 @@
 + (void)saveError:(long long)arg1 errorDomain:(id)arg2 message:(id)arg3;
 + (void)uploadError;
 + (void)enable;
++ (void)initialize;
 
 @end
 

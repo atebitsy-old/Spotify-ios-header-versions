@@ -10,7 +10,7 @@
 #import "SPTShareHandler-Protocol.h"
 
 @class NSString, SPTDataLoader, SPTShareData, SPTShareFeatureProperties, SPTShareHandlerCompletionDataModel, SPTShareLogger, SPTSharingSDK;
-@protocol SPTShareVideoDataProvider, SPTSharingSDKDeeplinkHandler;
+@protocol SPTShareDeeplinkHandler, SPTShareVideoDataProvider;
 
 @interface SPTShareInstagramStoriesShareHandler : NSObject <SPTShareHandler, SPTDataLoaderDelegate>
 {
@@ -24,7 +24,7 @@
     SPTShareLogger *_shareLogger;
     CDUnknownBlockType _shareCompletionBlock;
     SPTShareData *_shareData;
-    id <SPTSharingSDKDeeplinkHandler> _deeplinkHandler;
+    id <SPTShareDeeplinkHandler> _deeplinkHandler;
     SPTSharingSDK *_sharingSDK;
     SPTShareFeatureProperties *_featureProperties;
     id <SPTShareVideoDataProvider> _videoDataLoader;
@@ -36,7 +36,7 @@
 @property(readonly, nonatomic) id <SPTShareVideoDataProvider> videoDataLoader; // @synthesize videoDataLoader=_videoDataLoader;
 @property(readonly, nonatomic) __weak SPTShareFeatureProperties *featureProperties; // @synthesize featureProperties=_featureProperties;
 @property(readonly, nonatomic) __weak SPTSharingSDK *sharingSDK; // @synthesize sharingSDK=_sharingSDK;
-@property(retain, nonatomic) id <SPTSharingSDKDeeplinkHandler> deeplinkHandler; // @synthesize deeplinkHandler=_deeplinkHandler;
+@property(retain, nonatomic) id <SPTShareDeeplinkHandler> deeplinkHandler; // @synthesize deeplinkHandler=_deeplinkHandler;
 @property(retain, nonatomic) SPTShareData *shareData; // @synthesize shareData=_shareData;
 @property(copy, nonatomic) CDUnknownBlockType shareCompletionBlock; // @synthesize shareCompletionBlock=_shareCompletionBlock;
 @property(nonatomic) _Bool isRequesting; // @synthesize isRequesting=_isRequesting;

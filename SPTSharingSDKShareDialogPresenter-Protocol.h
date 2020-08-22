@@ -9,6 +9,6 @@
 @protocol SPTSharingSDKShareDialogPresenterData;
 
 @protocol SPTSharingSDKShareDialogPresenter <NSObject>
-- (void)presentShareDialogWithShareableData:(id <SPTSharingSDKShareDialogPresenterData>)arg1 completionHandler:(void (^)(_Bool, NSError *, _Bool))arg2;
+- (void)presentShareDialogForDestination:(unsigned long long)arg1 shareableData:(id <SPTSharingSDKShareDialogPresenterData>)arg2 completionHandler:(void (^)(_Bool, NSError *, _Bool))arg3;
 @end
 

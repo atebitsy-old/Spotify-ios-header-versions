@@ -6,16 +6,11 @@
 
 #import <objc/NSObject.h>
 
-#import "SPTService-Protocol.h"
-
-@interface _TtC20SingalongFeatureImpl18SingalongUIService : NSObject <SPTService>
+@interface _TtC20SingalongFeatureImpl18SingalongUIService : NSObject
 {
-    // Error parsing type: , name: eventSenderService
-    // Error parsing type: , name: glueService
     // Error parsing type: , name: networkService
     // Error parsing type: , name: nowPlayingPlatformService
     // Error parsing type: , name: singalongService
-    // Error parsing type: , name: ubiService
     // Error parsing type: , name: $__lazy_storage_$_colorLyricsDataLoader
 }
 
