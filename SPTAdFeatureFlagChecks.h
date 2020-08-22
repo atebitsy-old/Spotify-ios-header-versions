@@ -16,6 +16,7 @@
 @interface SPTAdFeatureFlagChecks : NSObject <SPTProductStateObserver, SPTLocalSettingsObserver, SPTAbbaFeatureFlagsObserver>
 {
     _Bool _noOfferCardEnabled;
+    _Bool _isVoiceAdAudioSignalEnabeled;
     id <SPTProductState> _productState;
     id <SPTLocalSettings> _localSettings;
     id <SPTAbbaFeatureFlags> _abbaFeatureFlags;
@@ -39,6 +40,7 @@
 @property(retain, nonatomic) id <SPTAbbaFeatureFlags> abbaFeatureFlags; // @synthesize abbaFeatureFlags=_abbaFeatureFlags;
 @property(readonly, nonatomic) __weak id <SPTLocalSettings> localSettings; // @synthesize localSettings=_localSettings;
 @property(readonly, nonatomic) id <SPTProductState> productState; // @synthesize productState=_productState;
+@property(nonatomic) _Bool isVoiceAdAudioSignalEnabeled; // @synthesize isVoiceAdAudioSignalEnabeled=_isVoiceAdAudioSignalEnabeled;
 @property(nonatomic) _Bool noOfferCardEnabled; // @synthesize noOfferCardEnabled=_noOfferCardEnabled;
 - (void)notifyObserversOfLoad;
 - (void)notifyObserversOfChange;
@@ -47,8 +49,11 @@
 - (void)featureFlagsDidChange:(id)arg1;
 - (void)removeObserver:(id)arg1;
 - (void)addObserver:(id)arg1;
+@property(readonly, nonatomic, getter=isAdFeedbackEnabled) _Bool adFeedbackEnabled;
 @property(readonly, nonatomic, getter=isContextResumeEnabled) _Bool contextResumeEnabled;
 @property(readonly, nonatomic, getter=isPrerollEnabled) _Bool prerollEnabled;
+- (void)requestAudioSignalFlagValueFromCore;
+@property(readonly, nonatomic, getter=isVoiceEnabled) _Bool voiceEnabled;
 - (void)requestNoOfferCardFlagValueFromCore;
 @property(readonly, nonatomic, getter=isCosmosWatchNowEnabled) _Bool cosmosWatchNowEnabled;
 - (void)dealloc;

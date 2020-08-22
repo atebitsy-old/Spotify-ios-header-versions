@@ -7,7 +7,7 @@
 #import "_TtC28EncoreIntegrationFeatureImpl18ComponentFactories.h"
 
 @interface _TtC28EncoreIntegrationFeatureImpl18ComponentFactories (EncoreIntegrationFeatureImpl3)
-- (id)makeEpisodeRowListeningHistory:(long long)arg1;
-- (id)makeEpisodeRowListeningHistory;
+- (id)makePlaylistHeader:(long long)arg1;
+- (id)makePlaylistHeader;
 @end
 

@@ -68,7 +68,7 @@
 - (id)errorWithCode:(unsigned long long)arg1;
 - (void)addSpecialChildContentToCache:(id)arg1 forParentIndexPath:(id)arg2;
 - (void)addChildContentToCache:(id)arg1 forParent:(id)arg2 withIndexPath:(id)arg3;
-- (void)handleCompletedChildContentResolvingWithContent:(id)arg1 indexPath:(id)arg2 requestedURI:(id)arg3 error:(id)arg4 completionHandler:(CDUnknownBlockType)arg5;
+- (void)handleCompletedChildContentResolvingWithContent:(id)arg1 indexPath:(id)arg2 error:(id)arg3 completionHandler:(CDUnknownBlockType)arg4;
 - (void)loadChildrenOfItemAtIndexPath:(id)arg1 completionHandler:(CDUnknownBlockType)arg2;
 - (void)loadChildrenAndNeccessaryParentsOfItemAtIndexPath:(id)arg1 completionHandler:(CDUnknownBlockType)arg2;
 - (void)loadRootItemsWithCompletionHandler:(CDUnknownBlockType)arg1;

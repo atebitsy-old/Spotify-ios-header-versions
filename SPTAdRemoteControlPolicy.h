@@ -8,13 +8,14 @@
 
 #import "SPTAdNowPlayingRemoteControlPolicy-Protocol.h"
 
-@class NSArray, NSString, SPTAdNowPlayingAuxiliaryActionsHandler, SPTAdsFeatureProperties, SPTObserverManager, SPTPlayerState;
+@class NSArray, NSString, SPTAdFeatureFlagChecks, SPTAdNowPlayingAuxiliaryActionsHandler, SPTAdsFeatureProperties, SPTObserverManager, SPTPlayerState;
 @protocol SPTAdsManager;
 
 @interface SPTAdRemoteControlPolicy : NSObject <SPTAdNowPlayingRemoteControlPolicy>
 {
     SPTPlayerState *_playerState;
     id <SPTAdsManager> _manager;
+    SPTAdFeatureFlagChecks *_featureFlags;
     SPTAdNowPlayingAuxiliaryActionsHandler *_actionsHandler;
     SPTAdsFeatureProperties *_featureProperties;
     SPTObserverManager *_observerManager;
@@ -24,6 +25,7 @@
 @property(readonly, nonatomic) SPTObserverManager *observerManager; // @synthesize observerManager=_observerManager;
 @property(readonly, nonatomic) SPTAdsFeatureProperties *featureProperties; // @synthesize featureProperties=_featureProperties;
 @property(readonly, nonatomic) SPTAdNowPlayingAuxiliaryActionsHandler *actionsHandler; // @synthesize actionsHandler=_actionsHandler;
+@property(readonly, nonatomic) SPTAdFeatureFlagChecks *featureFlags; // @synthesize featureFlags=_featureFlags;
 @property(readonly, nonatomic) __weak id <SPTAdsManager> manager; // @synthesize manager=_manager;
 @property(retain, nonatomic) SPTPlayerState *playerState; // @synthesize playerState=_playerState;
 - (void)removeRemoteControlStateUpdateObserver:(id)arg1;
@@ -71,7 +73,7 @@
 @property(readonly, nonatomic) _Bool shouldNextTrackCommandBeEnabled;
 @property(readonly, nonatomic) _Bool shouldNextTrackCommandBeAvailable;
 - (void)notifyObserversThatPolicyDidChange;
-- (id)initWithManager:(id)arg1 actionsHandler:(id)arg2 featureProperties:(id)arg3;
+- (id)initWithManager:(id)arg1 featureChecker:(id)arg2 actionsHandler:(id)arg3 featureProperties:(id)arg4;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

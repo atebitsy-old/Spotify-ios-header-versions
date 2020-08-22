@@ -6,7 +6,7 @@
 
 #import "GPBMessage.h"
 
-@class GPBEnumArray, NSData, NSString, SPTLogin5Challenges, SPTLogin5LoginOk, SPTLogin5UserInfo;
+@class GPBEnumArray, NSData, SPTLogin5Challenges, SPTLogin5LoginOk;
 
 @interface SPTLogin5LoginResponse : GPBMessage
 {
@@ -17,12 +17,9 @@
 // Remaining properties
 @property(retain, nonatomic) SPTLogin5Challenges *challenges; // @dynamic challenges;
 @property(nonatomic) int error; // @dynamic error;
-@property(nonatomic) _Bool hasUserInfo; // @dynamic hasUserInfo;
-@property(copy, nonatomic) NSString *identifierToken; // @dynamic identifierToken;
 @property(copy, nonatomic) NSData *loginContext; // @dynamic loginContext;
 @property(retain, nonatomic) SPTLogin5LoginOk *ok; // @dynamic ok;
 @property(readonly, nonatomic) int responseOneOfCase; // @dynamic responseOneOfCase;
-@property(retain, nonatomic) SPTLogin5UserInfo *userInfo; // @dynamic userInfo;
 @property(retain, nonatomic) GPBEnumArray *warningsArray; // @dynamic warningsArray;
 @property(readonly, nonatomic) unsigned long long warningsArray_Count; // @dynamic warningsArray_Count;
 

@@ -8,18 +8,22 @@
 
 #import "SPTUBIEventFactory-Protocol.h"
 
-@class NSDictionary, NSString;
+@class NSDictionary, NSString, NSURL;
 
 @interface SPTUBIEventFactoryImplementation : NSObject <SPTUBIEventFactory>
 {
     NSDictionary *_interactionTypesMap;
+    NSURL *_pageURI;
+    NSString *_pageId;
 }
 
 - (void).cxx_destruct;
+@property(readonly, copy, nonatomic) NSString *pageId; // @synthesize pageId=_pageId;
+@property(readonly, nonatomic) NSURL *pageURI; // @synthesize pageURI=_pageURI;
 @property(readonly, copy, nonatomic) NSDictionary *interactionTypesMap; // @synthesize interactionTypesMap=_interactionTypesMap;
 - (id)impressionFromLocation:(id)arg1;
 - (id)interactionFactoryFromLocation:(id)arg1;
-- (id)initWithInteractionTypesMap:(id)arg1;
+- (id)initWithInteractionTypesMap:(id)arg1 pageURI:(id)arg2 pageId:(id)arg3;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

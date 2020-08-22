@@ -35,7 +35,6 @@
 @property(nonatomic) __weak SpotifyAppDelegate *appDelegate; // @synthesize appDelegate=_appDelegate;
 @property(nonatomic) __weak id <SPTEmailUniversalLinkResolverDelegate> emailUniversalLinkResolverDelegate;
 @property(nonatomic) __weak id <SPTNotificationSystemDelegate> notificationSystemDelegate;
-- (id)provideRemoteControl;
 - (id)provideKeychainManager;
 - (CDUnknownBlockType)provideContainerLogoutHandler;
 - (id)providePageRegistry;

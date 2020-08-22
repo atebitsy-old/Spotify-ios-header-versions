@@ -11,6 +11,7 @@
     // Error parsing type: , name: trailingButtonAction
     // Error parsing type: , name: subtitleAccessoryType
     // Error parsing type: , name: style
+    // Error parsing type: , name: contentView
     // Error parsing type: , name: leadingImageView
     // Error parsing type: , name: trailingButton
     // Error parsing type: , name: labelsView

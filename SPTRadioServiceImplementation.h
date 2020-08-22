@@ -11,7 +11,7 @@
 #import "SPTURISubtypeHandler-Protocol.h"
 
 @class NSString, SPTAllocationContext, SPTInfinitePlaybackManager, SPTPersistentCache, SPTRadioHubManager, SPTRadioLogger, SPTRadioPlaybackService, SPTRadioStationsService;
-@protocol GaiaFeature, NSObject, SPContextMenuFeature, SPTCollectionLogger, SPTContainerService, SPTContainerUIService, SPTCoreService, SPTExplicitContentService, SPTFreeTierService, SPTGLUEService, SPTHubFrameworkService, SPTLocalSettings, SPTNavigationFeature, SPTNetworkService, SPTPerformanceMetricsService, SPTPlayer, SPTPlayerFeature, SPTRadioAPI, SPTRadioManager, SPTRadioRemoteConfigService, SPTRadioTestManager, SPTRecentlyPlayedService, SPTSessionService, SPTSettingsFeature, SPTShelfService, SPTURIDispatchService, _TtP15AutoplayFeature18SPTAutoplayService_;
+@protocol CosmosFeature, GaiaFeature, NSObject, SPContextMenuFeature, SPTCollectionLogger, SPTContainerService, SPTContainerUIService, SPTCoreService, SPTDataSaverService, SPTExplicitContentService, SPTFreeTierService, SPTGLUEService, SPTHubFrameworkService, SPTLocalSettings, SPTNavigationFeature, SPTNetworkService, SPTPerformanceMetricsService, SPTPlayer, SPTPlayerFeature, SPTRadioAPI, SPTRadioManager, SPTRadioRemoteConfigService, SPTRadioTestManager, SPTRecentlyPlayedService, SPTSessionService, SPTSettingsFeature, SPTShelfService, SPTURIDispatchService, _TtP15AutoplayFeature18SPTAutoplayService_;
 
 @interface SPTRadioServiceImplementation : NSObject <SPTService, SPTRadioService, SPTURISubtypeHandler>
 {
@@ -21,6 +21,8 @@
     id <SPTContainerUIService> _containerUIService;
     id <SPContextMenuFeature> _contextMenuFeature;
     id <SPTCoreService> _coreService;
+    id <CosmosFeature> _cosmosService;
+    id <SPTDataSaverService> _dataSaverService;
     id <SPTExplicitContentService> _explicitContentService;
     id <SPTFreeTierService> _freeTierService;
     id <GaiaFeature> _gaiaFeature;
@@ -82,6 +84,8 @@
 @property(nonatomic) __weak id <GaiaFeature> gaiaFeature; // @synthesize gaiaFeature=_gaiaFeature;
 @property(nonatomic) __weak id <SPTFreeTierService> freeTierService; // @synthesize freeTierService=_freeTierService;
 @property(nonatomic) __weak id <SPTExplicitContentService> explicitContentService; // @synthesize explicitContentService=_explicitContentService;
+@property(nonatomic) __weak id <SPTDataSaverService> dataSaverService; // @synthesize dataSaverService=_dataSaverService;
+@property(nonatomic) __weak id <CosmosFeature> cosmosService; // @synthesize cosmosService=_cosmosService;
 @property(nonatomic) __weak id <SPTCoreService> coreService; // @synthesize coreService=_coreService;
 @property(nonatomic) __weak id <SPContextMenuFeature> contextMenuFeature; // @synthesize contextMenuFeature=_contextMenuFeature;
 @property(nonatomic) __weak id <SPTContainerUIService> containerUIService; // @synthesize containerUIService=_containerUIService;

@@ -42,7 +42,6 @@
 - (void)cancelledRequest:(id)arg1;
 - (void)failedResponse:(id)arg1;
 - (void)successfulResponse:(id)arg1;
-- (id)createDataLoaderBlockWrapper;
 - (id)createDataLoader;
 - (id)initWithRequestResponseHandlerDelegate:(id)arg1 authorisers:(id)arg2;
 

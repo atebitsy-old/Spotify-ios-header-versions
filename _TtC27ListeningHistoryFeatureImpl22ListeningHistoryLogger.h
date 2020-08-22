@@ -11,8 +11,6 @@
     // Error parsing type: , name: logCenter
 }
 
-- (void)logListeningHistoryViewModeMenuItemInteractionWithItemIndex:(long long)arg1;
-- (void)logListeningHistoryViewModeMenuNavBarButtonInteraction;
 - (void)logListeningHistoryContextMenuInteractionWithItemUri:(id)arg1 itemIndex:(long long)arg2;
 - (void)logListeningHistoryItemInteractionWithItemUri:(id)arg1 itemIndex:(long long)arg2;
 - (void)logListeningHistoryPageImpression;

@@ -10,6 +10,7 @@
 {
     // Error parsing type: , name: style
     // Error parsing type: , name: profileImage
+    // Error parsing type: , name: profileDisplayName
     // Error parsing type: , name: mainContentView
     // Error parsing type: , name: contentFiltersView
     // Error parsing type: , name: $__lazy_storage_$_headerBottomAnchor
@@ -24,7 +25,6 @@
 
 - (void).cxx_destruct;
 - (id)initWithFrame:(struct CGRect)arg1;
-- (void)layoutSubviews;
 - (id)initWithCoder:(id)arg1;
 
 @end

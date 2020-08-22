@@ -6,11 +6,9 @@
 
 #import "_TtC22AllBoardingFeatureImpl20SearchViewController.h"
 
-#import "SPTPageController-Protocol.h"
-
 @class NSString, NSURL;
 
-@interface _TtC22AllBoardingFeatureImpl20SearchViewController (AllBoardingFeatureImpl) <SPTPageController>
+@interface _TtC22AllBoardingFeatureImpl20SearchViewController (AllBoardingFeatureImpl)
 - (id)spt_pageURI;
 - (id)spt_pageIdentifier;
 

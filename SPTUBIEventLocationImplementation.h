@@ -14,6 +14,8 @@
 {
     _Bool _impressionEnabled;
     NSString *_applicationId;
+    NSString *_specificationId;
+    NSString *_pageReason;
     NSString *_specificationCommitHash;
     NSString *_generatorCommitHash;
     NSString *_specificationVersion;
@@ -26,9 +28,11 @@
 @property(readonly, copy, nonatomic) NSString *specificationVersion; // @synthesize specificationVersion=_specificationVersion;
 @property(readonly, copy, nonatomic) NSString *generatorCommitHash; // @synthesize generatorCommitHash=_generatorCommitHash;
 @property(readonly, copy, nonatomic) NSString *specificationCommitHash; // @synthesize specificationCommitHash=_specificationCommitHash;
+@property(readonly, copy, nonatomic) NSString *pageReason; // @synthesize pageReason=_pageReason;
+@property(readonly, copy, nonatomic) NSString *specificationId; // @synthesize specificationId=_specificationId;
 @property(readonly, copy, nonatomic) NSString *applicationId; // @synthesize applicationId=_applicationId;
 - (id)initWithLocation:(id)arg1;
-- (id)initWithApplicationId:(id)arg1 specificationCommitHash:(id)arg2 generatorCommitHash:(id)arg3 specificationVersion:(id)arg4 eventPathComponents:(id)arg5 impressionEnabled:(_Bool)arg6;
+- (id)initWithApplicationId:(id)arg1 specificationId:(id)arg2 pageReason:(id)arg3 specificationCommitHash:(id)arg4 generatorCommitHash:(id)arg5 specificationVersion:(id)arg6 eventPathComponents:(id)arg7 impressionEnabled:(_Bool)arg8;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

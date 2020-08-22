@@ -6,20 +6,17 @@
 
 #import "SPTPodcastSectionTableViewCell.h"
 
-#import "SPTPodcastQuoteUIComponentDismissDelegate-Protocol.h"
-
 @class GLUEStatefulView, NSArray, NSIndexPath, NSString, NSURL, SPTPodcastEpisodeContentViewStyle, UIView;
-@protocol GLUEImageLoader, GLUETheme, SPTPodcastEpisodeCellActionTarget, SPTPodcastEpisodeTableViewCellDelegate, SPTPodcastEpisodeView, SPTPodcastQuoteUIComponentDismissible;
+@protocol GLUEImageLoader, GLUETheme, SPTPodcastEpisodeCellActionTarget, SPTPodcastEpisodeView;
 
-@interface SPTPodcastEpisodeTableViewCell : SPTPodcastSectionTableViewCell <SPTPodcastQuoteUIComponentDismissDelegate>
+@interface SPTPodcastEpisodeTableViewCell : SPTPodcastSectionTableViewCell
 {
     _Bool _disabled;
-    id <SPTPodcastEpisodeTableViewCellDelegate> _delegate;
     NSURL *_imageURL;
     id <SPTPodcastEpisodeCellActionTarget> _target;
     SPTPodcastEpisodeContentViewStyle *_contentViewStyle;
     NSIndexPath *_indexPath;
-    UIView<SPTPodcastQuoteUIComponentDismissible> *_quotesView;
+    UIView *_quotesView;
     GLUEStatefulView<SPTPodcastEpisodeView> *_episodeView;
     id <GLUETheme> _glueTheme;
 }
@@ -27,14 +24,12 @@
 - (void).cxx_destruct;
 @property(retain, nonatomic) id <GLUETheme> glueTheme; // @synthesize glueTheme=_glueTheme;
 @property(retain, nonatomic) GLUEStatefulView<SPTPodcastEpisodeView> *episodeView; // @synthesize episodeView=_episodeView;
-@property(retain, nonatomic) UIView<SPTPodcastQuoteUIComponentDismissible> *quotesView; // @synthesize quotesView=_quotesView;
+@property(retain, nonatomic) UIView *quotesView; // @synthesize quotesView=_quotesView;
 @property(retain, nonatomic) NSIndexPath *indexPath; // @synthesize indexPath=_indexPath;
 @property(retain, nonatomic) SPTPodcastEpisodeContentViewStyle *contentViewStyle; // @synthesize contentViewStyle=_contentViewStyle;
 @property(nonatomic) __weak id <SPTPodcastEpisodeCellActionTarget> target; // @synthesize target=_target;
 @property(nonatomic, getter=isDisabled) _Bool disabled; // @synthesize disabled=_disabled;
 @property(retain, nonatomic) NSURL *imageURL; // @synthesize imageURL=_imageURL;
-@property(nonatomic) __weak id <SPTPodcastEpisodeTableViewCellDelegate> delegate; // @synthesize delegate=_delegate;
-- (void)dismissPodcastQuoteView:(id)arg1;
 - (void)updateWithViewModel:(id)arg1 atIndexPath:(id)arg2;
 - (void)addTapGestureRecognizerForView:(id)arg1 withSelector:(SEL)arg2;
 - (void)didTapHeader;

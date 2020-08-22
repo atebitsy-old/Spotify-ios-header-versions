@@ -6,24 +6,24 @@
 
 #import <objc/NSObject.h>
 
-#import "SPTProductStateObserver-Protocol.h"
+#import "SPTAbbaFeatureFlagsObserver-Protocol.h"
 
 @class NSString;
-@protocol SPTProductState;
+@protocol SPTAbbaFeatureFlags;
 
-@interface SPTVideoCoordinatorFeatureFlags : NSObject <SPTProductStateObserver>
+@interface SPTVideoCoordinatorFeatureFlags : NSObject <SPTAbbaFeatureFlagsObserver>
 {
     _Bool _subtitlesEnabled;
-    id <SPTProductState> _productState;
+    id <SPTAbbaFeatureFlags> _featureFlags;
 }
 
 - (void).cxx_destruct;
-@property(retain, nonatomic) id <SPTProductState> productState; // @synthesize productState=_productState;
+@property(retain, nonatomic) id <SPTAbbaFeatureFlags> featureFlags; // @synthesize featureFlags=_featureFlags;
 @property(readonly, nonatomic) _Bool subtitlesEnabled; // @synthesize subtitlesEnabled=_subtitlesEnabled;
 - (void)updateSubtitlesFlag;
-- (void)updateProductState;
-- (void)productState:(id)arg1 stateDidChange:(id)arg2;
-- (id)initWithProductState:(id)arg1;
+- (void)updateFeatureFlags;
+- (void)featureFlagsDidChange:(id)arg1;
+- (id)initWithFeatureFlags:(id)arg1;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

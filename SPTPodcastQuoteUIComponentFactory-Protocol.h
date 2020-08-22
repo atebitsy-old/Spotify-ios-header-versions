@@ -5,9 +5,8 @@
 //
 
 @class NSArray, UIView;
-@protocol SPTPodcastQuoteUIComponentDismissible;
 
 @protocol SPTPodcastQuoteUIComponentFactory
-- (UIView<SPTPodcastQuoteUIComponentDismissible> *)createViewWithQuotes:(NSArray *)arg1;
+- (UIView *)createViewWithQuotes:(NSArray *)arg1;
 @end
 

@@ -10,7 +10,7 @@
 #import "SPTNowPlayingAdUnitViewController-Protocol.h"
 #import "SPTNowPlayingContainedViewController-Protocol.h"
 
-@class GLUELabel, NSArray, NSString, SPTAdNowPlayingAuxiliaryActionsHandler, SPTAdPlayerObservable, SPTAdsFeatureProperties, SPTNowPlayingHeadUnitView, SPTTheme;
+@class GLUELabel, NSArray, NSString, SPTAdFeatureFlagChecks, SPTAdNowPlayingAuxiliaryActionsHandler, SPTAdPlayerObservable, SPTNowPlayingHeadUnitView, SPTTheme;
 @protocol SPTAdNowPlayingRemoteControlPolicy, SPTAdsBaseEntity, SPTAdsManager, SPTNowPlayingContainingViewController;
 
 @interface SPTNowPlayingAudioAdHeadUnitViewController : UIViewController <SPTAdPlayerObserver, SPTNowPlayingContainedViewController, SPTNowPlayingAdUnitViewController>
@@ -20,7 +20,7 @@
     SPTTheme *_theme;
     GLUELabel *_skipDelayLabel;
     SPTAdNowPlayingAuxiliaryActionsHandler *_actionsHandler;
-    SPTAdsFeatureProperties *_featureProperties;
+    SPTAdFeatureFlagChecks *_featureChecker;
     NSArray *_layoutConstraints;
     id <SPTAdNowPlayingRemoteControlPolicy> _remoteControlPolicy;
     id <SPTAdsBaseEntity> _adEntity;
@@ -30,7 +30,7 @@
 @property(nonatomic) __weak id <SPTAdsBaseEntity> adEntity; // @synthesize adEntity=_adEntity;
 @property(retain, nonatomic) id <SPTAdNowPlayingRemoteControlPolicy> remoteControlPolicy; // @synthesize remoteControlPolicy=_remoteControlPolicy;
 @property(copy, nonatomic) NSArray *layoutConstraints; // @synthesize layoutConstraints=_layoutConstraints;
-@property(readonly, nonatomic) SPTAdsFeatureProperties *featureProperties; // @synthesize featureProperties=_featureProperties;
+@property(readonly, nonatomic) SPTAdFeatureFlagChecks *featureChecker; // @synthesize featureChecker=_featureChecker;
 @property(readonly, nonatomic) SPTAdNowPlayingAuxiliaryActionsHandler *actionsHandler; // @synthesize actionsHandler=_actionsHandler;
 @property(readonly, nonatomic) GLUELabel *skipDelayLabel; // @synthesize skipDelayLabel=_skipDelayLabel;
 @property(readonly, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
@@ -57,7 +57,7 @@
 - (void)viewDidLoad;
 - (void)loadView;
 - (void)dealloc;
-- (id)initWithAdManager:(id)arg1 playerObservable:(id)arg2 actionsHandler:(id)arg3 featureProperties:(id)arg4 theme:(id)arg5;
+- (id)initWithAdManager:(id)arg1 playerObservable:(id)arg2 actionsHandler:(id)arg3 featureChecker:(id)arg4 theme:(id)arg5;
 
 // Remaining properties
 @property(nonatomic) __weak UIViewController<SPTNowPlayingContainingViewController> *container;

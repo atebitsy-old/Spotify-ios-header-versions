@@ -8,7 +8,7 @@
 
 @interface _TtC23ConnectivityFeatureImpl26ConnectivitySessionService : NSObject
 {
-    // Error parsing type: , name: _sessionService
+    // Error parsing type: , name: sessionService
 }
 
 + (id)serviceIdentifier;
@@ -18,6 +18,7 @@
 - (id)provideHermesController;
 - (void)unload;
 - (void)load;
+- (void)configureWithServices:(id)arg1;
 
 @end
 

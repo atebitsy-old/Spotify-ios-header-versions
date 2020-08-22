@@ -9,12 +9,13 @@
 #import "SPTPodcastEpisodeFeaturedContentViewProvider-Protocol.h"
 
 @class NSString, SPTPodcastEpisodeFeaturedContentContentOperationFactory, SPTPodcastEpisodeFeaturedContentContextMenuPresenter, SPTPodcastEpisodeFeaturedContentLogger;
-@protocol GLUEImageLoader, GLUETheme, SPTHubsRendererFactory, SPTHugsFactory, SPTLinkDispatcher, SPTNowPlayingPlatformService, SPTPageLoaderViewService, SPTPlayerFeature, SPTPodcastEpisodeFeaturedContentTestManager, _TtP29EpisodeSegmentsFetcherFeature34SPTEpisodeSegmentsCosmosDataLoader_;
+@protocol GLUEImageLoader, GLUETheme, SPTHubsRendererFactory, SPTHugsFactory, SPTLinkDispatcher, SPTMetaViewController, SPTNowPlayingPlatformService, SPTPageLoaderViewService, SPTPlayerFeature, SPTPodcastEpisodeFeaturedContentTestManager, _TtP29EpisodeSegmentsFetcherFeature34SPTEpisodeSegmentsCosmosDataLoader_;
 
 @interface SPTPodcastEpisodeFeaturedContentViewProviderImplementation : NSObject <SPTPodcastEpisodeFeaturedContentViewProvider>
 {
     id <SPTPlayerFeature> _playerService;
     id <SPTNowPlayingPlatformService> _nowPlayingPlatformService;
+    id <SPTMetaViewController> _metaviewController;
     id <SPTPageLoaderViewService> _pageLoaderViewService;
     id <_TtP29EpisodeSegmentsFetcherFeature34SPTEpisodeSegmentsCosmosDataLoader_> _dataLoader;
     id <SPTHubsRendererFactory> _hubsRendererFactory;
@@ -40,6 +41,7 @@
 @property(readonly, nonatomic) id <SPTHubsRendererFactory> hubsRendererFactory; // @synthesize hubsRendererFactory=_hubsRendererFactory;
 @property(readonly, nonatomic) id <_TtP29EpisodeSegmentsFetcherFeature34SPTEpisodeSegmentsCosmosDataLoader_> dataLoader; // @synthesize dataLoader=_dataLoader;
 @property(readonly, nonatomic) __weak id <SPTPageLoaderViewService> pageLoaderViewService; // @synthesize pageLoaderViewService=_pageLoaderViewService;
+@property(readonly, nonatomic) __weak id <SPTMetaViewController> metaviewController; // @synthesize metaviewController=_metaviewController;
 @property(readonly, nonatomic) __weak id <SPTNowPlayingPlatformService> nowPlayingPlatformService; // @synthesize nowPlayingPlatformService=_nowPlayingPlatformService;
 @property(readonly, nonatomic) __weak id <SPTPlayerFeature> playerService; // @synthesize playerService=_playerService;
 - (id)managerForURL:(id)arg1 referrerIdentifier:(id)arg2;
@@ -47,7 +49,7 @@
 - (id)featuredContentTimelineForEpisodeURL:(id)arg1 withContext:(id)arg2;
 - (id)featuredContentTrackListForEpisodeURL:(id)arg1 withContext:(id)arg2;
 - (id)featuredContentForEpisodeURL:(id)arg1 withContext:(id)arg2;
-- (id)initWithHubsRendererFactory:(id)arg1 hugsFactory:(id)arg2 theme:(id)arg3 imageLoader:(id)arg4 testManager:(id)arg5 contentOperationFactory:(id)arg6 dataLoader:(id)arg7 contextMenuPresenter:(id)arg8 playerService:(id)arg9 linkDispatcher:(id)arg10 logger:(id)arg11 nowPlayingPlatformService:(id)arg12 pageLoaderViewService:(id)arg13;
+- (id)initWithHubsRendererFactory:(id)arg1 hugsFactory:(id)arg2 theme:(id)arg3 imageLoader:(id)arg4 testManager:(id)arg5 contentOperationFactory:(id)arg6 dataLoader:(id)arg7 contextMenuPresenter:(id)arg8 playerService:(id)arg9 linkDispatcher:(id)arg10 logger:(id)arg11 metaViewController:(id)arg12 nowPlayingPlatformService:(id)arg13 pageLoaderViewService:(id)arg14;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

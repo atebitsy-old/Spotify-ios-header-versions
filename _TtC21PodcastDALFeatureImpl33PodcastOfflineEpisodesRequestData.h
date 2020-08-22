@@ -21,10 +21,13 @@
 - (id)init;
 @property(nonatomic, readonly) NSString *requestAction;
 @property(nonatomic, readonly) NSData *requestBody;
-@property(nonatomic, readonly) _Bool isGrouped; // @synthesize isGrouped;
+- (_Bool)isGrouped;
 @property(nonatomic, readonly) NSString *requestStringTemplate;
 @property(nonatomic, readonly) NSArray *sortDescriptors;
 @property(nonatomic, readonly) NSPredicate *filterPredicate;
+
+// Remaining properties
+@property(nonatomic, readonly) _Bool grouped; // @synthesize grouped=isGrouped;
 
 @end
 

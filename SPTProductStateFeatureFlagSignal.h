@@ -8,7 +8,7 @@
 
 #import "SPTProductStateObserver-Protocol.h"
 
-@class NSString;
+@class NSString, SPTProductStateExposureLogger;
 @protocol SPTProductState;
 
 @interface SPTProductStateFeatureFlagSignal : SPTFeatureFlagSignalImplementation <SPTProductStateObserver>
@@ -16,17 +16,20 @@
     id <SPTProductState> _productState;
     NSString *_key;
     CDUnknownBlockType _mapper;
+    SPTProductStateExposureLogger *_exposureLogger;
 }
 
 - (void).cxx_destruct;
+@property(readonly, nonatomic) SPTProductStateExposureLogger *exposureLogger; // @synthesize exposureLogger=_exposureLogger;
 @property(readonly, copy, nonatomic) CDUnknownBlockType mapper; // @synthesize mapper=_mapper;
 @property(readonly, copy, nonatomic) NSString *key; // @synthesize key=_key;
 @property(readonly, nonatomic) id <SPTProductState> productState; // @synthesize productState=_productState;
 - (void)productState:(id)arg1 stateDidChange:(id)arg2;
+- (void)logExposure;
 - (long long)calculateState;
 - (void)updateValue;
 - (void)dealloc;
-- (id)initWithUserProductState:(id)arg1 key:(id)arg2 mapper:(CDUnknownBlockType)arg3;
+- (id)initWithUserProductState:(id)arg1 key:(id)arg2 mapper:(CDUnknownBlockType)arg3 exposureLogger:(id)arg4;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

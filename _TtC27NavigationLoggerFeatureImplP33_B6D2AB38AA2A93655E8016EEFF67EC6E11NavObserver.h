@@ -6,7 +6,9 @@
 
 #import <objc/NSObject.h>
 
-@interface _TtC27NavigationLoggerFeatureImplP33_B6D2AB38AA2A93655E8016EEFF67EC6E11NavObserver : NSObject
+#import "SPTNavigationManagerDelegate-Protocol.h"
+
+@interface _TtC27NavigationLoggerFeatureImplP33_B6D2AB38AA2A93655E8016EEFF67EC6E11NavObserver : NSObject <SPTNavigationManagerDelegate>
 {
 }
 

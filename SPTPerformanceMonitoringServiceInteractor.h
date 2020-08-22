@@ -6,14 +6,14 @@
 
 #import <objc/NSObject.h>
 
-#import "_TtP16SPTServiceSystem28SPTServiceInstanceInteractor_-Protocol.h"
+#import "SPTServiceInstanceInteractor-Protocol.h"
 
-@class NSString, SPTStartupTracer, _TtC16SPTServiceSystem35SPTDefaultServiceInstanceInteractor;
+@class NSString, SPTDefaultServiceInstanceInteractor, SPTStartupTracer;
 @protocol OS_os_log;
 
-@interface SPTPerformanceMonitoringServiceInteractor : NSObject <_TtP16SPTServiceSystem28SPTServiceInstanceInteractor_>
+@interface SPTPerformanceMonitoringServiceInteractor : NSObject <SPTServiceInstanceInteractor>
 {
-    _TtC16SPTServiceSystem35SPTDefaultServiceInstanceInteractor *_defaultInteractor;
+    SPTDefaultServiceInstanceInteractor *_defaultInteractor;
     SPTStartupTracer *_startupTracer;
     NSObject<OS_os_log> *_instrumentationLog;
 }
@@ -21,7 +21,7 @@
 - (void).cxx_destruct;
 @property(readonly, nonatomic) NSObject<OS_os_log> *instrumentationLog; // @synthesize instrumentationLog=_instrumentationLog;
 @property(readonly, nonatomic) SPTStartupTracer *startupTracer; // @synthesize startupTracer=_startupTracer;
-@property(readonly, nonatomic) _TtC16SPTServiceSystem35SPTDefaultServiceInstanceInteractor *defaultInteractor; // @synthesize defaultInteractor=_defaultInteractor;
+@property(readonly, nonatomic) SPTDefaultServiceInstanceInteractor *defaultInteractor; // @synthesize defaultInteractor=_defaultInteractor;
 - (void)notifyServiceThatIdleStateWasReached:(id)arg1 scope:(id)arg2;
 - (void)notifyServiceThatInitialViewDidAppear:(id)arg1 scope:(id)arg2;
 - (void)unloadService:(id)arg1 scope:(id)arg2;

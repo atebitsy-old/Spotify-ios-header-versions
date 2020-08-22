@@ -9,8 +9,8 @@
 @protocol SPTClientToken, SPTClientTokenAcquireTask, SPTEncryptedClientTokenObserver;
 
 @protocol SPTClientTokenAcquirer <NSObject>
-@property(readonly, nonatomic, getter=isEnabled) _Bool enabled;
-- (id <SPTEncryptedClientTokenObserver>)createEncryptedClientTokenObserver;
+- (id <SPTEncryptedClientTokenObserver>)observeEncryptedClientToken;
+- (_Bool)isEnabled;
 - (void)disable;
 - (void)enable;
 - (void)clearToken;

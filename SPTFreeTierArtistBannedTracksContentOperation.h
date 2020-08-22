@@ -21,7 +21,7 @@
 }
 
 - (void).cxx_destruct;
-@property(retain) FollowModel *followModel; // @synthesize followModel=_followModel;
+@property(retain, nonatomic) FollowModel *followModel; // @synthesize followModel=_followModel;
 @property(readonly, nonatomic) NSURL *viewURI; // @synthesize viewURI=_viewURI;
 @property(readonly, nonatomic) id <SPTFollowModelFactory> followModelFactory; // @synthesize followModelFactory=_followModelFactory;
 @property(nonatomic) __weak id <HUBContentOperationDelegate> delegate; // @synthesize delegate;

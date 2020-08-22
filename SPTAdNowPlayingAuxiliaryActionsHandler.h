@@ -6,52 +6,67 @@
 
 #import <objc/NSObject.h>
 
+#import "SPForegroundObserverDelegate-Protocol.h"
 #import "SPTContextMenuPresenterDelegate-Protocol.h"
+#import "SPTDataLoaderDelegate-Protocol.h"
 
-@class NSArray, NSMutableSet, NSString, SPTAdPlayerObservable, SPTAdsRemindersManager;
-@protocol SPContextMenuFeature, SPTAdsBaseCosmosBridge, SPTAdsBaseEntity, SPTContextMenuPresenter, SPTEventSender, SPTLinkDispatcher, SPTLogCenter, SPTSnackbarConditionalPresenter;
+@class NSArray, NSMutableSet, NSString, SPForegroundObserver, SPTAdPlayerObservable, SPTAdsFeatureProperties, SPTAdsRemindersManager, SPTDataLoader;
+@protocol SPContextMenuFeature, SPTAdsBaseEntity, SPTContextMenuPresenter, SPTEventSender, SPTLogCenter, SPTSnackbarConditionalPresenter;
 
-@interface SPTAdNowPlayingAuxiliaryActionsHandler : NSObject <SPTContextMenuPresenterDelegate>
+@interface SPTAdNowPlayingAuxiliaryActionsHandler : NSObject <SPTContextMenuPresenterDelegate, SPForegroundObserverDelegate, SPTDataLoaderDelegate>
 {
     id <SPTSnackbarConditionalPresenter> _snackbarPresenter;
     id <SPTLogCenter> _logCenter;
     SPTAdPlayerObservable *_playerObserver;
+    SPTDataLoader *_dataLoader;
+    SPTAdsFeatureProperties *_properties;
     SPTAdsRemindersManager *_reminderManager;
     id <SPContextMenuFeature> _contextMenuFeature;
     id <SPTContextMenuPresenter> _contextMenuPresenter;
     id <SPTAdsBaseEntity> _adEntity;
     NSMutableSet *_savedAdIds;
     NSArray *_contextMenuActions;
+    SPForegroundObserver *_foregroundObserver;
     id <SPTEventSender> _eventSender;
-    id <SPTAdsBaseCosmosBridge> _cosmosBridge;
-    id <SPTLinkDispatcher> _linkDispatcher;
 }
 
 - (void).cxx_destruct;
-@property(readonly, nonatomic) id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
-@property(readonly, nonatomic) id <SPTAdsBaseCosmosBridge> cosmosBridge; // @synthesize cosmosBridge=_cosmosBridge;
 @property(readonly, nonatomic) id <SPTEventSender> eventSender; // @synthesize eventSender=_eventSender;
+@property(readonly, nonatomic) SPForegroundObserver *foregroundObserver; // @synthesize foregroundObserver=_foregroundObserver;
 @property(copy, nonatomic) NSArray *contextMenuActions; // @synthesize contextMenuActions=_contextMenuActions;
 @property(retain, nonatomic) NSMutableSet *savedAdIds; // @synthesize savedAdIds=_savedAdIds;
 @property(retain, nonatomic) id <SPTAdsBaseEntity> adEntity; // @synthesize adEntity=_adEntity;
 @property(retain, nonatomic) id <SPTContextMenuPresenter> contextMenuPresenter; // @synthesize contextMenuPresenter=_contextMenuPresenter;
 @property(readonly, nonatomic) __weak id <SPContextMenuFeature> contextMenuFeature; // @synthesize contextMenuFeature=_contextMenuFeature;
 @property(readonly, nonatomic) SPTAdsRemindersManager *reminderManager; // @synthesize reminderManager=_reminderManager;
+@property(readonly, nonatomic) SPTAdsFeatureProperties *properties; // @synthesize properties=_properties;
+@property(readonly, nonatomic) SPTDataLoader *dataLoader; // @synthesize dataLoader=_dataLoader;
 @property(readonly, nonatomic) SPTAdPlayerObservable *playerObserver; // @synthesize playerObserver=_playerObserver;
 @property(readonly, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
 @property(readonly, nonatomic) id <SPTSnackbarConditionalPresenter> snackbarPresenter; // @synthesize snackbarPresenter=_snackbarPresenter;
+- (void)dataLoader:(id)arg1 didReceiveErrorResponse:(id)arg2;
+- (void)dataLoader:(id)arg1 didReceiveSuccessfulResponse:(id)arg2;
+- (void)foregroundObserverDidHibernate:(id)arg1;
+- (void)foregroundObserverDidAwake:(id)arg1;
+- (id)requestURLToGetSavedAds;
+- (id)requestURLToDeleteBookmarkedAd;
+- (id)requestURLToBookmarkAd;
+- (void)loadSavedAds;
 - (void)logEventForAdEntity:(id)arg1 action:(id)arg2;
 - (id)randomizedArrayFromArray:(id)arg1;
 - (void)logInteractionEventWithIntent:(id)arg1 pageURI:(id)arg2;
 - (id)feedBackMenuCustomActionsWithActionBlock:(CDUnknownBlockType)arg1;
 - (void)presentFeedbackMenuWithViewController:(id)arg1 sender:(id)arg2;
+- (void)performRemoveBookmarkActionForAd:(id)arg1 fromPageURI:(id)arg2;
 - (void)performBookmarkActionForAd:(id)arg1 fromPageURI:(id)arg2;
-- (void)enableSavedAdsSlot;
 - (void)contextMenuPresenterDidDismiss:(id)arg1;
 - (void)performMobiusNegativeActionForAd:(id)arg1 inViewController:(id)arg2 sender:(id)arg3 completion:(CDUnknownBlockType)arg4;
 - (void)performNegativeActionForAd:(id)arg1 inViewController:(id)arg2 sender:(id)arg3;
 - (void)performPositiveActionForAd:(id)arg1 inViewController:(id)arg2 withSender:(id)arg3;
-- (id)initWithEducationPresenter:(id)arg1 contextMenuFeature:(id)arg2 logCenter:(id)arg3 playerObserver:(id)arg4 reminderManager:(id)arg5 eventSender:(id)arg6 cosmosBridge:(id)arg7 linkDispatcher:(id)arg8;
+- (_Bool)isAdBookmarked:(id)arg1;
+- (void)startBackgroundObserver;
+- (void)dealloc;
+- (id)initWithEducationPresenter:(id)arg1 contextMenuFeature:(id)arg2 logCenter:(id)arg3 playerObserver:(id)arg4 dataLoader:(id)arg5 featureProperties:(id)arg6 reminderManager:(id)arg7 eventSender:(id)arg8;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

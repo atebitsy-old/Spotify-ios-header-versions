@@ -13,18 +13,14 @@
     // Error parsing type: , name: pageLoaderViewService
     // Error parsing type: , name: remoteConfigurationService
     // Error parsing type: , name: loopController
-    // Error parsing type: , name: glueService
-    // Error parsing type: , name: uiPresentationService
     // Error parsing type: , name: pageToken
     // Error parsing type: , name: testManager
     // Error parsing type: , name: $__lazy_storage_$_experienceRegistry
-    // Error parsing type: , name: $__lazy_storage_$_feedbackTheme
 }
 
 + (id)serviceIdentifier;
 - (void).cxx_destruct;
 - (id)init;
-- (id)provideFeedbackFactory;
 - (id)provideExperienceRegistry;
 - (id)provideTestManager;
 - (id)provideViewControllerWithUri:(id)arg1 pageCreationContext:(id)arg2;

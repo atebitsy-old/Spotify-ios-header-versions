@@ -6,26 +6,26 @@
 
 #import <objc/NSObject.h>
 
-@class SPTAdsFeatureProperties;
+@class SPTAdFeatureFlagChecks;
 @protocol SPTLinkDispatcher, SPTLocalSettings;
 
 @interface SPTAdVoicePermissions : NSObject
 {
     id <SPTLocalSettings> _localSettings;
-    SPTAdsFeatureProperties *_featureProperties;
+    SPTAdFeatureFlagChecks *_featureFlagChecker;
     id <SPTLinkDispatcher> _linkDispatcher;
 }
 
 - (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
-@property(retain, nonatomic) SPTAdsFeatureProperties *featureProperties; // @synthesize featureProperties=_featureProperties;
+@property(retain, nonatomic) SPTAdFeatureFlagChecks *featureFlagChecker; // @synthesize featureFlagChecker=_featureFlagChecker;
 @property(nonatomic) __weak id <SPTLocalSettings> localSettings; // @synthesize localSettings=_localSettings;
 - (void)handleDeepLinkURL:(id)arg1;
 - (void)requestRecordPermissionIfNeeded;
 - (_Bool)isVoiceAdPreferenceAllowed;
 - (_Bool)isRecordingAllowed;
 @property(readonly, nonatomic, getter=isVoiceAdAllowed) _Bool voiceAdAllowed;
-- (id)initWithLocalSettings:(id)arg1 featureProperties:(id)arg2 linkDispatcher:(id)arg3;
+- (id)initWithLocalSettings:(id)arg1 featureFlagChecker:(id)arg2 linkDispatcher:(id)arg3;
 
 @end
 

@@ -6,7 +6,7 @@
 
 #import <objc/NSObject.h>
 
-@class NSArray, NSData, NSString, NSURL, UIImage;
+@class NSArray, NSString, NSURL;
 @protocol SPTShareEntityData;
 
 @interface SPTShareData : NSObject
@@ -14,8 +14,6 @@
     NSURL *_shareableURL;
     NSString *_shareBrowselinkId;
     NSArray *_itemDescriptionComponents;
-    NSData *_videoData;
-    UIImage *_image;
     id <SPTShareEntityData> _entityData;
     NSURL *_currentlyPlayingTrackURI;
     NSString *_shareSessionID;
@@ -25,8 +23,6 @@
 @property(readonly, nonatomic) NSString *shareSessionID; // @synthesize shareSessionID=_shareSessionID;
 @property(readonly, nonatomic) NSURL *currentlyPlayingTrackURI; // @synthesize currentlyPlayingTrackURI=_currentlyPlayingTrackURI;
 @property(readonly, nonatomic) id <SPTShareEntityData> entityData; // @synthesize entityData=_entityData;
-@property(copy, nonatomic) UIImage *image; // @synthesize image=_image;
-@property(copy, nonatomic) NSData *videoData; // @synthesize videoData=_videoData;
 @property(readonly, nonatomic) NSArray *itemDescriptionComponents; // @synthesize itemDescriptionComponents=_itemDescriptionComponents;
 @property(copy, nonatomic) NSString *shareBrowselinkId; // @synthesize shareBrowselinkId=_shareBrowselinkId;
 @property(retain, nonatomic) NSURL *shareableURL; // @synthesize shareableURL=_shareableURL;

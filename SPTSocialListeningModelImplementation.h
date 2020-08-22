@@ -11,7 +11,7 @@
 #import "SPTSocialListeningModel-Protocol.h"
 
 @class NSArray, NSDictionary, NSString, NSURL, SPTObserverManager, SPTSocialListeningDataLoader, SPTSocialListeningSession, SPTSocialListeningUpdateEvent;
-@protocol GLUEImageLoader, SPTPlayer, SPTScannablesDataSource, SPTSocialListeningSessionModelEntity, SPTSocialListeningSocialDeviceModelEntity, SPTSocialListeningTestManager;
+@protocol GLUEImageLoader, SPTPlayer, SPTScannablesDataSource, SPTSocialListeningSocialDeviceModelEntity, SPTSocialListeningTestManager;
 
 @interface SPTSocialListeningModelImplementation : NSObject <SPTSocialListeningModel, SPTSocialListeningDataLoaderDelegate, SPTScannablesDataSourceDelegate>
 {
@@ -60,7 +60,6 @@
 - (void)handleSession:(id)arg1 updateEvent:(id)arg2;
 - (void)notifyScannableDidFinishLoadingIfError:(id)arg1;
 - (void)notifyIfLoaded;
-@property(readonly, nonatomic) id <SPTSocialListeningSessionModelEntity> sessionModelEntity;
 @property(readonly, nonatomic) NSURL *hostAvatarURL;
 @property(readonly, nonatomic) NSArray<SPTSocialListeningSocialDeviceModelEntity> *socialDevices;
 @property(readonly, nonatomic) NSString *sessionID;

@@ -9,7 +9,7 @@
 #import "SPTPodcastEpisodeService-Protocol.h"
 
 @class NSString, SPTAllocationContext;
-@protocol SPTCollectionPlatformService, SPTContextDispatchService, SPTExplicitContentService, SPTGLUEService, SPTNetworkService, SPTPageLoaderViewService, SPTPerformanceMetricsService, SPTPodcastEpisodeFeaturedContentService, SPTPodcastFeature, SPTPodcastOffliningService, SPTPodcastRecommendationsService, SPTPodcastUIService, SPTRemoteConfigurationService, SPTSessionService, SPTShareFeature, SPTUBIService, SPTUIPresentationService, _TtP17PodcastDALFeature20SPTPodcastDALService_, _TtP21PodcastQuoteUIFeature24SPTPodcastQuoteUIService_, _TtP27PodcastHTMLComponentFeature30SPTPodcastHTMLComponentService_, _TtP27PodcastInteractivityFeature15SPTPollsService_, _TtP30PodcastEpisodeAudioPlusFeature33SPTPodcastEpisodeAudioPlusService_;
+@protocol SPTCollectionPlatformService, SPTContextDispatchService, SPTExplicitContentService, SPTGLUEService, SPTNetworkService, SPTPageLoaderViewService, SPTPerformanceMetricsService, SPTPodcastEpisodeFeaturedContentService, SPTPodcastFeature, SPTPodcastOffliningService, SPTPodcastRecommendationsService, SPTPodcastUIService, SPTRemoteConfigurationService, SPTShareFeature, SPTUBIService, SPTUIPresentationService, _TtP17PodcastDALFeature20SPTPodcastDALService_, _TtP27PodcastHTMLComponentFeature30SPTPodcastHTMLComponentService_, _TtP27PodcastInteractivityFeature15SPTPollsService_, _TtP30PodcastEpisodeAudioPlusFeature33SPTPodcastEpisodeAudioPlusService_;
 
 @interface SPTPodcastEpisodeServiceImplementation : SPTUIPageService <SPTPodcastEpisodeService>
 {
@@ -33,14 +33,10 @@
     id <_TtP27PodcastHTMLComponentFeature30SPTPodcastHTMLComponentService_> _podcastHTMLComponentService;
     id <_TtP27PodcastInteractivityFeature15SPTPollsService_> _pollsService;
     id <SPTPageLoaderViewService> _pageLoaderViewService;
-    id <_TtP21PodcastQuoteUIFeature24SPTPodcastQuoteUIService_> _podcastQuoteUIService;
-    id <SPTSessionService> _clientSessionService;
 }
 
 + (id)serviceIdentifier;
 - (void).cxx_destruct;
-@property(nonatomic) __weak id <SPTSessionService> clientSessionService; // @synthesize clientSessionService=_clientSessionService;
-@property(nonatomic) __weak id <_TtP21PodcastQuoteUIFeature24SPTPodcastQuoteUIService_> podcastQuoteUIService; // @synthesize podcastQuoteUIService=_podcastQuoteUIService;
 @property(nonatomic) __weak id <SPTPageLoaderViewService> pageLoaderViewService; // @synthesize pageLoaderViewService=_pageLoaderViewService;
 @property(nonatomic) __weak id <_TtP27PodcastInteractivityFeature15SPTPollsService_> pollsService; // @synthesize pollsService=_pollsService;
 @property(nonatomic) __weak id <_TtP27PodcastHTMLComponentFeature30SPTPodcastHTMLComponentService_> podcastHTMLComponentService; // @synthesize podcastHTMLComponentService=_podcastHTMLComponentService;

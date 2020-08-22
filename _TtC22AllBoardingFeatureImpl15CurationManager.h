@@ -11,6 +11,7 @@
     // Error parsing type: , name: userDefaultsController
     // Error parsing type: , name: dataLoader
     // Error parsing type: , name: selectedItems
+    // Error parsing type: , name: encoder
     // Error parsing type: , name: delegate
 }
 

@@ -12,7 +12,6 @@
     // Error parsing type: , name: mainContentView
     // Error parsing type: , name: searchField
     // Error parsing type: , name: cancelButton
-    // Error parsing type: , name: searchFieldXConstraint
 }
 
 - (void).cxx_destruct;

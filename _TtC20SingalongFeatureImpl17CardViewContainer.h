@@ -4,16 +4,16 @@
 //     class-dump is Copyright (C) 1997-1998, 2000-2001, 2004-2015 by Steve Nygard.
 //
 
-#import "_TtC20SingalongFeatureImpl19CommonViewContainer.h"
+#import <UIKit/UIView.h>
 
-@interface _TtC20SingalongFeatureImpl17CardViewContainer : _TtC20SingalongFeatureImpl19CommonViewContainer
+@interface _TtC20SingalongFeatureImpl17CardViewContainer : UIView
 {
-    // Error parsing type: , name: errorView
-    // Error parsing type: , name: loadingView
+    // Error parsing type: , name: titleLabel
+    // Error parsing type: , name: lyricsView
 }
 
 - (void).cxx_destruct;
-- (void)applyColors:(id)arg1;
+- (id)initWithFrame:(struct CGRect)arg1;
 - (id)initWithCoder:(id)arg1;
 
 @end

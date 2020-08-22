@@ -16,9 +16,6 @@
     UIColor *_titleColor;
     long long _titleNumberOfLines;
     UIColor *_iconColor;
-    SPTEncoreTypeStyle *_textStyle;
-    UIColor *_textColor;
-    long long _textNumberOfLines;
     UIColor *_separatorColor;
     double _defaultMarginMetric;
     struct CGSize _iconSize;
@@ -27,9 +24,6 @@
 - (void).cxx_destruct;
 @property(nonatomic) double defaultMarginMetric; // @synthesize defaultMarginMetric=_defaultMarginMetric;
 @property(retain, nonatomic) UIColor *separatorColor; // @synthesize separatorColor=_separatorColor;
-@property(nonatomic) long long textNumberOfLines; // @synthesize textNumberOfLines=_textNumberOfLines;
-@property(retain, nonatomic) UIColor *textColor; // @synthesize textColor=_textColor;
-@property(retain, nonatomic) SPTEncoreTypeStyle *textStyle; // @synthesize textStyle=_textStyle;
 @property(nonatomic) struct CGSize iconSize; // @synthesize iconSize=_iconSize;
 @property(retain, nonatomic) UIColor *iconColor; // @synthesize iconColor=_iconColor;
 @property(nonatomic) long long titleNumberOfLines; // @synthesize titleNumberOfLines=_titleNumberOfLines;

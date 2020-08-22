@@ -55,7 +55,7 @@
 @property(readonly, nonatomic) double offscreenContentHeight;
 - (void)podcastPlayer:(id)arg1 didUpdateProgressForTrackURL:(id)arg2;
 - (double)podcastPlayer:(id)arg1 updateProgressIntervalForTrackURL:(id)arg2;
-- (void)podcastPlayer:(id)arg1 didChangePlayingTrackURL:(id)arg2 fromTrackURL:(id)arg3;
+- (void)podcastPlayer:(id)arg1 didChangePlayingTrackURL:(id)arg2;
 - (void)podcastPlayerStateDidChange:(id)arg1;
 - (_Bool)automaticallyAdjustsScrollViewInsets;
 - (void)sp_updateContentInsets;

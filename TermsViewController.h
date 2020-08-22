@@ -45,7 +45,6 @@
 - (void)showVoiceTermsAndConditions;
 - (void)showPrivacyPolicy;
 - (void)showTermsAndConditions;
-- (void)showCookiePermissions;
 - (void)viewWillAppear:(_Bool)arg1;
 - (void)viewDidLoad;
 - (id)initWithAlertController:(id)arg1;

@@ -8,8 +8,8 @@
 
 #import "SPTAdsManager-Protocol.h"
 
-@class NSString, SPTAdFeaturedActionHandler, SPTAdNowPlayingAuxiliaryActionsHandler, SPTAdNowPlayingManager, SPTAdRulesManager, SPTAdVoicePermissions, SPTAdsFeatureProperties, SPTAdsInAppBrowserController, SPTAdsRemindersManager, SPTAdsViewModel;
-@protocol SPTAdNowPlayingRemoteControlPolicy, SPTAdsBaseCosmosBridge, SPTAdsBaseEntity, SPTAdsBaseGlobalSettingsController, SPTLinkDispatcher, SPTMetaViewController, SPTNowPlayingNavigationBarModel, SPTPlayer, SPTSnackbarConditionalPresenter;
+@class NSString, SPTAdFeatureFlagChecks, SPTAdFeaturedActionHandler, SPTAdNowPlayingAuxiliaryActionsHandler, SPTAdNowPlayingManager, SPTAdRulesManager, SPTAdVoicePermissions, SPTAdsFeatureProperties, SPTAdsInAppBrowserController, SPTAdsViewModel;
+@protocol SPTAdNowPlayingRemoteControlPolicy, SPTAdsBaseCosmosBridge, SPTAdsBaseEntity, SPTAdsBaseGlobalSettingsController, SPTLinkDispatcher, SPTMetaViewController, SPTNowPlayingNavigationBarModel, SPTPlayer;
 
 @interface SPTAdsManagerImplementation : NSObject <SPTAdsManager>
 {
@@ -20,6 +20,7 @@
     id <SPTNowPlayingNavigationBarModel> _nowPlayingNavigationBarModel;
     SPTAdFeaturedActionHandler *_adActionHandler;
     SPTAdRulesManager *_adRulesManager;
+    SPTAdFeatureFlagChecks *_adFeatureChecker;
     id <SPTAdsBaseGlobalSettingsController> _adSettingsController;
     id <SPTLinkDispatcher> _linkDispatcher;
     id <SPTPlayer> _player;
@@ -29,13 +30,9 @@
     SPTAdsInAppBrowserController *_inAppBrowserController;
     SPTAdVoicePermissions *_voicePermission;
     SPTAdsFeatureProperties *_featureProperties;
-    id <SPTSnackbarConditionalPresenter> _snackbarPresenter;
-    SPTAdsRemindersManager *_reminderManager;
 }
 
 - (void).cxx_destruct;
-@property(readonly, nonatomic) SPTAdsRemindersManager *reminderManager; // @synthesize reminderManager=_reminderManager;
-@property(retain, nonatomic) id <SPTSnackbarConditionalPresenter> snackbarPresenter; // @synthesize snackbarPresenter=_snackbarPresenter;
 @property(retain, nonatomic) SPTAdsFeatureProperties *featureProperties; // @synthesize featureProperties=_featureProperties;
 @property(retain, nonatomic) SPTAdVoicePermissions *voicePermission; // @synthesize voicePermission=_voicePermission;
 @property(retain, nonatomic) SPTAdsInAppBrowserController *inAppBrowserController; // @synthesize inAppBrowserController=_inAppBrowserController;
@@ -45,6 +42,7 @@
 @property(nonatomic) __weak id <SPTPlayer> player; // @synthesize player=_player;
 @property(retain, nonatomic) id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
 @property(nonatomic) __weak id <SPTAdsBaseGlobalSettingsController> adSettingsController; // @synthesize adSettingsController=_adSettingsController;
+@property(nonatomic) __weak SPTAdFeatureFlagChecks *adFeatureChecker; // @synthesize adFeatureChecker=_adFeatureChecker;
 @property(retain, nonatomic) SPTAdRulesManager *adRulesManager; // @synthesize adRulesManager=_adRulesManager;
 @property(retain, nonatomic) SPTAdFeaturedActionHandler *adActionHandler; // @synthesize adActionHandler=_adActionHandler;
 @property(nonatomic) __weak id <SPTNowPlayingNavigationBarModel> nowPlayingNavigationBarModel; // @synthesize nowPlayingNavigationBarModel=_nowPlayingNavigationBarModel;
@@ -63,7 +61,6 @@
 - (void)handlePlayContext:(id)arg1;
 - (void)handleAdTap:(id)arg1;
 - (void)handleAdTap:(id)arg1 shouldPlayContent:(_Bool)arg2;
-- (void)handleBookmarkAction;
 - (double)skipDelayRemaining:(double)arg1;
 @property(readonly, nonatomic) id <SPTAdsBaseEntity> activeAdEntity;
 @property(readonly, nonatomic) _Bool shouldDisallowPause;
@@ -81,7 +78,7 @@
 - (void)removeObservers;
 - (void)addObservers;
 - (void)dealloc;
-- (id)initWithViewModel:(id)arg1 metaViewController:(id)arg2 adNowPlayingManager:(id)arg3 adFeaturedActionHandler:(id)arg4 adRulesManager:(id)arg5 adSettingsController:(id)arg6 linkDispatcher:(id)arg7 actionsHandler:(id)arg8 player:(id)arg9 cosmosBridge:(id)arg10 inAppBrowserController:(id)arg11 voicePermission:(id)arg12 featureProperties:(id)arg13 snackbarPresenter:(id)arg14 reminderManager:(id)arg15;
+- (id)initWithViewModel:(id)arg1 metaViewController:(id)arg2 adNowPlayingManager:(id)arg3 adFeaturedActionHandler:(id)arg4 adRulesManager:(id)arg5 adFeatureChecker:(id)arg6 adSettingsController:(id)arg7 linkDispatcher:(id)arg8 actionsHandler:(id)arg9 player:(id)arg10 cosmosBridge:(id)arg11 inAppBrowserController:(id)arg12 voicePermission:(id)arg13 featureProperties:(id)arg14;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

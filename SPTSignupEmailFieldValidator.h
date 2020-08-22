@@ -6,11 +6,11 @@
 
 #import <objc/NSObject.h>
 
-#import "SPTSignupFieldLocalAndRemoteValidator-Protocol.h"
+#import "SPTSignupFieldValidator-Protocol.h"
 
 @class NSString, SPTSignupEmailBackendValidator;
 
-@interface SPTSignupEmailFieldValidator : NSObject <SPTSignupFieldLocalAndRemoteValidator>
+@interface SPTSignupEmailFieldValidator : NSObject <SPTSignupFieldValidator>
 {
     SPTSignupEmailBackendValidator *_emailBackendValidator;
     CDUnknownBlockType _lastDispatchBlock;

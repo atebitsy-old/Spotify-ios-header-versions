@@ -67,7 +67,7 @@
 - (void)invalidateDisplayLink;
 - (id)trackImageWithSize:(struct CGSize)arg1 color:(id)arg2;
 - (void)modifySliderAppearance;
-- (id)initWithFrame:(struct CGRect)arg1 animationView:(id)arg2 configuration:(id)arg3;
+- (id)initWithFrame:(struct CGRect)arg1 animationView:(id)arg2;
 
 @end
 

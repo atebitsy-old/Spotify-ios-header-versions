@@ -12,11 +12,9 @@
 {
     NSString *_columnID;
     long long _icon;
-    NSString *_text;
 }
 
 - (void).cxx_destruct;
-@property(copy, nonatomic) NSString *text; // @synthesize text=_text;
 @property(nonatomic) long long icon; // @synthesize icon=_icon;
 @property(copy, nonatomic) NSString *columnID; // @synthesize columnID=_columnID;
 

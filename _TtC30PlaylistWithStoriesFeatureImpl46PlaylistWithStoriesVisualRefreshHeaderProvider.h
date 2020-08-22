@@ -19,6 +19,7 @@
     // Error parsing type: , name: userDefaultsController
     // Error parsing type: , name: visrefIntegrationManager
     // Error parsing type: , name: defaultHeaderViewModel
+    // Error parsing type: , name: containsStoryThumbnail
     // Error parsing type: , name: headerController
 }
 

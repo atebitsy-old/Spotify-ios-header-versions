@@ -5,10 +5,11 @@
 //
 
 #import "NSObject-Protocol.h"
+#import "SPTAbbaFeatureExposureLogging-Protocol.h"
 
 @protocol SPTFeatureFlagSignalObserver;
 
-@protocol SPTFeatureFlagSignal <NSObject>
+@protocol SPTFeatureFlagSignal <NSObject, SPTAbbaFeatureExposureLogging>
 - (void)removeObserver:(id <SPTFeatureFlagSignalObserver>)arg1;
 - (void)addObserver:(id <SPTFeatureFlagSignalObserver>)arg1;
 @end

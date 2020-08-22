@@ -24,7 +24,7 @@
 @property(retain, nonatomic) GLUEAccessoryIconButton<SPTPodcastUIDownloadButton> *downloadButton; // @synthesize downloadButton=_downloadButton;
 @property(retain, nonatomic) GLUEAccessoryIconButton *shareButton; // @synthesize shareButton=_shareButton;
 @property(retain, nonatomic) GLUEButton *mainActionButton; // @synthesize mainActionButton=_mainActionButton;
-- (id)initWithGlueTheme:(id)arg1 buttonsFactory:(id)arg2 allowEpisodeDownload:(_Bool)arg3;
+- (id)initWithGlueTheme:(id)arg1 buttonsFactory:(id)arg2;
 
 @end
 

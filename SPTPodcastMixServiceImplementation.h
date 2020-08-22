@@ -9,18 +9,16 @@
 #import "SPTPodcastMixService-Protocol.h"
 
 @class NSMutableSet, NSString, SPSession, SPTAllocationContext, SPTPodcastMixConfiguration;
-@protocol SPContextMenuFeature, SPTFreeTierPlaylistUIService, SPTFreeTierTooltipService, SPTGLUEService, SPTRemoteConfigurationService, SPTSessionService, SPTUBIService, SPTURIDispatchService;
+@protocol SPContextMenuFeature, SPTFreeTierPlaylistUIService, SPTFreeTierTooltipService, SPTRemoteConfigurationService, SPTSessionService, SPTURIDispatchService;
 
 @interface SPTPodcastMixServiceImplementation : NSObject <SPTPodcastMixService>
 {
     id <SPTSessionService> _clientSessionService;
-    id <SPContextMenuFeature> _contextMenuService;
     id <SPTFreeTierPlaylistUIService> _freeTierPlaylistUIService;
     id <SPTFreeTierTooltipService> _freeTierTooltipService;
-    id <SPTGLUEService> _glueService;
     id <SPTRemoteConfigurationService> _remoteConfigurationService;
-    id <SPTUBIService> _ubiService;
     id <SPTURIDispatchService> _uriDispatchService;
+    id <SPContextMenuFeature> _contextMenuService;
     SPTPodcastMixConfiguration *_configuration;
     SPSession *_session;
     NSMutableSet *_customizedContextURLs;
@@ -31,17 +29,14 @@
 @property(retain, nonatomic) NSMutableSet *customizedContextURLs; // @synthesize customizedContextURLs=_customizedContextURLs;
 @property(nonatomic) __weak SPSession *session; // @synthesize session=_session;
 @property(retain, nonatomic) SPTPodcastMixConfiguration *configuration; // @synthesize configuration=_configuration;
+@property(nonatomic) __weak id <SPContextMenuFeature> contextMenuService; // @synthesize contextMenuService=_contextMenuService;
 @property(nonatomic) __weak id <SPTURIDispatchService> uriDispatchService; // @synthesize uriDispatchService=_uriDispatchService;
-@property(nonatomic) __weak id <SPTUBIService> ubiService; // @synthesize ubiService=_ubiService;
 @property(nonatomic) __weak id <SPTRemoteConfigurationService> remoteConfigurationService; // @synthesize remoteConfigurationService=_remoteConfigurationService;
-@property(nonatomic) __weak id <SPTGLUEService> glueService; // @synthesize glueService=_glueService;
 @property(nonatomic) __weak id <SPTFreeTierTooltipService> freeTierTooltipService; // @synthesize freeTierTooltipService=_freeTierTooltipService;
 @property(nonatomic) __weak id <SPTFreeTierPlaylistUIService> freeTierPlaylistUIService; // @synthesize freeTierPlaylistUIService=_freeTierPlaylistUIService;
-@property(nonatomic) __weak id <SPContextMenuFeature> contextMenuService; // @synthesize contextMenuService=_contextMenuService;
 @property(nonatomic) __weak id <SPTSessionService> clientSessionService; // @synthesize clientSessionService=_clientSessionService;
 - (id)manageEpisodeContextMenuTask:(id)arg1 logContext:(id)arg2 sourceURL:(id)arg3;
 - (_Bool)isFormatListLoadingForOwner:(id)arg1;
-- (id)provideLoggerForUrl:(id)arg1;
 - (void)customizeWithURL:(id)arg1 context:(id)arg2 playlistConfiguration:(id)arg3 formatListAttributes:(id)arg4 podcastMixConfiguration:(id)arg5;
 - (void)enableFeature;
 - (void)unload;

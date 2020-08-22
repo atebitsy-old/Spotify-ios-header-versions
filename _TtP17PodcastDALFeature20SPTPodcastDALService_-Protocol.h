@@ -9,14 +9,11 @@
 @protocol SPTPodcastDataLoader, SPTPodcastEntityDataLoader, SPTPodcastEpisodeFactory, SPTPodcastFactory, SPTPodcastRequestFactory, SPTPodcastSortingProvider;
 
 @protocol _TtP17PodcastDALFeature20SPTPodcastDALService_ <SPTService>
-- (id <SPTPodcastEntityDataLoader>)provideProtobufPodcastEntityDataLoader;
 - (id <SPTPodcastEntityDataLoader>)providePodcastEntityDataLoader;
 - (id <SPTPodcastSortingProvider>)provideSortingProvider;
 - (id <SPTPodcastRequestFactory>)providePodcastRequestFactory;
 - (id <SPTPodcastDataLoader>)provideDataLoader;
-- (id <SPTPodcastEpisodeFactory>)providePodcastEpisodeProtobufFactory;
 - (id <SPTPodcastEpisodeFactory>)providePodcastEpisodeFactory;
-- (id <SPTPodcastFactory>)providePodcastProtobufFactory;
 - (id <SPTPodcastFactory>)providePodcastFactory;
 @end
 

@@ -20,7 +20,6 @@
 - (void).cxx_destruct;
 @property(readonly, nonatomic) SPTPsesCommandLineArguments *psesCommandLineArguments; // @synthesize psesCommandLineArguments=_psesCommandLineArguments;
 @property(readonly, nonatomic) id <SPTPreSignupExperimentationFeatureFlagsLoader> featureFlagsLoader; // @synthesize featureFlagsLoader=_featureFlagsLoader;
-@property(readonly, nonatomic, getter=isClientTokenEnabled) _Bool clientTokenEnabled;
 - (unsigned long long)phoneNumberPlaceholderCell;
 @property(readonly, nonatomic, getter=isPhoneNumberAutofillEnabled) _Bool phoneNumberAutofillEnabled;
 @property(readonly, nonatomic, getter=isStartScreenImageryEnabled) _Bool startScreenImageryEnabled;

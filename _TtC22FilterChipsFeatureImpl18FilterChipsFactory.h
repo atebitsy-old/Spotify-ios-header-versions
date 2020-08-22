@@ -11,7 +11,7 @@
     // Error parsing type: , name: theme
 }
 
-- (id)makeFilterChipsWithItemLoader:(id)arg1 itemInteractionObserver:(id)arg2 buttonSize:(long long)arg3;
+- (id)makeFilterChipsWithItemLoader:(id)arg1 itemInteractionObserver:(id)arg2;
 
 @end
 

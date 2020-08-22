@@ -6,7 +6,9 @@
 
 #import <objc/NSObject.h>
 
-@interface _TtC35PodcastCreatorEntityPageFeatureImpl28HubComponentModelUriResolver : NSObject
+#import "SPTHubComponentModelURIResolver-Protocol.h"
+
+@interface _TtC35PodcastCreatorEntityPageFeatureImpl28HubComponentModelUriResolver : NSObject <SPTHubComponentModelURIResolver>
 {
 }
 

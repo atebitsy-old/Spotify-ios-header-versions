@@ -17,10 +17,8 @@
     _Bool _editorialOnDemandDebuggingEnabled;
     _Bool _topicCarouselProhibited;
     _Bool _v2AssistedCurationEnabled;
-    _Bool _recentsRowEpisodeTwoLinesEnabled;
 }
 
-@property(readonly, nonatomic) _Bool recentsRowEpisodeTwoLinesEnabled; // @synthesize recentsRowEpisodeTwoLinesEnabled=_recentsRowEpisodeTwoLinesEnabled;
 @property(readonly, nonatomic) _Bool v2AssistedCurationEnabled; // @synthesize v2AssistedCurationEnabled=_v2AssistedCurationEnabled;
 @property(readonly, nonatomic) _Bool topicCarouselProhibited; // @synthesize topicCarouselProhibited=_topicCarouselProhibited;
 @property(readonly, nonatomic) _Bool editorialOnDemandDebuggingEnabled; // @synthesize editorialOnDemandDebuggingEnabled=_editorialOnDemandDebuggingEnabled;

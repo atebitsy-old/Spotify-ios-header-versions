@@ -10,7 +10,7 @@
 #import "SPTURISubtypeHandler-Protocol.h"
 
 @class NSString, SPTAllocationContext, SPTOnboardingCoordinationManager;
-@protocol SPTContainerService, SPTFreeTierTasteOnboardingService, SPTLanguageOnboardingService, SPTLoginService, SPTUIPresentationService, SPTURIDispatchService, _TtP24PodcastOnboardingFeature27SPTPodcastOnboardingService_;
+@protocol SPTContainerService, SPTFreeTierTasteOnboardingService, SPTLanguageOnboardingService, SPTLoginService, SPTUIPresentationService, SPTURIDispatchService, _TtP18AllBoardingFeature21SPTAllBoardingService_, _TtP24PodcastOnboardingFeature27SPTPodcastOnboardingService_;
 
 @interface SPTOnboardingCoordinationServiceImplementation : NSObject <SPTURISubtypeHandler, SPTOnboardingCoordinationService>
 {
@@ -21,12 +21,14 @@
     id <SPTFreeTierTasteOnboardingService> _tasteOnboardingService;
     id <SPTLanguageOnboardingService> _languageOnboardingService;
     id <_TtP24PodcastOnboardingFeature27SPTPodcastOnboardingService_> _podcastOnboardingService;
+    id <_TtP18AllBoardingFeature21SPTAllBoardingService_> _allboardingService;
     SPTOnboardingCoordinationManager *_coordinationManager;
 }
 
 + (id)serviceIdentifier;
 - (void).cxx_destruct;
 @property(retain, nonatomic) SPTOnboardingCoordinationManager *coordinationManager; // @synthesize coordinationManager=_coordinationManager;
+@property(nonatomic) __weak id <_TtP18AllBoardingFeature21SPTAllBoardingService_> allboardingService; // @synthesize allboardingService=_allboardingService;
 @property(nonatomic) __weak id <_TtP24PodcastOnboardingFeature27SPTPodcastOnboardingService_> podcastOnboardingService; // @synthesize podcastOnboardingService=_podcastOnboardingService;
 @property(nonatomic) __weak id <SPTLanguageOnboardingService> languageOnboardingService; // @synthesize languageOnboardingService=_languageOnboardingService;
 @property(nonatomic) __weak id <SPTFreeTierTasteOnboardingService> tasteOnboardingService; // @synthesize tasteOnboardingService=_tasteOnboardingService;

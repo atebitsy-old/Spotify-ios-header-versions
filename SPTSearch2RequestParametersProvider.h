@@ -6,7 +6,7 @@
 
 #import <objc/NSObject.h>
 
-@protocol SPTPodcastTestManager, SPTProductState;
+@protocol SPTFeatureFlagSignal, SPTPodcastTestManager, SPTProductState;
 
 @interface SPTSearch2RequestParametersProvider : NSObject
 {
@@ -14,11 +14,13 @@
     _Bool _v2AssistedCurationEnabled;
     id <SPTPodcastTestManager> _podcastTestManager;
     id <SPTProductState> _productState;
+    id <SPTFeatureFlagSignal> _freeTierSignal;
 }
 
 - (void).cxx_destruct;
 @property(readonly, nonatomic) _Bool v2AssistedCurationEnabled; // @synthesize v2AssistedCurationEnabled=_v2AssistedCurationEnabled;
 @property(readonly, nonatomic) _Bool topicsEnabled; // @synthesize topicsEnabled=_topicsEnabled;
+@property(readonly, nonatomic) id <SPTFeatureFlagSignal> freeTierSignal; // @synthesize freeTierSignal=_freeTierSignal;
 @property(readonly, nonatomic) id <SPTProductState> productState; // @synthesize productState=_productState;
 @property(readonly, nonatomic) id <SPTPodcastTestManager> podcastTestManager; // @synthesize podcastTestManager=_podcastTestManager;
 - (id)entityTypes;

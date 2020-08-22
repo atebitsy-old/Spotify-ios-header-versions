@@ -6,11 +6,10 @@
 
 #import "NSObject-Protocol.h"
 
-@class SPTBrowseViewModel;
-@protocol SPTBrowseViewModelProvider;
+@protocol HUBViewModel, SPTBrowseViewModelProvider;
 
 @protocol SPTBrowseViewModelProviderObserver <NSObject>
 - (void)viewModelProvider:(id <SPTBrowseViewModelProvider>)arg1 didUpdateStateFrom:(unsigned long long)arg2;
-- (void)viewModelProvider:(id <SPTBrowseViewModelProvider>)arg1 didUpdateFromViewModel:(SPTBrowseViewModel *)arg2;
+- (void)viewModelProvider:(id <SPTBrowseViewModelProvider>)arg1 didUpdateFromViewModel:(id <HUBViewModel>)arg2;
 @end
 

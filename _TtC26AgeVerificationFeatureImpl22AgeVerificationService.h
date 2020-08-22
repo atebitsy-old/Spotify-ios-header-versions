@@ -8,16 +8,16 @@
 
 @interface _TtC26AgeVerificationFeatureImpl22AgeVerificationService : NSObject
 {
-    // Error parsing type: , name: _containerService
-    // Error parsing type: , name: _coreService
-    // Error parsing type: , name: _featureFlagingService
-    // Error parsing type: , name: _glueService
-    // Error parsing type: , name: _networkService
-    // Error parsing type: , name: _playerFeature
-    // Error parsing type: , name: _playlistPlatformService
-    // Error parsing type: , name: _remoteConfigurationService
-    // Error parsing type: , name: _slateService
-    // Error parsing type: , name: _ubiService
+    // Error parsing type: , name: containerService
+    // Error parsing type: , name: coreService
+    // Error parsing type: , name: featureFlagingService
+    // Error parsing type: , name: glueService
+    // Error parsing type: , name: networkService
+    // Error parsing type: , name: playerFeature
+    // Error parsing type: , name: playlistPlatformService
+    // Error parsing type: , name: remoteConfigurationService
+    // Error parsing type: , name: slateService
+    // Error parsing type: , name: ubiService
     // Error parsing type: , name: $__lazy_storage_$_defaultAgeVerificationProvider
     // Error parsing type: , name: player
     // Error parsing type: , name: stateMachine
@@ -29,6 +29,7 @@
 - (id)init;
 - (void)unload;
 - (void)load;
+- (void)configureWithServices:(id)arg1;
 
 @end
 

@@ -10,10 +10,10 @@
 @protocol SPTAudioDriverController, SPTEventSenderCore, SPTLogDispatcher, SPTSessionBootstrapDelegate;
 
 @protocol SPTCoreService <SPTService>
-- (void)setBootstrapModule:(id <SPTSessionBootstrapDelegate>)arg1;
 - (void)setEventSenderCore:(id <SPTEventSenderCore>)arg1;
 - (id <SPTAudioDriverController>)provideAudioDriverController;
 - (SPCore *)provideCoreInstance;
+- (void)setBootstrapModule:(id <SPTSessionBootstrapDelegate>)arg1;
 - (id <SPTLogDispatcher>)provideCoreLogDispatcher;
 @end
 

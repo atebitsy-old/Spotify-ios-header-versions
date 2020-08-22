@@ -9,12 +9,9 @@
 @interface _TtC23YourLibraryXFeatureImpl28YourLibraryContentHeaderView : UICollectionReusableView
 {
     // Error parsing type: , name: style
-    // Error parsing type: , name: gridListButtonType
     // Error parsing type: , name: sortButton
-    // Error parsing type: , name: $__lazy_storage_$_gridListButton
     // Error parsing type: , name: $__lazy_storage_$_sortButtonLeadingConstraint
     // Error parsing type: , name: $__lazy_storage_$_sortButtonTopConstraint
-    // Error parsing type: , name: $__lazy_storage_$_gridListTrailingConstraint
 }
 
 - (void).cxx_destruct;

@@ -10,10 +10,10 @@
 @protocol SPTSlate;
 
 @protocol SPTSlateBuilder <SPTSlate>
-@property(nonatomic, retain) UIColor *backgroundColor;
+@property(retain, nonatomic) UIColor *backgroundColor;
 @property(nonatomic) double shadowRadius;
 @property(nonatomic) struct CGSize shadowOffset;
-@property(nonatomic, retain) UIColor *shadowColor;
+@property(retain, nonatomic) UIColor *shadowColor;
 @property(nonatomic) double shadowAlpha;
 @property(nonatomic) double cornerRadius;
 @property(nonatomic) struct CGSize slateSize;

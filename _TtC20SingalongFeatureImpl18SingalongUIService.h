@@ -14,11 +14,9 @@
     // Error parsing type: , name: glueService
     // Error parsing type: , name: networkService
     // Error parsing type: , name: nowPlayingPlatformService
-    // Error parsing type: , name: playerService
     // Error parsing type: , name: singalongService
     // Error parsing type: , name: ubiService
-    // Error parsing type: , name: colorLyricsDataLoader
-    // Error parsing type: , name: $__lazy_storage_$_player
+    // Error parsing type: , name: $__lazy_storage_$_colorLyricsDataLoader
 }
 
 + (id)serviceIdentifier;

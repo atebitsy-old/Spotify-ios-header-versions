@@ -7,14 +7,14 @@
 #import "NSCopying-Protocol.h"
 #import "NSObject-Protocol.h"
 
-@class NSString, SPTDataLoaderRequest, SPTDataLoaderResponse;
+@class NSString, SPTDataLoaderRequest;
 @protocol SPTDataLoaderAuthoriserDelegate;
 
 @protocol SPTDataLoaderAuthoriser <NSObject, NSCopying>
 @property(nonatomic) __weak id <SPTDataLoaderAuthoriserDelegate> delegate;
 @property(readonly, nonatomic) NSString *identifier;
 - (void)refresh;
-- (void)requestFailedAuthorisation:(SPTDataLoaderRequest *)arg1 response:(SPTDataLoaderResponse *)arg2;
+- (void)requestFailedAuthorisation:(SPTDataLoaderRequest *)arg1;
 - (void)authoriseRequest:(SPTDataLoaderRequest *)arg1;
 - (_Bool)requestRequiresAuthorisation:(SPTDataLoaderRequest *)arg1;
 @end

@@ -34,6 +34,7 @@
 @property(readonly, nonatomic) SPTFreeTierAlbumViewModel *albumViewModel; // @synthesize albumViewModel=_albumViewModel;
 @property(readonly, nonatomic) unsigned long long state; // @synthesize state=_state;
 @property(nonatomic) __weak id <SPTFreeTierEntityContextMenuButtonViewModelDelegate> delegate; // @synthesize delegate=_delegate;
+- (id)createStashTask;
 - (id)createRadioTask;
 - (id)createAddToQueueTask;
 - (id)createAddToPlaylistTask;

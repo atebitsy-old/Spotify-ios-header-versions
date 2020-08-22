@@ -7,12 +7,10 @@
 #import <objc/NSObject.h>
 
 @class NSMutableDictionary;
-@protocol SPTDataLoaderTimeProvider;
 
 @interface SPTDataLoaderRateLimiter : NSObject
 {
     double _requestsPerSecond;
-    id <SPTDataLoaderTimeProvider> _timeProvider;
     NSMutableDictionary *_serviceEndpointRequestsPerSecond;
     NSMutableDictionary *_serviceEndpointLastExecution;
     NSMutableDictionary *_serviceEndpointRetryAt;
@@ -23,7 +21,6 @@
 @property(retain, nonatomic) NSMutableDictionary *serviceEndpointRetryAt; // @synthesize serviceEndpointRetryAt=_serviceEndpointRetryAt;
 @property(retain, nonatomic) NSMutableDictionary *serviceEndpointLastExecution; // @synthesize serviceEndpointLastExecution=_serviceEndpointLastExecution;
 @property(retain, nonatomic) NSMutableDictionary *serviceEndpointRequestsPerSecond; // @synthesize serviceEndpointRequestsPerSecond=_serviceEndpointRequestsPerSecond;
-@property(readonly, nonatomic) id <SPTDataLoaderTimeProvider> timeProvider; // @synthesize timeProvider=_timeProvider;
 @property(nonatomic) double requestsPerSecond; // @synthesize requestsPerSecond=_requestsPerSecond;
 - (id)serviceKeyFromURL:(id)arg1;
 - (double)requestsPerSecondForServiceKey:(id)arg1;
@@ -32,7 +29,7 @@
 - (double)requestsPerSecondForURL:(id)arg1;
 - (void)executedRequest:(id)arg1;
 - (double)earliestTimeUntilRequestCanBeExecuted:(id)arg1;
-- (id)initWithDefaultRequestsPerSecond:(double)arg1 timeProvider:(id)arg2;
+- (id)initWithDefaultRequestsPerSecond:(double)arg1;
 
 @end
 

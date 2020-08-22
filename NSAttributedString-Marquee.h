@@ -19,6 +19,7 @@
 - (id)spt_attributedStringByPrependingShuffleBadge;
 - (id)attributedStringByPrependingShuffleBadge;
 - (id)marqueeContextMenuHeaderString;
+- (id)spt_collapsedAttributedStringWithStringEnding:(id)arg1 sizeConstraint:(struct CGSize)arg2 numberOfLines:(long long)arg3;
 - (id)spt_timestampLinkAttributedStringWithContextURL:(id)arg1 maxTimeLimit:(long long)arg2 dotStyling:(_Bool)arg3;
 - (id)spt_dottedTimestampLinkAttributedStringWithContextURL:(id)arg1 maxTimeLimit:(long long)arg2;
 - (id)spt_timestampLinkAttributedStringWithContextURL:(id)arg1 maxTimeLimit:(long long)arg2;

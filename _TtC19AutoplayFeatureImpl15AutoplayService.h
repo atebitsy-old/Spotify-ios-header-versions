@@ -12,10 +12,10 @@
 {
     // Error parsing type: , name: mobiusController
     // Error parsing type: , name: testManager
-    // Error parsing type: , name: _remoteConfigurationService
-    // Error parsing type: , name: _gaiaService
-    // Error parsing type: , name: _clientSessionService
-    // Error parsing type: , name: _networkService
+    // Error parsing type: , name: remoteConfigurationService
+    // Error parsing type: , name: gaiaService
+    // Error parsing type: , name: clientSessionService
+    // Error parsing type: , name: networkService
 }
 
 + (id)serviceIdentifier;
@@ -23,6 +23,7 @@
 - (id)init;
 - (void)unload;
 - (void)load;
+- (void)configureWithServices:(id)arg1;
 @property(nonatomic, retain) id <_TtP15AutoplayFeature22SPTAutoplayTestManager_> testManager; // @synthesize testManager;
 
 @end

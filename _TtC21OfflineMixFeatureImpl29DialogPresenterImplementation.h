@@ -11,15 +11,8 @@
     // Error parsing type: , name: alertInterface
     // Error parsing type: , name: messageRequester
     // Error parsing type: , name: popupManager
-    // Error parsing type: , name: slate
-    // Error parsing type: , name: slateCompletionBlock
-    // Error parsing type: , name: slateBuilderProvider
-    // Error parsing type: , name: slateManager
     // Error parsing type: , name: snackbarPresenter
     // Error parsing type: , name: tooltipPresenter
-    // Error parsing type: , name: theme
-    // Error parsing type: , name: $__lazy_storage_$_userCuratedIntroViewController
-    // Error parsing type: , name: $__lazy_storage_$_slateBuilder
 }
 
 - (void).cxx_destruct;
@@ -29,7 +22,7 @@
 - (void)showPlayTooltipIn:(id)arg1 from:(struct CGRect)arg2 maxNumberOfTimes:(unsigned long long)arg3;
 - (void)showDownloadTooltipIn:(id)arg1 from:(struct CGRect)arg2 maxNumberOfTimes:(unsigned long long)arg3;
 - (void)showSpotifyCuratedIntroMessage;
-- (void)showUserCuratedIntroMessageWith:(CDUnknownBlockType)arg1;
+- (void)showUserCuratedIntroMessage;
 - (void)showTrackDownloadRemovedSnackbar;
 - (void)showTrackDownloadCompletedSnackbar;
 - (void)showRemoveFromDownloadsConfirmationAlertWithConfirmBlock:(CDUnknownBlockType)arg1 cancelBlock:(CDUnknownBlockType)arg2;

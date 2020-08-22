@@ -13,12 +13,10 @@
 @interface SPTImageResolveFeatureProperties : NSObject <SPTRemoteConfigurationProperties>
 {
     _Bool _imageResolveEnabled;
-    _Bool _fallbackToOriginal;
     long long _imageResolveConfigurationTtlSec;
 }
 
 @property(readonly, nonatomic) long long imageResolveConfigurationTtlSec; // @synthesize imageResolveConfigurationTtlSec=_imageResolveConfigurationTtlSec;
-@property(readonly, nonatomic) _Bool fallbackToOriginal; // @synthesize fallbackToOriginal=_fallbackToOriginal;
 @property(readonly, nonatomic) _Bool imageResolveEnabled; // @synthesize imageResolveEnabled=_imageResolveEnabled;
 - (id)propertyModels;
 - (id)initWithPropertyValuesDictionary:(id)arg1;

@@ -9,14 +9,13 @@
 @class NSString, NSURL;
 
 @protocol SPTAdsBaseMarqueeEntity <SPTAdsBaseEntity>
-@property(nonatomic, readonly) NSString *header;
-@property(nonatomic, readonly) NSString *ctaText;
-@property(nonatomic, readonly) NSString *tag;
-@property(nonatomic, readonly) NSString *artistName;
-@property(nonatomic, readonly) NSURL *artistURI;
-@property(nonatomic, readonly) NSString *disclosure;
-@property(nonatomic, readonly) NSURL *albumURI;
-@property(nonatomic, readonly) NSURL *albumImageURI;
-@property(nonatomic, readonly) NSString *albumName;
+@property(readonly, nonatomic) NSString *ctaText;
+@property(readonly, nonatomic) NSString *tag;
+@property(readonly, nonatomic) NSString *artistName;
+@property(readonly, nonatomic) NSURL *artistURI;
+@property(readonly, nonatomic) NSString *disclosure;
+@property(readonly, nonatomic) NSURL *albumURI;
+@property(readonly, nonatomic) NSURL *albumImageURI;
+@property(readonly, nonatomic) NSString *albumName;
 @end
 

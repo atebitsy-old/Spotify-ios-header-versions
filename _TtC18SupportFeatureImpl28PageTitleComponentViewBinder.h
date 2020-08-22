@@ -12,8 +12,8 @@
 }
 
 - (void).cxx_destruct;
-- (struct CGSize)sizeThatFits:(struct CGSize)arg1;
 - (void)configureWithModel:(id)arg1;
+- (struct CGSize)sizeThatFits:(struct CGSize)arg1;
 - (id)initWithFrame:(struct CGRect)arg1;
 
 @end

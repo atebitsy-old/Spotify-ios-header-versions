@@ -28,7 +28,6 @@
     id <SPTCrashReporter> _crashReporter;
     id <SPTOfflineModeState> _offlineModeState;
     id <SPTAuthController> _authController;
-    double _presentationStartTime;
     NSDictionary *_cancelationInfo;
     NSString *_matchedPattern;
     NSString *_triggerType;
@@ -38,7 +37,6 @@
 @property(copy, nonatomic) NSString *triggerType; // @synthesize triggerType=_triggerType;
 @property(copy, nonatomic) NSString *matchedPattern; // @synthesize matchedPattern=_matchedPattern;
 @property(copy, nonatomic) NSDictionary *cancelationInfo; // @synthesize cancelationInfo=_cancelationInfo;
-@property(nonatomic) double presentationStartTime; // @synthesize presentationStartTime=_presentationStartTime;
 @property(nonatomic, getter=isOffline) _Bool offline; // @synthesize offline=_offline;
 @property(readonly, nonatomic) id <SPTAuthController> authController; // @synthesize authController=_authController;
 @property(readonly, nonatomic) __weak id <SPTOfflineModeState> offlineModeState; // @synthesize offlineModeState=_offlineModeState;
@@ -55,7 +53,6 @@
 - (void)noteMessageSwipedAway;
 - (void)cancelNoteMessagePresentation:(id)arg1;
 - (_Bool)canPresentNote;
-- (void)logMessagePresentationPerformace;
 - (void)logMessageDiscardedWithReason:(id)arg1;
 - (void)offlineModeState:(id)arg1 updated:(_Bool)arg2;
 - (void)dismiss;

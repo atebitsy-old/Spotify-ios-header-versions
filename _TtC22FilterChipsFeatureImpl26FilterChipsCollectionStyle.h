@@ -8,7 +8,6 @@
 
 @interface _TtC22FilterChipsFeatureImpl26FilterChipsCollectionStyle : GLUECollectionViewStyle
 {
-    // Error parsing type: , name: height
 }
 
 - (id)init;

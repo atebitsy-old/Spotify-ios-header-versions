@@ -31,11 +31,9 @@
     id <SPTCrashReporter> _crashReporter;
     UIView *_containerView;
     id <SPTAuthController> _authController;
-    double _presentationStartTime;
 }
 
 - (void).cxx_destruct;
-@property(nonatomic) double presentationStartTime; // @synthesize presentationStartTime=_presentationStartTime;
 @property(readonly, nonatomic) id <SPTAuthController> authController; // @synthesize authController=_authController;
 @property(retain, nonatomic) UIView *containerView; // @synthesize containerView=_containerView;
 @property(readonly, nonatomic) id <SPTCrashReporter> crashReporter; // @synthesize crashReporter=_crashReporter;
@@ -56,7 +54,6 @@
 - (_Bool)canPresentSlate;
 - (id)provideSlate;
 - (_Bool)isIpad;
-- (void)logMessagePresentationPerformace;
 - (void)logMessageDiscardedWithReason:(id)arg1;
 - (void)logMessagePresented;
 - (void)dismiss;

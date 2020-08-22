@@ -9,6 +9,7 @@
 @interface _TtC27PushQuickActionsFeatureImpl23PushQuickActionsService : NSObject
 {
     // Error parsing type: , name: containerService
+    // Error parsing type: , name: internalQuickActions
     // Error parsing type: , name: networkService
     // Error parsing type: , name: pushMessagingService
     // Error parsing type: , name: dispatchService
@@ -19,7 +20,6 @@
     // Error parsing type: , name: playerFeature
     // Error parsing type: , name: eventSenderService
     // Error parsing type: , name: ubiService
-    // Error parsing type: , name: categoryRegistrationHandler
 }
 
 - (void).cxx_destruct;

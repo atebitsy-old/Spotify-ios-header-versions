@@ -7,14 +7,14 @@
 #import <objc/NSObject.h>
 
 #import "SPTAppStartupControllerDelegate-Protocol.h"
+#import "SPTServiceOrchestratorDelegate-Protocol.h"
 #import "UIApplicationDelegate-Protocol.h"
 #import "UNUserNotificationCenterDelegate-Protocol.h"
-#import "_TtP16SPTServiceSystem30SPTServiceOrchestratorDelegate_-Protocol.h"
 
-@class NSMutableDictionary, NSString, SPTApplicationDelegateLogger, SPTCookieStorageManager, SPTDeferredBlockDispatcher, SPTLogCenterImplementation, SPTPerfTracingSignpostObserver, SPTPlayModeMonitor, SPTStartupTracer, UIWindow, _TtC16SPTServiceSystem22SPTServiceOrchestrator;
+@class NSMutableDictionary, NSString, SPTApplicationDelegateLogger, SPTCookieStorageManager, SPTLogCenterImplementation, SPTPerfTracingSignpostObserver, SPTPlayModeMonitor, SPTServiceOrchestrator, SPTStartupTracer, UIWindow;
 @protocol OS_os_log, SPTAppStartupController, SPTCrashReporter, SPTEmailUniversalLinkResolverDelegate, SPTLinkDispatcher, SPTMetaViewController, SPTNotificationSystemDelegate, SPTReminderHandlerService, SPTThirdPartyTrackerBroadcaster, SPTUserActivityController;
 
-@interface SpotifyAppDelegate : NSObject <_TtP16SPTServiceSystem30SPTServiceOrchestratorDelegate_, SPTAppStartupControllerDelegate, UNUserNotificationCenterDelegate, UIApplicationDelegate>
+@interface SpotifyAppDelegate : NSObject <SPTServiceOrchestratorDelegate, SPTAppStartupControllerDelegate, UNUserNotificationCenterDelegate, UIApplicationDelegate>
 {
     id <SPTAppStartupController> _appStartupController;
     UIWindow *_window;
@@ -28,11 +28,11 @@
     SPTApplicationDelegateLogger *_appDelegateLogger;
     SPTCookieStorageManager *_cookieStorageManager;
     id <SPTMetaViewController> _metaViewController;
-    SPTDeferredBlockDispatcher *_deferredBlockDispatcher;
+    NSMutableDictionary *_deferredBlocks;
     id <SPTReminderHandlerService> _reminderHandlerService;
     SPTPerfTracingSignpostObserver *_perfTracingObserver;
     NSMutableDictionary *_scopeSignpostIDs;
-    _TtC16SPTServiceSystem22SPTServiceOrchestrator *_serviceOrchestrator;
+    SPTServiceOrchestrator *_serviceOrchestrator;
     SPTLogCenterImplementation *_logCenter;
     SPTStartupTracer *_startupTracer;
     id <SPTNotificationSystemDelegate> _notificationDelegate;
@@ -45,11 +45,11 @@
 @property(nonatomic) __weak id <SPTNotificationSystemDelegate> notificationDelegate; // @synthesize notificationDelegate=_notificationDelegate;
 @property(retain, nonatomic) SPTStartupTracer *startupTracer; // @synthesize startupTracer=_startupTracer;
 @property(retain, nonatomic) SPTLogCenterImplementation *logCenter; // @synthesize logCenter=_logCenter;
-@property(retain, nonatomic) _TtC16SPTServiceSystem22SPTServiceOrchestrator *serviceOrchestrator; // @synthesize serviceOrchestrator=_serviceOrchestrator;
+@property(retain, nonatomic) SPTServiceOrchestrator *serviceOrchestrator; // @synthesize serviceOrchestrator=_serviceOrchestrator;
 @property(readonly, nonatomic) NSMutableDictionary *scopeSignpostIDs; // @synthesize scopeSignpostIDs=_scopeSignpostIDs;
 @property(retain, nonatomic) SPTPerfTracingSignpostObserver *perfTracingObserver; // @synthesize perfTracingObserver=_perfTracingObserver;
 @property(nonatomic) __weak id <SPTReminderHandlerService> reminderHandlerService; // @synthesize reminderHandlerService=_reminderHandlerService;
-@property(retain, nonatomic) SPTDeferredBlockDispatcher *deferredBlockDispatcher; // @synthesize deferredBlockDispatcher=_deferredBlockDispatcher;
+@property(retain, nonatomic) NSMutableDictionary *deferredBlocks; // @synthesize deferredBlocks=_deferredBlocks;
 @property(retain, nonatomic) id <SPTMetaViewController> metaViewController; // @synthesize metaViewController=_metaViewController;
 @property(retain, nonatomic) SPTCookieStorageManager *cookieStorageManager; // @synthesize cookieStorageManager=_cookieStorageManager;
 @property(retain, nonatomic) SPTApplicationDelegateLogger *appDelegateLogger; // @synthesize appDelegateLogger=_appDelegateLogger;
@@ -66,8 +66,10 @@
 - (void)serviceOrchestrator:(id)arg1 willUnloadServicesForScope:(id)arg2;
 - (void)serviceOrchestrator:(id)arg1 didLoadServicesForScope:(id)arg2;
 - (void)serviceOrchestrator:(id)arg1 willLoadServicesForScope:(id)arg2;
+- (void)executeDeferredBlock:(CDUnknownBlockType)arg1 scope:(id)arg2 origin:(id)arg3;
 - (_Bool)isScopeLoaded:(id)arg1;
 - (void)withLoadedScope:(id)arg1 origin:(SEL)arg2 do:(CDUnknownBlockType)arg3;
+- (void)runDeferredBlocksForScope:(id)arg1;
 - (id)optionalServiceForIdentifier:(id)arg1 inScope:(id)arg2;
 - (id)serviceForIdentifier:(id)arg1 inScope:(id)arg2;
 - (id)debugController;
@@ -98,8 +100,6 @@
 - (void)application:(id)arg1 didUpdateUserActivity:(id)arg2;
 - (void)handlePotentialDeepLinkEventWithURL:(id)arg1 sourceApplication:(id)arg2;
 - (void)handleDeepLinkWithURL:(id)arg1 restorationHandler:(CDUnknownBlockType)arg2;
-- (void)handleContinueUserActivity:(id)arg1 restorationHandler:(CDUnknownBlockType)arg2;
-- (void)handleOpenURL:(id)arg1 options:(id)arg2;
 - (_Bool)application:(id)arg1 continueUserActivity:(id)arg2 restorationHandler:(CDUnknownBlockType)arg3;
 - (_Bool)application:(id)arg1 openURL:(id)arg2 options:(id)arg3;
 - (void)application:(id)arg1 didFailToRegisterForRemoteNotificationsWithError:(id)arg2;

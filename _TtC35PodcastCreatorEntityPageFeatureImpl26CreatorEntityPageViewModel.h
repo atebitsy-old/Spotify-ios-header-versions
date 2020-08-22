@@ -8,7 +8,9 @@
 
 @interface _TtC35PodcastCreatorEntityPageFeatureImpl26CreatorEntityPageViewModel : _TtCs12_SwiftObject
 {
-    // Error parsing type: , name: creator
+    // Error parsing type: , name: delegate
+    // Error parsing type: , name: creatorId
+    // Error parsing type: , name: loader
     // Error parsing type: , name: transformer
 }
 

@@ -5,6 +5,8 @@
 //
 
 @interface (null) (VoiceUIFeatureImpl)
+- (void)didTapPermissionWithButton:(id)arg1;
+- (void)didTapMicButtonWithButton:(id)arg1;
 - (void)didTapCloseButtonWithButton:(id)arg1;
 @end
 

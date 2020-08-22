@@ -23,8 +23,6 @@
 + (id)bass;
 + (id)mestoBold;
 + (id)mesto;
-+ (id)violaBold;
-+ (id)viola;
 + (id)balladBold;
 + (id)ballad;
 

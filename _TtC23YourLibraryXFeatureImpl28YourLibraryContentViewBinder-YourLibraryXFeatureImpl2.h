@@ -8,7 +8,6 @@
 
 @interface _TtC23YourLibraryXFeatureImpl28YourLibraryContentViewBinder (YourLibraryXFeatureImpl2)
 - (struct CGSize)collectionView:(id)arg1 layout:(id)arg2 referenceSizeForHeaderInSection:(long long)arg3;
-- (struct UIEdgeInsets)collectionView:(id)arg1 layout:(id)arg2 insetForSectionAtIndex:(long long)arg3;
 - (struct CGSize)collectionView:(id)arg1 layout:(id)arg2 sizeForItemAtIndexPath:(id)arg3;
 - (void)collectionView:(id)arg1 didSelectItemAtIndexPath:(id)arg2;
 @end

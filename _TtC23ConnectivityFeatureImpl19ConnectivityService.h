@@ -8,9 +8,7 @@
 
 @interface _TtC23ConnectivityFeatureImpl19ConnectivityService : NSObject
 {
-    // Error parsing type: , name: $__lazy_storage_$_clientTokenPersistentStorage
-    // Error parsing type: , name: $__lazy_storage_$_encryptedClientTokenObserver
-    // Error parsing type: , name: applicationScope
+    // Error parsing type: , name: containerService
 }
 
 + (id)serviceIdentifier;
@@ -18,8 +16,7 @@
 - (id)init;
 - (void)unload;
 - (void)load;
-- (void)setApplicationScope:(id)arg1;
-- (id)provideClientTokenPersistentStorage;
+- (void)configureWithServices:(id)arg1;
 
 @end
 

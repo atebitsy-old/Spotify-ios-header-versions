@@ -7,14 +7,13 @@
 #import <objc/NSObject.h>
 
 #import "SPTSocialListeningDialogPresenterObserver-Protocol.h"
-#import "SPTSocialListeningListenTogetherStateObserver-Protocol.h"
 #import "SPTSocialListeningModelObserver-Protocol.h"
 #import "SPTSocialListeningViewModel-Protocol.h"
 
 @class NSArray, NSString, NSURL, SPTObserverManager, SPTSocialListeningDialogPresenter, UIColor, UIImage;
 @protocol SPTLinkDispatcher, SPTProfileUserData, SPTShareEntityData, SPTShareEntityDataFactory, SPTShareFeature, SPTSocialListeningListenTogetherStateManager, SPTSocialListeningModel, SPTSocialListeningTestManager;
 
-@interface SPTSocialListeningViewModelImplementation : NSObject <SPTSocialListeningDialogPresenterObserver, SPTSocialListeningViewModel, SPTSocialListeningModelObserver, SPTSocialListeningListenTogetherStateObserver>
+@interface SPTSocialListeningViewModelImplementation : NSObject <SPTSocialListeningDialogPresenterObserver, SPTSocialListeningViewModel, SPTSocialListeningModelObserver>
 {
     _Bool _isSessionHost;
     id <SPTSocialListeningTestManager> _testManager;
@@ -57,11 +56,6 @@
 @property(readonly, nonatomic) SPTObserverManager *observers; // @synthesize observers=_observers;
 @property(readonly, nonatomic) id <SPTSocialListeningListenTogetherStateManager> listenTogetherStateManager; // @synthesize listenTogetherStateManager=_listenTogetherStateManager;
 @property(readonly, nonatomic) id <SPTSocialListeningTestManager> testManager; // @synthesize testManager=_testManager;
-- (void)resetToSingleUserState;
-- (void)updateSessionModelEntity:(id)arg1;
-- (void)updateScannableImage:(id)arg1 sessionColor:(id)arg2;
-- (long long)sessionState;
-- (long long)joinFlowState;
 - (_Bool)isNewUIExperienceScannableEnabled;
 - (_Bool)isNewUIExperienceEnabled;
 - (void)presenter:(id)arg1 didSelectSessionMode:(long long)arg2 forJoinURL:(id)arg3;
@@ -69,8 +63,6 @@
 - (void)presenterDidConfirmDeleteSession:(id)arg1;
 - (void)removeObserver:(id)arg1;
 - (void)addObserver:(id)arg1;
-- (void)listenTogetherSessionStateUpdated:(long long)arg1 error:(id)arg2;
-- (void)listenTogetherJoinFlowStateUpdated:(long long)arg1;
 - (void)socialListeningModel:(id)arg1 didDeleteSession:(id)arg2;
 - (void)socialListeningModel:(id)arg1 didReceiveError:(id)arg2;
 - (void)socialListeningModel:(id)arg1 updatedSession:(id)arg2 updateEvent:(id)arg3;
@@ -87,6 +79,7 @@
 @property(readonly, nonatomic, getter=isParticipantsInviteBarButtonVisible) _Bool participantsInviteBarButtonVisible;
 @property(readonly, nonatomic) unsigned long long bottomBannerType;
 @property(readonly, nonatomic) _Bool seeListenersButtonHidden;
+@property(readonly, nonatomic) _Bool shareLinkButtonHidden;
 @property(readonly, nonatomic) _Bool scanCodeButtonHidden;
 @property(readonly, nonatomic) _Bool sessionButtonHidden;
 @property(readonly, nonatomic) _Bool leaveButtonHidden;

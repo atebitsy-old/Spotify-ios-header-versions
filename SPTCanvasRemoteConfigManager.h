@@ -8,6 +8,7 @@
 
 @interface SPTCanvasRemoteConfigManager : NSObject
 {
+    _Bool _canvasStateGabitoEnabled;
     _Bool _canvasNoCacheEnabled;
     _Bool _canvasPlaylistEnabled;
     _Bool _canvasAbSettingsEnabled;
@@ -24,6 +25,7 @@
 @property(readonly, nonatomic, getter=isCanvasAbSettingsEnabled) _Bool canvasAbSettingsEnabled; // @synthesize canvasAbSettingsEnabled=_canvasAbSettingsEnabled;
 @property(readonly, nonatomic, getter=isCanvasPlaylistEnabled) _Bool canvasPlaylistEnabled; // @synthesize canvasPlaylistEnabled=_canvasPlaylistEnabled;
 @property(readonly, nonatomic, getter=isCanvasNoCacheEnabled) _Bool canvasNoCacheEnabled; // @synthesize canvasNoCacheEnabled=_canvasNoCacheEnabled;
+@property(readonly, nonatomic, getter=isCanvasStateGabitoEnabled) _Bool canvasStateGabitoEnabled; // @synthesize canvasStateGabitoEnabled=_canvasStateGabitoEnabled;
 - (id)initWithRemoteConfigProperties:(id)arg1;
 
 @end

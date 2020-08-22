@@ -11,6 +11,6 @@
 @protocol SPTSignupEmailViewModelDelegate <NSObject>
 - (void)viewModel:(SPTSignupEmailViewModel *)arg1 didEndFullValidationWithError:(NSError *)arg2;
 - (void)viewModelDidBeginFullValidation:(SPTSignupEmailViewModel *)arg1;
-- (void)viewModelDidValidateLocaly:(SPTSignupEmailViewModel *)arg1;
+- (void)viewModel:(SPTSignupEmailViewModel *)arg1 didValidateLocalyWithResult:(_Bool)arg2;
 @end
 

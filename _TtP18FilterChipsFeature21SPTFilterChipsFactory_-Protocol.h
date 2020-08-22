@@ -8,6 +8,6 @@
 @protocol _TtP18FilterChipsFeature24SPTFilterChipsItemLoader_, _TtP18FilterChipsFeature33SPTFilterChipsInteractionObserver_;
 
 @protocol _TtP18FilterChipsFeature21SPTFilterChipsFactory_
-- (UIViewController *)makeFilterChipsWithItemLoader:(id <_TtP18FilterChipsFeature24SPTFilterChipsItemLoader_>)arg1 itemInteractionObserver:(id <_TtP18FilterChipsFeature33SPTFilterChipsInteractionObserver_>)arg2 buttonSize:(long long)arg3;
+- (UIViewController *)makeFilterChipsWithItemLoader:(id <_TtP18FilterChipsFeature24SPTFilterChipsItemLoader_>)arg1 itemInteractionObserver:(id <_TtP18FilterChipsFeature33SPTFilterChipsInteractionObserver_>)arg2;
 @end
 

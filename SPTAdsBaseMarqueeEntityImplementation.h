@@ -21,11 +21,9 @@
     NSString *_tag;
     NSString *_disclosure;
     NSString *_ctaText;
-    NSString *_header;
 }
 
 - (void).cxx_destruct;
-@property(readonly, nonatomic) NSString *header; // @synthesize header=_header;
 @property(readonly, nonatomic) NSString *ctaText; // @synthesize ctaText=_ctaText;
 @property(readonly, nonatomic) NSString *disclosure; // @synthesize disclosure=_disclosure;
 @property(readonly, nonatomic) NSString *tag; // @synthesize tag=_tag;

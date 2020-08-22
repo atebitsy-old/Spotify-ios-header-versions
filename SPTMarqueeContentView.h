@@ -7,7 +7,6 @@
 #import <UIKit/UIView.h>
 
 @class GLUEButton, GLUEImageView, GLUELabel, NSArray, SPTTheme, UIButton, UIStackView;
-@protocol SPTAdsBaseMarqueeEntity, SPTMarqueeTestManager;
 
 @interface SPTMarqueeContentView : UIView
 {
@@ -23,13 +22,9 @@
     UIStackView *_informationContainerView;
     NSArray *_adsDisabledConstraints;
     NSArray *_adsEnabledConstraints;
-    id <SPTMarqueeTestManager> _testManager;
-    id <SPTAdsBaseMarqueeEntity> _adEntity;
 }
 
 - (void).cxx_destruct;
-@property(retain, nonatomic) id <SPTAdsBaseMarqueeEntity> adEntity; // @synthesize adEntity=_adEntity;
-@property(readonly, nonatomic) id <SPTMarqueeTestManager> testManager; // @synthesize testManager=_testManager;
 @property(copy, nonatomic) NSArray *adsEnabledConstraints; // @synthesize adsEnabledConstraints=_adsEnabledConstraints;
 @property(copy, nonatomic) NSArray *adsDisabledConstraints; // @synthesize adsDisabledConstraints=_adsDisabledConstraints;
 @property(readonly, nonatomic) UIStackView *informationContainerView; // @synthesize informationContainerView=_informationContainerView;
@@ -45,7 +40,7 @@
 - (_Bool)isAccessibilityElement;
 - (void)applyThemeLayout;
 - (void)addConstraintsWithAdsEnabled:(_Bool)arg1;
-- (id)initWithArtistTitle:(id)arg1 albumTitle:(id)arg2 albumImage:(id)arg3 adsEnabled:(_Bool)arg4 theme:(id)arg5 testManager:(id)arg6 adEntity:(id)arg7;
+- (id)initWithArtistTitle:(id)arg1 albumTitle:(id)arg2 albumImage:(id)arg3 adsEnabled:(_Bool)arg4 theme:(id)arg5;
 
 @end
 

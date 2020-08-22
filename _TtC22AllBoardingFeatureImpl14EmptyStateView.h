@@ -21,7 +21,6 @@
 - (void).cxx_destruct;
 - (id)initWithFrame:(struct CGRect)arg1;
 - (void)keyboardDidChangeWithNotification:(id)arg1;
-- (void)classSizeDidChangeWithNotification:(id)arg1;
 - (void)dealloc;
 - (id)initWithCoder:(id)arg1;
 

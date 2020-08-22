@@ -13,8 +13,6 @@
 + (id)descriptor;
 
 // Remaining properties
-@property(nonatomic) _Bool downloadForOffline; // @dynamic downloadForOffline;
-@property(nonatomic) _Bool fetchOnline; // @dynamic fetchOnline;
 @property(nonatomic) int height; // @dynamic height;
 @property(nonatomic) int width; // @dynamic width;
 

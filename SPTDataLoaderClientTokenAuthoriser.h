@@ -26,7 +26,7 @@
 - (void)unregisterAuthorisationHostsName:(id)arg1;
 - (void)registerAuthorisationHosts:(id)arg1 withName:(id)arg2;
 - (_Bool)requestRequiresAuthorisation:(id)arg1;
-- (void)requestFailedAuthorisation:(id)arg1 response:(id)arg2;
+- (void)requestFailedAuthorisation:(id)arg1;
 - (void)refresh;
 - (void)authoriseRequest:(id)arg1;
 - (id)copyWithZone:(struct _NSZone *)arg1;

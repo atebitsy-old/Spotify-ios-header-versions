@@ -22,7 +22,6 @@
 @property(readonly, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
 - (void)logInteractionRequestId:(id)arg1 featureId:(id)arg2 pageURI:(id)arg3 section:(id)arg4 targetURI:(id)arg5 type:(id)arg6 intent:(id)arg7;
 - (id)featureId;
-- (void)logClearQueueWithNumberOfItemsToRemove:(unsigned long long)arg1;
 - (void)logSpeedControlMenuButtonTapped;
 - (void)logSleepTimerButtonTapped;
 - (void)logBanButtonTappedWithFeedbackButtonBehavior:(long long)arg1 playerState:(id)arg2;

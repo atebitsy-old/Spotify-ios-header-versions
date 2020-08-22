@@ -9,25 +9,20 @@
 #import "SPTBrowseLogger-Protocol.h"
 
 @class NSString;
-@protocol SPTBrowseDateProvider, SPTLogCenter, SPTUBIHubsUtilities, SPTUBILogger;
+@protocol SPTBrowseDateProvider, SPTLogCenter;
 
 @interface SPTBrowseLoggerImplementation : NSObject <SPTBrowseLogger>
 {
     id <SPTLogCenter> _logCenter;
     id <SPTBrowseDateProvider> _dateProvider;
-    id <SPTUBILogger> _ubiLogger;
-    id <SPTUBIHubsUtilities> _ubiHubs;
 }
 
 - (void).cxx_destruct;
-@property(readonly, nonatomic) id <SPTUBIHubsUtilities> ubiHubs; // @synthesize ubiHubs=_ubiHubs;
-@property(readonly, nonatomic) id <SPTUBILogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
 @property(readonly, nonatomic) id <SPTBrowseDateProvider> dateProvider; // @synthesize dateProvider=_dateProvider;
 @property(readonly, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
-- (id)logInteraction:(id)arg1;
 - (void)logInteractionWithURI:(id)arg1 event:(id)arg2 userIntent:(id)arg3;
 - (void)logImpressionWithComponentModel:(id)arg1;
-- (id)initWithLogCenter:(id)arg1 dateProvider:(id)arg2 ubiLogger:(id)arg3 ubiHubs:(id)arg4;
+- (id)initWithLogCenter:(id)arg1 dateProvider:(id)arg2;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

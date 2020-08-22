@@ -33,7 +33,6 @@
 - (void)foregroundObserverDidAwake:(id)arg1;
 - (void)applicationWillResignActive;
 - (void)applicationDidBecomeActive;
-- (void)applicationDidEnterBackground:(id)arg1;
 - (void)observeAppActiveState;
 - (void)removeObserver:(id)arg1;
 - (void)addObserver:(id)arg1;

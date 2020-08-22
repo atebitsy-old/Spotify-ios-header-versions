@@ -12,7 +12,7 @@
 - (void)showDownloadedTracksLimitReachedPopupWith:(void (^)(void))arg1;
 - (void)showDownloadTooltipIn:(UIView *)arg1 from:(struct CGRect)arg2 maxNumberOfTimes:(unsigned long long)arg3;
 - (void)showSpotifyCuratedIntroMessage;
-- (void)showUserCuratedIntroMessageWith:(void (^)(void))arg1;
+- (void)showUserCuratedIntroMessage;
 - (void)showTrackDownloadRemovedSnackbar;
 - (void)showTrackDownloadCompletedSnackbar;
 - (void)showRemoveFromDownloadsConfirmationAlertWithConfirmBlock:(void (^)(void))arg1 cancelBlock:(void (^)(void))arg2;

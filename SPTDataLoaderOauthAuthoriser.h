@@ -41,7 +41,7 @@
 - (void)dealloc;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 - (void)refresh;
-- (void)requestFailedAuthorisation:(id)arg1 response:(id)arg2;
+- (void)requestFailedAuthorisation:(id)arg1;
 - (void)authoriseRequest:(id)arg1;
 - (_Bool)requestRequiresAuthorisation:(id)arg1;
 - (_Bool)hostInAuthorisationHosts:(id)arg1;

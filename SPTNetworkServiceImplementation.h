@@ -9,16 +9,12 @@
 #import "SPTNetworkService-Protocol.h"
 
 @class NSString, SPTAllocationContext, SPTHTTPService, SPTImageLoaderService, SPTImageLoaderServiceManager, SPTNetworkConnectivityControllerImplementation, SPTVideoURLAssetLoaderImplementation;
-@protocol SPTConnectivityService, SPTContainerService, SPTCoreService, SPTImageLoaderFactory;
+@protocol SPTContainerService, SPTCoreService, SPTImageLoaderFactory;
 
 @interface SPTNetworkServiceImplementation : NSObject <SPTNetworkService>
 {
-    _Bool _clientTokenEnabledFromPSES;
-    _Bool _clientTokenEnabledFromRCS;
-    _Bool _clientTokenDisabledFromRCS;
     id <SPTContainerService> _containerService;
     id <SPTCoreService> _coreService;
-    id <SPTConnectivityService> _connectivityService;
     id <SPTImageLoaderFactory> _imageLoaderFactory;
     SPTNetworkConnectivityControllerImplementation *_networkConnectivityController;
     SPTImageLoaderService *_imageLoaderService;
@@ -35,15 +31,8 @@
 @property(retain, nonatomic) SPTImageLoaderService *imageLoaderService; // @synthesize imageLoaderService=_imageLoaderService;
 @property(retain, nonatomic) SPTNetworkConnectivityControllerImplementation *networkConnectivityController; // @synthesize networkConnectivityController=_networkConnectivityController;
 @property(retain, nonatomic) id <SPTImageLoaderFactory> imageLoaderFactory; // @synthesize imageLoaderFactory=_imageLoaderFactory;
-@property(nonatomic) __weak id <SPTConnectivityService> connectivityService; // @synthesize connectivityService=_connectivityService;
 @property(nonatomic) __weak id <SPTCoreService> coreService; // @synthesize coreService=_coreService;
 @property(nonatomic) __weak id <SPTContainerService> containerService; // @synthesize containerService=_containerService;
-@property(nonatomic, getter=isClientTokenDisabledFromRCS) _Bool clientTokenDisabledFromRCS; // @synthesize clientTokenDisabledFromRCS=_clientTokenDisabledFromRCS;
-@property(nonatomic, getter=isClientTokenEnabledFromRCS) _Bool clientTokenEnabledFromRCS; // @synthesize clientTokenEnabledFromRCS=_clientTokenEnabledFromRCS;
-@property(nonatomic, getter=isClientTokenEnabledFromPSES) _Bool clientTokenEnabledFromPSES; // @synthesize clientTokenEnabledFromPSES=_clientTokenEnabledFromPSES;
-- (void)disableClientToken;
-- (void)enableClientToken;
-- (void)didSetClientRcsProperties;
 - (void)invalidateSessionFactories;
 - (id)provideHermesController;
 - (id)provideReachabilityForInternetConnection;

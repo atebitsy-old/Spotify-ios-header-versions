@@ -8,13 +8,13 @@
 
 #import "SPTNavigationControllerNavigationBarState-Protocol.h"
 #import "SPTPageController-Protocol.h"
-#import "SPTSignupPasswordViewModelDelegate-Protocol.h"
+#import "SPTSignupPasswordFieldValidationViewModelDelegate-Protocol.h"
 #import "UITextFieldDelegate-Protocol.h"
 
 @class NSString, NSURL, SPTLoginTheme, SPTSignupAnimatedTransitioning, SPTSignupPasswordViewModel, SPTSignupSingleInputFieldView;
 @protocol SPTPageContainer;
 
-@interface SPTSignupPasswordViewController : SPTLoginTraitAwareViewController <SPTNavigationControllerNavigationBarState, UITextFieldDelegate, SPTSignupPasswordViewModelDelegate, SPTPageController>
+@interface SPTSignupPasswordViewController : SPTLoginTraitAwareViewController <SPTNavigationControllerNavigationBarState, UITextFieldDelegate, SPTSignupPasswordFieldValidationViewModelDelegate, SPTPageController>
 {
     SPTSignupPasswordViewModel *_viewModel;
     SPTSignupAnimatedTransitioning *_animatedTransitioning;
@@ -30,8 +30,7 @@
 - (id)navigationController:(id)arg1 animationControllerForPushOperationFromViewController:(id)arg2;
 - (void)viewModel:(id)arg1 didEndFullValidationWithError:(id)arg2;
 - (void)viewModelDidBeginFullValidation:(id)arg1;
-- (void)viewModelDidValidateLocaly:(id)arg1;
-- (void)enableOrDisableSubmitButton;
+- (void)viewModel:(id)arg1 didValidateLocalyWithResult:(_Bool)arg2;
 - (void)textFieldDidChange:(id)arg1;
 - (_Bool)textFieldShouldReturn:(id)arg1;
 - (void)textFieldDidBeginEditing:(id)arg1;

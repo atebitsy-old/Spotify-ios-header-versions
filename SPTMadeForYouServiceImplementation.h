@@ -6,12 +6,12 @@
 
 #import <objc/NSObject.h>
 
-#import "SPTService-Protocol.h"
+#import "SPTMadeForYouService-Protocol.h"
 
 @class NSString, SPTAllocationContext;
 @protocol SPTContainerService, SPTGLUEService, SPTHubFrameworkService, SPTNetworkService, SPTSessionService;
 
-@interface SPTMadeForYouServiceImplementation : NSObject <SPTService>
+@interface SPTMadeForYouServiceImplementation : NSObject <SPTMadeForYouService>
 {
     id <SPTSessionService> _clientSessionService;
     id <SPTContainerService> _containerService;

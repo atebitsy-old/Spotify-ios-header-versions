@@ -6,27 +6,39 @@
 
 #import <objc/NSObject.h>
 
-@class NSMutableArray;
-@protocol SPTAdsBaseCosmosBridge, SPTLogCenter, SPTSavedAdsViewModelDelegate;
+#import "SPTDataLoaderDelegate-Protocol.h"
 
-@interface SPTSavedAdsViewModel : NSObject
+@class NSMutableArray, NSString, SPTDataLoader;
+@protocol SPTLogCenter, SPTSavedAdsViewModelDelegate;
+
+@interface SPTSavedAdsViewModel : NSObject <SPTDataLoaderDelegate>
 {
     id <SPTSavedAdsViewModelDelegate> _delegate;
     id <SPTLogCenter> _logCenter;
-    id <SPTAdsBaseCosmosBridge> _cosmosBridge;
+    SPTDataLoader *_dataLoader;
     NSMutableArray *_savedAds;
 }
 
 - (void).cxx_destruct;
 @property(retain, nonatomic) NSMutableArray *savedAds; // @synthesize savedAds=_savedAds;
-@property(readonly, nonatomic) id <SPTAdsBaseCosmosBridge> cosmosBridge; // @synthesize cosmosBridge=_cosmosBridge;
+@property(readonly, nonatomic) SPTDataLoader *dataLoader; // @synthesize dataLoader=_dataLoader;
 @property(readonly, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
 @property(nonatomic) __weak id <SPTSavedAdsViewModelDelegate> delegate; // @synthesize delegate=_delegate;
+- (void)dataLoader:(id)arg1 didReceiveErrorResponse:(id)arg2;
+- (void)dataLoader:(id)arg1 didReceiveSuccessfulResponse:(id)arg2;
+- (id)requestURLToDeleteBookmarkedAdWithIdentifier:(id)arg1;
+- (id)requestURLToGetSavedAds;
 - (void)loadSavedAds;
 - (id)savedAdAtIndex:(long long)arg1;
 - (void)removeSavedAdAtIndex:(long long)arg1;
 - (unsigned long long)numberOfSavedAds;
-- (id)initWithLogCenter:(id)arg1 cosmosBridge:(id)arg2;
+- (id)initWithLogCenter:(id)arg1 dataLoader:(id)arg2;
+
+// Remaining properties
+@property(readonly, copy) NSString *debugDescription;
+@property(readonly, copy) NSString *description;
+@property(readonly) unsigned long long hash;
+@property(readonly) Class superclass;
 
 @end
 

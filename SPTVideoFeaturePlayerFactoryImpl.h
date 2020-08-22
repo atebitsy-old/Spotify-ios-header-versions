@@ -9,12 +9,12 @@
 #import "SPTVideoFeaturePlayerFactory-Protocol.h"
 
 @class BMBetamaxPlayerFactory, NSString, SPSession, SPTRequestAccounting, SPTVideoFeatureProperties;
-@protocol BMLogger, SPTAudioPlayerMediaClockService, SPTNetworkConnectivityController, SPTProductState;
+@protocol BMLogger, SPTAbbaFeatureFlags, SPTAudioPlayerMediaClockService, SPTNetworkConnectivityController;
 
 @interface SPTVideoFeaturePlayerFactoryImpl : NSObject <SPTVideoFeaturePlayerFactory>
 {
     BMBetamaxPlayerFactory *_playerFactory;
-    id <SPTProductState> _productState;
+    id <SPTAbbaFeatureFlags> _featureFlags;
     SPTVideoFeatureProperties *_videoFeatureProperties;
     id <BMLogger> _logger;
     SPSession *_loginSession;
@@ -30,7 +30,7 @@
 @property(nonatomic) __weak SPSession *loginSession; // @synthesize loginSession=_loginSession;
 @property(retain, nonatomic) id <BMLogger> logger; // @synthesize logger=_logger;
 @property(retain, nonatomic) SPTVideoFeatureProperties *videoFeatureProperties; // @synthesize videoFeatureProperties=_videoFeatureProperties;
-@property(retain, nonatomic) id <SPTProductState> productState; // @synthesize productState=_productState;
+@property(retain, nonatomic) id <SPTAbbaFeatureFlags> featureFlags; // @synthesize featureFlags=_featureFlags;
 @property(retain, nonatomic) BMBetamaxPlayerFactory *playerFactory; // @synthesize playerFactory=_playerFactory;
 - (id)playerConfigurationWithPreventDisplaySleepDuringVideoPlayback:(_Bool)arg1;
 - (id)loggerDataProviderForIdentifier:(id)arg1;
@@ -38,7 +38,7 @@
 - (id)defaultObserverFactoriesWithLoggerDataProvider:(id)arg1 royaltyMediaEnabled:(_Bool)arg2;
 - (id)createVideoPlayerWithFeatureIdentifier:(id)arg1 eventObserverFactories:(id)arg2 surfaceManager:(id)arg3 videoCacheOptions:(id)arg4 withRoyaltyMediaEnabled:(_Bool)arg5 preventDisplaySleepDuringVideoPlayback:(_Bool)arg6;
 - (id)createVideoPlayerWithFeatureIdentifier:(id)arg1 eventObserverFactories:(id)arg2 surface:(id)arg3 videoCacheOptions:(id)arg4 withRoyaltyMediaEnabled:(_Bool)arg5 preventDisplaySleepDuringVideoPlayback:(_Bool)arg6;
-- (id)initWithPlayerFactory:(id)arg1 productState:(id)arg2 videoFeatureProperties:(id)arg3 logger:(id)arg4 loginSession:(id)arg5 networkConnectivityController:(id)arg6 requestAccounting:(id)arg7 audioPlayerMediaClockService:(id)arg8;
+- (id)initWithPlayerFactory:(id)arg1 featureFlags:(id)arg2 videoFeatureProperties:(id)arg3 logger:(id)arg4 loginSession:(id)arg5 networkConnectivityController:(id)arg6 requestAccounting:(id)arg7 audioPlayerMediaClockService:(id)arg8;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

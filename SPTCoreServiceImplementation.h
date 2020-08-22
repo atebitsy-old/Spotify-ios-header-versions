@@ -9,7 +9,7 @@
 #import "SPTCoreService-Protocol.h"
 
 @class NSString, SPCore, SPTAllocationContext, SPTBootstrapCoreProxyImplementation, SPTConnectivityApplicationScope, SPTConnectivityManager, SPTCoreLogHandler, SPTCoreLoggerConnectivityAnalyticsDelegate, SPTCoreSchedulerThread, SPTEventSenderAnalyticsDelegate, SPTEventSenderCoreProxyImplementation, SPTPreferencesImplementation;
-@protocol SPTAudioDriverController, SPTAuthCredentialsStorage, SPTConnectivityConnectionTypeProvider, SPTConnectivityConnectivityPolicyProvider, SPTConnectivityService;
+@protocol SPTAudioDriverController, SPTAuthCredentialsStorage, SPTConnectivityConnectionTypeProvider, SPTConnectivityConnectivityPolicyProvider;
 
 @interface SPTCoreServiceImplementation : NSObject <SPTCoreService>
 {
@@ -26,7 +26,6 @@
     SPTConnectivityManager *_connectivityManager;
     SPTConnectivityApplicationScope *_connectivityApplicationScope;
     SPTEventSenderAnalyticsDelegate *_eventSenderAnalyticsDelegate;
-    id <SPTConnectivityService> _connectivityService;
     SPCore *_core;
     CDUnknownBlockType _assertionHandlerCallback;
 }
@@ -35,7 +34,6 @@
 - (void).cxx_destruct;
 @property(copy, nonatomic) CDUnknownBlockType assertionHandlerCallback; // @synthesize assertionHandlerCallback=_assertionHandlerCallback;
 @property(retain, nonatomic) SPCore *core; // @synthesize core=_core;
-@property(nonatomic) __weak id <SPTConnectivityService> connectivityService; // @synthesize connectivityService=_connectivityService;
 @property(retain, nonatomic) SPTEventSenderAnalyticsDelegate *eventSenderAnalyticsDelegate; // @synthesize eventSenderAnalyticsDelegate=_eventSenderAnalyticsDelegate;
 @property(retain, nonatomic) SPTConnectivityApplicationScope *connectivityApplicationScope; // @synthesize connectivityApplicationScope=_connectivityApplicationScope;
 @property(retain, nonatomic) SPTConnectivityManager *connectivityManager; // @synthesize connectivityManager=_connectivityManager;

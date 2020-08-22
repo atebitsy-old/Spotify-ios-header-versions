@@ -4,9 +4,11 @@
 //     class-dump is Copyright (C) 1997-1998, 2000-2001, 2004-2015 by Steve Nygard.
 //
 
+#import "NSObject-Protocol.h"
+
 @class NSSortDescriptor, NSURL;
 
-@protocol SPTPodcastSortingProvider
+@protocol SPTPodcastSortingProvider <NSObject>
 - (NSSortDescriptor *)sortDescriptorForConsumptionOrder:(long long)arg1;
 - (NSSortDescriptor *)setSortingFromCollectionSortColumn:(unsigned long long)arg1 forURL:(NSURL *)arg2;
 - (NSSortDescriptor *)storedSortDescriptorForURL:(NSURL *)arg1;

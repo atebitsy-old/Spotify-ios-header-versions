@@ -10,16 +10,12 @@
 
 @interface SPTImageResolveProjection : NSObject
 {
-    _Bool _fetchOnline;
-    _Bool _downloadForOffline;
     NSData *_projectionID;
     NSString *_URLTemplate;
     struct CGSize _size;
 }
 
 - (void).cxx_destruct;
-@property(readonly, nonatomic) _Bool downloadForOffline; // @synthesize downloadForOffline=_downloadForOffline;
-@property(readonly, nonatomic) _Bool fetchOnline; // @synthesize fetchOnline=_fetchOnline;
 @property(readonly, nonatomic) NSString *URLTemplate; // @synthesize URLTemplate=_URLTemplate;
 @property(readonly, nonatomic) struct CGSize size; // @synthesize size=_size;
 @property(readonly, nonatomic) NSData *projectionID; // @synthesize projectionID=_projectionID;
@@ -27,8 +23,6 @@
 - (_Bool)isEqual:(id)arg1;
 - (unsigned long long)hash;
 - (id)initWithProjectionID:(id)arg1 size:(struct CGSize)arg2 URLTemplate:(id)arg3;
-- (id)initWithProjectionID:(id)arg1 size:(struct CGSize)arg2 URLTemplate:(id)arg3 fetchOnline:(_Bool)arg4 downloadForOflline:(_Bool)arg5;
-- (id)applyToImageID:(id)arg1;
 
 @end
 

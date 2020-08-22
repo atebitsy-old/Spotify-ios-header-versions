@@ -13,10 +13,8 @@
 @interface SPTMarqueeobjcFeatureProperties : NSObject <SPTRemoteConfigurationProperties>
 {
     _Bool _enableMarqueeObjc;
-    _Bool _enableBackendStrings;
 }
 
-@property(readonly, nonatomic) _Bool enableBackendStrings; // @synthesize enableBackendStrings=_enableBackendStrings;
 @property(readonly, nonatomic) _Bool enableMarqueeObjc; // @synthesize enableMarqueeObjc=_enableMarqueeObjc;
 - (id)propertyModels;
 - (id)initWithPropertyValuesDictionary:(id)arg1;

@@ -32,7 +32,6 @@
     // Error parsing type: , name: isPlayable
     // Error parsing type: , name: isAvailable
     // Error parsing type: , name: isPlayed
-    // Error parsing type: , name: isMusicAndTalk
     // Error parsing type: , name: lastPlayedAt
     // Error parsing type: , name: isExplicit
     // Error parsing type: , name: isFollowingPodcast
@@ -69,8 +68,6 @@
 @property(nonatomic) _Bool explicit; // @synthesize explicit=isExplicit;
 - (_Bool)isExplicit;
 @property(nonatomic) double lastPlayedAt; // @synthesize lastPlayedAt;
-@property(nonatomic) _Bool musicAndTalk; // @synthesize musicAndTalk=isMusicAndTalk;
-- (_Bool)isMusicAndTalk;
 @property(nonatomic) _Bool played; // @synthesize played=isPlayed;
 - (_Bool)isPlayed;
 @property(nonatomic) _Bool available; // @synthesize available=isAvailable;

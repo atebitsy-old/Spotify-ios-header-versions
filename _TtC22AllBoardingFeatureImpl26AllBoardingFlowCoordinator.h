@@ -8,7 +8,19 @@
 
 @interface _TtC22AllBoardingFeatureImpl26AllBoardingFlowCoordinator : NSObject
 {
-    // Error parsing type: , name: dependencies
+    // Error parsing type: , name: delegate
+    // Error parsing type: , name: modalPresentationController
+    // Error parsing type: , name: metaViewController
+    // Error parsing type: , name: dataLoaderFactory
+    // Error parsing type: , name: pageLoaderViewService
+    // Error parsing type: , name: networkService
+    // Error parsing type: , name: glueService
+    // Error parsing type: , name: ubiLogger
+    // Error parsing type: , name: followModelFactory
+    // Error parsing type: , name: modalPresentationMonitor
+    // Error parsing type: , name: eventSender
+    // Error parsing type: , name: initialDeeplink
+    // Error parsing type: , name: curationManager
     // Error parsing type: , name: flowLoop
     // Error parsing type: , name: navigationController
     // Error parsing type: , name: presentationMode

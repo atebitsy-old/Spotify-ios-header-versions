@@ -24,8 +24,6 @@
     // Error parsing type: , name: uriDispatcherService
     // Error parsing type: , name: nowPlayingEpisodeMode
     // Error parsing type: , name: modeRegistry
-    // Error parsing type: , name: contentLayerResolver
-    // Error parsing type: , name: nowPlayingContentLayerProvider
 }
 
 + (id)serviceIdentifier;

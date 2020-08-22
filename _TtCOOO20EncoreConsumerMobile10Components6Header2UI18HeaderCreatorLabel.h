@@ -17,7 +17,6 @@
 - (id)initWithFrame:(struct CGRect)arg1;
 - (id)initWithStyle:(id)arg1;
 - (id)initWithFrame:(struct CGRect)arg1 andStyle:(id)arg2;
-@property(nonatomic, readonly) struct CGSize intrinsicContentSize;
 - (void)layoutSubviews;
 - (id)initWithCoder:(id)arg1;
 - (id)init;

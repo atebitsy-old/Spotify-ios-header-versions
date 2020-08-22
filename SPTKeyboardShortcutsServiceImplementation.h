@@ -9,24 +9,28 @@
 #import "SPTKeyboardShortcutsService-Protocol.h"
 
 @class MessageBarController, NSString, SPTAllocationContext, SPTKeyboardShortcutsKeyCommandHandler;
-@protocol SPTContainerService, SPTContainerUIService, SPTPlayer, SPTPlayerFeature;
+@protocol SPTContainerService, SPTContainerUIService, SPTFeatureFlaggingService, SPTKeyboardShortcutsTestManager, SPTPlayer, SPTPlayerFeature;
 
 @interface SPTKeyboardShortcutsServiceImplementation : NSObject <SPTKeyboardShortcutsService>
 {
     id <SPTContainerService> _containerService;
     id <SPTContainerUIService> _containerUIService;
+    id <SPTFeatureFlaggingService> _featureFlaggingService;
     id <SPTPlayerFeature> _playerFeature;
     id <SPTPlayer> _player;
     MessageBarController *_messageBarController;
+    id <SPTKeyboardShortcutsTestManager> _testManager;
     SPTKeyboardShortcutsKeyCommandHandler *_keyCommandHandler;
 }
 
 + (id)serviceIdentifier;
 - (void).cxx_destruct;
 @property(retain, nonatomic) SPTKeyboardShortcutsKeyCommandHandler *keyCommandHandler; // @synthesize keyCommandHandler=_keyCommandHandler;
+@property(retain, nonatomic) id <SPTKeyboardShortcutsTestManager> testManager; // @synthesize testManager=_testManager;
 @property(nonatomic) __weak MessageBarController *messageBarController; // @synthesize messageBarController=_messageBarController;
 @property(retain, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
 @property(nonatomic) __weak id <SPTPlayerFeature> playerFeature; // @synthesize playerFeature=_playerFeature;
+@property(nonatomic) __weak id <SPTFeatureFlaggingService> featureFlaggingService; // @synthesize featureFlaggingService=_featureFlaggingService;
 @property(nonatomic) __weak id <SPTContainerUIService> containerUIService; // @synthesize containerUIService=_containerUIService;
 @property(nonatomic) __weak id <SPTContainerService> containerService; // @synthesize containerService=_containerService;
 - (void)didReceivePreviousCommand;

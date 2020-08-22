@@ -66,7 +66,6 @@
 @property(readonly, nonatomic) NSString *artistTitle;
 @property(readonly, nonatomic) NSURL *showURL;
 @property(readonly, nonatomic) NSURL *trackClickURL;
-@property(readonly, nonatomic) NSURL *nowPlayingBarCoverArtURL;
 @property(readonly, nonatomic) NSURL *coverArtURLXLarge;
 @property(readonly, nonatomic) NSURL *coverArtURLLarge;
 @property(readonly, nonatomic) NSURL *coverArtURLSmall;

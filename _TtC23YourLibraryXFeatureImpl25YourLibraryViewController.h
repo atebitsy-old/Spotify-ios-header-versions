@@ -9,7 +9,6 @@
 @interface _TtC23YourLibraryXFeatureImpl25YourLibraryViewController : SPViewController
 {
     // Error parsing type: , name: loopController
-    // Error parsing type: , name: feedbackFactory
     // Error parsing type: , name: theme
     // Error parsing type: , name: quickScrollFactory
     // Error parsing type: , name: yourLibraryView
@@ -21,7 +20,6 @@
 - (void).cxx_destruct;
 - (id)initWithNibName:(id)arg1 bundle:(id)arg2;
 - (id)initWithCoder:(id)arg1;
-- (void)viewWillTransitionToSize:(struct CGSize)arg1 withTransitionCoordinator:(id)arg2;
 - (void)spt_scrollToTop;
 - (void)viewWillAppear:(_Bool)arg1;
 - (void)viewDidLoad;

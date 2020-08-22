@@ -6,8 +6,6 @@
 
 #import <objc/NSObject.h>
 
-@class NSString;
-
 @interface _TtC20SuperbirdFeatureImpl20SuperbirdDetectorImp : NSObject
 {
     // Error parsing type: , name: superbirdIdentififer
@@ -23,7 +21,6 @@
 - (void)removeObserver:(id)arg1;
 - (void)addObserver:(id)arg1;
 - (void)dealloc;
-@property(nonatomic, readonly) NSString *deviceSerial;
 
 @end
 

@@ -23,6 +23,7 @@
 @property(retain, nonatomic) id <SPTFeatureFlagSignal> defaultSignal; // @synthesize defaultSignal=_defaultSignal;
 @property(retain, nonatomic) id <SPTFeatureFlagSignal> combinedSignal; // @synthesize combinedSignal=_combinedSignal;
 - (void)featureFlagSignal:(id)arg1 hasAssumedState:(long long)arg2;
+- (void)logExposure;
 - (void)setInitialSettingItemState:(long long)arg1;
 - (void)setSettingItemDefaultValueForState:(long long)arg1;
 - (id)initWithCombinedSignal:(id)arg1 defaultSignal:(id)arg2 switchSettingItem:(id)arg3;

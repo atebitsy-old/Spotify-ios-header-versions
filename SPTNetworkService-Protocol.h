@@ -10,13 +10,6 @@
 @protocol SPTImageLoaderFactory, SPTNetworkConnectivityController, SPTReachabilityMonitor, SPTVideoURLAssetLoader;
 
 @protocol SPTNetworkService <SPTService>
-- (void)didSetClientRcsProperties;
-@property(nonatomic) _Bool clientTokenDisabledFromRCS;
-- (_Bool)isClientTokenDisabledFromRCS;
-@property(nonatomic) _Bool clientTokenEnabledFromRCS;
-- (_Bool)isClientTokenEnabledFromRCS;
-@property(nonatomic) _Bool clientTokenEnabledFromPSES;
-- (_Bool)isClientTokenEnabledFromPSES;
 - (void)invalidateSessionFactories;
 - (SPTHermesController *)provideHermesController;
 - (id <SPTReachabilityMonitor>)provideReachabilityForInternetConnection;

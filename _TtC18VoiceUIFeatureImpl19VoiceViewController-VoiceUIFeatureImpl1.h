@@ -6,8 +6,14 @@
 
 #import "_TtC18VoiceUIFeatureImpl19VoiceViewController.h"
 
+@class NSString, NSURL;
+
 @interface _TtC18VoiceUIFeatureImpl19VoiceViewController (VoiceUIFeatureImpl1)
-- (_Bool)presentationControllerShouldDismiss:(id)arg1;
-- (void)presentationControllerWillDismiss:(id)arg1;
+- (id)spt_pageURI;
+- (id)spt_pageIdentifier;
+
+// Remaining properties
+@property(nonatomic, readonly) NSString *pageIdentifier;
+@property(nonatomic, readonly) NSURL *pageURI;
 @end
 

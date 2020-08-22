@@ -49,7 +49,7 @@
 - (void)sessionViewUserCellDidTapActionButton:(id)arg1;
 - (void)sessionViewUserCellDidTapUserImageOrName:(id)arg1;
 - (void)didFinishLoadingScannable:(id)arg1 sessionColor:(id)arg2 error:(id)arg3;
-- (void)listenTogetherJoinFlowStateUpdated:(long long)arg1;
+- (void)listenTogetherStateUpdated:(long long)arg1;
 - (void)socialListeningViewModelWillLeaveSession:(id)arg1;
 - (void)socialListeningViewModelDidDeleteSession:(id)arg1;
 - (void)socialListeningViewModel:(id)arg1 didReceiveError:(id)arg2;

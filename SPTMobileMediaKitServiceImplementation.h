@@ -6,12 +6,12 @@
 
 #import <objc/NSObject.h>
 
-#import "SPTService-Protocol.h"
+#import "SPTMobileMediaKitService-Protocol.h"
 
 @class NSString, SPTAllocationContext, SPTDataLoader, SPTMobileMediaKitAPKeepAliveHandler, SPTMobileMediaKitClientCommunicationsManager;
 @protocol GaiaFeature, SPTAccessoryManagerService, SPTAccessoryManagerSessionService, SPTExternalIntegrationCollectionService, SPTExternalIntegrationDebugLogService, SPTExternalIntegrationPlaybackService, SPTNetworkService, SPTRemoteConfigurationResolver, SPTRemoteConfigurationService;
 
-@interface SPTMobileMediaKitServiceImplementation : NSObject <SPTService>
+@interface SPTMobileMediaKitServiceImplementation : NSObject <SPTMobileMediaKitService>
 {
     id <SPTAccessoryManagerSessionService> _accessorySessionService;
     id <SPTExternalIntegrationPlaybackService> _externalIntegrationPlaybackService;

@@ -6,20 +6,19 @@
 
 #import <objc/NSObject.h>
 
-@class NSString, NSTimer, SPTDynamicSignupFlowController, SPTLoginDialogController, SPTLoginEmailValidationDialogLogger, SPTLoginSplitEmailSignupViewLogger, SPTSignupA11yEnvironment, SPTSignupDisplayNameSuggestionDataLoader, SPTSignupUserInfoModel, SPTSignupValidationSequencer;
+@class NSString, NSTimer, SPTDynamicSignupFlowController, SPTLoginDialogController, SPTLoginEmailAlreadyExistsDialogLogger, SPTLoginSplitEmailSignupViewLogger, SPTSignupA11yEnvironment, SPTSignupDisplayNameSuggestionDataLoader, SPTSignupEmailFieldValidator, SPTSignupUserInfoModel;
 @protocol SPTSignupEmailViewModelDelegate;
 
 @interface SPTSignupEmailViewModel : NSObject
 {
-    _Bool _shouldEnableNextButton;
     _Bool _fullValidationEnabled;
     SPTLoginSplitEmailSignupViewLogger *_logger;
     id <SPTSignupEmailViewModelDelegate> _delegate;
     SPTSignupUserInfoModel *_userInfoModel;
-    SPTSignupValidationSequencer *_validationSequencer;
+    SPTSignupEmailFieldValidator *_fieldValidator;
     NSTimer *_timer;
     SPTLoginDialogController *_dialogController;
-    SPTLoginEmailValidationDialogLogger *_dialogLogger;
+    SPTLoginEmailAlreadyExistsDialogLogger *_dialogLogger;
     SPTSignupDisplayNameSuggestionDataLoader *_displayNameDataLoader;
     NSString *_lastValidEmail;
     SPTDynamicSignupFlowController *_flowController;
@@ -31,29 +30,30 @@
 @property(readonly, nonatomic) SPTDynamicSignupFlowController *flowController; // @synthesize flowController=_flowController;
 @property(copy, nonatomic) NSString *lastValidEmail; // @synthesize lastValidEmail=_lastValidEmail;
 @property(readonly, nonatomic) SPTSignupDisplayNameSuggestionDataLoader *displayNameDataLoader; // @synthesize displayNameDataLoader=_displayNameDataLoader;
-@property(readonly, nonatomic) SPTLoginEmailValidationDialogLogger *dialogLogger; // @synthesize dialogLogger=_dialogLogger;
+@property(readonly, nonatomic) SPTLoginEmailAlreadyExistsDialogLogger *dialogLogger; // @synthesize dialogLogger=_dialogLogger;
 @property(readonly, nonatomic) SPTLoginDialogController *dialogController; // @synthesize dialogController=_dialogController;
 @property(retain, nonatomic) NSTimer *timer; // @synthesize timer=_timer;
 @property(nonatomic, getter=isFullValidationEnabled) _Bool fullValidationEnabled; // @synthesize fullValidationEnabled=_fullValidationEnabled;
-@property(readonly, nonatomic) SPTSignupValidationSequencer *validationSequencer; // @synthesize validationSequencer=_validationSequencer;
+@property(readonly, nonatomic) SPTSignupEmailFieldValidator *fieldValidator; // @synthesize fieldValidator=_fieldValidator;
 @property(readonly, nonatomic) SPTSignupUserInfoModel *userInfoModel; // @synthesize userInfoModel=_userInfoModel;
-@property(nonatomic) _Bool shouldEnableNextButton; // @synthesize shouldEnableNextButton=_shouldEnableNextButton;
 @property(nonatomic) __weak id <SPTSignupEmailViewModelDelegate> delegate; // @synthesize delegate=_delegate;
 @property(retain, nonatomic) SPTLoginSplitEmailSignupViewLogger *logger; // @synthesize logger=_logger;
-- (void)presentPopupForVoiceOverUserWithError:(id)arg1;
-- (void)presentEmailExistsPopupWithEmail:(id)arg1;
+- (void)presentPopupWithError:(id)arg1 email:(id)arg2;
 - (void)navigateToNextScreenWithEmail:(id)arg1;
-- (void)performFinalValidationWithValue:(id)arg1;
+- (void)validateAndOpenNextScreen:(id)arg1;
 - (void)userDidTapNextButtonWithValue:(id)arg1;
 - (void)userDidTapReturnButtonWithValue:(id)arg1;
 - (void)userDidUpdateTextFieldWithValue:(id)arg1;
+- (void)resetTimer;
+- (void)timerDidFire:(id)arg1;
+- (void)validateEmail:(id)arg1 withCompletionBlock:(CDUnknownBlockType)arg2;
 - (id)nextButtonText;
 - (id)fieldDisclosureLabelText;
 - (id)fieldAccessibilityLabel;
 - (id)fieldTitleLabelText;
 - (id)titleLabelText;
 @property(readonly, nonatomic) _Bool shouldAutoFocusTextFieldOnAppear;
-- (id)initWithLogger:(id)arg1 userInfoModel:(id)arg2 validationSequencer:(id)arg3 displayNameDataLoader:(id)arg4 dialogController:(id)arg5 dialogLogger:(id)arg6 flowController:(id)arg7 a11yEnvironment:(id)arg8;
+- (id)initWithLogger:(id)arg1 userInfoModel:(id)arg2 fieldValidator:(id)arg3 displayNameDataLoader:(id)arg4 dialogController:(id)arg5 dialogLogger:(id)arg6 flowController:(id)arg7 a11yEnvironment:(id)arg8;
 
 @end
 

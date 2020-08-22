@@ -53,8 +53,6 @@
 - (void)tryAgainButtonTapped:(id)arg1;
 - (void)setupActions;
 - (void)showErrorAlert;
-- (void)updateUIVisibility;
-- (void)updateScannableUI;
 - (void)updateUI;
 - (void)applyThemeLayout;
 - (void)calculatePreferredSize;

@@ -7,11 +7,10 @@
 #import "NSObject-Protocol.h"
 
 @class NSURL;
-@protocol SPTUBIEventLocation, SPTUBIMobileQueue_QueueUpNext_ClearButtonEventFactory, SPTUBIMobileQueue_QueueUpNext_QueuedTrackEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIMobileQueue_QueueUpNext_QueuedTrackEventFactory;
 
 @protocol SPTUBIMobileQueue_QueueUpNextEventFactory <NSObject>
 - (id <SPTUBIMobileQueue_QueueUpNext_QueuedTrackEventFactory>)queuedTrackFactoryWithPosition:(long long)arg1 uri:(NSURL *)arg2;
-- (id <SPTUBIMobileQueue_QueueUpNext_ClearButtonEventFactory>)clearButtonFactory;
 - (id <SPTUBIEventLocation>)_location;
 @end
 

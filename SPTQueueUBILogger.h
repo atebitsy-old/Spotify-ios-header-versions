@@ -30,7 +30,6 @@
 - (void)logSkipToPreviousTappedWithPlayerState:(id)arg1;
 - (void)logPlayButtonTappedWithBehavior:(long long)arg1 playerState:(id)arg2;
 - (void)logSkipToNextTappedWithPlayerState:(id)arg1;
-- (void)logClearQueueWithNumberOfItemsToRemove:(unsigned long long)arg1;
 - (void)logDragToSortUpNextTrack:(id)arg1 atPosition:(long long)arg2;
 - (void)logTapToDeselectUpNextTrack:(id)arg1 atPosition:(long long)arg2;
 - (void)logTapToSelectUpNextTrack:(id)arg1 atPosition:(long long)arg2;

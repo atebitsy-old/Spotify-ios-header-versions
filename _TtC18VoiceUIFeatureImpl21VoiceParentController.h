@@ -12,6 +12,7 @@
     // Error parsing type: , name: wakewordController
     // Error parsing type: , name: onboardingController
     // Error parsing type: , name: voiceController
+    // Error parsing type: , name: searchResultsController
     // Error parsing type: , name: onboardingState
     // Error parsing type: , name: testManager
     // Error parsing type: , name: linkDispatcher

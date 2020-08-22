@@ -8,12 +8,12 @@
 
 #import "SPTNowPlayingService-Protocol.h"
 #import "SPTQueueViewControllerDelegate-Protocol.h"
-#import "SPTRemoteControlDelegate-Protocol.h"
+#import "SpotifyApplicationRemoteControlDelegate-Protocol.h"
 
-@class NSString, SPTAllocationContext, SPTNowPlayingAuxiliaryActionsHandlerImplementation, SPTNowPlayingBackgroundViewController, SPTNowPlayingBarLogger, SPTNowPlayingBarModel, SPTNowPlayingContentLayerViewModel, SPTNowPlayingContextMenuHeaderFactory, SPTNowPlayingDefaultMode, SPTNowPlayingDeviceOrientationManager, SPTNowPlayingFeatureSettings, SPTNowPlayingFeedbackMode, SPTNowPlayingFreeMode, SPTNowPlayingLogger, SPTNowPlayingManagerImplementation, SPTNowPlayingModel, SPTNowPlayingPlaybackActionsHandlerImplementation, SPTNowPlayingPlaylistSteeringMode, SPTNowPlayingPodcastMode, SPTNowPlayingRemoteControlEventDefaultController, SPTNowPlayingRemoteControlPolicyResolver, SPTNowPlayingSideBarLogger, SPTNowPlayingSideBarViewControllerFactory, SPTNowPlayingSkipLimitReachedMessageRequester, SPTNowPlayingStateProxy, SPTNowPlayingToggleViewController, SPTNowPlayingUBILogger, SPTNowPlayingVideoManagerImplementation, SPTNowPlayingVideoShowMode, SPTNowPlayingViewFullscreenConfigurator, SPTStatefulPlayer, UIViewController;
+@class NSString, SPTAllocationContext, SPTNowPlayingAuxiliaryActionsHandlerImplementation, SPTNowPlayingBackgroundViewController, SPTNowPlayingBarLogger, SPTNowPlayingBarModel, SPTNowPlayingContentLayerViewModel, SPTNowPlayingContextMenuHeaderFactory, SPTNowPlayingDefaultMode, SPTNowPlayingDeviceOrientationManager, SPTNowPlayingFeatureSettings, SPTNowPlayingFeedbackMode, SPTNowPlayingFreeMode, SPTNowPlayingLogger, SPTNowPlayingManagerImplementation, SPTNowPlayingModel, SPTNowPlayingPlaybackActionsHandlerImplementation, SPTNowPlayingPodcastMode, SPTNowPlayingRemoteControlEventDefaultController, SPTNowPlayingRemoteControlPolicyResolver, SPTNowPlayingSideBarLogger, SPTNowPlayingSideBarViewControllerFactory, SPTNowPlayingSkipLimitReachedMessageRequester, SPTNowPlayingStateProxy, SPTNowPlayingToggleViewController, SPTNowPlayingUBILogger, SPTNowPlayingVideoManagerImplementation, SPTNowPlayingVideoShowMode, SPTNowPlayingViewFullscreenConfigurator, SPTStatefulPlayer, UIViewController;
 @protocol GaiaFeature, SPContextMenuFeature, SPTAccessoryManagerSessionService, SPTAdsBaseService, SPTAdsService, SPTBannerFeature, SPTCollectionPlatformService, SPTContainerService, SPTContainerUIService, SPTCoreService, SPTEncoreIntegrationService, SPTGLUEService, SPTInAppMessageService, SPTMediaPlayerService, SPTNetworkService, SPTNowPlayingInfoCenterManagerProtocol, SPTNowPlayingNavigationBarModel, SPTNowPlayingNavigationBarUnitManager, SPTNowPlayingPlatformService, SPTNowPlayingRemoteControlPolicyRegistry, SPTNowPlayingTestManager, SPTPlayer, SPTPlayerFeature, SPTPlaylistPlatformService, SPTPodcastFeature, SPTQueueInteractor, SPTQueueLogger, SPTQueueService, SPTRadioService, SPTSessionService, SPTSettingsFeature, SPTShareFeature, SPTSleepTimerService, SPTSnackbarConditionalPresenter, SPTSnackbarService, SPTUBIService, SPTUIPresentationService, SPTURIDispatchService, SPTVideoCoordinatorService, _TtP17OfflineMixFeature20SPTOfflineMixService_, _TtP18ConnectUIV2Feature21SPTConnectUIV2Service_, _TtP21VoiceCompanionFeature24SPTVoiceCompanionService_, _TtP24ResponsiveShuffleFeature27SPTResponsiveShuffleService_;
 
-@interface SPTNowPlayingServiceImplementation : NSObject <SPTRemoteControlDelegate, SPTQueueViewControllerDelegate, SPTNowPlayingService>
+@interface SPTNowPlayingServiceImplementation : NSObject <SpotifyApplicationRemoteControlDelegate, SPTQueueViewControllerDelegate, SPTNowPlayingService>
 {
     id <SPTSessionService> _clientSessionService;
     id <SPTContainerService> _containerService;
@@ -81,7 +81,6 @@
     UIViewController *_queueNavigationBarViewController;
     SPTNowPlayingDefaultMode *_defaultMode;
     SPTNowPlayingFeedbackMode *_feedbackMode;
-    SPTNowPlayingPlaylistSteeringMode *_playlistSteeringMode;
     SPTNowPlayingFreeMode *_freeMode;
     SPTNowPlayingVideoShowMode *_videoShowMode;
     SPTNowPlayingPodcastMode *_podcastMode;
@@ -108,7 +107,6 @@
 @property(retain, nonatomic) SPTNowPlayingPodcastMode *podcastMode; // @synthesize podcastMode=_podcastMode;
 @property(retain, nonatomic) SPTNowPlayingVideoShowMode *videoShowMode; // @synthesize videoShowMode=_videoShowMode;
 @property(retain, nonatomic) SPTNowPlayingFreeMode *freeMode; // @synthesize freeMode=_freeMode;
-@property(retain, nonatomic) SPTNowPlayingPlaylistSteeringMode *playlistSteeringMode; // @synthesize playlistSteeringMode=_playlistSteeringMode;
 @property(retain, nonatomic) SPTNowPlayingFeedbackMode *feedbackMode; // @synthesize feedbackMode=_feedbackMode;
 @property(retain, nonatomic) SPTNowPlayingDefaultMode *defaultMode; // @synthesize defaultMode=_defaultMode;
 @property(retain, nonatomic) UIViewController *queueNavigationBarViewController; // @synthesize queueNavigationBarViewController=_queueNavigationBarViewController;
@@ -185,8 +183,6 @@
 - (id)provideSleepTimerButtonViewController;
 - (id)provideSkipForwardButtonViewController;
 - (id)provideSkipBackwardButtonViewController;
-- (id)provideSteerDownButtonViewController;
-- (id)provideSteerUpButtonViewController;
 - (id)provideBanButtonViewController;
 - (id)provideHeartButtonViewController;
 - (id)provideSkipPreviousButtonViewController;
@@ -197,7 +193,7 @@
 - (void)registerFeatureSettings;
 - (void)registerContextMenuActions;
 - (void)queue:(id)arg1 didTapNowPlayingTrack:(id)arg2;
-- (_Bool)remoteControl:(id)arg1 handleRemoteControlEventOfSubtype:(long long)arg2;
+- (_Bool)spotifyApplication:(id)arg1 handleRemoteControlEventOfSubtype:(long long)arg2;
 - (void)registerDefaultModes;
 - (id)provideSideBarFactory;
 - (void)setupSideBarViewControllerRegistry;

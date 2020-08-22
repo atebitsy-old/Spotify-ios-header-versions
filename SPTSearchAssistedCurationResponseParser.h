@@ -8,7 +8,7 @@
 
 #import "SPTSearchPlatformResponseParser-Protocol.h"
 
-@class HUBViewModelBuilderFactory, NSString, NSURL;
+@class HUBViewModelBuilderFactory, NSString;
 @protocol SPTExplicitContentAccessManager, SPTSearch2EmptyStatePropertiesProvider, _TtP22AgeVerificationFeature26SPTAgeVerificationProvider_;
 
 @interface SPTSearchAssistedCurationResponseParser : NSObject <SPTSearchPlatformResponseParser>
@@ -19,11 +19,9 @@
     id <SPTSearch2EmptyStatePropertiesProvider> _emptyStatePropertiesProvider;
     id <SPTExplicitContentAccessManager> _explicitContentAccessManager;
     id <_TtP22AgeVerificationFeature26SPTAgeVerificationProvider_> _ageVerificationProvider;
-    NSURL *_pageURI;
 }
 
 - (void).cxx_destruct;
-@property(readonly, copy, nonatomic) NSURL *pageURI; // @synthesize pageURI=_pageURI;
 @property(readonly, nonatomic) _Bool isDrilldown; // @synthesize isDrilldown=_isDrilldown;
 @property(readonly, nonatomic) id <_TtP22AgeVerificationFeature26SPTAgeVerificationProvider_> ageVerificationProvider; // @synthesize ageVerificationProvider=_ageVerificationProvider;
 @property(readonly, nonatomic) id <SPTExplicitContentAccessManager> explicitContentAccessManager; // @synthesize explicitContentAccessManager=_explicitContentAccessManager;
@@ -45,20 +43,14 @@
 - (id)customDataForEntity:(id)arg1;
 - (id)metadataForEntity:(id)arg1;
 - (id)mainImageDataForEntity:(id)arg1;
-- (id)subtitleForEntity:(id)arg1 includingTypeName:(_Bool)arg2;
-- (id)rowsForEntities:(id)arg1 requestID:(id)arg2 sectionID:(id)arg3 offset:(unsigned long long)arg4;
+- (id)subtitleForEntity:(id)arg1;
+- (id)rowsForEntities:(id)arg1 requestID:(id)arg2 sectionID:(id)arg3;
 - (id)resultsViewModelForMainResponse:(id)arg1 requestID:(id)arg2;
 - (id)noResultsViewModelWithRequestID:(id)arg1;
 - (id)viewModelForMainResponse:(id)arg1 requestID:(id)arg2;
-- (int)entityTypeForEntity:(id)arg1;
-- (id)sectionIDForEntityType:(int)arg1;
-- (id)drilldownTitleForQuery:(id)arg1 entityType:(int)arg2;
-- (id)resultsViewModelForDrillDownResponse:(id)arg1 requestID:(id)arg2 offset:(unsigned long long)arg3;
-- (id)viewModelForDrillDownResponse:(id)arg1 requestID:(id)arg2 offset:(unsigned long long)arg3;
-- (id)parseDrillDownResponse:(id)arg1 requestID:(id)arg2 offset:(unsigned long long)arg3 error:(id *)arg4;
 - (id)parseMainResponse:(id)arg1 requestID:(id)arg2 error:(id *)arg3;
 - (id)parse:(id)arg1 requestID:(id)arg2 offset:(unsigned long long)arg3 error:(id *)arg4;
-- (id)initWithQuery:(id)arg1 pageURI:(id)arg2 viewModelBuilderFactory:(id)arg3 emptyStatePropertiesProvider:(id)arg4 explicitContentAccessManager:(id)arg5 ageVerificationProvider:(id)arg6 isDrilldown:(_Bool)arg7;
+- (id)initWithQuery:(id)arg1 viewModelBuilderFactory:(id)arg2 emptyStatePropertiesProvider:(id)arg3 explicitContentAccessManager:(id)arg4 ageVerificationProvider:(id)arg5 isDrilldown:(_Bool)arg6;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

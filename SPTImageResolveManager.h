@@ -11,18 +11,16 @@
 
 @interface SPTImageResolveManager : NSObject
 {
-    _Bool _fallbackToOriginal;
     id <SPTImageResolveCacheStatusProvider> _cacheStatusProvider;
     SPTImageResolveProjectionMapLoader *_loader;
 }
 
 - (void).cxx_destruct;
-@property(readonly, nonatomic) _Bool fallbackToOriginal; // @synthesize fallbackToOriginal=_fallbackToOriginal;
 @property(readonly, nonatomic) SPTImageResolveProjectionMapLoader *loader; // @synthesize loader=_loader;
 @property(readonly, nonatomic) id <SPTImageResolveCacheStatusProvider> cacheStatusProvider; // @synthesize cacheStatusProvider=_cacheStatusProvider;
 - (id)createImageResolver;
 - (void)refreshConfiguration;
-- (id)initWithTransport:(id)arg1 cacheStatusProvider:(id)arg2 userIdentifier:(id)arg3 configurationTTL:(unsigned long long)arg4 fallbackToOriginal:(_Bool)arg5 configurationUpdatedCallback:(CDUnknownBlockType)arg6;
+- (id)initWithTransport:(id)arg1 cacheStatusProvider:(id)arg2 userIdentifier:(id)arg3 configurationTTL:(unsigned long long)arg4 configurationUpdatedCallback:(CDUnknownBlockType)arg5;
 
 @end
 

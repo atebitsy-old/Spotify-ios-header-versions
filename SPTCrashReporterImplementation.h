@@ -9,8 +9,8 @@
 #import "SPTCrashDetectorDelegate-Protocol.h"
 #import "SPTCrashReporter-Protocol.h"
 
-@class NSString, SPTANRDetector;
-@protocol SPTCrashDetector;
+@class NSMutableArray, NSString, SPTANRDetector;
+@protocol SPTCrashDetector, SPTCrashReporterPersistentStore><SPTCrashReporterURLPoster;
 
 @interface SPTCrashReporterImplementation : NSObject <SPTCrashDetectorDelegate, SPTCrashReporter>
 {
@@ -18,15 +18,19 @@
     _Bool _echoBreadcrumbsToLog;
     id <SPTCrashDetector> _crashDetector;
     SPTANRDetector *_anrDetector;
+    NSMutableArray *_crashSummaryObservers;
     NSString *_userName;
+    id <SPTCrashReporterPersistentStore><SPTCrashReporterURLPoster> _provider;
     struct _opaque_pthread_t *_mainThread;
 }
 
 - (void).cxx_destruct;
 @property(nonatomic) struct _opaque_pthread_t *mainThread; // @synthesize mainThread=_mainThread;
+@property(retain, nonatomic) id <SPTCrashReporterPersistentStore><SPTCrashReporterURLPoster> provider; // @synthesize provider=_provider;
 @property(retain, nonatomic) NSString *userName; // @synthesize userName=_userName;
 @property(nonatomic) _Bool echoBreadcrumbsToLog; // @synthesize echoBreadcrumbsToLog=_echoBreadcrumbsToLog;
 @property(nonatomic) _Bool haveSentSummaryReports; // @synthesize haveSentSummaryReports=_haveSentSummaryReports;
+@property(readonly, nonatomic) NSMutableArray *crashSummaryObservers; // @synthesize crashSummaryObservers=_crashSummaryObservers;
 @property(retain, nonatomic) SPTANRDetector *anrDetector; // @synthesize anrDetector=_anrDetector;
 @property(retain, nonatomic) id <SPTCrashDetector> crashDetector; // @synthesize crashDetector=_crashDetector;
 - (void)unload;
@@ -34,6 +38,7 @@
 - (void)recordCustomExceptionName:(id)arg1 reason:(id)arg2 callStack:(id)arg3;
 - (id)lastCrashURL;
 - (id)lastCrashIdentifier;
+- (void)tellObserversToSendPendingCrashReports;
 - (void)synchronizeState;
 - (void)setValue:(id)arg1 forStateKey:(id)arg2;
 - (void)leaveBreadcrumb:(id)arg1;

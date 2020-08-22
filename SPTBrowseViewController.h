@@ -50,7 +50,6 @@
 @property(readonly, nonatomic, getter=spt_pageURI) NSURL *pageURI;
 - (void)viewModelProvider:(id)arg1 didUpdateStateFrom:(unsigned long long)arg2;
 - (void)viewModelProvider:(id)arg1 didUpdateFromViewModel:(id)arg2;
-- (void)viewWillLayoutSubviews;
 - (void)viewDidLoad;
 - (void)viewWillTransitionToSize:(struct CGSize)arg1 withTransitionCoordinator:(id)arg2;
 - (void)viewDidLayoutSubviews;

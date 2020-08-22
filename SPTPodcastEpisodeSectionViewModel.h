@@ -44,11 +44,9 @@
     id <SPTPodcastSortingProvider> _sortingProvider;
     unsigned long long _sortColumn;
     SPTPodcastFilterTableFooterView *_filterTableFooterView;
-    long long _activeSupplementaryContentIndex;
 }
 
 - (void).cxx_destruct;
-@property(nonatomic) long long activeSupplementaryContentIndex; // @synthesize activeSupplementaryContentIndex=_activeSupplementaryContentIndex;
 @property(retain, nonatomic) SPTPodcastFilterTableFooterView *filterTableFooterView; // @synthesize filterTableFooterView=_filterTableFooterView;
 @property(nonatomic) _Bool ascendingSortOrder; // @synthesize ascendingSortOrder=_ascendingSortOrder;
 @property(nonatomic) unsigned long long sortColumn; // @synthesize sortColumn=_sortColumn;
@@ -86,7 +84,6 @@
 - (void)updateProgressWithPlayer:(id)arg1;
 - (id)cachedProgressForEpisode:(id)arg1;
 - (void)updateCurrentProgress:(double)arg1 position:(double)arg2 duration:(double)arg3 forEpisode:(id)arg4;
-- (void)updateSupplementaryContent;
 - (long long)indexForEpisodeURL:(id)arg1;
 - (long long)indexOfPlayingEpisode;
 - (long long)indexOfActiveEpisode;

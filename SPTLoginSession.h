@@ -6,11 +6,11 @@
 
 #import <objc/NSObject.h>
 
-#import "NSSecureCoding-Protocol.h"
+#import "SPTLoginSession-Protocol.h"
 
 @class NSData, NSString;
 
-@interface SPTLoginSession : NSObject <NSSecureCoding>
+@interface SPTLoginSession : NSObject <SPTLoginSession>
 {
     NSString *_username;
     NSData *_storedCredential;
@@ -19,15 +19,21 @@
 }
 
 + (_Bool)supportsSecureCoding;
-- (void).cxx_destruct;
 @property(readonly, nonatomic) double accessTokenExpiration; // @synthesize accessTokenExpiration=_accessTokenExpiration;
 @property(readonly, copy, nonatomic) NSString *accessToken; // @synthesize accessToken=_accessToken;
 @property(readonly, copy, nonatomic) NSData *storedCredential; // @synthesize storedCredential=_storedCredential;
 @property(readonly, copy, nonatomic) NSString *username; // @synthesize username=_username;
+- (void).cxx_destruct;
 - (void)encodeWithCoder:(id)arg1;
 - (id)initWithCoder:(id)arg1;
 @property(readonly, nonatomic, getter=isAccessTokenValid) _Bool accessTokenValid;
 - (id)initWithUsername:(id)arg1 storedCredential:(id)arg2 accessToken:(id)arg3 accessTokenExpiration:(double)arg4;
+
+// Remaining properties
+@property(readonly, copy) NSString *debugDescription;
+@property(readonly, copy) NSString *description;
+@property(readonly) unsigned long long hash;
+@property(readonly) Class superclass;
 
 @end
 

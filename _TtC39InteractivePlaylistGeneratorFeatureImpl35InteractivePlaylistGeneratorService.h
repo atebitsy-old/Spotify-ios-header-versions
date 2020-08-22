@@ -8,14 +8,15 @@
 
 @interface _TtC39InteractivePlaylistGeneratorFeatureImpl35InteractivePlaylistGeneratorService : NSObject
 {
-    // Error parsing type: , name: _glueService
-    // Error parsing type: , name: _networkService
-    // Error parsing type: , name: _uiPresentationService
-    // Error parsing type: , name: _uriDispatchService
+    // Error parsing type: , name: containerService
 }
 
++ (id)serviceIdentifier;
 - (void).cxx_destruct;
 - (id)init;
+- (void)unload;
+- (void)load;
+- (void)configureWithServices:(id)arg1;
 
 @end
 

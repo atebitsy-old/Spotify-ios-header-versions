@@ -20,8 +20,6 @@
     // Error parsing type: , name: ttsPlaybackLogger
     // Error parsing type: , name: voiceSourceLogger
     // Error parsing type: , name: carModeEngine
-    // Error parsing type: , name: logCenter
-    // Error parsing type: , name: imageLoader
 }
 
 @end

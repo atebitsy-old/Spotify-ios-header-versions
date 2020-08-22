@@ -10,7 +10,7 @@
 #import "SPTShowContextMenuMetadataViewDelegate-Protocol.h"
 
 @class NSString, SPTPodcastFeatureProperties;
-@protocol SPContextMenuActionsFactory, SPTCollectionPlatform, SPTCollectionPlatformTestManager, SPTContextMenuPresenter, SPTContextMenuPresenterFactory, SPTLinkDispatcher, SPTModalPresentationController, SPTPodcastSpeedControlManager, SPTPodcastTestManager, SPTProductState, SPTScannablesUserInterfaceFactory, SPTSleepTimerContextMenuActionsProvider;
+@protocol SPContextMenuActionsFactory, SPTCollectionPlatform, SPTCollectionPlatformTestManager, SPTContextMenuPresenter, SPTContextMenuPresenterFactory, SPTLinkDispatcher, SPTModalPresentationController, SPTPodcastSpeedControlManager, SPTPodcastTestManager, SPTScannablesUserInterfaceFactory, SPTSleepTimerContextMenuActionsProvider;
 
 @interface SPTShowContextMenuController : NSObject <SPTShowContextMenuMetadataViewDelegate, SPTContextMenuPresenterDelegate>
 {
@@ -25,13 +25,11 @@
     id <SPTSleepTimerContextMenuActionsProvider> _sleepTimerContextMenuActionsProvider;
     id <SPTModalPresentationController> _modalPresentationController;
     id <SPTLinkDispatcher> _linkDispatcher;
-    id <SPTProductState> _productState;
     SPTPodcastFeatureProperties *_featureProperties;
 }
 
 - (void).cxx_destruct;
 @property(readonly, nonatomic) SPTPodcastFeatureProperties *featureProperties; // @synthesize featureProperties=_featureProperties;
-@property(readonly, nonatomic) id <SPTProductState> productState; // @synthesize productState=_productState;
 @property(readonly, nonatomic) id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
 @property(readonly, nonatomic) id <SPTModalPresentationController> modalPresentationController; // @synthesize modalPresentationController=_modalPresentationController;
 @property(readonly, nonatomic) id <SPTSleepTimerContextMenuActionsProvider> sleepTimerContextMenuActionsProvider; // @synthesize sleepTimerContextMenuActionsProvider=_sleepTimerContextMenuActionsProvider;
@@ -50,7 +48,7 @@
 - (id)provideGoToEpisodeActionForEpisode:(id)arg1 inViewController:(id)arg2;
 - (id)provideGoToShowActionForEpisode:(id)arg1 inViewController:(id)arg2;
 - (id)provideMarkAsPlayedUnplayedActionForEpisode:(id)arg1 contextMenuDelegate:(id)arg2;
-- (id)provideOfflineActionForEpisode:(id)arg1 contextMenuDelegate:(id)arg2 inViewController:(id)arg3 allowOffline:(_Bool)arg4;
+- (id)provideOfflineActionForEpisode:(id)arg1 contextMenuDelegate:(id)arg2 inViewController:(id)arg3;
 - (id)subtitleContextMenuActionForURI:(id)arg1 sourceURL:(id)arg2 options:(id)arg3;
 - (void)showContextMenuMetadataViewShowMore:(id)arg1;
 - (id)logContext;
@@ -64,7 +62,7 @@
 - (void)presentContexMenuForShow:(id)arg1 contextMenuDelegate:(id)arg2 inViewController:(id)arg3 senderView:(id)arg4 options:(id)arg5;
 - (void)presentContexMenuWithHeaderView:(id)arg1 actions:(id)arg2 entityURL:(id)arg3 inViewController:(id)arg4 senderView:(id)arg5;
 - (void)presentContexMenuWithMetaDataView:(id)arg1 actions:(id)arg2 entityURL:(id)arg3 inViewController:(id)arg4 senderView:(id)arg5;
-- (id)initWithPodcastTestManager:(id)arg1 collectionPlatfrom:(id)arg2 collectionTestManager:(id)arg3 featureProperties:(id)arg4 speedControlManager:(id)arg5 sleepTimerContextMenuActionsProvider:(id)arg6 modalPresentationController:(id)arg7 presenterFactory:(id)arg8 actionFactory:(id)arg9 linkDispatcher:(id)arg10 scannablesUIFactory:(id)arg11 productState:(id)arg12;
+- (id)initWithPodcastTestManager:(id)arg1 collectionPlatfrom:(id)arg2 collectionTestManager:(id)arg3 featureProperties:(id)arg4 speedControlManager:(id)arg5 sleepTimerContextMenuActionsProvider:(id)arg6 modalPresentationController:(id)arg7 presenterFactory:(id)arg8 actionFactory:(id)arg9 linkDispatcher:(id)arg10 scannablesUIFactory:(id)arg11;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

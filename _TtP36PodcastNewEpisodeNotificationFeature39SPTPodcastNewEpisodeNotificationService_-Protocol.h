@@ -6,10 +6,6 @@
 
 #import "SPTService-Protocol.h"
 
-@class NSURL;
-@protocol SPTPodcastFollowButtonObserver;
-
 @protocol _TtP36PodcastNewEpisodeNotificationFeature39SPTPodcastNewEpisodeNotificationService_ <SPTService>
-- (id <SPTPodcastFollowButtonObserver>)provideNENViewProviderWithUrl:(NSURL *)arg1;
 @end
 

@@ -12,7 +12,7 @@
 #import "SPTPodcastEpisodeFeaturedContentTrackActionsDelegate-Protocol.h"
 
 @class NSString, SPTPodcastEpisodeFeaturedContentContextMenuPresenter, SPTPodcastEpisodeFeaturedContentLogger, SPTPodcastEpisodeFeaturedContentPlayer;
-@protocol GLUEImageLoader, SPTEpisodeSegmentsModel, _TtP29EpisodeSegmentsFetcherFeature34SPTEpisodeSegmentsCosmosDataLoader_;
+@protocol GLUEImageLoader, SPTEpisodeSegmentsModel, SPTMetaViewController, _TtP29EpisodeSegmentsFetcherFeature34SPTEpisodeSegmentsCosmosDataLoader_;
 
 @interface SPTPodcastEpisodeFeaturedContentTrackTimelineViewController : UITableViewController <SPContentInsetViewController, SPTPodcastEpisodeFeaturedContentPlayerPlayerDelegate, SPTNavigationControllerNavigationBarState, SPTPodcastEpisodeFeaturedContentTrackActionsDelegate>
 {
@@ -23,9 +23,11 @@
     SPTPodcastEpisodeFeaturedContentPlayer *_featuredContentPlayer;
     id <SPTEpisodeSegmentsModel> _episodeSegmentsModel;
     SPTPodcastEpisodeFeaturedContentLogger *_logger;
+    id <SPTMetaViewController> _metaViewController;
 }
 
 - (void).cxx_destruct;
+@property(nonatomic) __weak id <SPTMetaViewController> metaViewController; // @synthesize metaViewController=_metaViewController;
 @property(readonly, nonatomic) SPTPodcastEpisodeFeaturedContentLogger *logger; // @synthesize logger=_logger;
 @property(retain, nonatomic) id <SPTEpisodeSegmentsModel> episodeSegmentsModel; // @synthesize episodeSegmentsModel=_episodeSegmentsModel;
 @property(readonly, nonatomic) SPTPodcastEpisodeFeaturedContentPlayer *featuredContentPlayer; // @synthesize featuredContentPlayer=_featuredContentPlayer;
@@ -48,7 +50,7 @@
 - (void)viewDidLoad;
 - (unsigned long long)preferredNavigationBarState;
 - (void)setUpNavigationItem;
-- (id)initWithEpisodeSegmentsModel:(id)arg1 imageLoader:(id)arg2 contextMenuPresenter:(id)arg3 featuredContentPlayer:(id)arg4 logger:(id)arg5;
+- (id)initWithEpisodeSegmentsModel:(id)arg1 imageLoader:(id)arg2 contextMenuPresenter:(id)arg3 featuredContentPlayer:(id)arg4 logger:(id)arg5 metaViewController:(id)arg6;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

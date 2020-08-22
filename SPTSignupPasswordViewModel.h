@@ -6,38 +6,28 @@
 
 #import <objc/NSObject.h>
 
-@class SPTDynamicSignupFlowController, SPTLoginDialogController, SPTLoginPasswordSignupDialogLogger, SPTLoginSplitEmailSignupViewLogger, SPTSignupA11yEnvironment, SPTSignupUserInfoModel, SPTSignupValidationSequencer;
-@protocol SPTSignupPasswordViewModelDelegate;
+@class SPTDynamicSignupFlowController, SPTLoginSplitEmailSignupViewLogger, SPTSignupA11yEnvironment, SPTSignupPasswordFieldValidationViewModel, SPTSignupUserInfoModel;
 
 @interface SPTSignupPasswordViewModel : NSObject
 {
-    _Bool _shouldEnableNextButton;
-    id <SPTSignupPasswordViewModelDelegate> _delegate;
     SPTLoginSplitEmailSignupViewLogger *_logger;
     SPTSignupUserInfoModel *_userInfoModel;
-    SPTSignupValidationSequencer *_validationSequencer;
+    SPTSignupPasswordFieldValidationViewModel *_fieldViewModel;
     SPTDynamicSignupFlowController *_flowController;
     SPTSignupA11yEnvironment *_a11yEnvironment;
-    SPTLoginDialogController *_dialogController;
-    SPTLoginPasswordSignupDialogLogger *_dialogLogger;
 }
 
 - (void).cxx_destruct;
-@property(readonly, nonatomic) SPTLoginPasswordSignupDialogLogger *dialogLogger; // @synthesize dialogLogger=_dialogLogger;
-@property(readonly, nonatomic) SPTLoginDialogController *dialogController; // @synthesize dialogController=_dialogController;
 @property(retain, nonatomic) SPTSignupA11yEnvironment *a11yEnvironment; // @synthesize a11yEnvironment=_a11yEnvironment;
 @property(retain, nonatomic) SPTDynamicSignupFlowController *flowController; // @synthesize flowController=_flowController;
-@property(retain, nonatomic) SPTSignupValidationSequencer *validationSequencer; // @synthesize validationSequencer=_validationSequencer;
+@property(retain, nonatomic) SPTSignupPasswordFieldValidationViewModel *fieldViewModel; // @synthesize fieldViewModel=_fieldViewModel;
 @property(retain, nonatomic) SPTSignupUserInfoModel *userInfoModel; // @synthesize userInfoModel=_userInfoModel;
-@property(nonatomic) _Bool shouldEnableNextButton; // @synthesize shouldEnableNextButton=_shouldEnableNextButton;
 @property(retain, nonatomic) SPTLoginSplitEmailSignupViewLogger *logger; // @synthesize logger=_logger;
-@property(nonatomic) __weak id <SPTSignupPasswordViewModelDelegate> delegate; // @synthesize delegate=_delegate;
-- (void)presentPopupForVoiceOverUserWithError:(id)arg1;
 - (void)openNextScreenWithPassword:(id)arg1;
-- (void)performFinalValidationWithValue:(id)arg1;
 - (void)userDidTapNextButtonWithValue:(id)arg1;
 - (void)userDidTapReturnButtonWithValue:(id)arg1;
 - (void)userDidUpdateTextFieldWithValue:(id)arg1;
+- (void)setFieldValidationHandlerDelegate:(id)arg1;
 - (id)userEmail;
 - (id)previouslySelectedPassword;
 - (id)nextButtonText;
@@ -46,7 +36,7 @@
 - (id)fieldTitleLabelText;
 - (id)titleLabelText;
 @property(readonly, nonatomic) _Bool shouldAutoFocusTextFieldOnAppear;
-- (id)initWithLogger:(id)arg1 userInfoModel:(id)arg2 validationSequencer:(id)arg3 flowController:(id)arg4 a11yEnvironment:(id)arg5 dialogController:(id)arg6 dialogLogger:(id)arg7;
+- (id)initWithLogger:(id)arg1 userInfoModel:(id)arg2 fieldViewModel:(id)arg3 flowController:(id)arg4 a11yEnvironment:(id)arg5;
 
 @end
 

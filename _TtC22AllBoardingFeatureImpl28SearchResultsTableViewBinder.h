@@ -11,12 +11,12 @@
     // Error parsing type: , name: imageLoader
     // Error parsing type: , name: theme
     // Error parsing type: , name: logger
+    // Error parsing type: , name: traitCollection
     // Error parsing type: , name: tableView
     // Error parsing type: , name: tableBinder
     // Error parsing type: , name: primaryFeedbackGenerator
     // Error parsing type: , name: eventConsumer
     // Error parsing type: , name: items
-    // Error parsing type: , name: traitCollection
     // Error parsing type: , name: searchSessionId
 }
 

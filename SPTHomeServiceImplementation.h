@@ -9,7 +9,7 @@
 #import "SPTHomeService-Protocol.h"
 
 @class NSString, NSURL, SPTAllocationContext, SPTHomeContentStorage, SPTHomeDebugger, SPTHomeFeatureProperties, SPTHomeHubManager;
-@protocol SPTContainerUIService, SPTCrashReporterService, SPTFreeTierTasteOnboardingService, SPTFreeTierUIService, SPTGLUEService, SPTHomeUIService, SPTHubFrameworkService, SPTNavigationFeature, SPTNetworkService, SPTOfflineService, SPTOnDemandService, SPTPageLoaderViewService, SPTPerformanceMetricsService, SPTPlayerFeature, SPTPodcastUIService, SPTRecentlyPlayedService, SPTRemoteConfigurationService, SPTSessionService, SPTSettingsFeature, SPTShareFeature, SPTUBIHubsUtilities, SPTUBIService, _TtP17FollowFeedFeature20SPTFollowFeedService_, _TtP19CarDetectionFeature22SPTCarDetectionService_, _TtP23ListeningHistoryFeature26SPTListeningHistoryService_;
+@protocol SPTContainerUIService, SPTCrashReporterService, SPTFreeTierTasteOnboardingService, SPTFreeTierUIService, SPTGLUEService, SPTHomeUIService, SPTHubFrameworkService, SPTNavigationFeature, SPTNetworkService, SPTOfflineService, SPTOnDemandService, SPTPageLoaderViewService, SPTPerformanceMetricsService, SPTPlayerFeature, SPTPodcastUIService, SPTRecentlyPlayedService, SPTRemoteConfigurationService, SPTSessionService, SPTSettingsFeature, SPTShareFeature, SPTUBIHubsUtilities, SPTUBIService, SPTURIDispatchService, _TtP17FollowFeedFeature20SPTFollowFeedService_, _TtP19CarDetectionFeature22SPTCarDetectionService_, _TtP23ListeningHistoryFeature26SPTListeningHistoryService_;
 
 @interface SPTHomeServiceImplementation : SPTUIPageService <SPTHomeService>
 {
@@ -31,6 +31,7 @@
     id <SPTFreeTierTasteOnboardingService> _tasteOnboardingService;
     id <SPTRemoteConfigurationService> _remoteConfigurationService;
     id <SPTUBIService> _ubiService;
+    id <SPTURIDispatchService> _uriDispatchService;
     id <_TtP23ListeningHistoryFeature26SPTListeningHistoryService_> _listeningHistoryService;
     id <SPTSettingsFeature> _settingsFeature;
     id <SPTPageLoaderViewService> _pageLoaderViewService;
@@ -59,6 +60,7 @@
 @property(nonatomic) __weak id <SPTPageLoaderViewService> pageLoaderViewService; // @synthesize pageLoaderViewService=_pageLoaderViewService;
 @property(nonatomic) __weak id <SPTSettingsFeature> settingsFeature; // @synthesize settingsFeature=_settingsFeature;
 @property(nonatomic) __weak id <_TtP23ListeningHistoryFeature26SPTListeningHistoryService_> listeningHistoryService; // @synthesize listeningHistoryService=_listeningHistoryService;
+@property(nonatomic) __weak id <SPTURIDispatchService> uriDispatchService; // @synthesize uriDispatchService=_uriDispatchService;
 @property(nonatomic) __weak id <SPTUBIService> ubiService; // @synthesize ubiService=_ubiService;
 @property(nonatomic) __weak id <SPTRemoteConfigurationService> remoteConfigurationService; // @synthesize remoteConfigurationService=_remoteConfigurationService;
 @property(nonatomic) __weak id <SPTFreeTierTasteOnboardingService> tasteOnboardingService; // @synthesize tasteOnboardingService=_tasteOnboardingService;

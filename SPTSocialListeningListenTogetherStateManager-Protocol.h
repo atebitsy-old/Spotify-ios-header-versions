@@ -9,10 +9,9 @@
 @protocol SPTSocialListeningListenTogetherStateObserver;
 
 @protocol SPTSocialListeningListenTogetherStateManager <NSObject>
-@property(readonly, nonatomic) long long sessionState;
-@property(readonly, nonatomic) long long joinFlowState;
+@property(readonly, nonatomic) long long currentState;
 - (void)removeListenTogetherStateObserver:(id <SPTSocialListeningListenTogetherStateObserver>)arg1;
 - (void)addListenTogetherStateObserver:(id <SPTSocialListeningListenTogetherStateObserver>)arg1;
-- (void)updateJoinFlowState:(long long)arg1;
+- (void)updateCurrentState:(long long)arg1;
 @end
 

@@ -6,12 +6,12 @@
 
 #import <objc/NSObject.h>
 
-#import "SPTService-Protocol.h"
+#import "SPTRateMeService-Protocol.h"
 
 @class NSString, SPTAllocationContext, SPTRateMeController;
 @protocol SPTAccountService, SPTContainerUIService, SPTPartnerService, SPTPlayerFeature, SPTSessionService, SPTSettingsFeature, SPTURIDispatchService;
 
-@interface SPTRateMeServiceImplementation : NSObject <SPTService>
+@interface SPTRateMeServiceImplementation : NSObject <SPTRateMeService>
 {
     id <SPTAccountService> _accountService;
     id <SPTSessionService> _clientSessionService;

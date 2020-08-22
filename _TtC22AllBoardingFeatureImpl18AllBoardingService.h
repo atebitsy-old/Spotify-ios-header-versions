@@ -8,23 +8,22 @@
 
 @interface _TtC22AllBoardingFeatureImpl18AllBoardingService : NSObject
 {
-    // Error parsing type: , name: _containerService
-    // Error parsing type: , name: _settingsService
-    // Error parsing type: , name: _uriDispatchService
-    // Error parsing type: , name: _uiPresentationService
-    // Error parsing type: , name: _networkService
-    // Error parsing type: , name: _pageLoaderViewService
-    // Error parsing type: , name: _glueService
-    // Error parsing type: , name: _clientSessionService
-    // Error parsing type: , name: _ubiService
-    // Error parsing type: , name: _followService
-    // Error parsing type: , name: _instrumentationService
-    // Error parsing type: , name: _featureFlaggingService
-    // Error parsing type: , name: _eventSenderService
-    // Error parsing type: , name: _tasteOnboardingDeeplinkService
-    // Error parsing type: , name: _remoteConfigurationService
-    // Error parsing type: , name: _loginOnboardingService
-    // Error parsing type: , name: _collectionPlatformService
+    // Error parsing type: , name: containerService
+    // Error parsing type: , name: settingsService
+    // Error parsing type: , name: uriDispatchService
+    // Error parsing type: , name: uiPresentationService
+    // Error parsing type: , name: networkService
+    // Error parsing type: , name: pageLoaderViewService
+    // Error parsing type: , name: glueService
+    // Error parsing type: , name: clientSessionService
+    // Error parsing type: , name: ubiService
+    // Error parsing type: , name: followFeature
+    // Error parsing type: , name: instrumentationService
+    // Error parsing type: , name: featureFlaggingService
+    // Error parsing type: , name: eventSenderService
+    // Error parsing type: , name: tasteOnboardingDeeplinkService
+    // Error parsing type: , name: remoteConfigurationService
+    // Error parsing type: , name: loginOnboardingService
     // Error parsing type: , name: debugFeatureManager
     // Error parsing type: , name: $__lazy_storage_$_flowCoordinator
     // Error parsing type: , name: $__lazy_storage_$_curationManager
@@ -37,6 +36,7 @@
 - (void)applicationDidBecomeActive;
 - (void)unload;
 - (void)load;
+- (void)configureWithServices:(id)arg1;
 
 @end
 

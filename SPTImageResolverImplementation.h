@@ -13,22 +13,16 @@
 
 @interface SPTImageResolverImplementation : NSObject <SPTImageResolver>
 {
-    _Bool _fallbackToOriginal;
     id <SPTImageResolveProjectionMapProvider> _projectionMapProvider;
     id <SPTImageResolveCacheStatusProvider> _cacheStatusProvider;
 }
 
 - (void).cxx_destruct;
-@property(readonly, nonatomic) _Bool fallbackToOriginal; // @synthesize fallbackToOriginal=_fallbackToOriginal;
 @property(readonly, nonatomic) id <SPTImageResolveCacheStatusProvider> cacheStatusProvider; // @synthesize cacheStatusProvider=_cacheStatusProvider;
 @property(readonly, nonatomic) id <SPTImageResolveProjectionMapProvider> projectionMapProvider; // @synthesize projectionMapProvider=_projectionMapProvider;
-- (id)buildCacheLookupCandidatesForImageID:(id)arg1 offlineProjection:(id)arg2 onlineProjection:(id)arg3 useIfCachedProjection:(id)arg4;
-- (id)useIfCachedProjectionForSize:(struct CGSize)arg1 fromProjections:(id)arg2;
-- (id)offlineProjectionForSize:(struct CGSize)arg1 fromProjections:(id)arg2;
-- (id)onlineProjectionForSize:(struct CGSize)arg1 fromProjections:(id)arg2;
-- (id)tightestFitForSize:(struct CGSize)arg1 fromProjections:(id)arg2;
+- (id)preferredProjectionForSize:(struct CGSize)arg1 forCollectionID:(id)arg2;
 - (void)resolveImageURL:(id)arg1 forSize:(struct CGSize)arg2 completion:(CDUnknownBlockType)arg3;
-- (id)initWithProjectionMapProvider:(id)arg1 cacheStatusProvider:(id)arg2 fallbackToOriginal:(_Bool)arg3;
+- (id)initWithProjectionMapProvider:(id)arg1 cacheStatusProvider:(id)arg2;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

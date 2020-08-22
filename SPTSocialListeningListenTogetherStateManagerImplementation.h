@@ -10,30 +10,24 @@
 #import "SPTSocialListeningModelObserver-Protocol.h"
 
 @class NSString, SPTObserverManager;
-@protocol SPTSocialListeningTestManager;
 
 @interface SPTSocialListeningListenTogetherStateManagerImplementation : NSObject <SPTSocialListeningListenTogetherStateManager, SPTSocialListeningModelObserver>
 {
-    long long _joinFlowState;
-    long long _sessionState;
+    long long _currentState;
     SPTObserverManager *_observerManager;
-    id <SPTSocialListeningTestManager> _testManager;
 }
 
 - (void).cxx_destruct;
-@property(readonly, nonatomic) id <SPTSocialListeningTestManager> testManager; // @synthesize testManager=_testManager;
 @property(readonly, nonatomic) SPTObserverManager *observerManager; // @synthesize observerManager=_observerManager;
-@property(nonatomic) long long sessionState; // @synthesize sessionState=_sessionState;
-@property(nonatomic) long long joinFlowState; // @synthesize joinFlowState=_joinFlowState;
+@property(nonatomic) long long currentState; // @synthesize currentState=_currentState;
 - (void)socialListeningModel:(id)arg1 updatedSession:(id)arg2 updateEvent:(id)arg3;
 - (void)socialListeningModel:(id)arg1 didFinishLoadingScannable:(id)arg2 sessionColor:(id)arg3 error:(id)arg4;
 - (void)socialListeningModel:(id)arg1 didReceiveError:(id)arg2;
 - (void)socialListeningModel:(id)arg1 didDeleteSession:(id)arg2;
-- (void)updateSessionState:(long long)arg1 error:(id)arg2;
-- (void)updateJoinFlowState:(long long)arg1;
+- (void)updateCurrentState:(long long)arg1;
 - (void)removeListenTogetherStateObserver:(id)arg1;
 - (void)addListenTogetherStateObserver:(id)arg1;
-- (id)initWithTestManager:(id)arg1;
+- (id)init;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

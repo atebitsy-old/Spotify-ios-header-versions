@@ -15,7 +15,7 @@
 #import "SPTSlateWireframeCustomPresentationDelegate-Protocol.h"
 
 @class NSString, NSURL, SPTMarqueeContentViewController, SPTMarqueeContextMenuFactory, SPTMarqueeContextMenuTransition, SPTMarqueeContextMenuView, SPTMarqueeContextMenuViewController, SPTNavigationManager, SPTProgressView, SPTTheme, UIImage;
-@protocol GLUEImageLoader, SPTAdsBaseCosmosBridge, SPTAdsBaseMarqueeEntity, SPTAdsBaseRegistry, SPTAdsMarqueeLogger, SPTInAppMessagePresentationMonitor, SPTLinkDispatcher, SPTMarqueeTestManager, SPTProductState, SPTSlate, SPTSlateBuilderProvider, SPTSlateManager, SPTUIPresentationService, SPTWebViewFactory;
+@protocol GLUEImageLoader, SPTAdsBaseCosmosBridge, SPTAdsBaseMarqueeEntity, SPTAdsBaseRegistry, SPTAdsMarqueeLogger, SPTInAppMessagePresentationMonitor, SPTLinkDispatcher, SPTProductState, SPTSlate, SPTSlateBuilderProvider, SPTSlateManager, SPTUIPresentationService, SPTWebViewFactory;
 
 @interface SPTMarqueeController : NSObject <SPTAdsBaseRegistryObserver, SPTNavigationManagerDelegate, SPTSlateDataSource, SPTSlateDelegate, SPTSlateViewDataSource, SPTSlateWireframeCustomPresentationDelegate, SPTMarqueeContentViewControllerDelegate>
 {
@@ -46,11 +46,9 @@
     SPTProgressView *_progressView;
     NSURL *_currentContextURL;
     id <SPTProductState> _productState;
-    id <SPTMarqueeTestManager> _testManager;
 }
 
 - (void).cxx_destruct;
-@property(readonly, nonatomic) id <SPTMarqueeTestManager> testManager; // @synthesize testManager=_testManager;
 @property(readonly, nonatomic) id <SPTProductState> productState; // @synthesize productState=_productState;
 @property(nonatomic) _Bool shouldAnimateSlate; // @synthesize shouldAnimateSlate=_shouldAnimateSlate;
 @property(nonatomic) _Bool shouldNavigateToAlbum; // @synthesize shouldNavigateToAlbum=_shouldNavigateToAlbum;
@@ -103,7 +101,7 @@
 - (_Bool)isCurrentContextURLHome;
 - (void)forcePresentMarquee;
 - (void)dealloc;
-- (id)initWithRegistry:(id)arg1 cosmosBridge:(id)arg2 imageLoader:(id)arg3 slateBuilderProvider:(id)arg4 slateManager:(id)arg5 contextMenuFactory:(id)arg6 presentationService:(id)arg7 navigationManager:(id)arg8 linkDispatcher:(id)arg9 inAppMessagePresentationMonitor:(id)arg10 theme:(id)arg11 productState:(id)arg12 eventLogger:(id)arg13 testManager:(id)arg14;
+- (id)initWithRegistry:(id)arg1 cosmosBridge:(id)arg2 imageLoader:(id)arg3 slateBuilderProvider:(id)arg4 slateManager:(id)arg5 contextMenuFactory:(id)arg6 presentationService:(id)arg7 navigationManager:(id)arg8 linkDispatcher:(id)arg9 inAppMessagePresentationMonitor:(id)arg10 theme:(id)arg11 productState:(id)arg12 eventLogger:(id)arg13;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

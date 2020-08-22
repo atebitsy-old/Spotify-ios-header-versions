@@ -9,7 +9,7 @@
 #import "SPTProductStateObserver-Protocol.h"
 
 @class NSDate, NSString, NSURL, SPTFilePickerViewController, SPTLocalFilesImportAuthorizationRequester, SPTLocalFilesLogger;
-@protocol SPTCollectionPlatform, SPTCollectionPlatformTestManager, SPTContainerUIService, SPTImageLoaderFactory, SPTLinkDispatcher, SPTLocalFilesPlaylistsDataSource, SPTLocalFilesTracksDataSource, SPTLocalSettings, SPTNavigationRouter, SPTPageRegistry, SPTPlaylistModel, SPTProductState;
+@protocol SPTCollectionPlatform, SPTCollectionPlatformTestManager, SPTContainerUIService, SPTImageLoaderFactory, SPTLinkDispatcher, SPTLocalFilesPlaylistsDataSource, SPTLocalFilesTracksDataSource, SPTLocalSettings, SPTNavigationRouter, SPTPlaylistModel, SPTProductState;
 
 @interface SPTLocalFilesImportManager : NSObject <SPTProductStateObserver>
 {
@@ -20,7 +20,6 @@
     id <SPTLocalFilesPlaylistsDataSource> _playlistsDataSource;
     id <SPTCollectionPlatform> _collectionPlatform;
     id <SPTCollectionPlatformTestManager> _collectionTestManager;
-    id <SPTPageRegistry> _pageRegistry;
     id <SPTContainerUIService> _containerUIService;
     id <SPTPlaylistModel> _playlistModel;
     NSString *_productStateFlagValue;
@@ -50,7 +49,6 @@
 @property(copy, nonatomic) NSString *productStateFlagValue; // @synthesize productStateFlagValue=_productStateFlagValue;
 @property(retain, nonatomic) id <SPTPlaylistModel> playlistModel; // @synthesize playlistModel=_playlistModel;
 @property(nonatomic) __weak id <SPTContainerUIService> containerUIService; // @synthesize containerUIService=_containerUIService;
-@property(nonatomic) __weak id <SPTPageRegistry> pageRegistry; // @synthesize pageRegistry=_pageRegistry;
 @property(nonatomic) __weak id <SPTCollectionPlatformTestManager> collectionTestManager; // @synthesize collectionTestManager=_collectionTestManager;
 @property(nonatomic) __weak id <SPTCollectionPlatform> collectionPlatform; // @synthesize collectionPlatform=_collectionPlatform;
 @property(retain, nonatomic) id <SPTLocalFilesPlaylistsDataSource> playlistsDataSource; // @synthesize playlistsDataSource=_playlistsDataSource;
@@ -59,9 +57,7 @@
 @property(retain, nonatomic) id <SPTProductState> productState; // @synthesize productState=_productState;
 @property(nonatomic) _Bool enabled; // @synthesize enabled=_enabled;
 - (void)registerSettingsPage:(id)arg1 featureSettingsItemFactory:(id)arg2;
-- (id)provideLocalFilesImportSettingsViewController:(id)arg1;
 - (void)registerRootSettings:(id)arg1;
-- (id)provideLocalFilesImportSettingsWithSettingsViewController:(id)arg1;
 - (void)productState:(id)arg1 stateDidChange:(id)arg2;
 - (void)okButtonSelected;
 - (void)navigateToImportedFiles;
@@ -82,7 +78,7 @@
 - (void)enableIfFlagged;
 - (void)startImportWithURL:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)checkForPermissionWithResultHandler:(CDUnknownBlockType)arg1;
-- (id)initWithProductState:(id)arg1 localSettings:(id)arg2 collectionPlatform:(id)arg3 collectionTestManager:(id)arg4 playlistModel:(id)arg5 imageLoaderFactory:(id)arg6 resolver:(id)arg7 navigationRouter:(id)arg8 pageRegistry:(id)arg9 containerUIService:(id)arg10 linkDispatcher:(id)arg11 logger:(id)arg12;
+- (id)initWithProductState:(id)arg1 localSettings:(id)arg2 collectionPlatform:(id)arg3 collectionTestManager:(id)arg4 playlistModel:(id)arg5 imageLoaderFactory:(id)arg6 resolver:(id)arg7 navigationRouter:(id)arg8 containerUIService:(id)arg9 linkDispatcher:(id)arg10 logger:(id)arg11;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

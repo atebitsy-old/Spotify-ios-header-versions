@@ -15,9 +15,6 @@
     _Bool _creamBookmarkAudioAdsIos;
     _Bool _audioAdsSwiftNpvEnabled;
     _Bool _comscoreEnabled;
-    _Bool _voiceAdsEnabled;
-    _Bool _voiceAdInaudibleToneEnabled;
-    _Bool _adsFeedbackEnabled;
     unsigned long long _adsInAppBrowserIos;
     unsigned long long _audioPlusFormat;
     unsigned long long _audioPlusVersion;
@@ -33,9 +30,6 @@
 @property(readonly, nonatomic) unsigned long long audioPlusVersion; // @synthesize audioPlusVersion=_audioPlusVersion;
 @property(readonly, nonatomic) unsigned long long audioPlusFormat; // @synthesize audioPlusFormat=_audioPlusFormat;
 @property(readonly, nonatomic) unsigned long long adsInAppBrowserIos; // @synthesize adsInAppBrowserIos=_adsInAppBrowserIos;
-@property(readonly, nonatomic) _Bool adsFeedbackEnabled; // @synthesize adsFeedbackEnabled=_adsFeedbackEnabled;
-@property(readonly, nonatomic) _Bool voiceAdInaudibleToneEnabled; // @synthesize voiceAdInaudibleToneEnabled=_voiceAdInaudibleToneEnabled;
-@property(readonly, nonatomic) _Bool voiceAdsEnabled; // @synthesize voiceAdsEnabled=_voiceAdsEnabled;
 @property(readonly, nonatomic) _Bool comscoreEnabled; // @synthesize comscoreEnabled=_comscoreEnabled;
 @property(readonly, nonatomic) _Bool audioAdsSwiftNpvEnabled; // @synthesize audioAdsSwiftNpvEnabled=_audioAdsSwiftNpvEnabled;
 @property(readonly, nonatomic) _Bool creamBookmarkAudioAdsIos; // @synthesize creamBookmarkAudioAdsIos=_creamBookmarkAudioAdsIos;

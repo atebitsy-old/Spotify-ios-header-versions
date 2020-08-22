@@ -8,11 +8,11 @@
 
 @interface _TtC23CarDetectionFeatureImpl19CarDetectionService : NSObject
 {
-    // Error parsing type: , name: _accessoryManagerService
-    // Error parsing type: , name: _carmageddonService
-    // Error parsing type: , name: _featureFlaggingService
-    // Error parsing type: , name: _settingsService
-    // Error parsing type: , name: _remoteConfigurationService
+    // Error parsing type: , name: accessoryManagerService
+    // Error parsing type: , name: carmageddonService
+    // Error parsing type: , name: featureFlaggingService
+    // Error parsing type: , name: settingsService
+    // Error parsing type: , name: remoteConfigurationService
     // Error parsing type: , name: carDetector
     // Error parsing type: , name: testManager
     // Error parsing type: , name: loop
@@ -24,6 +24,7 @@
 - (id)provideCarDetector;
 - (void)unload;
 - (void)load;
+- (void)configureWithServices:(id)arg1;
 
 @end
 

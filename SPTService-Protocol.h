@@ -11,6 +11,7 @@
 
 @protocol SPTService <NSObject>
 + (NSString *)serviceIdentifier;
+- (void)configureWithServices:(id <SPTServiceProvider>)arg1;
 - (id)init;
 
 @optional
@@ -18,7 +19,6 @@
 - (void)initialViewDidAppear;
 - (void)load;
 - (void)unload;
-- (void)configureWithServices:(id <SPTServiceProvider>)arg1;
 @property(retain, nonatomic) SPTAllocationContext *allocationContext;
 @end
 
